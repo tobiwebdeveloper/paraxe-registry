@@ -1,0 +1,59 @@
+{
+  "name": "faq-01",
+  "type": "block",
+  "title": "Faq01",
+  "description": "Editorial support section with numbered accordion rows and a contact panel.",
+  "category": "marketing",
+  "status": "experimental",
+  "components": [
+    "Flex",
+    "Heading",
+    "Text",
+    "Card",
+    "Accordion",
+    "AccordionItem"
+  ],
+  "tokenPrefix": "--faq01-",
+  "framework": "vue",
+  "entry": "blocks/faq-01/vue/Faq01.vue",
+  "dependencies": [
+    "@paraxe/vue",
+    "@paraxe/design"
+  ],
+  "files": [
+    {
+      "source": "blocks/faq-01/shared/types.ts",
+      "target": "blocks/faq-01/shared/types.ts",
+      "content": "export interface Faq01Props {\n  eyebrow?: string;\n  title?: string;\n  description?: string;\n  supportTitle?: string;\n  supportDescription?: string;\n  supportLabel?: string;\n  supportHref?: string;\n  items?: { question: string; answer: string }[];\n}\nexport const defaultItems = [\n  {\n    question: \"Can I customise the design?\",\n    answer:\n      \"Yes. Choose a recipe, tune your tokens, and replace the content to suit your brand.\",\n  },\n  {\n    question: \"Can I use my own images?\",\n    answer: \"All media and copy are replaceable. Your assets remain yours.\",\n  },\n  {\n    question: \"How do I connect my shop?\",\n    answer:\n      \"Connect your catalogue and checkout through your application. These blocks provide the interface foundations.\",\n  },\n  {\n    question: \"Will it work on smaller screens?\",\n    answer:\n      \"The layout adapts from a split desktop section to a single column on smaller screens.\",\n  },\n  {\n    question: \"Can I bring my own content?\",\n    answer:\n      \"Replace every question, answer and support link with the details your customers need.\",\n  },\n];\n",
+      "sha256": "5f1e91a2ceac0539bc820d987123b403d8839ff404c13574c77f7f2d9a418533"
+    },
+    {
+      "source": "blocks/faq-01/shared/style.css",
+      "target": "blocks/faq-01/shared/style.css",
+      "content": ".faq01 {\n  padding: var(--website-section-padding) var(--container-padding-lg);\n  background: var(--background-primary);\n  color: var(--text-primary);\n  border-block-start: var(--border-width-thin) solid var(--border-default);\n}\n.faq01 *,\n.faq01 *::before,\n.faq01 *::after {\n  box-sizing: border-box;\n}\n.faq01-inner {\n  max-width: var(--container-max-width);\n  margin-inline: auto;\n}\n.faq01 .faq01-layout {\n  gap: var(--website-column-gap);\n}\n.faq01 .faq01-intro {\n  flex: 0 0 32%;\n  gap: var(--space-5);\n  min-width: 0;\n}\n.faq01 :is(h2, h3, p) {\n  margin: 0;\n}\n.faq01 .faq01-eyebrow,\n.faq01 .faq01-list-heading {\n  font-size: var(--typography-micro-size);\n  font-weight: var(--font-weight-semibold);\n  letter-spacing: var(--letter-spacing-widest);\n}\n.faq01 .faq01-title {\n  font-size: var(--website-title-size);\n  line-height: var(--line-height-tight);\n  letter-spacing: var(--letter-spacing-tighter);\n  text-wrap: balance;\n}\n.faq01 .faq01-description {\n  max-width: var(--website-copy-width);\n  font-size: var(--website-copy-size);\n  line-height: var(--line-height-relaxed);\n}\n.faq01 .faq01-support {\n  width: 100%;\n  margin-block-start: auto;\n}\n.faq01 .faq01-support h3 {\n  font-size: var(--typography-caption-size);\n}\n.faq01 .faq01-support p {\n  font-size: var(--typography-caption-size);\n  line-height: var(--line-height-relaxed);\n}\n.faq01-support-mark {\n  font-size: var(--font-size-2xl);\n  color: var(--brand-primary);\n}\n.faq01-support-link {\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  width: 100%;\n  padding-block-start: var(--space-4);\n  border-block-start: var(--border-width-thin) solid var(--border-default);\n  color: var(--text-primary);\n  font-size: var(--typography-caption-size);\n  text-decoration: none;\n}\n.faq01-support-link:hover {\n  text-decoration: underline;\n}\n.faq01-support-link:focus-visible {\n  outline: var(--focus-ring-width) solid var(--focus-ring-color);\n  outline-offset: var(--focus-ring-offset);\n}\n.faq01 .faq01-items {\n  flex: 1 1 0;\n  min-width: 0;\n}\n.faq01 .faq01-list-heading {\n  gap: var(--space-4);\n  padding-block-end: var(--space-5);\n  color: var(--text-muted);\n}\n.faq01 .faq01-question {\n  gap: var(--space-4);\n}\n.faq01-number {\n  flex: 0 0 var(--space-6);\n  font-family: var(--font-family-mono);\n  font-size: var(--typography-micro-size);\n  color: var(--text-muted);\n}\n.faq01-answer {\n  padding-inline-start: calc(var(--space-6) + var(--space-4));\n  max-width: var(--content-width-narrow);\n}\n.faq01 .faq01-answer p {\n  font-size: var(--website-copy-size);\n  line-height: var(--line-height-relaxed);\n}\n@media (max-width: 760px) {\n  .faq01 {\n    padding: var(--space-8) var(--container-padding);\n  }\n  .faq01 .faq01-layout {\n    flex-direction: column;\n    gap: var(--space-8);\n  }\n  .faq01 .faq01-intro {\n    flex-basis: auto;\n  }\n  .faq01 .faq01-items {\n    width: 100%;\n  }\n  .faq01 .faq01-support {\n    margin-block-start: var(--space-3);\n  }\n}\n",
+      "sha256": "2f3a6a6450858266bb129a66c8a48613eea00b952e67b96e23f6d1aa187dbb32"
+    },
+    {
+      "source": "blocks/faq-01/vue/Faq01.vue",
+      "target": "blocks/faq-01/vue/Faq01.vue",
+      "content": "<script setup lang=\"ts\">\r\nimport { useId } from \"vue\";\r\nimport {\r\n  Accordion,\r\n  AccordionItem,\r\n  Card,\r\n  Flex,\r\n  Heading,\r\n  Text,\r\n} from \"@paraxe/vue\";\r\nimport { defaultItems, type Faq01Props } from \"../shared/types\";\r\nimport \"../shared/style.css\";\r\nconst headingId = useId();\r\nconst props = withDefaults(defineProps<Faq01Props>(), {\r\n  eyebrow: \"THE DETAILS / 01\",\r\n  title: \"Good questions. Clear answers.\",\r\n  description: \"A few things worth knowing before you make your next move.\",\r\n  supportTitle: \"Still have a question?\",\r\n  supportDescription: \"Our team can help with the details.\",\r\n  supportLabel: \"Talk to us\",\r\n  supportHref: \"/contact\",\r\n  items: () => defaultItems,\r\n});\r\n</script>\r\n<template>\r\n  <section class=\"faq01\" :aria-labelledby=\"headingId\">\r\n    <div class=\"faq01-inner\">\r\n      <Flex class=\"faq01-layout\" align=\"stretch\" full-width>\r\n        <Flex class=\"faq01-intro\" direction=\"column\" align=\"start\"\r\n          ><Text class=\"faq01-eyebrow\">{{ props.eyebrow }}</Text\r\n          ><Heading :id=\"headingId\" level=\"h2\" class=\"faq01-title\">{{\r\n            props.title\r\n          }}</Heading\r\n          ><Text class=\"faq01-description\" tone=\"muted\">{{\r\n            props.description\r\n          }}</Text>\r\n          <Card v-if=\"props.supportHref\" class=\"faq01-support\"\r\n            ><Flex direction=\"column\" align=\"start\"\r\n              ><span class=\"faq01-support-mark\" aria-hidden=\"true\">↗</span\r\n              ><Heading level=\"h3\">{{ props.supportTitle }}</Heading\r\n              ><Text tone=\"muted\">{{ props.supportDescription }}</Text\r\n              ><a class=\"faq01-support-link\" :href=\"props.supportHref\"\r\n                >{{ props.supportLabel }}<span aria-hidden=\"true\">↗</span></a\r\n              ></Flex\r\n            ></Card\r\n          >\r\n        </Flex>\r\n        <div class=\"faq01-items\">\r\n          <Flex class=\"faq01-list-heading\" justify=\"between\"\r\n            ><Text as=\"span\">FREQUENTLY ASKED</Text\r\n            ><Text as=\"span\"\r\n              >{{ String(props.items.length).padStart(2, \"0\") }} QUESTIONS</Text\r\n            ></Flex\r\n          >\r\n          <Accordion :default-open=\"props.items.length ? ['question-0'] : []\"\r\n            ><AccordionItem\r\n              v-for=\"(item, i) in props.items\"\r\n              :key=\"i\"\r\n              :id=\"`question-${i}`\"\r\n              ><template #trigger\r\n                ><Flex as=\"span\" align=\"baseline\" class=\"faq01-question\"\r\n                  ><span class=\"faq01-number\" aria-hidden=\"true\">{{\r\n                    String(i + 1).padStart(2, \"0\")\r\n                  }}</span\r\n                  ><span>{{ item.question }}</span></Flex\r\n                ></template\r\n              >\r\n              <div class=\"faq01-answer\">\r\n                <Text>{{ item.answer }}</Text>\r\n              </div></AccordionItem\r\n            ></Accordion\r\n          >\r\n        </div>\r\n      </Flex>\r\n    </div>\r\n  </section>\r\n</template>\r\n",
+      "sha256": "41584dfa2e1368a532a4cea132106a592e8a677de7edc0f32a6e2f844af2e314"
+    },
+    {
+      "source": "LICENSE",
+      "target": ".paraxe-licenses/faq-01-vue-0.1.2.txt",
+      "content": "MIT License\r\n\r\nCopyright (c) 2026 Paraxe contributors\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+      "sha256": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229"
+    }
+  ],
+  "schemaVersion": 1,
+  "version": "0.1.2",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.4.0",
+    "@paraxe/design": "1.8.0",
+    "@paraxe/vue": "1.3.0",
+    "@paraxe/react": "0.2.0",
+    "@paraxe/cli": "0.3.0"
+  }
+}

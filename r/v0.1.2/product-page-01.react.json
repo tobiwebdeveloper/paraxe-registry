@@ -1,0 +1,64 @@
+{
+  "name": "product-page-01",
+  "type": "block",
+  "title": "ProductPage01",
+  "description": "Image-led sample product page with price, description, and size availability rows.",
+  "category": "commerce",
+  "status": "experimental",
+  "components": [
+    "Flex",
+    "Heading",
+    "Price",
+    "ProductMedia",
+    "Text"
+  ],
+  "tokenPrefix": "--product-page01-",
+  "framework": "react",
+  "entry": "blocks/product-page-01/react/ProductPage01.tsx",
+  "dependencies": [
+    "@paraxe/react",
+    "@paraxe/design"
+  ],
+  "files": [
+    {
+      "source": "blocks/product-page-01/assets/paraxe/product-page-01/jersey.svg",
+      "target": "public/paraxe/product-page-01/jersey.svg",
+      "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 672\"><defs><filter id=\"s\" x=\"-30%\" y=\"-30%\" width=\"160%\" height=\"180%\"><feDropShadow dx=\"0\" dy=\"16\" stdDeviation=\"12\" flood-opacity=\"0.13\"/></filter></defs><g fill=\"#222722\" filter=\"url(#s)\"><path d=\"M89 295 157 344 200 295 200 501H400V295l43 49 68-49-72-80-66-24-46 15h-54l-46-15-66 24Z\"/><path d=\"M268 202q32 27 64 0\" fill=\"none\" stroke=\"#f6d82e\" stroke-width=\"7\"/></g><text x=\"340\" y=\"290\" font-family=\"Arial,sans-serif\" font-weight=\"800\" font-size=\"20\" text-anchor=\"middle\" fill=\"#f6d82e\">P.</text></svg>",
+      "sha256": "fd3f82b7d00766934606ff038681a6a7e2500ffdaf9ed1963f49d96eaed4bcb6"
+    },
+    {
+      "source": "blocks/product-page-01/react/ProductPage01.tsx",
+      "target": "blocks/product-page-01/react/ProductPage01.tsx",
+      "content": "import { Flex, Heading, Price, ProductMedia, Text } from \"@paraxe/react\";\r\nimport { sampleProduct, validateProductVariants, type ProductPage01Props } from \"../shared/product\";\r\nimport \"../shared/product-page.css\";\r\n\r\nexport function ProductPage01({ as: Tag = \"main\", product = sampleProduct, backHref = \"/shop\", backLabel = \"Back to the collection\",\r\n  eyebrow = \"SAMPLE COLLECTION / DEVELOPMENT PREVIEW\", priceNote = \"/ sample price\", availabilityHeading = \"Sizes & availability\",\r\n  outOfStockLabel = \"Out of stock\", inStockLabel = \"in stock\", notice = \"This is a sample product. Ordering is unavailable in this preview.\" }: ProductPage01Props) {\r\n  validateProductVariants(product.variants);\r\n  return <Tag className=\"product-page01\">\r\n    <a className=\"product-page01-back\" href={backHref}><Text as=\"span\">{backLabel}</Text></a>\r\n    <Flex className=\"product-page01-layout\" align=\"start\" size=\"large\">\r\n      <div className=\"product-page01-gallery\"><ProductMedia src={product.imageSrc} alt={product.imageAlt} /></div>\r\n      <Flex className=\"product-page01-info\" direction=\"column\" size=\"large\">\r\n        <Text as=\"span\" className=\"product-page01-eyebrow\">{eyebrow}</Text>\r\n        <Heading level=\"h1\">{product.name}</Heading>\r\n        <Flex className=\"product-page01-price\" align=\"baseline\" size=\"small\"><Price size=\"detail\" amount={product.amount} currency={product.currency} locale={product.locale} />{priceNote && <Text as=\"span\" tone=\"muted\">{priceNote}</Text>}</Flex>\r\n        <Text className=\"product-page01-description\" tone=\"muted\">{product.description}</Text>\r\n        <section className=\"product-page01-availability\" aria-label={availabilityHeading}>\r\n          <Heading level=\"h2\">{availabilityHeading}</Heading>\r\n          {product.variants.length ? <dl>{product.variants.map(variant => <Flex key={variant.size} className=\"product-page01-stock-row\" justify=\"between\" align=\"baseline\" wrap><dt>{variant.size}</dt><dd>{variant.stock === 0 ? outOfStockLabel : `${variant.stock} ${inStockLabel}`}</dd></Flex>)}</dl> : <Text tone=\"muted\">{outOfStockLabel}</Text>}\r\n          {notice && <Text className=\"product-page01-notice\" tone=\"muted\">{notice}</Text>}\r\n        </section>\r\n      </Flex>\r\n    </Flex>\r\n  </Tag>;\r\n}\r\n",
+      "sha256": "5830518325070b02bfe8077f7cae655a64881db2cc3137043462315952677384"
+    },
+    {
+      "source": "blocks/product-page-01/shared/product-page.css",
+      "target": "blocks/product-page-01/shared/product-page.css",
+      "content": ".product-page01 {\r\n  --product-page01-max-width: var(--container-max-width);\r\n  --product-page01-gutter: var(--container-padding);\r\n  --product-page01-gap: var(--section-content-gap);\r\n  box-sizing: border-box;\r\n  max-width: calc(var(--product-page01-max-width) + var(--product-page01-gutter) * 2);\r\n  width: 100%;\r\n  margin-inline: auto;\r\n  padding: var(--card-padding) var(--product-page01-gutter) var(--space-10);\r\n  color: var(--text-primary);\r\n  font-family: var(--font-family-body);\r\n}\r\n.product-page01 *, .product-page01 *::before, .product-page01 *::after { box-sizing: border-box; }\r\n.product-page01 p, .product-page01 h1, .product-page01 h2, .product-page01 dl, .product-page01 dd { margin: 0; }\r\n.product-page01-back { display: inline-flex; align-items: center; min-height: calc(var(--space-4) * 2.75); margin-block-end: var(--space-6); color: inherit; font-size: var(--typography-caption-size); font-weight: var(--font-weight-semibold); text-underline-offset: var(--space-1); }\r\n.product-page01-back:focus-visible { outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset); }\r\n.product-page01 .product-page01-layout { gap: var(--product-page01-gap); }\r\n.product-page01-gallery { flex: 1.15 1 0; min-width: 0; }\r\n.product-page01 .product-page01-info { flex: 1 1 0; min-width: 0; padding-block-start: var(--space-4); gap: 0; }\r\n.product-page01-eyebrow { font-size: var(--typography-micro-size); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-widest); line-height: var(--line-height-normal); overflow-wrap: anywhere; }\r\n.product-page01 h1 { margin-block: var(--space-6); font-size: var(--typography-product-title-size); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tighter); font-weight: var(--font-weight-bold); overflow-wrap: anywhere; }\r\n.product-page01 .product-page01-price { margin-block-start: var(--space-1); gap: var(--inline-gap-sm); flex-wrap: wrap; }\r\n.product-page01-price > .text-muted { font-size: var(--typography-caption-size); }\r\n.product-page01-description { margin-block: var(--space-8); font-size: var(--font-size-base); line-height: var(--line-height-relaxed); }\r\n.product-page01 .product-page01-description { margin-block: var(--space-8); }\r\n.product-page01-availability { width: 100%; }\r\n.product-page01-availability h2 { font-size: var(--font-size-base); line-height: var(--line-height-normal); font-weight: var(--font-weight-semibold); margin-block-end: var(--space-3); }\r\n.product-page01 .product-page01-stock-row { min-height: calc(var(--space-4) * 3); gap: var(--inline-gap); padding-block: var(--space-3); border-block-end: var(--border-width-thin) solid var(--border-default); }\r\n.product-page01-stock-row dt { font-size: var(--typography-caption-size); font-weight: var(--font-weight-semibold); }\r\n.product-page01-stock-row dd { font-size: var(--typography-caption-size); color: var(--text-muted); text-align: end; }\r\n.product-page01 .product-page01-notice { margin-block-start: var(--space-4); font-size: var(--typography-caption-size); line-height: var(--line-height-relaxed); }\r\n@media (max-width: 64rem) { .product-page01 { --product-page01-gap: calc(var(--space-4) * 2.5); } }\r\n@media (max-width: 48rem) {\r\n  .product-page01 { --product-page01-gutter: var(--space-4); }\r\n  .product-page01 .product-page01-layout { flex-direction: column; gap: var(--inline-gap-lg); }\r\n  .product-page01-gallery, .product-page01 .product-page01-info { width: 100%; flex-basis: auto; }\r\n  .product-page01 .product-page01-info { padding-block-start: 0; }\r\n  .product-page01 h1 { font-size: var(--typography-product-title-size); }\r\n}\r\n",
+      "sha256": "e793dfdbdf2a55f1e1e74704fbd9816fd5cc1175a8a1391d9dc36a00308e458c"
+    },
+    {
+      "source": "blocks/product-page-01/shared/product.ts",
+      "target": "blocks/product-page-01/shared/product.ts",
+      "content": "export interface ProductPage01Variant {\n  size: string;\n  stock: number;\n}\nexport interface ProductPage01Product {\n  name: string;\n  amount: number;\n  currency: string;\n  locale: string;\n  description: string;\n  imageSrc?: string;\n  imageAlt: string;\n  variants: readonly ProductPage01Variant[];\n}\nexport interface ProductPage01Props {\n  as?: \"main\" | \"section\";\n  product?: ProductPage01Product;\n  backHref?: string;\n  backLabel?: string;\n  eyebrow?: string;\n  priceNote?: string;\n  availabilityHeading?: string;\n  outOfStockLabel?: string;\n  inStockLabel?: string;\n  notice?: string;\n}\nexport const sampleProduct: ProductPage01Product = {\n  name: \"Academy training jersey\", amount: 28, currency: \"GBP\", locale: \"en-GB\",\n  description: \"Training wear. A concept for the academy collection, designed around life on and off the pitch. This is a fictional visual sample; designs, prices and availability are illustrative.\",\n  imageSrc: \"/paraxe/product-page-01/jersey.svg\", imageAlt: \"Black academy training jersey with yellow collar and chest mark, front view\",\n  variants: [{ size: \"XS\", stock: 0 }, { size: \"S\", stock: 8 }, { size: \"M\", stock: 8 }, { size: \"L\", stock: 8 }, { size: \"XL\", stock: 8 }],\n};\nexport function validateProductVariants(variants: readonly ProductPage01Variant[]): void {\n  const sizes = new Set<string>();\n  for (const variant of variants) {\n    const size = variant.size.trim();\n    if (!size || sizes.has(size) || !Number.isSafeInteger(variant.stock) || variant.stock < 0) throw new RangeError(\"Availability rows require unique size labels and non-negative integer stock.\");\n    sizes.add(size);\n  }\n}\n",
+      "sha256": "0033041852a9c0727af8a65a4a0d15517935463c0fc03b6c00339a50a067675b"
+    },
+    {
+      "source": "LICENSE",
+      "target": ".paraxe-licenses/product-page-01-react-0.1.2.txt",
+      "content": "MIT License\r\n\r\nCopyright (c) 2026 Paraxe contributors\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+      "sha256": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229"
+    }
+  ],
+  "schemaVersion": 1,
+  "version": "0.1.2",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.4.0",
+    "@paraxe/design": "1.8.0",
+    "@paraxe/vue": "1.3.0",
+    "@paraxe/react": "0.2.0",
+    "@paraxe/cli": "0.3.0"
+  }
+}
