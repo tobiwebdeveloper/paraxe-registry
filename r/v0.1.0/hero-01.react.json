@@ -1,0 +1,56 @@
+{
+  "name": "hero-01",
+  "type": "block",
+  "title": "Hero01",
+  "description": "Two-sided editorial hero with replaceable media and a feature strip.",
+  "category": "marketing",
+  "status": "experimental",
+  "components": [
+    "Flex",
+    "Heading",
+    "Text",
+    "Image"
+  ],
+  "tokenPrefix": "--hero01-",
+  "framework": "react",
+  "entry": "blocks/hero-01/react/Hero01.tsx",
+  "dependencies": [
+    "@paraxe/react",
+    "@paraxe/design"
+  ],
+  "files": [
+    {
+      "source": "blocks/hero-01/react/Hero01.tsx",
+      "target": "blocks/hero-01/react/Hero01.tsx",
+      "content": "import type { ReactNode } from \"react\";\nimport { Flex, Heading, Image, Text } from \"@paraxe/react\";\nimport type { Hero01Props } from \"../shared/types\";\nimport \"../shared/hero.css\";\nexport function Hero01({ eyebrow = \"BUILT WITH PARAXE / 2026\", titleLines = [\"Same system.\", \"More possibilities.\"], description = \"Composable foundations for the interfaces you want to build. Your product, your visual language.\", ctaLabel = \"Explore the system\", ctaHref = \"/components\", footnote = \"BUILT FROM COMPONENTS. MADE FOR YOUR PRODUCT.\", mediaEyebrow = \"YOUR NEXT IDEA STARTS HERE.\", mediaCaption = \"01 — COMPOSABLE FOUNDATIONS\", mediaCredit = \"PARAXE / DESIGN\", imageSrc, imageAlt = \"\", headingLevel = \"h1\", highlights = [\"MADE TO COMPOSE\", \"ONE SYSTEM. YOUR STYLE.\", \"BUILT TO FIT\"], media }: Hero01Props & { media?: ReactNode }) {\n  return <section className=\"hero01\"><Flex className=\"hero01-panels\" align=\"stretch\" fullWidth>\n    <Flex className=\"hero01-copy\" direction=\"column\" align=\"start\">\n      <Flex as=\"span\" className=\"hero01-eyebrow\" align=\"center\" size=\"small\"><span className=\"hero01-dot\" aria-hidden=\"true\" />{eyebrow}</Flex>\n      <Heading level={headingLevel}>{titleLines.map((line, index) => <span key={index} className=\"hero01-title-line\">{line}</span>)}</Heading>\n      <Text tone=\"muted\">{description}</Text>\n      <a className=\"btn btn-primary btn-md hero01-cta\" href={ctaHref}><Flex as=\"span\" align=\"center\" justify=\"between\" fullWidth>{ctaLabel}<span aria-hidden=\"true\">↗</span></Flex></a>\n      <Text as=\"span\" className=\"hero01-footnote\">{footnote}</Text>\n    </Flex>\n    <Flex className=\"hero01-media\" direction=\"column\" justify=\"between\">\n      <Text as=\"span\" className=\"hero01-media-eyebrow\">{mediaEyebrow}</Text>\n      <div className=\"hero01-art\">{media ?? (imageSrc ? <Image src={imageSrc} alt={imageAlt} fit=\"contain\" /> : <span className=\"hero01-monogram\" aria-hidden=\"true\">P.</span>)}</div>\n      <Flex className=\"hero01-caption\" justify=\"between\" wrap><Text as=\"span\">{mediaCaption}</Text><Text as=\"span\">{mediaCredit}</Text></Flex>\n    </Flex>\n  </Flex>{highlights.length > 0 && <Flex className=\"hero01-highlights\" justify=\"between\" wrap>{highlights.map((highlight, index) => <Flex key={index} as=\"span\" align=\"center\" size=\"small\"><span aria-hidden=\"true\">{index === 1 ? \"●\" : \"↗\"}</span><Text as=\"span\">{highlight}</Text></Flex>)}</Flex>}</section>;\n}\n",
+      "sha256": "7037d6caa88fefb55451e23a9e9e7ca7f190756c1aec84304ca812306c776e66"
+    },
+    {
+      "source": "blocks/hero-01/shared/hero.css",
+      "target": "blocks/hero-01/shared/hero.css",
+      "content": ".hero01 {\r\n  --hero01-media-background: var(--brand-primary);\r\n  --hero01-media-text: var(--text-on-brand);\r\n  --hero01-min-height: calc(var(--space-4) * 27.25);\r\n  --hero01-copy-padding: var(--hero-content-padding);\r\n  --hero01-copy-surface: var(--surface-base);\r\n  width: 100%;\r\n  color: var(--text-primary);\r\n  font-family: var(--font-family-body);\r\n}\r\n.hero01 *, .hero01 *::before, .hero01 *::after { box-sizing: border-box; }\r\n.hero01 p, .hero01 h1, .hero01 h2, .hero01 h3 { margin: 0; }\r\n.hero01 .hero01-panels { gap: 0; min-height: var(--hero01-min-height); border-radius: var(--section-radius); overflow: hidden; }\r\n.hero01 .hero01-copy { flex: 1.1 1 0; min-width: 0; padding: var(--hero01-copy-padding); background: var(--hero01-copy-surface); gap: 0; }\r\n.hero01-eyebrow { font-size: var(--typography-micro-size); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-widest); }\r\n.hero01-dot { width: calc(var(--space-4) * 0.375); height: calc(var(--space-4) * 0.375); border-radius: var(--radius-full); background: var(--brand-primary); }\r\n.hero01 .hero01-copy :is(h1,h2,h3) { margin-block: var(--space-8) var(--space-6); font-size: var(--typography-hero-size); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tighter); overflow-wrap: anywhere; }\r\n.hero01-title-line { display: block; }\r\n.hero01-copy > p { max-width: var(--content-width-narrow); font-size: var(--typography-caption-size); line-height: var(--line-height-relaxed); }\r\n.hero01 .hero01-cta { min-width: calc(var(--space-4) * 12.5); margin-block: var(--space-6) var(--space-8); text-decoration: none; }\r\n.hero01-cta:focus-visible { outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset); }\r\n.hero01-footnote { margin-block-start: auto; font-size: var(--typography-micro-size); letter-spacing: var(--letter-spacing-widest); line-height: var(--line-height-relaxed); }\r\n.hero01 .hero01-media { position: relative; isolation: isolate; flex: 1 1 0; min-width: 0; min-height: var(--hero01-min-height); padding: var(--card-padding); overflow: hidden; background: var(--hero01-media-background); color: var(--hero01-media-text); }\r\n.hero01-media::before { content: ''; position: absolute; z-index: -1; inset: calc(var(--space-4) * 2) calc(var(--space-4) * -5); border-block: var(--border-width-thin) solid color-mix(in srgb, var(--hero01-media-text) 20%, transparent); transform: rotate(-15deg); }\r\n.hero01-media::after { content: ''; position: absolute; z-index: -1; inset-inline-start: var(--space-6); top: 35%; width: calc(var(--space-4) * 11); height: calc(var(--space-4) * 11); border: var(--border-width-thin) solid color-mix(in srgb, var(--hero01-media-text) 20%, transparent); border-radius: var(--radius-full); }\r\n.hero01-media-eyebrow { font-size: var(--typography-micro-size); letter-spacing: var(--letter-spacing-widest); }\r\n.hero01-art { display: grid; place-items: center; flex: 1; min-height: calc(var(--space-4) * 16); min-width: 0; }\r\n.hero01-art > .media { width: 100%; max-width: calc(var(--space-4) * 24); }\r\n.hero01-art img { max-height: calc(var(--space-4) * 19); object-fit: contain; }\r\n.hero01-monogram { font-size: var(--typography-display-size); font-weight: var(--font-weight-bold); letter-spacing: var(--letter-spacing-tighter); }\r\n.hero01 .hero01-caption { gap: var(--inline-gap); font-size: var(--typography-micro-size); letter-spacing: var(--letter-spacing-widest); }\r\n.hero01 .hero01-highlights { gap: var(--stack-gap); padding: var(--space-5) var(--space-6); border-block-end: var(--border-width-thin) solid var(--border-default); font-size: var(--typography-micro-size); font-weight: var(--font-weight-semibold); letter-spacing: var(--letter-spacing-widest); }\r\n@media (max-width: 48rem) {\r\n  .hero01 { --hero01-copy-padding: var(--card-padding); --hero01-min-height: calc(var(--space-4) * 21); }\r\n  .hero01 .hero01-panels { flex-direction: column; }\r\n  .hero01 .hero01-copy { flex-basis: auto; }\r\n  .hero01 .hero01-copy :is(h1,h2,h3) { font-size: var(--typography-hero-size); }\r\n  .hero01 .hero01-highlights { justify-content: flex-start; }\r\n}\r\n\r\n.hero01-media :is(.text-primary, .text-muted) { color: var(--hero01-media-text); }\r\n",
+      "sha256": "3b0fce684588d6c4ac12ea9bc03eb5f386be4d437b8db6f8d00d2e1d458f9925"
+    },
+    {
+      "source": "blocks/hero-01/shared/types.ts",
+      "target": "blocks/hero-01/shared/types.ts",
+      "content": "export interface Hero01Props {\n  eyebrow?: string;\n  titleLines?: readonly string[];\n  description?: string;\n  ctaLabel?: string;\n  ctaHref?: string;\n  footnote?: string;\n  mediaEyebrow?: string;\n  mediaCaption?: string;\n  mediaCredit?: string;\n  imageSrc?: string;\n  imageAlt?: string;\n  highlights?: readonly string[];\n  headingLevel?: \"h1\" | \"h2\" | \"h3\";\n}\n",
+      "sha256": "8be6abb01a6da10024d2656d6f71b7438a4d31140d853c78efe49f6738dad081"
+    },
+    {
+      "source": "LICENSE",
+      "target": ".paraxe-licenses/hero-01-react-0.1.0.txt",
+      "content": "MIT License\r\n\r\nCopyright (c) 2026 Paraxe contributors\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+      "sha256": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229"
+    }
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.3.0",
+    "@paraxe/design": "1.8.0",
+    "@paraxe/vue": "1.3.0",
+    "@paraxe/react": "0.2.0",
+    "@paraxe/cli": "0.3.0"
+  }
+}

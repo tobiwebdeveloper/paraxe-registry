@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "name": "paraxe",
+  "version": "0.1.0",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.3.0",
+    "@paraxe/design": "1.8.0",
+    "@paraxe/vue": "1.3.0",
+    "@paraxe/react": "0.2.0",
+    "@paraxe/cli": "0.3.0"
+  },
+  "blocks": [
+    {
+      "name": "kit-room-collection",
+      "title": "Kit room collection",
+      "description": "Monochrome collection with category tabs, filters, sorting, search, and product tiles.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "kit-room-collection.vue.json",
+      "sha256": "1a981583d2c83974910c75f11b904f3ac1562dfe07d0221f59f812e12468d861",
+      "status": "experimental"
+    },
+    {
+      "name": "kit-room-collection",
+      "title": "Kit room collection",
+      "description": "Monochrome collection with category tabs, filters, sorting, search, and product tiles.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "kit-room-collection.react.json",
+      "sha256": "3e01da245582622f955573cfd188ecb1501bc67dcc042467464838851d6190a9",
+      "status": "experimental"
+    },
+    {
+      "name": "navbar-01",
+      "title": "Navbar01",
+      "description": "Academy crest, centered shop/collection/cart links, active underline, and edition label.",
+      "category": "navigation",
+      "framework": "vue",
+      "file": "navbar-01.vue.json",
+      "sha256": "4247a3d0652676628dc44acc18bdf28d0935d85d4fe671a2d28d49a2fd2a7719",
+      "status": "experimental"
+    },
+    {
+      "name": "navbar-01",
+      "title": "Navbar01",
+      "description": "Academy crest, centered shop/collection/cart links, active underline, and edition label.",
+      "category": "navigation",
+      "framework": "react",
+      "file": "navbar-01.react.json",
+      "sha256": "0cd1988e4f6b43f98d87a1a99c30bfd28e7f1b37f13c6e99eefd0cce411e38d1",
+      "status": "experimental"
+    },
+    {
+      "name": "product-page-01",
+      "title": "ProductPage01",
+      "description": "Image-led sample product page with price, description, and size availability rows.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "product-page-01.vue.json",
+      "sha256": "2107bff13d342301e635b1230dd82f0511915340b27518385693541c9cc74c4c",
+      "status": "experimental"
+    },
+    {
+      "name": "product-page-01",
+      "title": "ProductPage01",
+      "description": "Image-led sample product page with price, description, and size availability rows.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "product-page-01.react.json",
+      "sha256": "7d8667175aebfa5db5f644c4e0850130053b7d18a0f290b0d4c5374c16ed7e3d",
+      "status": "experimental"
+    },
+    {
+      "name": "hero-01",
+      "title": "Hero01",
+      "description": "Two-sided editorial hero with replaceable media and a feature strip.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "hero-01.vue.json",
+      "sha256": "6d245a1da01c37b90df0a33d27dcc1ce61b6b1c6ad69e707b3d13f8e15db1360",
+      "status": "experimental"
+    },
+    {
+      "name": "hero-01",
+      "title": "Hero01",
+      "description": "Two-sided editorial hero with replaceable media and a feature strip.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "hero-01.react.json",
+      "sha256": "70f9bcb81e5d70be709de90906f149b59a37d545b776559d7bf59254cb5534a1",
+      "status": "experimental"
+    },
+    {
+      "name": "login-01",
+      "title": "Login01",
+      "description": "Compact sign-in form with an app-owned authentication callback and no bundled auth provider.",
+      "category": "authentication",
+      "framework": "vue",
+      "file": "login-01.vue.json",
+      "sha256": "755296a532146d2147970ef5ecd9c5c438432cf7f762f15df7d5913fb7dcc5de",
+      "status": "experimental"
+    },
+    {
+      "name": "login-01",
+      "title": "Login01",
+      "description": "Compact sign-in form with an app-owned authentication callback and no bundled auth provider.",
+      "category": "authentication",
+      "framework": "react",
+      "file": "login-01.react.json",
+      "sha256": "e8000358350c0df984aaac6293c33ee3a90617a881bc00fc743664c832ddcfbc",
+      "status": "experimental"
+    },
+    {
+      "name": "footer-01",
+      "title": "Footer01",
+      "description": "Editorial footer with a contact column, grouped navigation, brand signature and legal band.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "footer-01.vue.json",
+      "sha256": "f79ca36138acaaf1d14b29fcb40b5e850f368fed9c812f1f8c328105670599ec",
+      "status": "experimental"
+    },
+    {
+      "name": "footer-01",
+      "title": "Footer01",
+      "description": "Editorial footer with a contact column, grouped navigation, brand signature and legal band.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "footer-01.react.json",
+      "sha256": "d12aadc3a8aa1cb6853336914d371ef383593e3a1f010ecfb19284eac73ce01c",
+      "status": "experimental"
+    },
+    {
+      "name": "faq-01",
+      "title": "Faq01",
+      "description": "Editorial support section with numbered accordion rows and a contact panel.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "faq-01.vue.json",
+      "sha256": "6039f8693f8d11cba57dd92e9f0da94b6cc4d98a92d95c80672593e412d5d2d4",
+      "status": "experimental"
+    },
+    {
+      "name": "faq-01",
+      "title": "Faq01",
+      "description": "Editorial support section with numbered accordion rows and a contact panel.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "faq-01.react.json",
+      "sha256": "6dbb604caea9f77c7c2a43d4bc7d27e19b15826f9e7eaca42641657101507062",
+      "status": "experimental"
+    },
+    {
+      "name": "pricing-01",
+      "title": "Pricing01",
+      "description": "Three aligned pricing cards with featured plans, feature lists and app-owned checkout destinations.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "pricing-01.vue.json",
+      "sha256": "8d51f042a0f6e3d84bd878917db6fc0ae514af464cdc2ffc643737106f93e165",
+      "status": "experimental"
+    },
+    {
+      "name": "pricing-01",
+      "title": "Pricing01",
+      "description": "Three aligned pricing cards with featured plans, feature lists and app-owned checkout destinations.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "pricing-01.react.json",
+      "sha256": "417ca84b7d590efb485430bfc9296ae59aa8baf73f603b72379688b79a923f46",
+      "status": "experimental"
+    },
+    {
+      "name": "chat-01",
+      "title": "Chat01",
+      "description": "Study conversation workspace with context, starter prompts and an app-owned send callback.",
+      "category": "education",
+      "framework": "vue",
+      "file": "chat-01.vue.json",
+      "sha256": "30c6f8f994f81dc79c24e61d831a03a31b6094ed561ca71464e2db94ee2b8386",
+      "status": "experimental"
+    },
+    {
+      "name": "chat-01",
+      "title": "Chat01",
+      "description": "Study conversation workspace with context, starter prompts and an app-owned send callback.",
+      "category": "education",
+      "framework": "react",
+      "file": "chat-01.react.json",
+      "sha256": "421dcd7a80bf2dbd11ffebfabbe6287d123685fe9ef259529e595754086da4ae",
+      "status": "experimental"
+    }
+  ]
+}

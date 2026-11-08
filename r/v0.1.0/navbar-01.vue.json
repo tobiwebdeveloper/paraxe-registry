@@ -1,0 +1,62 @@
+{
+  "name": "navbar-01",
+  "type": "block",
+  "title": "Navbar01",
+  "description": "Academy crest, centered shop/collection/cart links, active underline, and edition label.",
+  "category": "navigation",
+  "status": "experimental",
+  "components": [
+    "Navbar",
+    "Flex",
+    "Image",
+    "Text"
+  ],
+  "tokenPrefix": "--navbar01-",
+  "framework": "vue",
+  "entry": "blocks/navbar-01/vue/Navbar01.vue",
+  "dependencies": [
+    "@paraxe/vue",
+    "@paraxe/design"
+  ],
+  "files": [
+    {
+      "source": "blocks/navbar-01/assets/paraxe/navbar-01/mark.svg",
+      "target": "public/paraxe/navbar-01/mark.svg",
+      "content": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 64 64\"><rect x=\"3\" y=\"3\" width=\"58\" height=\"58\" rx=\"12\" fill=\"#191b18\"/><path d=\"M21 48V16h14c10 0 15 5 15 13s-5 13-15 13h-6v6Zm8-14h6c5 0 7-2 7-5s-2-5-7-5h-6Z\" fill=\"#fff\"/></svg>\r\n",
+      "sha256": "5ab2a02a307b9add4b95dbb9e7b0919756a2b7e015ebdd96f206755baec81717"
+    },
+    {
+      "source": "blocks/navbar-01/shared/navbar.css",
+      "target": "blocks/navbar-01/shared/navbar.css",
+      "content": ".navbar01.navbar {\r\n  --navbar01-max-width: var(--container-max-width);\r\n  --navbar01-gutter: var(--container-padding);\r\n  --navbar01-height: calc(var(--nav-height) * 1.333333);\r\n  --navbar01-top-rule: var(--space-2);\r\n  --navbar01-side-width: calc(var(--space-4) * 9);\r\n  --navbar01-link-gap: var(--space-9);\r\n  --navbar01-logo-width: calc(var(--space-4) * 2.75);\r\n  --navbar01-logo-height: calc(var(--space-4) * 3);\r\n  position: relative;\r\n  top: auto;\r\n  z-index: auto;\r\n  box-sizing: border-box;\r\n  width: 100%;\r\n  min-height: calc(var(--navbar01-height) + var(--navbar01-top-rule));\r\n  gap: var(--inline-gap-lg);\r\n  padding-inline: max(var(--navbar01-gutter), calc((100% - var(--navbar01-max-width)) / 2));\r\n  border-block-start: var(--navbar01-top-rule) solid var(--text-primary);\r\n  border-block-end: var(--border-width-thin) solid var(--border-default);\r\n  backdrop-filter: none;\r\n  font-family: var(--font-family-body);\r\n}\r\n.navbar01 *, .navbar01 *::before, .navbar01 *::after { box-sizing: border-box; }\r\n.navbar01 .navbar-brand { flex: 0 0 var(--navbar01-side-width); }\r\n.navbar01 .navbar-content { justify-content: center; }\r\n.navbar01 .navbar-actions { flex: 0 0 var(--navbar01-side-width); justify-content: flex-end; margin-inline-start: 0; }\r\n.navbar01-brand { display: block; width: calc(var(--space-4) * 3); padding-block: var(--space-2); }\r\n.navbar01-brand .media { width: var(--navbar01-logo-width); height: var(--navbar01-logo-height); }\r\n.navbar01-nav > .flex { gap: var(--navbar01-link-gap); }\r\n.navbar01-nav a { display: inline-flex; align-items: center; min-height: calc(var(--space-4) * 2.75); padding-block: var(--space-3); border-block-end: var(--border-width-strong) solid transparent; color: inherit; font-size: var(--typography-nav-size); font-weight: var(--font-weight-regular); text-decoration: none; white-space: nowrap; }\r\n.navbar01-nav a[aria-current=\"page\"] { border-block-end-color: currentColor; }\r\n.navbar01-nav a:hover { border-block-end-color: var(--border-strong); }\r\n.navbar01-arrow { margin-inline-start: var(--space-3); font-size: var(--typography-micro-size); }\r\n.navbar01-edition { white-space: nowrap; font-size: var(--typography-micro-size); letter-spacing: var(--letter-spacing-widest); font-weight: var(--font-weight-semibold); }\r\n.navbar01 a:focus-visible { outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset); }\r\n@media (max-width: 48rem) {\r\n  .navbar01.navbar { flex-wrap: wrap; gap: 0 var(--space-4); padding-block: var(--space-2); --navbar01-gutter: var(--space-4); }\r\n  .navbar01 .navbar-brand { flex: 1 1 auto; }\r\n  .navbar01 .navbar-actions { flex: 0 0 auto; }\r\n  .navbar01 .navbar-content { order: 3; flex: 1 0 100%; }\r\n  .navbar01-nav > .flex { gap: var(--inline-gap-lg); }\r\n  .navbar01-nav a { font-size: var(--typography-micro-size); }\r\n}\r\n\r\n.navbar01 :is(.text-primary, .text-muted) { color: inherit; }\r\n",
+      "sha256": "9c39f9cd48fbf539ad3f8f257e041ac22d64108cc9896067bd3cbc492b3f7ba1"
+    },
+    {
+      "source": "blocks/navbar-01/shared/types.ts",
+      "target": "blocks/navbar-01/shared/types.ts",
+      "content": "export interface Navbar01Props {\n  brandName?: string;\n  logoSrc?: string;\n  shopHref?: string;\n  collectionHref?: string;\n  cartHref?: string;\n  cartCount?: number;\n  activeLink?: \"shop\" | \"collection\" | \"cart\" | null;\n  shopLabel?: string;\n  collectionLabel?: string;\n  cartLabel?: string;\n  editionLabel?: string;\n  edition?: string;\n}\n",
+      "sha256": "a63863709f70e752663ebe22ac23f71b22f00a3c719d3631c407d42dc59c3be9"
+    },
+    {
+      "source": "blocks/navbar-01/vue/Navbar01.vue",
+      "target": "blocks/navbar-01/vue/Navbar01.vue",
+      "content": "<script setup lang=\"ts\">\r\nimport { Flex, Image, Navbar, Text } from \"@paraxe/vue\";\r\nimport type { Navbar01Props } from \"../shared/types\";\r\nimport \"../shared/navbar.css\";\r\nconst props = withDefaults(defineProps<Navbar01Props>(), {\r\n  brandName: \"Paraxe home\", logoSrc: \"/paraxe/navbar-01/mark.svg\",\r\n  shopHref: \"/shop\", collectionHref: \"/collection\", cartHref: \"/cart\",\r\n  cartCount: 0, activeLink: \"shop\", shopLabel: \"The shop\", collectionLabel: \"The collection\", cartLabel: \"Cart\",\r\n  editionLabel: \"PARAXE\", edition: \"01\",\r\n});\r\n</script>\r\n\r\n<template>\r\n  <Navbar class=\"navbar01\">\r\n    <template #brand><a class=\"navbar01-brand\" :href=\"props.shopHref\" :aria-label=\"props.brandName\"><Image :src=\"props.logoSrc\" alt=\"\" fit=\"contain\" /></a></template>\r\n    <nav class=\"navbar01-nav\" aria-label=\"Shop navigation\">\r\n      <Flex align=\"center\" justify=\"center\" wrap>\r\n        <a :href=\"props.shopHref\" :aria-current=\"props.activeLink === 'shop' ? 'page' : undefined\">{{ props.shopLabel }}</a>\r\n        <a :href=\"props.collectionHref\" :aria-current=\"props.activeLink === 'collection' ? 'page' : undefined\"><Flex as=\"span\" align=\"center\" size=\"small\">{{ props.collectionLabel }}<span class=\"navbar01-arrow\" aria-hidden=\"true\">↗</span></Flex></a>\r\n        <a :href=\"props.cartHref\" :aria-current=\"props.activeLink === 'cart' ? 'page' : undefined\">{{ props.cartLabel }} ({{ props.cartCount }})</a>\r\n      </Flex>\r\n    </nav>\r\n    <template #actions><Flex as=\"span\" class=\"navbar01-edition\" align=\"center\" size=\"small\"><Text as=\"span\">{{ props.editionLabel }}</Text><Text as=\"span\" tone=\"muted\">/ {{ props.edition }}</Text></Flex></template>\r\n  </Navbar>\r\n</template>\r\n",
+      "sha256": "26e65edee406330b49225952a1b9b65a87752eac776ac15669d34ded4e33bb57"
+    },
+    {
+      "source": "LICENSE",
+      "target": ".paraxe-licenses/navbar-01-vue-0.1.0.txt",
+      "content": "MIT License\r\n\r\nCopyright (c) 2026 Paraxe contributors\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+      "sha256": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229"
+    }
+  ],
+  "version": "0.1.0",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.3.0",
+    "@paraxe/design": "1.8.0",
+    "@paraxe/vue": "1.3.0",
+    "@paraxe/react": "0.2.0",
+    "@paraxe/cli": "0.3.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "algorithm": "sha256",
+  "files": {
+    "index.json": "e7c3fac1eece86616072acb2c6f2f607be4335417e2671cb585ed6b5f223ed32",
+    "LICENSE.txt": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229",
+    "kit-room-collection.vue.json": "1a981583d2c83974910c75f11b904f3ac1562dfe07d0221f59f812e12468d861",
+    "kit-room-collection.react.json": "3e01da245582622f955573cfd188ecb1501bc67dcc042467464838851d6190a9",
+    "navbar-01.vue.json": "4247a3d0652676628dc44acc18bdf28d0935d85d4fe671a2d28d49a2fd2a7719",
+    "navbar-01.react.json": "0cd1988e4f6b43f98d87a1a99c30bfd28e7f1b37f13c6e99eefd0cce411e38d1",
+    "product-page-01.vue.json": "2107bff13d342301e635b1230dd82f0511915340b27518385693541c9cc74c4c",
+    "product-page-01.react.json": "7d8667175aebfa5db5f644c4e0850130053b7d18a0f290b0d4c5374c16ed7e3d",
+    "hero-01.vue.json": "6d245a1da01c37b90df0a33d27dcc1ce61b6b1c6ad69e707b3d13f8e15db1360",
+    "hero-01.react.json": "70f9bcb81e5d70be709de90906f149b59a37d545b776559d7bf59254cb5534a1",
+    "login-01.vue.json": "755296a532146d2147970ef5ecd9c5c438432cf7f762f15df7d5913fb7dcc5de",
+    "login-01.react.json": "e8000358350c0df984aaac6293c33ee3a90617a881bc00fc743664c832ddcfbc",
+    "footer-01.vue.json": "f79ca36138acaaf1d14b29fcb40b5e850f368fed9c812f1f8c328105670599ec",
+    "footer-01.react.json": "d12aadc3a8aa1cb6853336914d371ef383593e3a1f010ecfb19284eac73ce01c",
+    "faq-01.vue.json": "6039f8693f8d11cba57dd92e9f0da94b6cc4d98a92d95c80672593e412d5d2d4",
+    "faq-01.react.json": "6dbb604caea9f77c7c2a43d4bc7d27e19b15826f9e7eaca42641657101507062",
+    "pricing-01.vue.json": "8d51f042a0f6e3d84bd878917db6fc0ae514af464cdc2ffc643737106f93e165",
+    "pricing-01.react.json": "417ca84b7d590efb485430bfc9296ae59aa8baf73f603b72379688b79a923f46",
+    "chat-01.vue.json": "30c6f8f994f81dc79c24e61d831a03a31b6094ed561ca71464e2db94ee2b8386",
+    "chat-01.react.json": "421dcd7a80bf2dbd11ffebfabbe6287d123685fe9ef259529e595754086da4ae"
+  }
+}

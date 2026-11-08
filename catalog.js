@@ -1,0 +1,1 @@
+const search=document.querySelector('#search');const cards=[...document.querySelectorAll('.catalog-item')];search.addEventListener('input',()=>{const q=search.value.trim().toLowerCase();cards.forEach(card=>{card.hidden=!card.dataset.search.includes(q)});document.querySelector('#no-results').hidden=cards.some(card=>!card.hidden)});
