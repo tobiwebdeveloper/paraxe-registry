@@ -1,5 +1,7 @@
 # Input
 
+Development adds native `min`, `max`, and `step` forwarding in Vue and React for numeric/date controls. Values may be strings or numbers. Browser constraints help entry; the application must still validate submissions. See [Stay01](../registry/stay-01.md) and [release status](../reference/release-status.md).
+
 Input is a public Vue and React component. Its shared API is defined by `InputProps` from `@paraxe/core`.
 
 ## When to use it

@@ -9,6 +9,7 @@ Published npm and immutable registry releases can lag behind development. Read r
 - [Install and theme](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/install-and-theme.md): Dependencies and CSS order.
 - [Core components](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/core-components.md): Complete Vue and React examples.
 - [Editable blocks](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/using-blocks.md): CLI installation, customization, and ownership.
+- [Binary assets](https://tobiwebdeveloper.github.io/paraxe-registry/docs/registry/binary-assets.md): Development schema 2, byte integrity, backward compatibility, and rollout boundary.
 - [AI implementation guide](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/ai-implementation.md): Evidence-first implementation rules.
 - [Development contracts](https://tobiwebdeveloper.github.io/paraxe-registry/docs/reference/current-contracts.md): Exact source contracts; verify installed declarations.
 - [Block and recipe formula](https://tobiwebdeveloper.github.io/paraxe-registry/docs/block-and-recipe-formula.md): Distinct layouts, product purpose, and token discipline.

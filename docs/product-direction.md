@@ -112,3 +112,9 @@ The [guide hub](guides/start-here.md) now covers installation, core usage, sourc
 [Film01](registry/film-01.md) expands culture and visual-storytelling coverage with a title frame, synopsis, native trailer, production credits, and viewing destinations. Cinematic is an eighth development recipe, pairing expansive regular-weight display type with small, deliberate controls. Nocturne is an independent dark-plum/light-porcelain base palette; it is not a recipe-owned skin. Explicit preset choices still win.
 
 The core audit replaced React Video's placeholder and extended both framework players with captions, preload, missing/failure states, and rejected-play recovery. Geometry and play controls consume shared tokens. Media hosting and viewing access stay application-owned. All these additions remain development features pending coordinated release.
+
+## Hospitality and binary assets
+
+[Stay01](registry/stay-01.md) adds a guesthouse planning layout with an original generated landscape, date preferences, room-plan comparison, and considered house details. Organic is a ninth development recipe with regular Lora display type, Work Sans body text, and tactile controls. The composition follows the style-specific character endorsed after Film01's revision.
+
+The core Input audit added native min/max/step forwarding in both frameworks. The owner approved [registry schema 2](registry/binary-assets.md): explicit text/base64 encoding, decoded-byte hashes, bounded downloads, and backward-compatible reading of schema 1. The actual Stay01 image and all eighteen legacy release bundles pass consumer copying tests. Current npm and registry 0.1.2 remain unchanged until coordinated release.

@@ -51,6 +51,8 @@
 <li><a href="../registry/studio-01.html">Studio01</a></li>
 <li><a href="../registry/careers-01.html">Careers01</a></li>
 <li><a href="../registry/film-01.html">Film01</a></li>
+<li><a href="../registry/stay-01.html">Stay01 and Organic</a></li>
+<li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
 <li><a href="../registry/block-quality.html">Block quality</a></li>
@@ -197,7 +199,7 @@ Composites
 </tr>
 </tbody>
 </table>
-<p><code>recipe</code> is an independent preset field: <code>default</code>, <code>editorial</code>, <code>educational</code>, <code>clean</code>, <code>swiss</code>, <code>brutalist</code>, <code>studio</code>, or <code>cinematic</code>. It is not the old bundled theme/personality model: choosing editorial does not choose an accent, font, radius, or density for you. The sample recipe gives compact labels, distinct commerce metadata/display roles, quiet secondary controls, and restrained tab/badge treatment. Different component CSS can be supplied in the final override layer. See <a href="../reference/release-status.html">release status</a> before using development recipes.</p>
+<p><code>recipe</code> is an independent preset field: <code>default</code>, <code>editorial</code>, <code>educational</code>, <code>clean</code>, <code>swiss</code>, <code>brutalist</code>, <code>studio</code>, <code>cinematic</code>, or <code>organic</code>. It is not the old bundled theme/personality model: choosing editorial does not choose an accent, font, radius, or density for you. The sample recipe gives compact labels, distinct commerce metadata/display roles, quiet secondary controls, and restrained tab/badge treatment. Different component CSS can be supplied in the final override layer. See <a href="../reference/release-status.html">release status</a> before using development recipes.</p>
 <h2 id="choose-a-recipe-through-the-preset">Choose a recipe through the preset</h2>
 <p>Merge these fields under <code>preset</code> in the existing <code>paraxe.config.json</code>:</p>
 <pre><code class="language-json">{
@@ -209,7 +211,7 @@ Composites
 }
 </code></pre>
 <p>Then run <code>pnpm paraxe generate</code>. These choices can produce the reference's compact monochrome treatment through the core system. Change accent to emerald/violet, fonts, or radius independently; the same blocks follow them. Choosing default keeps the standard treatment. Old configurations omit recipe and normalize to default.</p>
-<p>The generator imports the selected <code>@paraxe/design/recipes/*.css</code> entry. Four entries ship in the current npm release; the development checkout has eight. Recipes define shared component rules and typography roles, not block-specific selectors. Editorial values belong centrally to this stylesheet, rather than being copied as raw pixels into every block.</p>
+<p>The generator imports the selected <code>@paraxe/design/recipes/*.css</code> entry. Four entries ship in the current npm release; the development checkout has nine. Recipes define shared component rules and typography roles, not block-specific selectors. Editorial values belong centrally to this stylesheet, rather than being copied as raw pixels into every block.</p>
 <h2 id="replace-a-treatment-completely">Replace a treatment completely</h2>
 <p>Generation now creates <code>paraxe-overrides.css</code> alongside the preset file, <strong>only if it does not already exist</strong>. Its path is recorded as <code>overridesOut</code>; <code>--overrides-out</code> selects a different path. Regenerating a preset never replaces this project-owned file. Theme, preset, and override output paths must be distinct.</p>
 <p>Import in this order:</p>

@@ -16,9 +16,11 @@ Sources: [npm core](https://www.npmjs.com/package/@paraxe/core/v/1.4.0), [design
 
 ## Development is ahead
 
-Swiss, Brutalist, Studio, Cinematic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; recent media/form accessibility updates; and Hero01 width choices are development additions. The In progress previews compile this newer source.
+Swiss, Brutalist, Studio, Cinematic, Organic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01, Stay01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; recent media/form accessibility updates and native Input min/max/step; and Hero01 width choices are development additions. The In progress previews compile this newer source.
 
 Workspace manifests retain previous version numbers during development. They are not evidence that a newer API is on npm. [Current contracts](current-contracts.md) describe the checkout; installed declarations describe the consumer release.
+
+Schema 2 binary-asset support is also implemented in development. Published CLI 0.3.0 remains schema 1; public registry 0.1.2 is unchanged. See [binary assets](../registry/binary-assets.md).
 
 A coordinated release needs new package versions, verified consumer archives, and a new immutable registry version. See [releasing](../registry/releasing.md) and [publishing](../registry/publishing-commands.md). Refresh this status page during release preparation.
 

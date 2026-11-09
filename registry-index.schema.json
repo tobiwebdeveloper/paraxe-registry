@@ -13,7 +13,7 @@
   ],
   "properties": {
     "schemaVersion": {
-      "const": 1
+      "enum": [1, 2]
     },
     "name": {
       "const": "paraxe"

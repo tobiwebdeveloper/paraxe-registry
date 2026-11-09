@@ -53,6 +53,8 @@ Keep interface styles token-driven and layout CSS scoped. Reuse existing core co
 
 Assets are copied to `public/`. Sample paths usually start at the app root. For subpath hosting, adapt asset data/paths to the host base URL; registry installation does not configure routing or deployment.
 
+Development [schema 2](../registry/binary-assets.md) adds exact binary-asset copying. Published CLI 0.3.0 and registry 0.1.2 remain schema 1; use the release-status page before assuming newer blocks or photographs can be installed with the current npm release.
+
 Existing files are protected. Review dry runs. `--force` replaces files and does not merge edits. Compare a fresh copy and merge deliberately; retain licenses.
 
 In progress entries may be blocks, components, recipes, or examples. A connected shop is an example, not an extra installable block. Current development source needs matching development packages until release.

@@ -665,6 +665,10 @@ export interface InputProps {
     | "month"
     | "week";
   placeholder?: string;
+  /** Native numeric/date constraints; validation remains application-owned. */
+  min?: string | number;
+  max?: string | number;
+  step?: string | number;
   modelValue?: string;
   required?: boolean;
   disabled?: boolean;

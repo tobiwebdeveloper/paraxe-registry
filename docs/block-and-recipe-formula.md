@@ -56,6 +56,8 @@ Current limitation: connected browser review has been unavailable. User feedback
 
 ## Brief for the next addition
 
+The owner endorsed the revised Film01 and clarified the principle: a style has a particular character they can feel even when it is hard to name. Treat that character as a relationship between layout, artwork, type, controls, and pacing. Do not apply the same composition and illustration to every new recipe. Hospitality, for example, benefits from an inviting landscape, tactile details, readable room comparisons, and clear planning controls; it should earn a different silhouette from a film poster or event programme.
+
 Record: product job; distinctive layout; intended recipe; typography/control proportions; core gaps; editable data and integration boundary; narrow-screen structure; important states; validation and release status.
 
 The owner has asked to continue this pattern. Keep new blocks distinct, flavours purposeful, and preset flexibility intact. Significant changes to the agreed product direction should be discussed; routine implementation within it can proceed.
@@ -69,3 +71,7 @@ The owner clarified that lighter Fraunces works for Studio; bold Fraunces does n
 Film01 gives the formula a culture/film context: one dominant title frame, quieter practical details, narrative reading space, a real trailer integration, and clear production/distribution sections. Cinematic suggests Manrope at regular weight with a responsive 56-144px hero range and 12px medium button labels. Comfortable medium controls retain the shared 44px minimum; their baseline height/label ratio is about 3.67. These are source-token observations, not browser measurements.
 
 Nocturne is a separate base palette, not part of the recipe CSS. Its dark plum and warm light counterpart feed the existing color derivation engine. Recipe-only changes preserve the base and every other explicit project choice.
+
+## Organic and hospitality
+
+Stay01 combines a broad landscape, an italic display phrase, a compact planning form, measured room comparisons, and quieter house details. Organic suggests regular Lora headings and Work Sans body text, with 12px uppercase medium button labels against a 44px comfortable minimum control height. The hero role spans 48-96px. These source-token proportions preserve an inviting reading pace without enlarging every control. Palette, type family, radius, density, and surfaces remain editable. The original photograph is replaceable content; it does not freeze the interface palette.

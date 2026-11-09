@@ -28,7 +28,7 @@ Run from the application's root:
 pnpm exec paraxe init --theme-out src/styles/paraxe-theme.css --preset-out src/styles/paraxe-preset.css --overrides-out src/styles/paraxe-overrides.css
 ```
 
-Choose a recipe, optionally accept its suggested defaults, then adjust the axes. Published CLI/design support Default, Editorial, Educational, and Clean. Swiss, Brutalist, and Studio currently require development source.
+Choose a recipe, optionally accept its suggested defaults, then adjust the axes. Published CLI/design support Default, Editorial, Educational, and Clean. Swiss, Brutalist, Studio, Cinematic, and Organic currently require development source.
 
 This creates `paraxe.config.json` and project CSS. Regenerate later with `pnpm exec paraxe generate`. An existing override file is preserved.
 
