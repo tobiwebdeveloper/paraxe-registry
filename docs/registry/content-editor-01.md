@@ -2,7 +2,7 @@
 
 The product direction now prioritizes depth in common application components and forms. ContentEditor01 is an embeddable writing-form layout. The content workspace is a composition **example**, not another registry block: it connects AppShell, Sidebar, Navbar, Breadcrumbs, Table, and the editor using ordinary application state.
 
-Try `?preview=content-workspace&profile=swiss&theme=light` in either playground, or `?preview=content-editor-01&profile=swiss&theme=light` for the editor on its own. Neither entry introduces a recipe. Both remain development work pending release.
+Try `?preview=content-workspace&profile=swiss&theme=light` in either playground, or `?preview=content-editor-01&profile=swiss&theme=light` for the editor on its own. Neither entry introduces a recipe. ContentEditor01 is included in registry 0.2.0; the connected workspace is a separate composition example. Check [release status](../reference/release-status.md) during rollout.
 
 ## Editor contract
 

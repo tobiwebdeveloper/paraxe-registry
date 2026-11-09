@@ -4,6 +4,32 @@ Paraxe is a composable UI system for building polished websites and software pro
 
 The current emphasis is **depth in commonly used application components and forms**, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.
 
+## Published package update — 9 November 2026
+
+| Package | Published version |
+| --- | --- |
+| @paraxe/core | 1.5.0 |
+| @paraxe/design | 1.9.0 |
+| @paraxe/vue | 1.4.0 |
+| @paraxe/react | 0.3.0 |
+| @paraxe/cli | 0.4.0 |
+
+This coordinated update includes nine recipes (including the differentiated Organic), the Nocturne palette, ProductGallery and media improvements, AppShell/navigation/table/form improvements, and CLI schema 2 binary-asset support. Registry **0.2.0** contains eighteen editable blocks in Vue and React; composition examples remain examples. The previous npm versions and immutable registry 0.1.2 stay available.
+
+Run the following in a **PowerShell terminal**. The first command checks the prepared archives without publishing. The second publishes those same archives to npm through pnpm:
+
+```powershell
+Set-Location "C:\Users\tobio\paraxe"
+& .\releases\npm\publish.ps1 -DryRun
+& .\releases\npm\publish.ps1
+```
+
+Run the script file itself, rather than pasting its contents. If npm asks for authentication, run `pnpm login` and complete any two-factor prompt in your terminal. The helper verifies the consumer-check record and archive hashes before publication, skips an already-published version only when its contents match, and stops on failure so the same command can be retried.
+
+All five npm versions were published by the maintainer and verified against the exact prepared archives. CLI 0.4.0 pins registry 0.2.0. The command above can be rerun safely: matching published archives are skipped. Future source changes require new versions and new archive verification; do not rebuild changed contents under these published versions. See [publishing commands](registry/publishing-commands.md) and [release details](registry/releasing.md).
+
+Validation passed: all five archive installations, all thirty-six copied bundles and hashes, nine recipe CSS exports, Vue and React production builds, consumer declarations, workspace typechecks, package/registry tests, and the PowerShell dry run. The previous registry 0.1.2 hashes are unchanged. Browser visual review remains pending; blocks stay experimental.
+
 This translates the user's product-use brief into a coverage map and priorities. It is a planning document, not a claim that complete products or backend capabilities already ship.
 
 ## Separate three decisions

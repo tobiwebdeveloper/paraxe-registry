@@ -6,9 +6,9 @@ Start with [installation and theming](install-and-theme.md), then [core composit
 
 ## Choose the available release
 
-The [verified release status](../reference/release-status.md) separates published packages from development. Public registry 0.1.2 has nine experimental blocks and four published recipes. In progress previews compile newer source; they are not installation guarantees for current npm versions.
+The [verified release status](../reference/release-status.md) tracks the coordinated rollout of registry 0.2.0, eighteen experimental blocks, and nine recipes. It records npm versions and deployment status. The previous registry 0.1.2 remains available.
 
-For newer work, use the repository playgrounds and matching workspace packages until a coordinated release is published.
+For future development work, use the repository playgrounds and matching workspace packages until its coordinated release is published.
 
 ## Build around a job
 

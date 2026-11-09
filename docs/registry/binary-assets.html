@@ -163,10 +163,10 @@ Composites
 </li>
 </ul>
 </details></nav><main><h1 id="registry-schema-2-binary-assets">Registry schema 2: binary assets</h1>
-<p>The owner approved binary asset support alongside Stay01. Schema 2 is implemented in development. It does not rewrite the public registry 0.1.2 or publish new npm packages.</p>
+<p>Schema 2 ships in CLI 0.4.0 and registry 0.2.0, introduced alongside Stay01. Registry 0.1.2 remains unchanged.</p>
 <h2 id="why-the-format-changes">Why the format changes</h2>
 <p>Schema 1 source bundles contain UTF-8 strings. Reading a PNG as text corrupts its bytes. Schema 2 explicitly distinguishes source text from encoded public assets, so copied photographs, fonts, and other binary content remain project-owned files.</p>
-<p>Indexes and bundles declare <code>schemaVersion: 2</code>. The development installer reads both schemas; a bundle must match its selected index's schema. Published CLI 0.3.0 reads schema 1 only and remains pinned to registry 0.1.2 until a coordinated release.</p>
+<p>Indexes and bundles declare <code>schemaVersion: 2</code>. CLI 0.4.0 reads both schemas; a bundle must match its selected index's schema. CLI 0.3.0 reads schema 1 only and remains pinned to registry 0.1.2.</p>
 <h2 id="file-records">File records</h2>
 <p>Every schema 2 file declares target, content, encoding, and sha256. Encoding is <code>utf8</code> for text or <code>base64</code> for binary public assets. The SHA-256 covers the <strong>decoded bytes that will be written</strong>, never the base64 representation. Bundle/index hashes still cover the exact UTF-8 JSON response.</p>
 <pre><code class="language-json">{
@@ -185,10 +185,10 @@ Composites
 <h2 id="coordinated-rollout">Coordinated rollout</h2>
 <ol>
 <li>Keep public registry 0.1.2 and its integrity manifest unchanged.</li>
-<li>Prepare a new CLI version with schema 2 support and compatible updated core/framework/design versions. The source version numbers currently describe the previous release, not these development APIs.</li>
+<li>Prepare a new CLI version with schema 2 support and compatible updated core/framework/design versions. This rollout uses CLI 0.4.0, core 1.5.0, design 1.9.0, Vue 1.4.0, and React 0.3.0.</li>
 <li>Choose a new immutable registry release version and record package compatibility. Release preparation rejects schema 2 with the known old CLI 0.3.0 metadata.</li>
 <li>Build and install the consumer archives, verify media paths and licenses, and complete browser/keyboard review.</li>
-<li>Publish npm packages, generate and verify the new immutable index/bundles, then publish the static registry. Only then update the CLI default index deliberately.</li>
+<li>Publish the verified npm archives, then deploy the verified static registry. The new CLI's default pins the new immutable index; retain the previous URL for existing consumers.</li>
 </ol>
-<p>For now, public In progress previews demonstrate Stay01; the workspace can build/test schema 2 locally with <code>pnpm registry:build</code> and <code>pnpm registry:binary:test</code>. The schema is ready for the next release, not a claim that current npm supports it.</p>
+<p>The workspace can reproduce schema 2 locally with <code>pnpm registry:build</code> and <code>pnpm registry:binary:test</code>. The coordinated release was verified through all thirty-six real consumer bundles, including Stay01's photograph.</p>
 </main></div></body></html>

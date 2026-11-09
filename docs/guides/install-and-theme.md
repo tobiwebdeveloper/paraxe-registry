@@ -2,23 +2,25 @@
 
 Start from an existing Vue 3 or React application. Check framework compatibility with the package you choose; published React declares React/ReactDOM 19. See [release status](../reference/release-status.md).
 
-## Published packages
+## Coordinated 0.2.0 release packages
+
+Use these versions once the [release status](../reference/release-status.md) confirms all five packages and the registry deployment. The previous release remains available during rollout.
 
 Vue:
 
 ```sh
-pnpm add @paraxe/vue@1.3.0 @paraxe/design@1.8.0
-pnpm add -D @paraxe/cli@0.3.0
+pnpm add @paraxe/vue@1.4.0 @paraxe/design@1.9.0
+pnpm add -D @paraxe/cli@0.4.0
 ```
 
 React:
 
 ```sh
-pnpm add @paraxe/react@0.2.0 @paraxe/design@1.8.0
-pnpm add -D @paraxe/cli@0.3.0
+pnpm add @paraxe/react@0.3.0 @paraxe/design@1.9.0
+pnpm add -D @paraxe/cli@0.4.0
 ```
 
-Framework packages bring their core dependency. Install `@paraxe/core@1.4.0` explicitly if you import its contracts/helpers. npm users can substitute `npm install` / `npm install --save-dev` and run the CLI with `npx paraxe`.
+Framework packages bring their core dependency. Install `@paraxe/core@1.5.0` explicitly if you import its contracts/helpers. npm users can substitute `npm install` / `npm install --save-dev` and run the CLI with `npx paraxe`.
 
 ## Generate styling
 
@@ -28,7 +30,7 @@ Run from the application's root:
 pnpm exec paraxe init --theme-out src/styles/paraxe-theme.css --preset-out src/styles/paraxe-preset.css --overrides-out src/styles/paraxe-overrides.css
 ```
 
-Choose a recipe, optionally accept its suggested defaults, then adjust the axes. Published CLI/design support Default, Editorial, Educational, and Clean. Swiss, Brutalist, Studio, Cinematic, and Organic currently require development source.
+Choose a recipe, optionally accept its suggested defaults, then adjust the axes. CLI 0.4.0 and design 1.9.0 include Default, Editorial, Educational, Clean, Swiss, Brutalist, Studio, Cinematic, and Organic. Palette, fonts, radius, density, and surfaces remain independent choices.
 
 This creates `paraxe.config.json` and project CSS. Regenerate later with `pnpm exec paraxe generate`. An existing override file is preserved.
 

@@ -14,7 +14,7 @@ pnpm exec paraxe add faq-01 --framework vue
 
 Use `--framework react` for React. Review and install the dependency versions printed by the CLI. It does not install dependencies or run registry scripts.
 
-Registry 0.1.2 contains kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, and chat-01. Newer previews are described in [release status](../reference/release-status.md).
+Registry 0.2.0 contains eighteen blocks in both frameworks: kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, chat-01, cart-01, portal-01, article-01, event-01, studio-01, careers-01, film-01, stay-01, and content-editor-01. Check [release status](../reference/release-status.md) during the coordinated rollout. Registry 0.1.2 remains available for the previous CLI.
 
 ## Import copied source
 
@@ -53,9 +53,9 @@ Keep interface styles token-driven and layout CSS scoped. Reuse existing core co
 
 Assets are copied to `public/`. Sample paths usually start at the app root. For subpath hosting, adapt asset data/paths to the host base URL; registry installation does not configure routing or deployment.
 
-Development [schema 2](../registry/binary-assets.md) adds exact binary-asset copying. Published CLI 0.3.0 and registry 0.1.2 remain schema 1; use the release-status page before assuming newer blocks or photographs can be installed with the current npm release.
+[Schema 2](../registry/binary-assets.md), supported by CLI 0.4.0 and registry 0.2.0, copies binary assets exactly. The installer also reads schema 1; CLI 0.3.0 remains pinned to the previous registry 0.1.2.
 
 Existing files are protected. Review dry runs. `--force` replaces files and does not merge edits. Compare a fresh copy and merge deliberately; retain licenses.
 
-In progress entries may be blocks, components, recipes, or examples. A connected shop is an example, not an extra installable block. Current development source needs matching development packages until release.
+Composition examples such as the connected shop and content workspace demonstrate how components and blocks work together. They are not extra installable blocks. Future In progress entries require matching development packages until released.
 

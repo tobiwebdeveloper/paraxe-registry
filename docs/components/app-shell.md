@@ -8,4 +8,4 @@ On narrow screens, navigation is an **in-flow disclosure**, closed by default. A
 
 Sidebar and SidebarItem now honor preset variants in both frameworks. SidebarItem renders an ordinary button for actions without an href, emits activate/onActivate, preserves native links for destinations, and blocks disabled controls. Item variants can inherit from Sidebar or be overridden explicitly. Expanded remains local disclosure state that follows changed expanded props; update:expanded/onExpandedChange reports toggles.
 
-See the [content workspace](../registry/content-editor-01.md) for a complete composition and the [current contract snapshot](../reference/current-contracts.md) for the development API. Released React 0.2.0 does not yet contain AppShell; use matching development packages until the coordinated release.
+See the [content workspace](../registry/content-editor-01.md) for a complete composition and the [current contract snapshot](../reference/current-contracts.md) for the API. React AppShell is included from 0.3.0; use Vue 1.4.0 and core 1.5.0 for the matching shared navigation contract. Older React 0.2.0 does not contain AppShell.

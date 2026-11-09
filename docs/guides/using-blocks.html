@@ -171,7 +171,7 @@ pnpm exec paraxe add faq-01 --framework vue --dry-run
 pnpm exec paraxe add faq-01 --framework vue
 </code></pre>
 <p>Use <code>--framework react</code> for React. Review and install the dependency versions printed by the CLI. It does not install dependencies or run registry scripts.</p>
-<p>Registry 0.1.2 contains kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, and chat-01. Newer previews are described in <a href="../reference/release-status.html">release status</a>.</p>
+<p>Registry 0.2.0 contains eighteen blocks in both frameworks: kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, chat-01, cart-01, portal-01, article-01, event-01, studio-01, careers-01, film-01, stay-01, and content-editor-01. Check <a href="../reference/release-status.html">release status</a> during the coordinated rollout. Registry 0.1.2 remains available for the previous CLI.</p>
 <h2 id="import-copied-source">Import copied source</h2>
 <p>From <code>src/App.vue</code> after a project-root install:</p>
 <pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
@@ -197,7 +197,7 @@ export function App() {
 <p>Replace sample branding, copy, imagery, dates, prices, and destinations. Read the block's own callback contract: authentication, chat, purchasing, enquiries, and registration are separate app integrations.</p>
 <p>Keep interface styles token-driven and layout CSS scoped. Reuse existing core controls. Preserve the <a href="../block-and-recipe-formula.html">typography/control balance</a>.</p>
 <p>Assets are copied to <code>public/</code>. Sample paths usually start at the app root. For subpath hosting, adapt asset data/paths to the host base URL; registry installation does not configure routing or deployment.</p>
-<p>Development <a href="../registry/binary-assets.html">schema 2</a> adds exact binary-asset copying. Published CLI 0.3.0 and registry 0.1.2 remain schema 1; use the release-status page before assuming newer blocks or photographs can be installed with the current npm release.</p>
+<p><a href="../registry/binary-assets.html">Schema 2</a>, supported by CLI 0.4.0 and registry 0.2.0, copies binary assets exactly. The installer also reads schema 1; CLI 0.3.0 remains pinned to the previous registry 0.1.2.</p>
 <p>Existing files are protected. Review dry runs. <code>--force</code> replaces files and does not merge edits. Compare a fresh copy and merge deliberately; retain licenses.</p>
-<p>In progress entries may be blocks, components, recipes, or examples. A connected shop is an example, not an extra installable block. Current development source needs matching development packages until release.</p>
+<p>Composition examples such as the connected shop and content workspace demonstrate how components and blocks work together. They are not extra installable blocks. Future In progress entries require matching development packages until released.</p>
 </main></div></body></html>

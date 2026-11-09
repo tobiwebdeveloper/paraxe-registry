@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Registry and npm release 2026-11-08 | Paraxe</title><link rel="stylesheet" href="../../design.css"><link rel="stylesheet" href="../../recipe.css"><link rel="stylesheet" href="../../preset.css"><link rel="stylesheet" href="../../theme.css"><link rel="stylesheet" href="../guides.css"></head><body><header><a href="../../index.html">Paraxe registry</a><a href="../guides/start-here.html">Guides</a><a href="../reference/release-status.html">Release status</a><a href="releasing.md">Markdown source</a></header><div class="layout"><nav aria-label="Documentation"><details open><summary>Browse documentation</summary><h1 id="paraxe-ui">Paraxe UI</h1>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Registry and npm release — 9 November 2026 | Paraxe</title><link rel="stylesheet" href="../../design.css"><link rel="stylesheet" href="../../recipe.css"><link rel="stylesheet" href="../../preset.css"><link rel="stylesheet" href="../../theme.css"><link rel="stylesheet" href="../guides.css"></head><body><header><a href="../../index.html">Paraxe registry</a><a href="../guides/start-here.html">Guides</a><a href="../reference/release-status.html">Release status</a><a href="releasing.md">Markdown source</a></header><div class="layout"><nav aria-label="Documentation"><details open><summary>Browse documentation</summary><h1 id="paraxe-ui">Paraxe UI</h1>
 <ul>
 <li><a href="../index.html">Introduction</a></li>
 <li><a href="../product-direction.html">Product direction and coverage</a></li>
@@ -162,50 +162,56 @@ Composites
 </ul>
 </li>
 </ul>
-</details></nav><main><h1 id="registry-and-npm-release-2026-11-08">Registry and npm release 2026-11-08</h1>
+</details></nav><main><h1 id="registry-and-npm-release-9-november-2026">Registry and npm release — 9 November 2026</h1>
 <h2 id="what-ships">What ships</h2>
 <table>
 <thead>
 <tr>
 <th>npm package</th>
-<th>Published version</th>
+<th>Published update</th>
+<th>Previous release</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>@paraxe/core</td>
-<td>1.4.0 (already published)</td>
+<td>1.5.0</td>
+<td>1.4.0</td>
 </tr>
 <tr>
 <td>@paraxe/design</td>
-<td>1.8.0 (already published)</td>
+<td>1.9.0</td>
+<td>1.8.0</td>
 </tr>
 <tr>
 <td>@paraxe/vue</td>
+<td>1.4.0</td>
 <td>1.3.0</td>
 </tr>
 <tr>
 <td>@paraxe/react</td>
+<td>0.3.0</td>
 <td>0.2.0</td>
 </tr>
 <tr>
 <td>@paraxe/cli</td>
+<td>0.4.0</td>
 <td>0.3.0</td>
 </tr>
 </tbody>
 </table>
-<p>All five listed versions are published on npm (verified 9 November 2026). See <a href="../reference/release-status.html">release status</a> for the stable/development boundary. Do not republish changed development contents under those versions.</p>
-<p>The registry is a separate static release: <strong>0.1.2</strong>, with nine experimental layouts and eighteen framework bundles. New blocks and recipes are development previews until a coordinated release. No npm publish command is run by release preparation tools.</p>
+<p>All five updated versions were published by the maintainer and verified against their exact archive integrity on 9 November 2026. See <a href="../reference/release-status.html">release status</a>. Never republish changed contents under an existing version.</p>
+<p>Registry <strong>0.2.0</strong> uses schema 2, with eighteen experimental layouts and thirty-six framework bundles. It adds exact binary-asset copying. Nine recipes ship in the CLI/design packages. Registry <strong>0.1.2</strong> remains immutable and usable by CLI 0.3.0. No preparation tool publishes npm packages; deployment checks that required npm versions exist first.</p>
 <h2 id="registry-hosting">Registry hosting</h2>
 <p>Public release repository: https://github.com/tobiwebdeveloper/paraxe-registry</p>
 <p>GitHub Pages destination: https://tobiwebdeveloper.github.io/paraxe-registry/</p>
 <p>The main Paraxe repository stays private. Only generated release material and client previews are pushed to the public release repository. Hosting is independent of Codex and ChatGPT. The abandoned Sites project was never deployed and is not a registry dependency.</p>
-<p>The versioned index is <code>r/v0.1.2/index.json</code>. It records compatible package versions and a SHA-256 for each framework bundle. Bundles contain editable UTF-8 source, file destinations, individual hashes, and license text. <code>integrity.json</code> covers the complete release. Hashes detect corruption against the chosen index; they are not publisher signatures.</p>
+<p>The versioned index is <code>r/v0.2.0/index.json</code>. It records compatible package versions and a SHA-256 for each framework bundle. Bundles contain editable source, explicit text/base64 encodings, file destinations, decoded-byte hashes, and license text. <code>integrity.json</code> covers the complete release. Hashes detect corruption against the chosen index; they are not publisher signatures.</p>
 <h2 id="consumer-installation">Consumer installation</h2>
-<p>Using published CLI 0.3.0:</p>
-<pre><code class="language-sh">npx @paraxe/cli@0.3.0 list
-npx @paraxe/cli@0.3.0 add product-page-01 --framework vue --dry-run
-npx @paraxe/cli@0.3.0 add product-page-01 --framework vue
+<p>After npm publication and registry deployment, use CLI 0.4.0:</p>
+<pre><code class="language-sh">npx @paraxe/cli@0.4.0 list
+npx @paraxe/cli@0.4.0 add product-page-01 --framework vue --dry-run
+npx @paraxe/cli@0.4.0 add product-page-01 --framework vue
 </code></pre>
 <p>Use <code>--framework react</code> for React, <code>--dir</code> to select a project directory, and <code>--registry</code> to select another trusted HTTPS index. HTTP localhost is allowed for local testing. Node 22 or newer is required by the CLI.</p>
 <p>The installer copies source into <code>blocks/&lt;name&gt;/</code>, assets into <code>public/</code>, and full license text into <code>.paraxe-licenses/</code>. It prints package dependencies to install or upgrade separately. It never runs registry scripts or package installs. Preflight checks reject path traversal, protected paths, duplicate destinations, corrupt hashes and existing directory links. Existing files are refused unless <code>--force</code> is explicitly supplied. A failed write attempts to restore files already changed by that install.</p>
@@ -218,17 +224,19 @@ pnpm release:pack
 pnpm --filter playground-vue build --base=./
 pnpm --filter playground-react build --base=./
 pnpm registry:release
+pnpm release:verify
 </code></pre>
 <p><code>release:pack</code> builds all five packages, packs them with workspace references converted to published versions, and writes archives, checksums, logs, and <code>publish.ps1</code> to ignored <code>releases/npm/</code>. Cleaning generated core/CLI output before building prevents deleted APIs from surviving inside tarballs. The design package now emits the <code>index.js</code> promised by its manifest, and its style entry points to <code>style.css</code>.</p>
-<p>The registry release command validates sources/tokens, produces immutable bundles under <code>registry/dist/releases/v0.1.2</code>, and generates the static site under <code>registry/site/public/</code>. Previews use relative Vite assets; only deployed fixture-image paths are adapted to the GitHub Pages project prefix. Source bundles keep their normal application-root image paths.</p>
+<p>The registry release command validates sources/tokens, produces immutable bundles under <code>registry/dist/releases/v0.2.0</code>, and generates the static site under <code>registry/site/public/</code>. Previews use relative Vite assets; only deployed fixture-image paths are adapted to the GitHub Pages project prefix. Source bundles keep their normal application-root image paths.</p>
+<p><code>release:verify</code> installs all five archives in a fresh consumer outside the monorepo, overrides the unpublished core dependency with its exact prepared archive, verifies versions and all nine recipe exports, copies all thirty-six registry bundles through the packed CLI, verifies every installed byte/hash, produces Vue and React production builds, and checks consumer TypeScript/Vue declarations. Logs stay in the recorded consumer directory. It writes <code>releases/npm/verification.json</code> only on success. Repacking invalidates that record; the publishing helper requires a matching manifest hash.</p>
 <p>Changing an existing versioned bundle is rejected: bump <code>registry/release.json</code> for the next release and update the CLI's pinned default URL when appropriate. Preserve old release directories on the host.</p>
 <h2 id="publish-npm-archives-yourself">Publish npm archives yourself</h2>
 <p>From the workspace root, after the prepared archive checks and clean-consumer checks pass:</p>
-<pre><code class="language-powershell">npm publish .\releases\npm\paraxe-vue-1.3.0.tgz --access public
-npm publish .\releases\npm\paraxe-react-0.2.0.tgz --access public
-npm publish .\releases\npm\paraxe-cli-0.3.0.tgz --access public
+<pre><code class="language-powershell">Set-Location &quot;C:\Users\tobio\paraxe&quot;
+&amp; .\releases\npm\publish.ps1 -DryRun
+&amp; .\releases\npm\publish.ps1
 </code></pre>
-<p>Or review and run <code>releases/npm/publish.ps1</code>. Use the exact verified archives; avoid rebuilding between verification and publication. npm authentication and any two-factor step remain with the maintainer. Existing npm versions are immutable; these versions were checked against npm before preparation.</p>
+<p>Use the exact verified archives; avoid rebuilding between verification and publication. npm authentication and any two-factor step remain with the maintainer. Existing npm versions are immutable; the prepared versions were checked against npm before preparation. The same command is saved in the <a href="../product-direction.html">product direction document</a>.</p>
 <h2 id="publish-or-update-registry-files">Publish or update registry files</h2>
 <p><code>pnpm registry:deploy</code> clones or updates only the dedicated public release repository under ignored <code>releases/registry-publish</code>, copies reviewed generated files, commits them, and pushes normally without force. It does not stage or commit the main working tree. GitHub Pages serves the public repository's <code>main</code> branch at <code>/</code>; <code>.nojekyll</code> preserves static assets.</p>
 <p>For a host migration, copy the static files and retain all versioned paths, then use <code>--registry</code> or publish a new CLI default URL. The npm packages and copied application blocks do not depend on the website remaining online at runtime.</p>

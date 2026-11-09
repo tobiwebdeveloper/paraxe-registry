@@ -1,12 +1,12 @@
 # Registry schema 2: binary assets
 
-The owner approved binary asset support alongside Stay01. Schema 2 is implemented in development. It does not rewrite the public registry 0.1.2 or publish new npm packages.
+Schema 2 ships in CLI 0.4.0 and registry 0.2.0, introduced alongside Stay01. Registry 0.1.2 remains unchanged.
 
 ## Why the format changes
 
 Schema 1 source bundles contain UTF-8 strings. Reading a PNG as text corrupts its bytes. Schema 2 explicitly distinguishes source text from encoded public assets, so copied photographs, fonts, and other binary content remain project-owned files.
 
-Indexes and bundles declare `schemaVersion: 2`. The development installer reads both schemas; a bundle must match its selected index's schema. Published CLI 0.3.0 reads schema 1 only and remains pinned to registry 0.1.2 until a coordinated release.
+Indexes and bundles declare `schemaVersion: 2`. CLI 0.4.0 reads both schemas; a bundle must match its selected index's schema. CLI 0.3.0 reads schema 1 only and remains pinned to registry 0.1.2.
 
 ## File records
 
@@ -36,9 +36,9 @@ Tests check exact binary bytes, explicit replacement, corrupt/noncanonical encod
 ## Coordinated rollout
 
 1. Keep public registry 0.1.2 and its integrity manifest unchanged.
-2. Prepare a new CLI version with schema 2 support and compatible updated core/framework/design versions. The source version numbers currently describe the previous release, not these development APIs.
+2. Prepare a new CLI version with schema 2 support and compatible updated core/framework/design versions. This rollout uses CLI 0.4.0, core 1.5.0, design 1.9.0, Vue 1.4.0, and React 0.3.0.
 3. Choose a new immutable registry release version and record package compatibility. Release preparation rejects schema 2 with the known old CLI 0.3.0 metadata.
 4. Build and install the consumer archives, verify media paths and licenses, and complete browser/keyboard review.
-5. Publish npm packages, generate and verify the new immutable index/bundles, then publish the static registry. Only then update the CLI default index deliberately.
+5. Publish the verified npm archives, then deploy the verified static registry. The new CLI's default pins the new immutable index; retain the previous URL for existing consumers.
 
-For now, public In progress previews demonstrate Stay01; the workspace can build/test schema 2 locally with `pnpm registry:build` and `pnpm registry:binary:test`. The schema is ready for the next release, not a claim that current npm supports it.
+The workspace can reproduce schema 2 locally with `pnpm registry:build` and `pnpm registry:binary:test`. The coordinated release was verified through all thirty-six real consumer bundles, including Stay01's photograph.

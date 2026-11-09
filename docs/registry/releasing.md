@@ -1,18 +1,18 @@
-# Registry and npm release 2026-11-08
+# Registry and npm release — 9 November 2026
 
 ## What ships
 
-| npm package | Published version |
-| --- | --- |
-| @paraxe/core | 1.4.0 (already published) |
-| @paraxe/design | 1.8.0 (already published) |
-| @paraxe/vue | 1.3.0 |
-| @paraxe/react | 0.2.0 |
-| @paraxe/cli | 0.3.0 |
+| npm package | Published update | Previous release |
+| --- | --- | --- |
+| @paraxe/core | 1.5.0 | 1.4.0 |
+| @paraxe/design | 1.9.0 | 1.8.0 |
+| @paraxe/vue | 1.4.0 | 1.3.0 |
+| @paraxe/react | 0.3.0 | 0.2.0 |
+| @paraxe/cli | 0.4.0 | 0.3.0 |
 
-All five listed versions are published on npm (verified 9 November 2026). See [release status](../reference/release-status.md) for the stable/development boundary. Do not republish changed development contents under those versions.
+All five updated versions were published by the maintainer and verified against their exact archive integrity on 9 November 2026. See [release status](../reference/release-status.md). Never republish changed contents under an existing version.
 
-The registry is a separate static release: **0.1.2**, with nine experimental layouts and eighteen framework bundles. New blocks and recipes are development previews until a coordinated release. No npm publish command is run by release preparation tools.
+Registry **0.2.0** uses schema 2, with eighteen experimental layouts and thirty-six framework bundles. It adds exact binary-asset copying. Nine recipes ship in the CLI/design packages. Registry **0.1.2** remains immutable and usable by CLI 0.3.0. No preparation tool publishes npm packages; deployment checks that required npm versions exist first.
 
 ## Registry hosting
 
@@ -22,16 +22,16 @@ GitHub Pages destination: https://tobiwebdeveloper.github.io/paraxe-registry/
 
 The main Paraxe repository stays private. Only generated release material and client previews are pushed to the public release repository. Hosting is independent of Codex and ChatGPT. The abandoned Sites project was never deployed and is not a registry dependency.
 
-The versioned index is `r/v0.1.2/index.json`. It records compatible package versions and a SHA-256 for each framework bundle. Bundles contain editable UTF-8 source, file destinations, individual hashes, and license text. `integrity.json` covers the complete release. Hashes detect corruption against the chosen index; they are not publisher signatures.
+The versioned index is `r/v0.2.0/index.json`. It records compatible package versions and a SHA-256 for each framework bundle. Bundles contain editable source, explicit text/base64 encodings, file destinations, decoded-byte hashes, and license text. `integrity.json` covers the complete release. Hashes detect corruption against the chosen index; they are not publisher signatures.
 
 ## Consumer installation
 
-Using published CLI 0.3.0:
+After npm publication and registry deployment, use CLI 0.4.0:
 
 ```sh
-npx @paraxe/cli@0.3.0 list
-npx @paraxe/cli@0.3.0 add product-page-01 --framework vue --dry-run
-npx @paraxe/cli@0.3.0 add product-page-01 --framework vue
+npx @paraxe/cli@0.4.0 list
+npx @paraxe/cli@0.4.0 add product-page-01 --framework vue --dry-run
+npx @paraxe/cli@0.4.0 add product-page-01 --framework vue
 ```
 
 Use `--framework react` for React, `--dir` to select a project directory, and `--registry` to select another trusted HTTPS index. HTTP localhost is allowed for local testing. Node 22 or newer is required by the CLI.
@@ -52,11 +52,14 @@ pnpm release:pack
 pnpm --filter playground-vue build --base=./
 pnpm --filter playground-react build --base=./
 pnpm registry:release
+pnpm release:verify
 ```
 
 `release:pack` builds all five packages, packs them with workspace references converted to published versions, and writes archives, checksums, logs, and `publish.ps1` to ignored `releases/npm/`. Cleaning generated core/CLI output before building prevents deleted APIs from surviving inside tarballs. The design package now emits the `index.js` promised by its manifest, and its style entry points to `style.css`.
 
-The registry release command validates sources/tokens, produces immutable bundles under `registry/dist/releases/v0.1.2`, and generates the static site under `registry/site/public/`. Previews use relative Vite assets; only deployed fixture-image paths are adapted to the GitHub Pages project prefix. Source bundles keep their normal application-root image paths.
+The registry release command validates sources/tokens, produces immutable bundles under `registry/dist/releases/v0.2.0`, and generates the static site under `registry/site/public/`. Previews use relative Vite assets; only deployed fixture-image paths are adapted to the GitHub Pages project prefix. Source bundles keep their normal application-root image paths.
+
+`release:verify` installs all five archives in a fresh consumer outside the monorepo, overrides the unpublished core dependency with its exact prepared archive, verifies versions and all nine recipe exports, copies all thirty-six registry bundles through the packed CLI, verifies every installed byte/hash, produces Vue and React production builds, and checks consumer TypeScript/Vue declarations. Logs stay in the recorded consumer directory. It writes `releases/npm/verification.json` only on success. Repacking invalidates that record; the publishing helper requires a matching manifest hash.
 
 Changing an existing versioned bundle is rejected: bump `registry/release.json` for the next release and update the CLI's pinned default URL when appropriate. Preserve old release directories on the host.
 
@@ -65,12 +68,12 @@ Changing an existing versioned bundle is rejected: bump `registry/release.json` 
 From the workspace root, after the prepared archive checks and clean-consumer checks pass:
 
 ```powershell
-npm publish .\releases\npm\paraxe-vue-1.3.0.tgz --access public
-npm publish .\releases\npm\paraxe-react-0.2.0.tgz --access public
-npm publish .\releases\npm\paraxe-cli-0.3.0.tgz --access public
+Set-Location "C:\Users\tobio\paraxe"
+& .\releases\npm\publish.ps1 -DryRun
+& .\releases\npm\publish.ps1
 ```
 
-Or review and run `releases/npm/publish.ps1`. Use the exact verified archives; avoid rebuilding between verification and publication. npm authentication and any two-factor step remain with the maintainer. Existing npm versions are immutable; these versions were checked against npm before preparation.
+Use the exact verified archives; avoid rebuilding between verification and publication. npm authentication and any two-factor step remain with the maintainer. Existing npm versions are immutable; the prepared versions were checked against npm before preparation. The same command is saved in the [product direction document](../product-direction.md).
 
 ## Publish or update registry files
 
