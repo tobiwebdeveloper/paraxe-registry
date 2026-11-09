@@ -341,6 +341,13 @@ export interface TableProps<T = unknown> {
 
   loading?: boolean;
   empty?: boolean;
+  caption?: string;
+  emptyText?: string;
+  loadingText?: string;
+  /** Controlled selection within the supplied rows. Aggregate pages in the app. */
+  selectedRows?: T[];
+  /** Data key used to name each selection checkbox. */
+  rowLabel?: string;
 }
 ```
 
@@ -665,6 +672,9 @@ export interface InputProps {
     | "month"
     | "week";
   placeholder?: string;
+  minlength?: number;
+  maxlength?: number;
+  pattern?: string;
   /** Native numeric/date constraints; validation remains application-owned. */
   min?: string | number;
   max?: string | number;
@@ -747,6 +757,8 @@ export interface TextareaProps {
   error?: boolean;
   success?: boolean;
   maxlength?: number;
+  minlength?: number;
+  invalid?: boolean;
   placeholder?: string;
   rows?: number;
   required?: boolean;
@@ -920,6 +932,7 @@ export type SidebarItemVariant =
 
 export interface SidebarProps {
   collapsed?: boolean;
+  label?: string;
   variant?: SidebarVariant;
   itemVariant?: SidebarItemVariant;
 }
@@ -1055,6 +1068,11 @@ export type AppShellVariant = "default" | "inset";
 
 export interface AppShellProps {
   variant?: AppShellVariant;
+  /** In-flow navigation disclosure on narrow screens; this is not a modal. */
+  sidebarOpen?: boolean;
+  sidebarId?: string;
+  mainId?: string;
+  mainLabel?: string;
 }
 ```
 

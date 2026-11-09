@@ -1,12 +1,12 @@
-# Stay01 and Organic
+# Stay01
 
 Stay01 is a hospitality layout: an editorial introduction, landscape, date-and-guest planner, room comparison with concept plans, and a quieter band of house details. The purpose is to help someone choose the kind of stay they want, rather than imitate a generic app dashboard.
 
-Preview `?preview=stay-01&profile=organic&theme=light` in Vue or React. Both the block and recipe are development additions awaiting coordinated release.
+Preview `?preview=stay-01&profile=organic&theme=light` in Vue or React. The block remains a development addition awaiting coordinated release.
 
 ## Composition and recipe
 
-Organic pairs regular Lora display type with Work Sans body text and small, deliberate control labels. The sample profile suggests Stone, Amber, comfortable density, larger corners, and bordered surfaces. Suggestions are optional; palette, font family, radius, density, surfaces, and variants remain independently editable.
+Organic uses a distinct field-note treatment: medium-weight Lora headings, small uppercase mono labels, ink-filled primary buttons, and outlined secondary actions. Studio keeps its regular Fraunces headings and quieter 14px mixed-case controls. Organic maps button color roles locally on each component; the global palette and all other preset axes stay editable. The sample profile suggests Stone, Amber, comfortable density, larger corners, and bordered surfaces. These are optional suggestions.
 
 The title has a separate italic phrase, the photograph carries the landscape, and the compact planner sits directly after it. Room comparison cards keep the same image height and align their lower details. On narrow screens the introduction, form, cards, and house-details band stack. All UI color, type, spacing, focus, corners, and surfaces consume shared tokens.
 

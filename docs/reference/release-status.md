@@ -16,7 +16,7 @@ Sources: [npm core](https://www.npmjs.com/package/@paraxe/core/v/1.4.0), [design
 
 ## Development is ahead
 
-Swiss, Brutalist, Studio, Cinematic, Organic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01, Stay01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; recent media/form accessibility updates and native Input min/max/step; and Hero01 width choices are development additions. The In progress previews compile this newer source.
+Swiss, Brutalist, Studio, Cinematic, Organic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01, Stay01, ContentEditor01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; recent media/form accessibility updates and native Input min/max/step; React AppShell, shared app-shell/navigation/table/form improvements, the connected content-workspace example, and Hero01 width choices are development additions. The In progress previews compile this newer source.
 
 Workspace manifests retain previous version numbers during development. They are not evidence that a newer API is on npm. [Current contracts](current-contracts.md) describe the checkout; installed declarations describe the consumer release.
 

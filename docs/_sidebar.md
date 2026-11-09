@@ -41,7 +41,8 @@
   - [Studio01](registry/studio-01.md)
   - [Careers01](registry/careers-01.md)
   - [Film01](registry/film-01.md)
-  - [Stay01 and Organic](registry/stay-01.md)
+  - [Stay01](registry/stay-01.md)
+  - [ContentEditor01 and workspace](registry/content-editor-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
   - [Connected shop demo](registry/shop-journey.md)
   - [Website blocks 01](registry/website-blocks-01.md)
@@ -52,6 +53,7 @@
   - [Contracts](core/contracts.md)
   - [Component contracts](core/component-contracts.md)
   - [Composition](core/composition.md)
+  - [AppShell and navigation](components/app-shell.md)
 - Frameworks
   - [Vue](vue/index.md)
   - [React](react/index.md)

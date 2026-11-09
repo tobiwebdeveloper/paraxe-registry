@@ -1,5 +1,7 @@
 # Table
 
+Development adds native sort buttons, named selection checkboxes, caption/empty/loading text, and controlled selectedRows within the supplied rows. Selectable rows require unique stable row keys; aggregate cross-page selection in the application. See [the workspace guide](../registry/content-editor-01.md).
+
 Table is a public Vue and React component. Its shared API is defined by `TableProps` from `@paraxe/core`.
 
 ## When to use it

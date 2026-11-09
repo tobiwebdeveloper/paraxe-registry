@@ -72,6 +72,6 @@ Film01 gives the formula a culture/film context: one dominant title frame, quiet
 
 Nocturne is a separate base palette, not part of the recipe CSS. Its dark plum and warm light counterpart feed the existing color derivation engine. Recipe-only changes preserve the base and every other explicit project choice.
 
-## Organic and hospitality
+## Hospitality and recipe consolidation
 
-Stay01 combines a broad landscape, an italic display phrase, a compact planning form, measured room comparisons, and quieter house details. Organic suggests regular Lora headings and Work Sans body text, with 12px uppercase medium button labels against a 44px comfortable minimum control height. The hero role spans 48-96px. These source-token proportions preserve an inviting reading pace without enlarging every control. Palette, type family, radius, density, and surfaces remain editable. The original photograph is replaceable content; it does not freeze the interface palette.
+Stay01 combines a broad landscape, an italic display phrase, a compact planning form, room comparisons, and quieter house details. The owner noticed overlap between Organic and Studio, then chose to retain Organic on condition that it becomes more distinct. Organic now uses firmer headings, uppercase field-note labels, and ink/outline controls; Studio retains its lighter regular display and quiet mixed-case actions. Differentiate through component treatment and layout rather than adding font families. Further recipe expansion is paused in favor of commonly used application components and forms.

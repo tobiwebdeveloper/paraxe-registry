@@ -1,5 +1,7 @@
 # Textarea
 
+Development adds minlength and invalid forwarding. Invalid fields use the error appearance as well as aria-invalid, taking precedence over success.
+
 Controlled multiline input for Vue and React. Import `Textarea` and optionally `FormField` from the framework package.
 
 ```vue

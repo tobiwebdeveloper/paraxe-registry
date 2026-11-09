@@ -9,3 +9,7 @@ Owner observation: monochrome buttons and brand text can look white/grey rather 
 Investigate `brand-primary`, `text-on-brand`, button backgrounds/borders, muted foregrounds, and hover/active/disabled/loading states in both light and dark modes. Distinguish deliberately disabled controls from enabled actions with insufficient visual separation. Check featured surfaces as well as buttons and each recipe's borders/shadows.
 
 Acceptance: enabled monochrome actions have clear paired foreground/background roles; secondary/text controls remain readable; intentional disabled/muted states are distinguishable; semantic and chart colours stay independent; chromatic palettes retain their current values and treatment. Verify actual browser rendering and contrast, alongside token/recipe regression tests. This item records feedback, not a confirmed diagnosis or an implementation.
+
+## Common application depth
+
+Prioritize reusable settings/account forms, product-management fields, and richer data workflows. Continue auditing shared Checkbox, Pagination, overlay and table contracts before composing them. Cross-page table selection, server sorting/pagination, conflict-aware persistence, real rich-text editing, and browser/keyboard review remain future integrations, not claims of the local content-workspace demo. Further recipe expansion is paused.

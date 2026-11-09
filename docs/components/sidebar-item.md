@@ -1,5 +1,7 @@
 # SidebarItem
 
+Development uses a native button when no href is supplied and exposes activate/onActivate. Disabled destinations cannot navigate. Preset and inherited item variants work in both frameworks. See [AppShell](app-shell.md).
+
 SidebarItem is a public Vue and React component. Its shared API is defined by `SidebarProps` from `@paraxe/core`.
 
 ## When to use it

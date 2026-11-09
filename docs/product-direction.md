@@ -2,6 +2,8 @@
 
 Paraxe is a composable UI system for building polished websites and software products. Its core components, independent preset axes, visual recipes, and editable registry layouts should compose across product uses. A new product family must not create a separate design system or bypass the tokens.
 
+The current emphasis is **depth in commonly used application components and forms**, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.
+
 This translates the user's product-use brief into a coverage map and priorities. It is a planning document, not a claim that complete products or backend capabilities already ship.
 
 ## Separate three decisions
@@ -115,6 +117,10 @@ The core audit replaced React Video's placeholder and extended both framework pl
 
 ## Hospitality and binary assets
 
-[Stay01](registry/stay-01.md) adds a guesthouse planning layout with an original generated landscape, date preferences, room-plan comparison, and considered house details. Organic is a ninth development recipe with regular Lora display type, Work Sans body text, and tactile controls. The composition follows the style-specific character endorsed after Film01's revision.
+[Stay01](registry/stay-01.md) adds a guesthouse planning layout with an original generated landscape, date preferences, room-plan comparison, and considered house details. Organic is retained and differentiated from Studio through firmer type, field-note labels, and component-scoped ink/outline action roles. The composition follows the style-specific character endorsed after Film01's revision.
 
 The core Input audit added native min/max/step forwarding in both frameworks. The owner approved [registry schema 2](registry/binary-assets.md): explicit text/base64 encoding, decoded-byte hashes, bounded downloads, and backward-compatible reading of schema 1. The actual Stay01 image and all eighteen legacy release bundles pass consumer copying tests. Current npm and registry 0.1.2 remain unchanged until coordinated release.
+
+## Common application foundations
+
+[ContentEditor01 and the content workspace](registry/content-editor-01.md) deepen everyday app coverage without another recipe. The new block is the controlled writing-form layout; the connected workspace is an example. Core improvements address React AppShell parity, navigation variants/actions, native table controls and selection, and consistent field validation. The next slices should prioritize reusable settings/account forms, data workflows, and product-management forms against this foundation. Real persistence and permissions remain application-owned.

@@ -1,5 +1,7 @@
 # Sidebar
 
+Development React Sidebar now honors variant/itemVariant and labels the navigation landmark. See [AppShell](app-shell.md).
+
 Sidebar is a public Vue and React component. Its shared API is defined by `SidebarProps` from `@paraxe/core`.
 
 ## When to use it

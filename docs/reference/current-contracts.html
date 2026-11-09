@@ -51,7 +51,8 @@
 <li><a href="../registry/studio-01.html">Studio01</a></li>
 <li><a href="../registry/careers-01.html">Careers01</a></li>
 <li><a href="../registry/film-01.html">Film01</a></li>
-<li><a href="../registry/stay-01.html">Stay01 and Organic</a></li>
+<li><a href="../registry/stay-01.html">Stay01</a></li>
+<li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
@@ -65,6 +66,7 @@
 <li><a href="../core/contracts.html">Contracts</a></li>
 <li><a href="../core/component-contracts.html">Component contracts</a></li>
 <li><a href="../core/composition.html">Composition</a></li>
+<li><a href="../components/app-shell.html">AppShell and navigation</a></li>
 </ul>
 </li>
 <li>Frameworks
@@ -453,6 +455,13 @@ export interface TableProps&lt;T = unknown&gt; {
 
   loading?: boolean;
   empty?: boolean;
+  caption?: string;
+  emptyText?: string;
+  loadingText?: string;
+  /** Controlled selection within the supplied rows. Aggregate pages in the app. */
+  selectedRows?: T[];
+  /** Data key used to name each selection checkbox. */
+  rowLabel?: string;
 }
 </code></pre>
 <h2 id="packagescoresrccontractselementsavatarts">packages/core/src/contracts/elements/Avatar.ts</h2>
@@ -720,6 +729,9 @@ export type FieldProps = FormFieldProps;
     | &quot;month&quot;
     | &quot;week&quot;;
   placeholder?: string;
+  minlength?: number;
+  maxlength?: number;
+  pattern?: string;
   /** Native numeric/date constraints; validation remains application-owned. */
   min?: string | number;
   max?: string | number;
@@ -787,6 +799,8 @@ export interface SliderProps {
   error?: boolean;
   success?: boolean;
   maxlength?: number;
+  minlength?: number;
+  invalid?: boolean;
   placeholder?: string;
   rows?: number;
   required?: boolean;
@@ -930,6 +944,7 @@ export type SidebarItemVariant =
 
 export interface SidebarProps {
   collapsed?: boolean;
+  label?: string;
   variant?: SidebarVariant;
   itemVariant?: SidebarItemVariant;
 }
@@ -1038,6 +1053,11 @@ export interface TooltipProps {
 
 export interface AppShellProps {
   variant?: AppShellVariant;
+  /** In-flow navigation disclosure on narrow screens; this is not a modal. */
+  sidebarOpen?: boolean;
+  sidebarId?: string;
+  mainId?: string;
+  mainLabel?: string;
 }
 </code></pre>
 <h2 id="packagescoresrccontractsprimitivescollapsiblets">packages/core/src/contracts/primitives/Collapsible.ts</h2>

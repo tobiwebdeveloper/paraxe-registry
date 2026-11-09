@@ -17,6 +17,7 @@
 | [Icon](../components/icon.md) | Elements | — | Yes |
 | [Tag](../components/tag.md) | Elements | Yes | Yes |
 | [Container](../components/container.md) | Primitives | Yes | Yes |
+| [AppShell](../components/app-shell.md) | Layout | Yes | Yes |
 | [Divider](../components/divider.md) | Primitives | Yes | Yes |
 | [Grid](../components/grid.md) | Primitives | Yes | Yes |
 | [Section](../components/section.md) | Primitives | Yes | Yes |
