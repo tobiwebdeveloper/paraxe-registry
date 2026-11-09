@@ -1,6 +1,6 @@
 # Film01
 
-A film-release layout for independent cinema, documentary projects, and visual storytelling. Its silhouette combines a large title frame, split synopsis, trailer, production credits, and viewing destinations. This is a new product layout rather than a renamed hero or event connector.
+A film-release layout for independent cinema, documentary projects, and visual storytelling. An offset portrait poster sits beside a large typographic introduction, followed by a practical film-details band, split synopsis, visual contact sheet, compact production credits, and viewing destinations.
 
 Try `?preview=film-01&profile=cinematic&theme=dark` in either playground. It is a development block, not part of immutable registry 0.1.2.
 
@@ -15,13 +15,18 @@ Nocturne is a separate base-color family: `#120e1b` in dark mode and `#fbf9fc` i
 Both frameworks accept the same `Film01Props`:
 
 - Identity: `studio`, `studioHref`, `eyebrow`, `title`, `tagline`, `year`, `duration`, `language`, `genre`.
-- Artwork: optional `posterSrc`, `posterAlt`, `imageCredit`. Without imagery, a decorative token-driven composition remains. Titles support newlines.
+- Artwork: optional `posterSrc`, `posterAlt`, `imageCredit`. Without imagery, a duotone concept illustration builds a passage, reflected light, and a solitary figure through perspective. Its ink, light, and tint come from semantic tokens. Supplied posters are shown without decorative overprinting. Titles support newlines.
+- Visual notes: `frames`, each with `id`, `label`, `caption`, optional `src`/`alt`, and optional concept-art choice (`passage`, `shore`, or `light`). Three samples form a contact sheet with aligned image heights. Supply real stills or use an empty array to omit it.
 - Story: `storyTitle`, `paragraphs`, `quote`, `quoteAttribution`. An empty quote removes it; empty paragraphs show an honest forthcoming state.
-- Media: `trailerSrc`, `trailerPoster`, `trailerTracks`, `trailerDescription`. The shared Video component handles native playback, supplied captions, and unavailable/error states. No video is fetched until a source is supplied.
+- Media: `trailerSrc`, `trailerPoster`, `trailerTracks`, `trailerDescription`. The trailer section and navigation link render only when a source exists. Without one, the primary action leads to the story; no empty player card is shown. Connected media uses shared Video captions and error handling.
 - People: `credits`, each with unique `id`, `role`, and `name`.
 - Distribution: `viewings`, each with unique `id`, `label`, `detail`, and optional `href`; optional `pressHref` and `notice`.
 
 Empty credit/viewing arrays remove those sections and their navigation links. IDs must start with a letter or digit and contain only letters, digits, underscores, or hyphens. Replace all fictional credits and notices before publication.
+
+## Composition audit
+
+The initial version gave a generic background illustration, unavailable trailer, and supporting headings too much equal space. This was a block-composition problem. The revision separates poster and typography, introduces a visual contact sheet, tightens secondary sections, and omits optional media until it exists. Cinematic uses the shared tighter heading line-height role; Nocturne and other palettes remain unchanged. Artwork is local illustration code, not a new core composite.
 
 Viewing links and press links render only when supplied. No ticketing, streaming entitlement, analytics, content licensing, or video hosting is provided. The app owns those integrations and destination validation.
 

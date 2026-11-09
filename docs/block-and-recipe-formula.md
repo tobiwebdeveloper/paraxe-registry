@@ -48,6 +48,8 @@ Build both frameworks, register source files and assets, document the job and AP
 
 ## Verify honestly
 
+An optional missing integration should not become a dominant empty card. Film01's first version failed this test: the artwork was generic, supporting sections had similar visual weight, and the unavailable trailer weakened the page. The revision gives the poster and title a clear relationship, uses a visual contact sheet, and renders the trailer only when supplied. A fallback is a recovery state, not a substitute for the block's main composition.
+
 Check token consumption, preset sharing, independent axes, semantic structure, and meaningful behavior. Typecheck and build both frameworks. Review desktop/mobile, light/dark, contrasting palettes, long text, native focus, and actual font loading in a browser when available. Compilation and arithmetic do not prove optical balance; record visual-review limits explicitly.
 
 Current limitation: connected browser review has been unavailable. User feedback on the recent layouts is positive, while automated verification and browser-review status remain separate records.

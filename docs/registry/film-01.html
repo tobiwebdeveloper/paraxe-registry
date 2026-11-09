@@ -159,7 +159,7 @@ Composites
 </li>
 </ul>
 </details></nav><main><h1 id="film01">Film01</h1>
-<p>A film-release layout for independent cinema, documentary projects, and visual storytelling. Its silhouette combines a large title frame, split synopsis, trailer, production credits, and viewing destinations. This is a new product layout rather than a renamed hero or event connector.</p>
+<p>A film-release layout for independent cinema, documentary projects, and visual storytelling. An offset portrait poster sits beside a large typographic introduction, followed by a practical film-details band, split synopsis, visual contact sheet, compact production credits, and viewing destinations.</p>
 <p>Try <code>?preview=film-01&amp;profile=cinematic&amp;theme=dark</code> in either playground. It is a development block, not part of immutable registry 0.1.2.</p>
 <h2 id="recipe-and-palette">Recipe and palette</h2>
 <p>Cinematic suggests Manrope headings, DM Sans body text, small restrained actions, comfortable density, and the Nocturne base with a rose accent. These are optional setup suggestions. Changing only the recipe preserves existing project choices. The block works with other recipes and palettes.</p>
@@ -168,13 +168,16 @@ Composites
 <p>Both frameworks accept the same <code>Film01Props</code>:</p>
 <ul>
 <li>Identity: <code>studio</code>, <code>studioHref</code>, <code>eyebrow</code>, <code>title</code>, <code>tagline</code>, <code>year</code>, <code>duration</code>, <code>language</code>, <code>genre</code>.</li>
-<li>Artwork: optional <code>posterSrc</code>, <code>posterAlt</code>, <code>imageCredit</code>. Without imagery, a decorative token-driven composition remains. Titles support newlines.</li>
+<li>Artwork: optional <code>posterSrc</code>, <code>posterAlt</code>, <code>imageCredit</code>. Without imagery, a duotone concept illustration builds a passage, reflected light, and a solitary figure through perspective. Its ink, light, and tint come from semantic tokens. Supplied posters are shown without decorative overprinting. Titles support newlines.</li>
+<li>Visual notes: <code>frames</code>, each with <code>id</code>, <code>label</code>, <code>caption</code>, optional <code>src</code>/<code>alt</code>, and optional concept-art choice (<code>passage</code>, <code>shore</code>, or <code>light</code>). Three samples form a contact sheet with aligned image heights. Supply real stills or use an empty array to omit it.</li>
 <li>Story: <code>storyTitle</code>, <code>paragraphs</code>, <code>quote</code>, <code>quoteAttribution</code>. An empty quote removes it; empty paragraphs show an honest forthcoming state.</li>
-<li>Media: <code>trailerSrc</code>, <code>trailerPoster</code>, <code>trailerTracks</code>, <code>trailerDescription</code>. The shared Video component handles native playback, supplied captions, and unavailable/error states. No video is fetched until a source is supplied.</li>
+<li>Media: <code>trailerSrc</code>, <code>trailerPoster</code>, <code>trailerTracks</code>, <code>trailerDescription</code>. The trailer section and navigation link render only when a source exists. Without one, the primary action leads to the story; no empty player card is shown. Connected media uses shared Video captions and error handling.</li>
 <li>People: <code>credits</code>, each with unique <code>id</code>, <code>role</code>, and <code>name</code>.</li>
 <li>Distribution: <code>viewings</code>, each with unique <code>id</code>, <code>label</code>, <code>detail</code>, and optional <code>href</code>; optional <code>pressHref</code> and <code>notice</code>.</li>
 </ul>
 <p>Empty credit/viewing arrays remove those sections and their navigation links. IDs must start with a letter or digit and contain only letters, digits, underscores, or hyphens. Replace all fictional credits and notices before publication.</p>
+<h2 id="composition-audit">Composition audit</h2>
+<p>The initial version gave a generic background illustration, unavailable trailer, and supporting headings too much equal space. This was a block-composition problem. The revision separates poster and typography, introduces a visual contact sheet, tightens secondary sections, and omits optional media until it exists. Cinematic uses the shared tighter heading line-height role; Nocturne and other palettes remain unchanged. Artwork is local illustration code, not a new core composite.</p>
 <p>Viewing links and press links render only when supplied. No ticketing, streaming entitlement, analytics, content licensing, or video hosting is provided. The app owns those integrations and destination validation.</p>
 <h2 id="core-audit">Core audit</h2>
 <p>React Video previously rendered a children-only wrapper while Vue exposed a native player. Development now gives both the shared media contract, captions/subtitle tracks, preload choice, source-change recovery, an optional play overlay, and rejected-play feedback. Video geometry and colors now consume shared tokens. See <a href="../components/video.html">Video</a>.</p>
