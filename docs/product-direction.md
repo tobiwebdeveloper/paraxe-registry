@@ -4,6 +4,14 @@ Paraxe is a composable UI system for building polished websites and software pro
 
 The current emphasis is **depth in commonly used application components and forms**, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.
 
+## Application blocks after registry 0.2.0
+
+The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using the existing Clean, Swiss, and Educational recipes. Each must be a complete, useful layout; connected examples remain separate from numbered blocks.
+
+[Settings01](registry/settings-01.md) is implemented in development: account/profile rail, grouped profile fields, configurable locale choices, notifications, provider-owned security status, and a persistent save/discard bar. Its controlled form/controller covers validation, pending work, failed-save recovery, and restoring the last saved baseline. Core Switch gained native form/label/description and invalid-state support rather than introducing a bespoke toggle. It is an In progress preview, not an addition to immutable registry 0.2.0.
+
+Next: Orders01, a substantial commerce-management layout with search/status filters, useful order data, and an order-detail view. Then Course01 for curriculum and learning progress, and Dashboard01 for a cohesive operational overview. Evaluate core gaps for each job before adding local exceptions or another recipe.
+
 ## Published package update — 9 November 2026
 
 | Package | Published version |

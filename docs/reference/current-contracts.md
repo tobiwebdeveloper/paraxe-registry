@@ -739,6 +739,12 @@ export interface SliderProps {
 
 ```ts
 export interface SwitchProps {
+  id?: string;
+  name?: string;
+  labelledBy?: string;
+  describedBy?: string;
+  required?: boolean;
+  invalid?: boolean;
   modelValue?: boolean;
   disabled?: boolean;
 }

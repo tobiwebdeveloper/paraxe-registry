@@ -53,6 +53,7 @@
 <li><a href="../registry/film-01.html">Film01</a></li>
 <li><a href="../registry/stay-01.html">Stay01</a></li>
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
+<li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
@@ -164,6 +165,7 @@ Composites
 </ul>
 </details></nav><main><h1 id="switch">Switch</h1>
 <p>Switch is a public Vue and React component. Its shared API is defined by <code>SwitchProps</code> from <code>@paraxe/core</code>.</p>
+<p>Development after registry 0.2.0 adds id, name, labelledBy, describedBy, required, and invalid to both frameworks. These attributes reach the native checkbox with role=&quot;switch&quot;; invalid also selects the shared error border. Use a visible child label or an external label with labelledBy, and connect helper text with describedBy. See <a href="../registry/settings-01.html">Settings01</a> for a complete preference-row example. These additions require matching development packages until the next npm release.</p>
 <h2 id="when-to-use-it">When to use it</h2>
 <p>Use Switch when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
 <h2 id="when-not-to-use-it">When not to use it</h2>
@@ -198,6 +200,48 @@ Composites
 <td>false</td>
 <td>No</td>
 <td>Defined by the core contract.</td>
+</tr>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td>—</td>
+<td>No</td>
+<td>Native input ID; development after 0.2.0.</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td><code>string</code></td>
+<td>—</td>
+<td>No</td>
+<td>Native form field name; development after 0.2.0.</td>
+</tr>
+<tr>
+<td><code>labelledBy</code></td>
+<td><code>string</code></td>
+<td>—</td>
+<td>No</td>
+<td>ID of an external visible label; development after 0.2.0.</td>
+</tr>
+<tr>
+<td><code>describedBy</code></td>
+<td><code>string</code></td>
+<td>—</td>
+<td>No</td>
+<td>IDs of helper/error text; development after 0.2.0.</td>
+</tr>
+<tr>
+<td><code>required</code></td>
+<td><code>boolean</code></td>
+<td>false</td>
+<td>No</td>
+<td>Native required checkbox constraint; development after 0.2.0.</td>
+</tr>
+<tr>
+<td><code>invalid</code></td>
+<td><code>boolean</code></td>
+<td>false</td>
+<td>No</td>
+<td>Announces invalid state and uses the shared error border; development after 0.2.0.</td>
 </tr>
 </tbody>
 </table>

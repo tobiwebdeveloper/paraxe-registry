@@ -16,6 +16,8 @@ Sources: [npm core](https://www.npmjs.com/package/@paraxe/core/v/1.5.0), [design
 
 ## Included in this release
 
+
+
 Swiss, Brutalist, Studio, Cinematic, Organic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01, Stay01, ContentEditor01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; media/form accessibility updates and native Input constraints; React AppShell, shared navigation/table/form improvements, and Hero01 width choices are included. Connected shop and content-workspace previews are composition examples, not additional installable blocks.
 
 All five published archive SHA-512 values match the exact prepared archives. [Current contracts](current-contracts.md) describe the checkout; installed declarations remain authoritative for the consumer version in use.
@@ -24,3 +26,6 @@ CLI 0.4.0 reads schemas 1 and 2 and pins registry 0.2.0. CLI 0.3.0 keeps its sch
 
 Archive hashes and successful clean-consumer verification are stored under `releases/npm/`. Verification covers all thirty-six installed bundles, nine recipe CSS exports, both framework production builds, consumer declarations, workspace typechecks, and package/registry tests. Browser visual review remains pending; all blocks stay experimental. See [releasing](../registry/releasing.md), [publishing](../registry/publishing-commands.md), and the copyable command in the [product direction document](../product-direction.md).
 
+## Development after 0.2.0
+
+Settings01 and the Switch id/name/labelledBy/describedBy/required/invalid additions are newer development source. Settings01 appears as In progress in the gallery and both playgrounds. It is not in the immutable registry 0.2.0 bundles or the published framework archives listed above. See [Settings01](../registry/settings-01.md).
