@@ -12,7 +12,7 @@ Paraxe needs to support different complete visual treatments without endlessly r
 | Project override file | App-owned token mappings or complete replacement component rules | Generated output that can be overwritten |
 | Registry block | Layout, content, state wiring, and token-derived composition | A competing local palette or component skin |
 
-`recipe` is a new independent preset field: `default`, `editorial`, `educational`, `clean`, `swiss`, `brutalist`, or `studio`. It is not the old bundled theme/personality model: choosing editorial does not choose an accent, font, radius, or density for you. The sample recipe gives compact labels, distinct commerce metadata/display roles, quiet secondary controls, and restrained tab/badge treatment. Different component CSS can be supplied in the final override layer.
+`recipe` is an independent preset field: `default`, `editorial`, `educational`, `clean`, `swiss`, `brutalist`, `studio`, or `cinematic`. It is not the old bundled theme/personality model: choosing editorial does not choose an accent, font, radius, or density for you. The sample recipe gives compact labels, distinct commerce metadata/display roles, quiet secondary controls, and restrained tab/badge treatment. Different component CSS can be supplied in the final override layer. See [release status](../reference/release-status.md) before using development recipes.
 
 ## Choose a recipe through the preset
 
@@ -30,7 +30,7 @@ Merge these fields under `preset` in the existing `paraxe.config.json`:
 
 Then run `pnpm paraxe generate`. These choices can produce the reference's compact monochrome treatment through the core system. Change accent to emerald/violet, fonts, or radius independently; the same blocks follow them. Choosing default keeps the standard treatment. Old configurations omit recipe and normalize to default.
 
-The generator imports the selected `@paraxe/design/recipes/*.css` entry. All four entries ship with the design package. Recipes define shared component rules and typography roles, not block-specific selectors. Editorial values belong centrally to this stylesheet, rather than being copied as raw pixels into every block.
+The generator imports the selected `@paraxe/design/recipes/*.css` entry. Four entries ship in the current npm release; the development checkout has eight. Recipes define shared component rules and typography roles, not block-specific selectors. Editorial values belong centrally to this stylesheet, rather than being copied as raw pixels into every block.
 
 ## Replace a treatment completely
 

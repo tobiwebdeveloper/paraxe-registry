@@ -1,5 +1,7 @@
 # Themes and presets
 
+Development adds **Nocturne**, an independent base palette with an ink-plum dark background (`#120e1b`) and warm light counterpart (`#fbf9fc`). Select it under Base palette in Recipe studio or set `baseColor: "nocturne"` in the preset. Accent, recipe, typography, radius, and density remain independent. [Film01](../registry/film-01.md) demonstrates it with Cinematic; see [release status](../reference/release-status.md) before installing development features.
+
 For complete component styling, see [recipes and project overrides](recipes.md). Presets now choose a recipe independently of accent/fonts/radius/density. Load the design baseline, generated preset, generated theme, and project-owned override file in that order; blocks inherit the result.
 
 The package exports themes under `@paraxe/design/themes/*.css` and presets under `@paraxe/design/presets/*.css`. Only `default`, `dark`, and `light` (themes) and `default` (presets) are current — they define the mode mechanics and structural baseline. The other named files (`sand`, `orchid`, `mocha`, `forge`, `electric`, `crimson`, `corporate`, `creative`, `editorial`, `fashion`, `friendly`, `future`, `industrial`, `local-business`, `minimal`, `premium`, `tech`) are **deprecated** in favor of `@paraxe/cli`, which derives a theme and preset from independent atomic fields (base color, accent, chart color, fonts, icon library, radius, density, menu style/accent) instead of bundled named personalities. Run `pnpm paraxe init` instead of importing a named file directly.

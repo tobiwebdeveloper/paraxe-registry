@@ -39,7 +39,7 @@
 | [Skeleton](../components/skeleton.md) | Feedback | Yes | Yes |
 | [Toast](../components/toast.md) | Feedback | Yes | Yes |
 | [Image](../components/image.md) | Media | Yes | Yes |
-| [Video](../components/video.md) | Media | — | Yes |
+| [Video](../components/video.md) | Media | Yes | Yes |
 | [Breadcrumb](../components/breadcrumb.md) | Navigation | Yes | Yes |
 | [Breadcrumbs](../components/breadcrumbs.md) | Navigation | Yes | Yes |
 | [Menu](../components/menu.md) | Navigation | Yes | Yes |

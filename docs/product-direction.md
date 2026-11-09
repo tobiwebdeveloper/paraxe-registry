@@ -106,3 +106,9 @@ Recipe studio navigation now scales through a shared searchable catalogue, produ
 Careers01 adds a distinct recruiting layout using Swiss: a filterable, grouped role board, company principles, and hiring steps. Sample roles remain explicit until real destinations are supplied. Hero01 is contained by default with an optional full-width mode. Both are development changes pending release.
 
 The [guide hub](guides/start-here.md) now covers installation, core usage, source-owned blocks, and AI implementation. Static HTML, Markdown sources, an AI index, and a generated current-contract snapshot make this an ongoing adoption track alongside block development. Published and development APIs must remain clearly separated.
+
+## Film, atmosphere, and a shared video player
+
+[Film01](registry/film-01.md) expands culture and visual-storytelling coverage with a title frame, synopsis, native trailer, production credits, and viewing destinations. Cinematic is an eighth development recipe, pairing expansive regular-weight display type with small, deliberate controls. Nocturne is an independent dark-plum/light-porcelain base palette; it is not a recipe-owned skin. Explicit preset choices still win.
+
+The core audit replaced React Video's placeholder and extended both framework players with captions, preload, missing/failure states, and rejected-play recovery. Geometry and play controls consume shared tokens. Media hosting and viewing access stay application-owned. All these additions remain development features pending coordinated release.

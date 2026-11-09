@@ -50,6 +50,7 @@
 <li><a href="../registry/event-01.html">Event01</a></li>
 <li><a href="../registry/studio-01.html">Studio01</a></li>
 <li><a href="../registry/careers-01.html">Careers01</a></li>
+<li><a href="../registry/film-01.html">Film01</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
 <li><a href="../registry/block-quality.html">Block quality</a></li>
@@ -158,6 +159,7 @@ Composites
 </li>
 </ul>
 </details></nav><main><h1 id="themes-and-presets">Themes and presets</h1>
+<p>Development adds <strong>Nocturne</strong>, an independent base palette with an ink-plum dark background (<code>#120e1b</code>) and warm light counterpart (<code>#fbf9fc</code>). Select it under Base palette in Recipe studio or set <code>baseColor: &quot;nocturne&quot;</code> in the preset. Accent, recipe, typography, radius, and density remain independent. <a href="../registry/film-01.html">Film01</a> demonstrates it with Cinematic; see <a href="../reference/release-status.html">release status</a> before installing development features.</p>
 <p>For complete component styling, see <a href="recipes.html">recipes and project overrides</a>. Presets now choose a recipe independently of accent/fonts/radius/density. Load the design baseline, generated preset, generated theme, and project-owned override file in that order; blocks inherit the result.</p>
 <p>The package exports themes under <code>@paraxe/design/themes/*.css</code> and presets under <code>@paraxe/design/presets/*.css</code>. Only <code>default</code>, <code>dark</code>, and <code>light</code> (themes) and <code>default</code> (presets) are current — they define the mode mechanics and structural baseline. The other named files (<code>sand</code>, <code>orchid</code>, <code>mocha</code>, <code>forge</code>, <code>electric</code>, <code>crimson</code>, <code>corporate</code>, <code>creative</code>, <code>editorial</code>, <code>fashion</code>, <code>friendly</code>, <code>future</code>, <code>industrial</code>, <code>local-business</code>, <code>minimal</code>, <code>premium</code>, <code>tech</code>) are <strong>deprecated</strong> in favor of <code>@paraxe/cli</code>, which derives a theme and preset from independent atomic fields (base color, accent, chart color, fonts, icon library, radius, density, menu style/accent) instead of bundled named personalities. Run <code>pnpm paraxe init</code> instead of importing a named file directly.</p>
 <p>Import one theme and one preset after structural tokens. Import order is significant because CSS custom properties cascade.</p>

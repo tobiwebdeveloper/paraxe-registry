@@ -40,6 +40,7 @@
   - [Event01](registry/event-01.md)
   - [Studio01](registry/studio-01.md)
   - [Careers01](registry/careers-01.md)
+  - [Film01](registry/film-01.md)
   - [Connected shop demo](registry/shop-journey.md)
   - [Website blocks 01](registry/website-blocks-01.md)
   - [Block quality](registry/block-quality.md)

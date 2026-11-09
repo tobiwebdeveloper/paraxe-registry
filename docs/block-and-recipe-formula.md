@@ -61,3 +61,9 @@ The owner has asked to continue this pattern. Keep new blocks distinct, flavours
 ## Font feedback: family versus weight
 
 The owner clarified that lighter Fraunces works for Studio; bold Fraunces does not. Keep that font family and correct weight consumption before substituting another font. Heading roles must actually reach the rendered classes. Studio uses regular (400) headings, while existing profiles retain their previous weights. This feedback concerns the optical weight of the display text, not a request to change button or body proportions.
+
+## Cinematic and Nocturne
+
+Film01 gives the formula a culture/film context: one dominant title frame, quieter practical details, narrative reading space, a real trailer integration, and clear production/distribution sections. Cinematic suggests Manrope at regular weight with a responsive 56-144px hero range and 12px medium button labels. Comfortable medium controls retain the shared 44px minimum; their baseline height/label ratio is about 3.67. These are source-token observations, not browser measurements.
+
+Nocturne is a separate base palette, not part of the recipe CSS. Its dark plum and warm light counterpart feed the existing color derivation engine. Recipe-only changes preserve the base and every other explicit project choice.

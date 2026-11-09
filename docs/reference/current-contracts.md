@@ -783,8 +783,16 @@ export interface ImageContract {
 export type VideoAspectRatio = "video" | "wide" | "square" | "portrait" | "auto";
 export type VideoVariant = "default" | "bordered" | "cinematic";
 
-export interface VideoProps {
+export interface VideoTrack {
   src: string;
+  kind?: "subtitles" | "captions" | "descriptions" | "chapters" | "metadata";
+  srcLang?: string;
+  label?: string;
+  default?: boolean;
+}
+
+export interface VideoProps {
+  src?: string;
   poster?: string;
   title?: string;
   controls?: boolean;
@@ -795,6 +803,9 @@ export interface VideoProps {
   variant?: VideoVariant;
   /** Show a custom play overlay until playback starts. */
   overlay?: boolean;
+  preload?: "none" | "metadata" | "auto";
+  tracks?: readonly VideoTrack[];
+  fallbackText?: string;
 }
 ```
 

@@ -50,6 +50,7 @@
 <li><a href="../registry/event-01.html">Event01</a></li>
 <li><a href="../registry/studio-01.html">Studio01</a></li>
 <li><a href="../registry/careers-01.html">Careers01</a></li>
+<li><a href="../registry/film-01.html">Film01</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
 <li><a href="../registry/block-quality.html">Block quality</a></li>
@@ -814,8 +815,16 @@ export interface ImageContract {
 <pre><code class="language-ts">export type VideoAspectRatio = &quot;video&quot; | &quot;wide&quot; | &quot;square&quot; | &quot;portrait&quot; | &quot;auto&quot;;
 export type VideoVariant = &quot;default&quot; | &quot;bordered&quot; | &quot;cinematic&quot;;
 
-export interface VideoProps {
+export interface VideoTrack {
   src: string;
+  kind?: &quot;subtitles&quot; | &quot;captions&quot; | &quot;descriptions&quot; | &quot;chapters&quot; | &quot;metadata&quot;;
+  srcLang?: string;
+  label?: string;
+  default?: boolean;
+}
+
+export interface VideoProps {
+  src?: string;
   poster?: string;
   title?: string;
   controls?: boolean;
@@ -826,6 +835,9 @@ export interface VideoProps {
   variant?: VideoVariant;
   /** Show a custom play overlay until playback starts. */
   overlay?: boolean;
+  preload?: &quot;none&quot; | &quot;metadata&quot; | &quot;auto&quot;;
+  tracks?: readonly VideoTrack[];
+  fallbackText?: string;
 }
 </code></pre>
 <h2 id="packagescoresrccontractsnavigationbreadcrumbts">packages/core/src/contracts/navigation/Breadcrumb.ts</h2>
