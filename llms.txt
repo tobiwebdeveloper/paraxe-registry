@@ -1,0 +1,14 @@
+# Paraxe
+
+> Token-driven UI components, editable registry blocks, and independently configurable design recipes for Vue and React.
+
+Published npm and immutable registry releases can lag behind development. Read release status before choosing an API. Registry installation copies editable source into the application; blocks do not provide authentication, payments, persistence, or backend services.
+
+- [Release status](https://tobiwebdeveloper.github.io/paraxe-registry/docs/reference/release-status.md): Published versions and development boundary.
+- [Start here](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/start-here.md): System layers and workflow.
+- [Install and theme](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/install-and-theme.md): Dependencies and CSS order.
+- [Core components](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/core-components.md): Complete Vue and React examples.
+- [Editable blocks](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/using-blocks.md): CLI installation, customization, and ownership.
+- [AI implementation guide](https://tobiwebdeveloper.github.io/paraxe-registry/docs/guides/ai-implementation.md): Evidence-first implementation rules.
+- [Development contracts](https://tobiwebdeveloper.github.io/paraxe-registry/docs/reference/current-contracts.md): Exact source contracts; verify installed declarations.
+- [Block and recipe formula](https://tobiwebdeveloper.github.io/paraxe-registry/docs/block-and-recipe-formula.md): Distinct layouts, product purpose, and token discipline.

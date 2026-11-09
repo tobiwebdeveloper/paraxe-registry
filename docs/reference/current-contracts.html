@@ -1,0 +1,1133 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Current component contracts | Paraxe</title><link rel="stylesheet" href="../../design.css"><link rel="stylesheet" href="../../recipe.css"><link rel="stylesheet" href="../../preset.css"><link rel="stylesheet" href="../../theme.css"><link rel="stylesheet" href="../guides.css"></head><body><header><a href="../../index.html">Paraxe registry</a><a href="../guides/start-here.html">Guides</a><a href="../reference/release-status.html">Release status</a><a href="current-contracts.md">Markdown source</a></header><div class="layout"><nav aria-label="Documentation"><details open><summary>Browse documentation</summary><h1 id="paraxe-ui">Paraxe UI</h1>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+<li><a href="../product-direction.html">Product direction and coverage</a></li>
+<li><a href="../block-and-recipe-formula.html">Block and recipe formula</a></li>
+<li><a href="../playground-navigation.html">Recipe studio navigation</a></li>
+<li><a href="../backlog.html">Development backlog</a></li>
+<li>Guides
+<ul>
+<li><a href="../guides/start-here.html">Start here</a></li>
+<li><a href="../guides/install-and-theme.html">Install and theme</a></li>
+<li><a href="../guides/core-components.html">Core components</a></li>
+<li><a href="../guides/using-blocks.html">Editable blocks</a></li>
+<li><a href="../guides/ai-implementation.html">AI implementation</a></li>
+<li><a href="../reference/release-status.html">Release status</a></li>
+<li><a href="../reference/current-contracts.html">Current contracts</a></li>
+</ul>
+</li>
+<li>Getting Started
+<ul>
+<li><a href="../getting-started/installation.html">Installation</a></li>
+<li><a href="../getting-started/project-setup.html">Project setup</a></li>
+<li><a href="../getting-started/package-structure.html">Package structure</a></li>
+<li><a href="../getting-started/first-component.html">First component</a></li>
+<li><a href="../getting-started/versioning.html">Versioning</a></li>
+</ul>
+</li>
+<li>Foundations
+<ul>
+<li><a href="../foundations/design-tokens.html">Design tokens</a></li>
+<li><a href="../foundations/themes.html">Themes and presets</a></li>
+<li><a href="../foundations/recipes.html">Component recipes and overrides</a></li>
+<li><a href="../storefront-roadmap.html">Storefront roadmap</a></li>
+<li><a href="../foundations/component-appearance-audit.html">Component appearance audit</a></li>
+<li><a href="../foundations/animation-integration.html">Animation integration</a></li>
+<li><a href="../foundations/accessibility.html">Accessibility</a></li>
+</ul>
+</li>
+<li>Registry
+<ul>
+<li><a href="../registry/plan.html">Registry plan</a></li>
+<li><a href="../registry/releasing.html">Releasing and installing</a></li>
+<li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
+<li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
+<li><a href="../registry/product-purchase.html">Product purchasing</a></li>
+<li><a href="../registry/cart-01.html">Cart 01</a></li>
+<li><a href="../registry/portal-01.html">Portal01</a></li>
+<li><a href="../registry/article-01.html">Article01</a></li>
+<li><a href="../registry/event-01.html">Event01</a></li>
+<li><a href="../registry/studio-01.html">Studio01</a></li>
+<li><a href="../registry/careers-01.html">Careers01</a></li>
+<li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
+<li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
+<li><a href="../registry/block-quality.html">Block quality</a></li>
+<li><a href="../registry/learning-blocks-01.html">Learning and pricing blocks</a></li>
+</ul>
+</li>
+<li>Core
+<ul>
+<li><a href="../core/architecture.html">Architecture</a></li>
+<li><a href="../core/contracts.html">Contracts</a></li>
+<li><a href="../core/component-contracts.html">Component contracts</a></li>
+<li><a href="../core/composition.html">Composition</a></li>
+</ul>
+</li>
+<li>Frameworks
+<ul>
+<li><a href="../vue/index.html">Vue</a></li>
+<li><a href="../react/index.html">React</a></li>
+</ul>
+</li>
+<li>Components
+Commerce
+<a href="../components/price.html">Price</a>
+<a href="../components/product-media.html">ProductMedia</a>
+<a href="../components/product-gallery.html">ProductGallery</a>
+<a href="../components/product-card.html">ProductCard</a>
+<a href="../components/quantity-input.html">QuantityInput</a>
+Elements
+<a href="../components/avatar.html">Avatar</a>
+<a href="../components/badge.html">Badge</a>
+<a href="../components/swatch.html">Swatch</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html">Card</a>
+<a href="../components/icon.html">Icon</a>
+<a href="../components/tag.html">Tag</a>
+Primitives
+<a href="../components/container.html">Container</a>
+<a href="../components/divider.html">Divider</a>
+<a href="../components/flex.html">Flex</a>
+<a href="../components/grid.html">Grid</a>
+<a href="../components/section.html">Section</a>
+<a href="../components/stack.html">Stack</a>
+Typography
+<a href="../components/eyebrow.html">Eyebrow</a>
+<a href="../components/heading.html">Heading</a>
+<a href="../components/label.html">Label</a>
+<a href="../components/text.html">Text</a>
+Forms
+<a href="../components/checkbox.html">Checkbox</a>
+<a href="../components/choice.html">Choice</a>
+<a href="../components/choice-group.html">ChoiceGroup</a>
+<a href="../components/form-field.html">FormField</a>
+<a href="../components/input.html">Input</a>
+<a href="../components/radio.html">Radio</a>
+<a href="../components/select.html">Select</a>
+<a href="../components/switch.html">Switch</a>
+<a href="../components/textarea.html">Textarea</a>
+Feedback
+<a href="../components/alert.html">Alert</a>
+<a href="../components/progress.html">Progress</a>
+<a href="../components/skeleton.html">Skeleton</a>
+<a href="../components/toast.html">Toast</a>
+Media
+<a href="../components/image.html">Image</a>
+<a href="../components/video.html">Video</a>
+Navigation
+<a href="../components/breadcrumb.html">Breadcrumb</a>
+<a href="../components/breadcrumbs.html">Breadcrumbs</a>
+<a href="../components/menu.html">Menu</a>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/sidebar.html">Sidebar</a>
+<a href="../components/sidebar-group.html">SidebarGroup</a>
+<a href="../components/sidebar-item.html">SidebarItem</a>
+<a href="../components/tab.html">Tab</a>
+<a href="../components/tabs.html">Tabs</a>
+Data display
+<a href="../components/empty-state.html">EmptyState</a>
+<a href="../components/list.html">List</a>
+<a href="../components/list-item.html">ListItem</a>
+<a href="../components/pagination.html">Pagination</a>
+<a href="../components/table.html">Table</a>
+Overlays
+<a href="../components/dialog.html">Dialog</a>
+<a href="../components/drawer.html">Drawer</a>
+<a href="../components/popover.html">Popover</a>
+<a href="../components/tooltip.html">Tooltip</a>
+Composites
+<a href="../components/accordion.html">Accordion</a>
+<a href="../components/accordion-item.html">AccordionItem</a>
+<a href="../components/button-group.html">ButtonGroup</a>
+<a href="../components/section-header.html">SectionHeader</a></li>
+<li>Advanced
+<ul>
+<li><a href="../advanced/theming.html">Theming and customisation</a></li>
+<li><a href="../advanced/production.html">Production usage</a></li>
+</ul>
+</li>
+<li>Reference
+<ul>
+<li><a href="../reference/packages.html">Packages and exports</a></li>
+<li><a href="../reference/contracts.html">Contract source</a></li>
+<li><a href="../reference/component-index.html">Component index</a></li>
+<li><a href="../reference/component-status.html">Component status</a></li>
+<li><a href="../reference/contributing.html">Contributing</a></li>
+</ul>
+</li>
+</ul>
+</details></nav><main><h1 id="current-component-contracts">Current component contracts</h1>
+<p>Generated from the development workspace. This is an exact contract snapshot, not a promise that every field is in npm. Check <a href="release-status.html">release status</a> and the installed package declarations before using an API. Regenerate with <code>pnpm docs:api</code>.</p>
+<p>Framework components add native attributes and framework events; see <a href="../guides/core-components.html">core usage</a> and the framework source for those details.</p>
+<h2 id="packagescoresrccontractscommercepricets">packages/core/src/contracts/commerce/Price.ts</h2>
+<pre><code class="language-ts">/** Amounts are in major currency units (e.g. 48.5 GBP), not minor units. */
+export interface PriceProps {
+  size?: &quot;inline&quot; | &quot;detail&quot; | &quot;display&quot;;
+  amount: number;
+  currency: string;
+  /** Explicit locale avoids server/client formatting differences. */
+  locale: string;
+  compareAt?: number;
+  currentLabel?: string;
+  originalLabel?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscommerceproductcardts">packages/core/src/contracts/commerce/ProductCard.ts</h2>
+<pre><code class="language-ts">import type { PriceProps } from &quot;./Price&quot;;
+
+export interface ProductCardProps extends PriceProps {
+  name: string;
+  href: string;
+  imageSrc?: string;
+  imageAlt: string;
+  imageFallbackText?: string;
+  category?: string;
+  badge?: string;
+  availability?: &quot;available&quot; | &quot;unavailable&quot;;
+  unavailableLabel?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscommerceproductgalleryts">packages/core/src/contracts/commerce/ProductGallery.ts</h2>
+<pre><code class="language-ts">export interface ProductGalleryImage {
+  id: string;
+  src?: string;
+  alt: string;
+  thumbnailSrc?: string;
+}
+export interface ProductGalleryProps {
+  images: readonly ProductGalleryImage[];
+  /** Controlled image ID. An absent/removed ID displays the first image. */
+  modelValue?: string;
+  label?: string;
+  imageLabel?: string;
+  fallbackText?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscommerceproductmediats">packages/core/src/contracts/commerce/ProductMedia.ts</h2>
+<pre><code class="language-ts">export interface ProductMediaProps {
+  as?: &quot;div&quot; | &quot;span&quot;;
+  src?: string;
+  alt: string;
+  pending?: boolean;
+  fallbackText?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscommercequantityinputts">packages/core/src/contracts/commerce/QuantityInput.ts</h2>
+<pre><code class="language-ts">export interface QuantityBounds {
+  min?: number;
+  max?: number;
+  /** Positive integer increments, anchored at min. */
+  step?: number;
+}
+
+export interface QuantityInputProps extends QuantityBounds {
+  id: string;
+  label: string;
+  modelValue: number;
+  name?: string;
+  disabled?: boolean;
+  readonly?: boolean;
+  hideLabel?: boolean;
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
+  decreaseLabel?: string;
+  increaseLabel?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositesaccordionts">packages/core/src/contracts/composites/Accordion.ts</h2>
+<pre><code class="language-ts">export type AccordionVariant = &quot;divided&quot; | &quot;bordered&quot; | &quot;plain&quot;;
+export interface AccordionProps {
+  multiple?: boolean;
+  collapsible?: boolean;
+  defaultOpen?: string[];
+  variant?: AccordionVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositesaccordionitemts">packages/core/src/contracts/composites/AccordionItem.ts</h2>
+<pre><code class="language-ts">export interface AccordionItemProps {
+  id: string;
+  disabled?: boolean;
+  /** Show the shared plus/minus indicator. */
+  indicator?: boolean;
+  headingLevel?: &quot;h2&quot; | &quot;h3&quot; | &quot;h4&quot; | &quot;h5&quot; | &quot;h6&quot;;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositesbuttongroupts">packages/core/src/contracts/composites/ButtonGroup.ts</h2>
+<pre><code class="language-ts">export type ButtonGroupAlign = &quot;start&quot; | &quot;center&quot; | &quot;end&quot;;
+
+export interface ButtonGroupProps {
+  align?: ButtonGroupAlign;
+  stack?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositespageheaderts">packages/core/src/contracts/composites/PageHeader.ts</h2>
+<pre><code class="language-ts">export interface PageHeaderProps {
+  title: string;
+  description?: string;
+  bordered?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositessectionheaderts">packages/core/src/contracts/composites/SectionHeader.ts</h2>
+<pre><code class="language-ts">export type SectionHeaderWidth = &quot;default&quot; | &quot;wide&quot;;
+export type SectionHeaderAlign = &quot;left&quot; | &quot;center&quot;;
+
+export interface SectionHeaderProps {
+  width?: SectionHeaderWidth;
+  align?: SectionHeaderAlign;
+}
+</code></pre>
+<h2 id="packagescoresrccontractscompositesstatts">packages/core/src/contracts/composites/Stat.ts</h2>
+<pre><code class="language-ts">export type StatVariant = &quot;default&quot; | &quot;plain&quot;;
+export type StatTrend = &quot;up&quot; | &quot;down&quot; | &quot;neutral&quot;;
+
+export interface StatProps {
+  label: string;
+  value: string | number;
+  trend?: StatTrend;
+  change?: string;
+  variant?: StatVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsdatachartts">packages/core/src/contracts/data/Chart.ts</h2>
+<pre><code class="language-ts">export interface ChartSeries {
+  name: string;
+  data: number[];
+  /** Any CSS colour. Defaults to the theme's `--chart-color-N` ladder. */
+  color?: string;
+}
+
+export interface ChartDatum {
+  label: string;
+  value: number;
+  color?: string;
+}
+
+export type LineChartVariant = &quot;line&quot; | &quot;smooth&quot; | &quot;area&quot; | &quot;step&quot;;
+
+export interface LineChartProps {
+  series: ChartSeries[];
+  labels?: string[];
+  height?: number;
+  variant?: LineChartVariant;
+  showGrid?: boolean;
+  showLegend?: boolean;
+  showDots?: boolean;
+  format?: (value: number) =&gt; string;
+  /** Accessible description of the chart. */
+  label?: string;
+}
+
+export type BarChartVariant = &quot;grouped&quot; | &quot;stacked&quot; | &quot;horizontal&quot; | &quot;stacked-horizontal&quot;;
+
+export interface BarChartProps {
+  series: ChartSeries[];
+  labels?: string[];
+  height?: number;
+  variant?: BarChartVariant;
+  showGrid?: boolean;
+  showLegend?: boolean;
+  format?: (value: number) =&gt; string;
+  label?: string;
+}
+
+export type DonutChartVariant = &quot;donut&quot; | &quot;pie&quot;;
+
+export interface DonutChartProps {
+  data: ChartDatum[];
+  variant?: DonutChartVariant;
+  size?: number;
+  /** Ring thickness as a fraction of the radius (donut only). */
+  thickness?: number;
+  showLegend?: boolean;
+  format?: (value: number) =&gt; string;
+  label?: string;
+}
+
+export type SparklineVariant = &quot;line&quot; | &quot;area&quot; | &quot;bars&quot;;
+
+export interface SparklineProps {
+  data: number[];
+  variant?: SparklineVariant;
+  width?: number;
+  height?: number;
+  color?: string;
+  /** Colour by direction (positive/negative) instead of the series colour. */
+  trend?: boolean;
+  label?: string;
+}
+
+export interface ChartLegendItem {
+  label: string;
+  color: string;
+  value?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsdataemptystatets">packages/core/src/contracts/data/EmptyState.ts</h2>
+<pre><code class="language-ts">export interface EmptyStateProps {
+  as?: string;
+}
+
+export interface EmptyStateSlots {
+  default?: unknown;
+  icon?: unknown;
+  actions?: unknown;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsdatalistts">packages/core/src/contracts/data/List.ts</h2>
+<pre><code class="language-ts">export type ListValue = string | number;
+
+export type ListModelValue =
+  | ListValue
+  | ListValue[]
+  | null;
+
+export type ListVariant = &quot;default&quot; | &quot;card&quot; | &quot;separated&quot; | &quot;flush&quot;;
+
+export type ListSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface ListProps {
+  selectable?: boolean;
+  multiple?: boolean;
+  variant?: ListVariant;
+  size?: ListSize;
+}
+
+export interface ListContext {
+  selectable: boolean;
+  multiple: boolean;
+  isSelected: (value: ListValue) =&gt; boolean;
+  toggleSelection: (value: ListValue) =&gt; void;
+}
+export interface ListItemProps {
+  value: string | number;
+  disabled?: boolean;
+  title?: string;
+  description?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsdatapaginationts">packages/core/src/contracts/data/Pagination.ts</h2>
+<pre><code class="language-ts">export type PaginationVariant = &quot;default&quot; | &quot;outline&quot; | &quot;filled&quot; | &quot;minimal&quot;;
+
+export type PaginationShape = &quot;square&quot; | &quot;round&quot;;
+
+export interface PaginationProps {
+  currentPage: number;
+  totalItems: number;
+  pageSize: number;
+
+  siblingCount?: number;
+  compact?: boolean;
+  variant?: PaginationVariant;
+  shape?: PaginationShape;
+}
+export interface PaginationEmits {
+  (event: &quot;update:currentPage&quot;, page: number): void;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsdatatablets">packages/core/src/contracts/data/Table.ts</h2>
+<pre><code class="language-ts">export interface TableColumn&lt;T = unknown&gt; {
+  key: string;
+  label: string;
+
+  sortable?: boolean;
+
+  width?: string;
+
+  align?: &quot;start&quot; | &quot;center&quot; | &quot;end&quot;;
+
+  render?: (value: unknown, row: T) =&gt; unknown;
+}
+
+export interface TableProps&lt;T = unknown&gt; {
+  columns: TableColumn&lt;T&gt;[];
+  rows: T[];
+
+  rowKey?: string;
+
+  sortable?: boolean;
+  selectable?: boolean;
+  multiple?: boolean;
+
+  loading?: boolean;
+  empty?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsavatarts">packages/core/src/contracts/elements/Avatar.ts</h2>
+<pre><code class="language-ts">export type AvatarSize = &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; | &quot;xl&quot;;
+export type AvatarShape = &quot;circle&quot; | &quot;square&quot;;
+export type AvatarStatus = &quot;online&quot; | &quot;busy&quot; | &quot;away&quot; | &quot;offline&quot;;
+
+export interface AvatarProps {
+  src?: string;
+  alt?: string;
+  name?: string;
+  size?: AvatarSize;
+  shape?: AvatarShape;
+  status?: AvatarStatus;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsbadgets">packages/core/src/contracts/elements/Badge.ts</h2>
+<pre><code class="language-ts">export type BadgeVariant =
+  | &quot;default&quot;
+  | &quot;success&quot;
+  | &quot;warning&quot;
+  | &quot;danger&quot;
+  | &quot;info&quot;
+  | &quot;brand&quot;;
+
+export interface BadgeProps {
+  variant?: BadgeVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsbuttonts">packages/core/src/contracts/elements/Button.ts</h2>
+<pre><code class="language-ts">export type ButtonVariant =
+  | &quot;primary&quot;
+  | &quot;secondary&quot;
+  | &quot;destructive&quot;
+  | &quot;ghost&quot;
+  | &quot;text&quot;;
+// Text actions remain real buttons with the same disabled/focus semantics.
+
+export type ButtonSize =
+  | &quot;small&quot;
+  | &quot;medium&quot;
+  | &quot;large&quot;;
+
+export type ButtonWidth =
+  | &quot;auto&quot;
+  | &quot;full&quot;;
+
+export type ButtonIconPosition =
+  | &quot;leading&quot;
+  | &quot;trailing&quot;;
+
+export interface ButtonProps {
+  type?: &quot;button&quot; | &quot;submit&quot; | &quot;reset&quot;;
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  width?: ButtonWidth;
+  iconPosition?: ButtonIconPosition;
+  disabled?: boolean;
+  loading?: boolean;
+}
+
+export interface ButtonEvents {
+  activate: void;
+}
+
+export interface ButtonContract {
+  props: ButtonProps;
+  events: ButtonEvents;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementscardts">packages/core/src/contracts/elements/Card.ts</h2>
+<pre><code class="language-ts">export type CardVariant =
+  | &quot;default&quot;
+  | &quot;outlined&quot;
+  | &quot;elevated&quot;
+  | &quot;interactive&quot;
+  | &quot;selected&quot;;
+
+export interface CardProps {
+  variant?: CardVariant;
+  as?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsiconts">packages/core/src/contracts/elements/Icon.ts</h2>
+<pre><code class="language-ts">export type IconSize = &quot;xs&quot; | &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot; | &quot;inherit&quot;;
+
+export interface IconProps {
+  name: string;
+  size?: IconSize;
+  label?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsspinnerts">packages/core/src/contracts/elements/Spinner.ts</h2>
+<pre><code class="language-ts">export type SpinnerSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface SpinnerProps {
+  size?: SpinnerSize;
+  label?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractselementsswatchts">packages/core/src/contracts/elements/Swatch.ts</h2>
+<pre><code class="language-ts">export interface SwatchProps {
+  color: string;
+  /** Omit for a decorative swatch beside a visible color name. */
+  label?: string;
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
+  shape?: &quot;circle&quot; | &quot;square&quot;;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsfeedbackalertts">packages/core/src/contracts/feedback/Alert.ts</h2>
+<pre><code class="language-ts">export type AlertVariant =
+  | &quot;info&quot;
+  | &quot;success&quot;
+  | &quot;warning&quot;
+  | &quot;danger&quot;;
+
+export interface AlertProps {
+  variant?: AlertVariant;
+  dismissible?: boolean;
+}
+
+export interface AlertEmits {
+  close: () =&gt; void;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsfeedbackprogressts">packages/core/src/contracts/feedback/Progress.ts</h2>
+<pre><code class="language-ts">export type ProgressVariant =
+  | &quot;default&quot;
+  | &quot;success&quot;
+  | &quot;warning&quot;
+  | &quot;danger&quot;;
+
+export interface ProgressProps {
+  label?: string;
+  value?: number;
+  max?: number;
+  indeterminate?: boolean;
+  variant?: ProgressVariant;
+  showValue?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsfeedbackskeletonts">packages/core/src/contracts/feedback/Skeleton.ts</h2>
+<pre><code class="language-ts">export type SkeletonVariant =
+  | &quot;text&quot;
+  | &quot;heading&quot;
+  | &quot;avatar&quot;
+  | &quot;circle&quot;
+  | &quot;button&quot;
+  | &quot;default&quot;;
+
+export interface SkeletonProps {
+  variant?: SkeletonVariant;
+  width?: string;
+  height?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsfeedbacktoastts">packages/core/src/contracts/feedback/Toast.ts</h2>
+<pre><code class="language-ts">export type ToastVariant =
+  | &quot;info&quot;
+  | &quot;success&quot;
+  | &quot;warning&quot;
+  | &quot;danger&quot;;
+
+export interface ToastProps {
+  modelValue?: boolean;
+  title?: string;
+  variant?: ToastVariant;
+  duration?: number;
+  dismissible?: boolean;
+}
+
+export interface ToastEmits {
+  &quot;update:modelValue&quot;: (
+    value: boolean,
+  ) =&gt; void;
+  close: () =&gt; void;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformscheckboxts">packages/core/src/contracts/forms/Checkbox.ts</h2>
+<pre><code class="language-ts">export interface CheckboxProps {
+  modelValue?: boolean;
+  name?: string;
+  disabled?: boolean;
+  required?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformschoicets">packages/core/src/contracts/forms/Choice.ts</h2>
+<pre><code class="language-ts">export interface ChoiceProps {
+  value: string | number;
+  disabled?: boolean;
+  width?: &quot;auto&quot; | &quot;full&quot;;
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformschoicegroupts">packages/core/src/contracts/forms/ChoiceGroup.ts</h2>
+<pre><code class="language-ts">export interface ChoiceGroupProps {
+  modelValue?:
+    | string
+    | number
+    | Array&lt;string | number&gt;
+    | null;
+  multiple?: boolean;
+  disabled?: boolean;
+  label?: string;
+}
+
+export type RadioGroupProps = ChoiceGroupProps;
+export interface ChoiceGroupContext {
+  multiple: boolean;
+  disabled: boolean;
+  isSelected: (value: string | number) =&gt; boolean;
+  toggleChoice: (value: string | number) =&gt; void;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformscomboboxts">packages/core/src/contracts/forms/Combobox.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsformsdatepickerts">packages/core/src/contracts/forms/DatePicker.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsformsfileuploadts">packages/core/src/contracts/forms/FileUpload.ts</h2>
+<pre><code class="language-ts">export type FileUploadVariant = &quot;dropzone&quot; | &quot;compact&quot;;
+
+export interface FileUploadProps {
+  accept?: string;
+  multiple?: boolean;
+  disabled?: boolean;
+  variant?: FileUploadVariant;
+  /** Maximum size per file in bytes. */
+  maxSize?: number;
+  label?: string;
+  hint?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformsformfieldts">packages/core/src/contracts/forms/FormField.ts</h2>
+<pre><code class="language-ts">export interface FormFieldProps {
+  id?: string;
+  label?: string;
+  description?: string;
+  error?: string;
+  required?: boolean;
+  optional?: boolean;
+  disabled?: boolean;
+}
+
+export type FieldProps = FormFieldProps;
+</code></pre>
+<h2 id="packagescoresrccontractsformsinputts">packages/core/src/contracts/forms/Input.ts</h2>
+<pre><code class="language-ts">export interface InputProps {
+  variant?: &quot;default&quot; | &quot;plain&quot;;
+  id?: string;
+  name?: string;
+  autocomplete?: string;
+  type?:
+    | &quot;text&quot;
+    | &quot;email&quot;
+    | &quot;password&quot;
+    | &quot;number&quot;
+    | &quot;tel&quot;
+    | &quot;url&quot;
+    | &quot;search&quot;
+    | &quot;date&quot;
+    | &quot;time&quot;
+    | &quot;datetime-local&quot;
+    | &quot;month&quot;
+    | &quot;week&quot;;
+  placeholder?: string;
+  modelValue?: string;
+  required?: boolean;
+  disabled?: boolean;
+  readonly?: boolean;
+  error?: boolean;
+  success?: boolean;
+  describedBy?: string;
+  invalid?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformsradiots">packages/core/src/contracts/forms/Radio.ts</h2>
+<pre><code class="language-ts">export interface RadioProps {
+  modelValue?: string | number | null;
+  value: string | number;
+  name: string;
+  disabled?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformsselectts">packages/core/src/contracts/forms/Select.ts</h2>
+<pre><code class="language-ts">export interface SelectProps {
+  required?: boolean;
+  describedBy?: string;
+  invalid?: boolean;
+  variant?: &quot;default&quot; | &quot;plain&quot;;
+  id?: string;
+  name?: string;
+  modelValue?: string;
+  disabled?: boolean;
+  error?: boolean;
+  success?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformssliderts">packages/core/src/contracts/forms/Slider.ts</h2>
+<pre><code class="language-ts">export type SliderSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface SliderProps {
+  modelValue?: number;
+  min?: number;
+  max?: number;
+  step?: number;
+  disabled?: boolean;
+  label?: string;
+  showValue?: boolean;
+  size?: SliderSize;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformsswitchts">packages/core/src/contracts/forms/Switch.ts</h2>
+<pre><code class="language-ts">export interface SwitchProps {
+  modelValue?: boolean;
+  disabled?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformstextareats">packages/core/src/contracts/forms/Textarea.ts</h2>
+<pre><code class="language-ts">export interface TextareaProps {
+  id?: string;
+  name?: string;
+  autocomplete?: string;
+  modelValue?: string;
+  disabled?: boolean;
+  readonly?: boolean;
+  error?: boolean;
+  success?: boolean;
+  maxlength?: number;
+  placeholder?: string;
+  rows?: number;
+  required?: boolean;
+  describedBy?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsmediaimagets">packages/core/src/contracts/media/Image.ts</h2>
+<pre><code class="language-ts">export type ImageFit = &quot;cover&quot; | &quot;contain&quot;;
+
+export type ImageAspectRatio =
+| &quot;auto&quot;
+| &quot;square&quot;
+| &quot;video&quot;
+| &quot;portrait&quot;
+| &quot;wide&quot;;
+
+export interface ImageProps {
+    src?: string;
+    pending?: boolean;
+    fallbackText?: string;
+    loading?: &quot;lazy&quot; | &quot;eager&quot;;
+    alt: string;
+    fit?: ImageFit;
+    aspectRatio?: ImageAspectRatio;
+}
+
+export interface ImageContract {
+    props: ImageProps;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsmediavideots">packages/core/src/contracts/media/Video.ts</h2>
+<pre><code class="language-ts">export type VideoAspectRatio = &quot;video&quot; | &quot;wide&quot; | &quot;square&quot; | &quot;portrait&quot; | &quot;auto&quot;;
+export type VideoVariant = &quot;default&quot; | &quot;bordered&quot; | &quot;cinematic&quot;;
+
+export interface VideoProps {
+  src: string;
+  poster?: string;
+  title?: string;
+  controls?: boolean;
+  autoplay?: boolean;
+  muted?: boolean;
+  loop?: boolean;
+  aspectRatio?: VideoAspectRatio;
+  variant?: VideoVariant;
+  /** Show a custom play overlay until playback starts. */
+  overlay?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationbreadcrumbts">packages/core/src/contracts/navigation/Breadcrumb.ts</h2>
+<pre><code class="language-ts">export interface BreadcrumbProps {
+  href?: string;
+  current?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationbreadcrumbsts">packages/core/src/contracts/navigation/Breadcrumbs.ts</h2>
+<pre><code class="language-ts">export type BreadcrumbsVariant = &quot;default&quot; | &quot;pills&quot; | &quot;filled&quot;;
+
+export type BreadcrumbsSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface BreadcrumbsProps {
+  /** Any string, or &quot;chevron&quot; for an SVG chevron. */
+  separator?: string;
+  variant?: BreadcrumbsVariant;
+  size?: BreadcrumbsSize;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationcommandts">packages/core/src/contracts/navigation/Command.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationdropdownts">packages/core/src/contracts/navigation/Dropdown.ts</h2>
+<pre><code class="language-ts">export type DropdownPlacement = &quot;bottom-start&quot; | &quot;bottom-end&quot; | &quot;top-start&quot; | &quot;top-end&quot;;
+
+export interface DropdownProps {
+  placement?: DropdownPlacement;
+  disabled?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationdropdownmenuts">packages/core/src/contracts/navigation/DropdownMenu.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationmenuts">packages/core/src/contracts/navigation/Menu.ts</h2>
+<pre><code class="language-ts">export type MenuVariant = &quot;default&quot; | &quot;flat&quot; | &quot;outline&quot;;
+
+export type MenuSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface MenuProps {
+  variant?: MenuVariant;
+  size?: MenuSize;
+  label?: string;
+}
+
+export interface MenuItemProps {
+  href?: string;
+  danger?: boolean;
+  disabled?: boolean;
+  shortcut?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationnavbarts">packages/core/src/contracts/navigation/Navbar.ts</h2>
+<pre><code class="language-ts">export type NavbarVariant =
+  | &quot;default&quot;
+  | &quot;floating&quot;
+  | &quot;transparent&quot;
+  | &quot;solid&quot;
+  | &quot;glass&quot;
+  | &quot;brand&quot;;
+
+export type NavbarSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface NavbarProps {
+  variant?: NavbarVariant;
+  size?: NavbarSize;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationsidebarts">packages/core/src/contracts/navigation/Sidebar.ts</h2>
+<pre><code class="language-ts">export type SidebarVariant =
+  | &quot;default&quot;
+  | &quot;floating&quot;
+  | &quot;inset&quot;
+  | &quot;minimal&quot;
+  | &quot;bordered&quot;
+  | &quot;brand&quot;;
+
+export type SidebarItemVariant =
+  | &quot;default&quot;
+  | &quot;indicator&quot;
+  | &quot;pill&quot;
+  | &quot;outline&quot;
+  | &quot;solid&quot;;
+
+export interface SidebarProps {
+  collapsed?: boolean;
+  variant?: SidebarVariant;
+  itemVariant?: SidebarItemVariant;
+}
+
+export interface SidebarGroupProps {
+  label?: string;
+}
+
+export interface SidebarItemProps {
+  active?: boolean;
+  disabled?: boolean;
+  href?: string;
+  expanded?: boolean;
+  variant?: SidebarItemVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationstepperts">packages/core/src/contracts/navigation/Stepper.ts</h2>
+<pre><code class="language-ts">export type StepperVariant = &quot;default&quot; | &quot;dots&quot; | &quot;bars&quot; | &quot;vertical&quot;;
+
+export interface StepperProps {
+  /** Zero-based index of the current step. */
+  current: number;
+  steps: string[];
+  variant?: StepperVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationtabts">packages/core/src/contracts/navigation/Tab.ts</h2>
+<pre><code class="language-ts">export interface TabProps {
+  value: string | number;
+  disabled?: boolean;
+  id?: string;
+  controls?: string;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsnavigationtabsts">packages/core/src/contracts/navigation/Tabs.ts</h2>
+<pre><code class="language-ts">export type TabsVariant =
+  | &quot;underline&quot;
+  | &quot;pills&quot;
+  | &quot;segmented&quot;
+  | &quot;enclosed&quot;
+  | &quot;vertical&quot;;
+
+export type TabsSize = &quot;sm&quot; | &quot;md&quot; | &quot;lg&quot;;
+
+export interface TabsProps {
+  label?: string;
+  modelValue?: string | number | null;
+  variant?: TabsVariant;
+  size?: TabsSize;
+  fullWidth?: boolean;
+}
+
+export interface TabsEmits {
+  &quot;update:modelValue&quot;: [
+    value: string | number,
+  ];
+}
+</code></pre>
+<h2 id="packagescoresrccontractsoverlaysdialogts">packages/core/src/contracts/overlays/Dialog.ts</h2>
+<pre><code class="language-ts">export interface DialogProps {
+  modelValue?: boolean;
+  closeOnBackdrop?: boolean;
+  closeOnEscape?: boolean;
+}
+export interface DialogEmits {
+  &quot;update:modelValue&quot;: [value: boolean];
+}
+</code></pre>
+<h2 id="packagescoresrccontractsoverlaysdrawerts">packages/core/src/contracts/overlays/Drawer.ts</h2>
+<pre><code class="language-ts">export interface DrawerProps {
+  modelValue?: boolean;
+  side?: &quot;left&quot; | &quot;right&quot;;
+  closeOnBackdrop?: boolean;
+  closeOnEscape?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsoverlayspopoverts">packages/core/src/contracts/overlays/Popover.ts</h2>
+<pre><code class="language-ts">export type PopoverPlacement =
+  | &quot;top&quot;
+  | &quot;bottom&quot;
+  | &quot;left&quot;
+  | &quot;right&quot;;
+
+export interface PopoverProps {
+  placement?: PopoverPlacement;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsoverlayssheetts">packages/core/src/contracts/overlays/Sheet.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsoverlaystooltipts">packages/core/src/contracts/overlays/Tooltip.ts</h2>
+<pre><code class="language-ts">export type TooltipPlacement =
+  | &quot;top&quot;
+  | &quot;bottom&quot;
+  | &quot;left&quot;
+  | &quot;right&quot;;
+
+export interface TooltipProps {
+  placement?: TooltipPlacement;
+  text: string;
+  delay?: number;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesappshellts">packages/core/src/contracts/primitives/AppShell.ts</h2>
+<pre><code class="language-ts">export type AppShellVariant = &quot;default&quot; | &quot;inset&quot;;
+
+export interface AppShellProps {
+  variant?: AppShellVariant;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivescollapsiblets">packages/core/src/contracts/primitives/Collapsible.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivescontainerts">packages/core/src/contracts/primitives/Container.ts</h2>
+<pre><code class="language-ts">export type ContainerSize =
+  | &quot;default&quot;
+  | &quot;narrow&quot;;
+
+export interface ContainerProps {
+  size?: ContainerSize;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesdividerts">packages/core/src/contracts/primitives/Divider.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesflexts">packages/core/src/contracts/primitives/Flex.ts</h2>
+<pre><code class="language-ts">export interface FlexProps {
+  as?: &quot;div&quot; | &quot;span&quot;;
+  inline?: boolean;
+  direction?: &quot;row&quot; | &quot;column&quot;;
+  wrap?: boolean;
+  align?: &quot;stretch&quot; | &quot;start&quot; | &quot;center&quot; | &quot;end&quot; | &quot;baseline&quot;;
+  justify?: &quot;start&quot; | &quot;center&quot; | &quot;end&quot; | &quot;between&quot; | &quot;around&quot; | &quot;evenly&quot;;
+  size?: &quot;small&quot; | &quot;medium&quot; | &quot;large&quot;;
+  fullWidth?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesgridts">packages/core/src/contracts/primitives/Grid.ts</h2>
+<pre><code class="language-ts">export type GridColumns = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type GridRows = 1 | 2 | 3 | 4 | 5 | 6;
+
+export type GridSize =
+  | &quot;small&quot;
+  | &quot;medium&quot;
+  | &quot;large&quot;;
+
+export interface GridProps {
+  /** Cross-axis alignment of items within each row. */
+  align?: &quot;stretch&quot; | &quot;start&quot; | &quot;center&quot; | &quot;end&quot;;
+  columns?: GridColumns;
+  rows?: GridRows;
+  size?: GridSize;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesscrollareats">packages/core/src/contracts/primitives/ScrollArea.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivessectionts">packages/core/src/contracts/primitives/Section.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesseparatorts">packages/core/src/contracts/primitives/Separator.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractsprimitivesstackts">packages/core/src/contracts/primitives/Stack.ts</h2>
+<pre><code class="language-ts">export type StackSize =
+  | &quot;small&quot;
+  | &quot;medium&quot;
+  | &quot;large&quot;;
+
+export interface StackProps {
+  size?: StackSize;
+  fullWidth?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractstypographyeyebrowts">packages/core/src/contracts/typography/Eyebrow.ts</h2>
+<pre><code class="language-ts">
+</code></pre>
+<h2 id="packagescoresrccontractstypographyheadingts">packages/core/src/contracts/typography/Heading.ts</h2>
+<pre><code class="language-ts">export type HeadingLevel =
+  | &quot;h1&quot;
+  | &quot;h2&quot;
+  | &quot;h3&quot;
+  | &quot;h4&quot;
+  | &quot;h5&quot;
+  | &quot;h6&quot;;
+
+export interface HeadingProps {
+  level?: HeadingLevel;
+}
+</code></pre>
+<h2 id="packagescoresrccontractstypographylabelts">packages/core/src/contracts/typography/Label.ts</h2>
+<pre><code class="language-ts">export interface LabelProps {
+  for?: string;
+  required?: boolean;
+  optional?: boolean;
+  disabled?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractstypographytextts">packages/core/src/contracts/typography/Text.ts</h2>
+<pre><code class="language-ts">export type TextTone =
+  | &quot;primary&quot;
+  | &quot;secondary&quot;
+  | &quot;muted&quot;
+  | &quot;accent&quot;
+  | &quot;inverse&quot;
+  | &quot;brand&quot;;
+
+export type TextElement =
+  | &quot;p&quot;
+  | &quot;span&quot;
+  | &quot;div&quot;;
+
+export interface TextProps {
+  as?: TextElement;
+  tone?: TextTone;
+}
+</code></pre>
+</main></div></body></html>

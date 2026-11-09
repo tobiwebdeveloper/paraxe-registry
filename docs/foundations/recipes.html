@@ -1,0 +1,335 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Presets, recipes, and project overrides | Paraxe</title><link rel="stylesheet" href="../../design.css"><link rel="stylesheet" href="../../recipe.css"><link rel="stylesheet" href="../../preset.css"><link rel="stylesheet" href="../../theme.css"><link rel="stylesheet" href="../guides.css"></head><body><header><a href="../../index.html">Paraxe registry</a><a href="../guides/start-here.html">Guides</a><a href="../reference/release-status.html">Release status</a><a href="recipes.md">Markdown source</a></header><div class="layout"><nav aria-label="Documentation"><details open><summary>Browse documentation</summary><h1 id="paraxe-ui">Paraxe UI</h1>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+<li><a href="../product-direction.html">Product direction and coverage</a></li>
+<li><a href="../block-and-recipe-formula.html">Block and recipe formula</a></li>
+<li><a href="../playground-navigation.html">Recipe studio navigation</a></li>
+<li><a href="../backlog.html">Development backlog</a></li>
+<li>Guides
+<ul>
+<li><a href="../guides/start-here.html">Start here</a></li>
+<li><a href="../guides/install-and-theme.html">Install and theme</a></li>
+<li><a href="../guides/core-components.html">Core components</a></li>
+<li><a href="../guides/using-blocks.html">Editable blocks</a></li>
+<li><a href="../guides/ai-implementation.html">AI implementation</a></li>
+<li><a href="../reference/release-status.html">Release status</a></li>
+<li><a href="../reference/current-contracts.html">Current contracts</a></li>
+</ul>
+</li>
+<li>Getting Started
+<ul>
+<li><a href="../getting-started/installation.html">Installation</a></li>
+<li><a href="../getting-started/project-setup.html">Project setup</a></li>
+<li><a href="../getting-started/package-structure.html">Package structure</a></li>
+<li><a href="../getting-started/first-component.html">First component</a></li>
+<li><a href="../getting-started/versioning.html">Versioning</a></li>
+</ul>
+</li>
+<li>Foundations
+<ul>
+<li><a href="../foundations/design-tokens.html">Design tokens</a></li>
+<li><a href="../foundations/themes.html">Themes and presets</a></li>
+<li><a href="../foundations/recipes.html">Component recipes and overrides</a></li>
+<li><a href="../storefront-roadmap.html">Storefront roadmap</a></li>
+<li><a href="../foundations/component-appearance-audit.html">Component appearance audit</a></li>
+<li><a href="../foundations/animation-integration.html">Animation integration</a></li>
+<li><a href="../foundations/accessibility.html">Accessibility</a></li>
+</ul>
+</li>
+<li>Registry
+<ul>
+<li><a href="../registry/plan.html">Registry plan</a></li>
+<li><a href="../registry/releasing.html">Releasing and installing</a></li>
+<li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
+<li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
+<li><a href="../registry/product-purchase.html">Product purchasing</a></li>
+<li><a href="../registry/cart-01.html">Cart 01</a></li>
+<li><a href="../registry/portal-01.html">Portal01</a></li>
+<li><a href="../registry/article-01.html">Article01</a></li>
+<li><a href="../registry/event-01.html">Event01</a></li>
+<li><a href="../registry/studio-01.html">Studio01</a></li>
+<li><a href="../registry/careers-01.html">Careers01</a></li>
+<li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
+<li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
+<li><a href="../registry/block-quality.html">Block quality</a></li>
+<li><a href="../registry/learning-blocks-01.html">Learning and pricing blocks</a></li>
+</ul>
+</li>
+<li>Core
+<ul>
+<li><a href="../core/architecture.html">Architecture</a></li>
+<li><a href="../core/contracts.html">Contracts</a></li>
+<li><a href="../core/component-contracts.html">Component contracts</a></li>
+<li><a href="../core/composition.html">Composition</a></li>
+</ul>
+</li>
+<li>Frameworks
+<ul>
+<li><a href="../vue/index.html">Vue</a></li>
+<li><a href="../react/index.html">React</a></li>
+</ul>
+</li>
+<li>Components
+Commerce
+<a href="../components/price.html">Price</a>
+<a href="../components/product-media.html">ProductMedia</a>
+<a href="../components/product-gallery.html">ProductGallery</a>
+<a href="../components/product-card.html">ProductCard</a>
+<a href="../components/quantity-input.html">QuantityInput</a>
+Elements
+<a href="../components/avatar.html">Avatar</a>
+<a href="../components/badge.html">Badge</a>
+<a href="../components/swatch.html">Swatch</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html">Card</a>
+<a href="../components/icon.html">Icon</a>
+<a href="../components/tag.html">Tag</a>
+Primitives
+<a href="../components/container.html">Container</a>
+<a href="../components/divider.html">Divider</a>
+<a href="../components/flex.html">Flex</a>
+<a href="../components/grid.html">Grid</a>
+<a href="../components/section.html">Section</a>
+<a href="../components/stack.html">Stack</a>
+Typography
+<a href="../components/eyebrow.html">Eyebrow</a>
+<a href="../components/heading.html">Heading</a>
+<a href="../components/label.html">Label</a>
+<a href="../components/text.html">Text</a>
+Forms
+<a href="../components/checkbox.html">Checkbox</a>
+<a href="../components/choice.html">Choice</a>
+<a href="../components/choice-group.html">ChoiceGroup</a>
+<a href="../components/form-field.html">FormField</a>
+<a href="../components/input.html">Input</a>
+<a href="../components/radio.html">Radio</a>
+<a href="../components/select.html">Select</a>
+<a href="../components/switch.html">Switch</a>
+<a href="../components/textarea.html">Textarea</a>
+Feedback
+<a href="../components/alert.html">Alert</a>
+<a href="../components/progress.html">Progress</a>
+<a href="../components/skeleton.html">Skeleton</a>
+<a href="../components/toast.html">Toast</a>
+Media
+<a href="../components/image.html">Image</a>
+<a href="../components/video.html">Video</a>
+Navigation
+<a href="../components/breadcrumb.html">Breadcrumb</a>
+<a href="../components/breadcrumbs.html">Breadcrumbs</a>
+<a href="../components/menu.html">Menu</a>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/sidebar.html">Sidebar</a>
+<a href="../components/sidebar-group.html">SidebarGroup</a>
+<a href="../components/sidebar-item.html">SidebarItem</a>
+<a href="../components/tab.html">Tab</a>
+<a href="../components/tabs.html">Tabs</a>
+Data display
+<a href="../components/empty-state.html">EmptyState</a>
+<a href="../components/list.html">List</a>
+<a href="../components/list-item.html">ListItem</a>
+<a href="../components/pagination.html">Pagination</a>
+<a href="../components/table.html">Table</a>
+Overlays
+<a href="../components/dialog.html">Dialog</a>
+<a href="../components/drawer.html">Drawer</a>
+<a href="../components/popover.html">Popover</a>
+<a href="../components/tooltip.html">Tooltip</a>
+Composites
+<a href="../components/accordion.html">Accordion</a>
+<a href="../components/accordion-item.html">AccordionItem</a>
+<a href="../components/button-group.html">ButtonGroup</a>
+<a href="../components/section-header.html">SectionHeader</a></li>
+<li>Advanced
+<ul>
+<li><a href="../advanced/theming.html">Theming and customisation</a></li>
+<li><a href="../advanced/production.html">Production usage</a></li>
+</ul>
+</li>
+<li>Reference
+<ul>
+<li><a href="../reference/packages.html">Packages and exports</a></li>
+<li><a href="../reference/contracts.html">Contract source</a></li>
+<li><a href="../reference/component-index.html">Component index</a></li>
+<li><a href="../reference/component-status.html">Component status</a></li>
+<li><a href="../reference/contributing.html">Contributing</a></li>
+</ul>
+</li>
+</ul>
+</details></nav><main><h1 id="presets-recipes-and-project-overrides">Presets, recipes, and project overrides</h1>
+<p>Paraxe needs to support different complete visual treatments without endlessly restyling each block. The system now separates shared values from component recipes and editable application composition.</p>
+<h2 id="the-layers">The layers</h2>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Owns</th>
+<th>Does not own</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Foundation tokens</td>
+<td>Semantic colors, typography roles, spacing, sizes, radius, focus, motion</td>
+<td>Page-specific selectors</td>
+</tr>
+<tr>
+<td>Preset axes</td>
+<td>Accent/base/chart colors, fonts, density, radius, surface treatment, component defaults</td>
+<td>A fixed shop layout or brand image</td>
+</tr>
+<tr>
+<td>Component recipe</td>
+<td>How components use semantic roles; complete control/card/navigation treatments</td>
+<td>Forced brand colors or font families</td>
+</tr>
+<tr>
+<td>Project override file</td>
+<td>App-owned token mappings or complete replacement component rules</td>
+<td>Generated output that can be overwritten</td>
+</tr>
+<tr>
+<td>Registry block</td>
+<td>Layout, content, state wiring, and token-derived composition</td>
+<td>A competing local palette or component skin</td>
+</tr>
+</tbody>
+</table>
+<p><code>recipe</code> is a new independent preset field: <code>default</code>, <code>editorial</code>, <code>educational</code>, <code>clean</code>, <code>swiss</code>, <code>brutalist</code>, or <code>studio</code>. It is not the old bundled theme/personality model: choosing editorial does not choose an accent, font, radius, or density for you. The sample recipe gives compact labels, distinct commerce metadata/display roles, quiet secondary controls, and restrained tab/badge treatment. Different component CSS can be supplied in the final override layer.</p>
+<h2 id="choose-a-recipe-through-the-preset">Choose a recipe through the preset</h2>
+<p>Merge these fields under <code>preset</code> in the existing <code>paraxe.config.json</code>:</p>
+<pre><code class="language-json">{
+  &quot;recipe&quot;: &quot;editorial&quot;,
+  &quot;density&quot;: &quot;compact&quot;,
+  &quot;radius&quot;: &quot;none&quot;,
+  &quot;accent&quot;: &quot;monochrome&quot;,
+  &quot;surfaceTreatment&quot;: &quot;flat&quot;
+}
+</code></pre>
+<p>Then run <code>pnpm paraxe generate</code>. These choices can produce the reference's compact monochrome treatment through the core system. Change accent to emerald/violet, fonts, or radius independently; the same blocks follow them. Choosing default keeps the standard treatment. Old configurations omit recipe and normalize to default.</p>
+<p>The generator imports the selected <code>@paraxe/design/recipes/*.css</code> entry. All four entries ship with the design package. Recipes define shared component rules and typography roles, not block-specific selectors. Editorial values belong centrally to this stylesheet, rather than being copied as raw pixels into every block.</p>
+<h2 id="replace-a-treatment-completely">Replace a treatment completely</h2>
+<p>Generation now creates <code>paraxe-overrides.css</code> alongside the preset file, <strong>only if it does not already exist</strong>. Its path is recorded as <code>overridesOut</code>; <code>--overrides-out</code> selects a different path. Regenerating a preset never replaces this project-owned file. Theme, preset, and override output paths must be distinct.</p>
+<p>Import in this order:</p>
+<pre><code class="language-ts">import &quot;@paraxe/design/style.css&quot;;
+import &quot;./styles/paraxe-preset.css&quot;;
+import &quot;./styles/paraxe-theme.css&quot;;
+import &quot;./styles/paraxe-overrides.css&quot;; // project-owned final authority
+</code></pre>
+<p>For example, a project can replace the primary-button recipe rather than asking each block to patch its appearance:</p>
+<pre><code class="language-css">/* paraxe-overrides.css */
+.btn-primary {
+  background: var(--surface-card);
+  color: var(--text-primary);
+  border: var(--border-width-thin) solid var(--brand-primary);
+  box-shadow: none;
+  border-radius: var(--button-radius);
+}
+
+:root {
+  --typography-hero-size: var(--font-size-7xl);
+  --typography-product-meta-size: var(--font-size-xs);
+}
+</code></pre>
+<p>This file can contain whole component rules, additional selectors, or deliberate token remappings. It is not limited to small numeric adjustments. Use ordinary CSS specificity when replacing an existing selector; importing last wins equal-specificity rules. Keep theme-role references for predictable light/dark support. The application owns this layer, so it can deliberately override a preset decision; shipped registry blocks cannot silently do the same.</p>
+<h2 id="compactness-belongs-in-the-core">Compactness belongs in the core</h2>
+<p>Density now controls control heights, padding, page gutters, option spacing, and checkbox row rhythm. Base control heights are compact 36px, comfortable 44px, spacious 52px; small/large variants and checkbox targets have their own roles. Choose a density appropriate for the interaction context; compact is intentionally denser than the previous implementation.</p>
+<p>Typography now has explicit hero, collection-title, product-title, product-name/price/meta, and micro roles. Large editorial headings and small catalog captions can coexist without reducing paragraph text everywhere. <code>Price size=&quot;detail&quot;</code> uses the detail-price role. Checkbox decoration and option gaps are core roles, not per-block hacks. Input/Select offer a plain treatment for composed toolbar/search contexts; they retain native semantics and focus behavior.</p>
+<p>Card default surface treatment stays independent. Login01 uses the core Card so flat/bordered/elevated, radius, and density work normally. Media corners follow the media-radius role; selecting square photography is a project/preset decision, not a rule frozen inside every block.</p>
+<p>Navbar/Tabs defaults can come from generated CSS. React now exposes <code>ParaxeProvider</code> for the same explicit/default precedence used by these components in Vue; pass preset variants through the provider for deterministic SSR. Explicit component props still win. Broader React variant parity can build on this hook.</p>
+<h2 id="registry-guardrail-and-previews">Registry guardrail and previews</h2>
+<p>All five registered blocks were audited. Their CSS defines only namespaced block aliases; it cannot replace foundation color/radius/density tokens, freeze literal theme values, or reference missing roles. <code>pnpm registry:styles</code> checks this, and registry check/build runs it before emitting bundles. Assets remain replaceable images; their illustration colors are not component-theme overrides.</p>
+<p>Hero01's visual panel uses accent and its paired foreground, not yellow. Its CTA uses the component recipe. The collection no longer forces monochrome colors or square control corners locally. To recreate that reference, select those decisions through the preset.</p>
+<p>Both playgrounds load the selected recipe, generated axes/theme, and project overrides in order. Add <code>&amp;recipe=editorial</code> to an isolated preview URL (for example <code>?preview=hero-01&amp;recipe=editorial</code>) to inspect the alternate treatment without modifying the saved preset. A missing query uses the project's saved choice. The final override file loads last in both previews too.</p>
+<p>Regression checks cover recipe sharing, protected overrides, multiple accents/modes/radii/densities, and block token isolation. Visual/interaction comparison still requires a connected browser; these checks do not claim pixel-perfect matching.</p>
+<h2 id="suggested-setup-defaults">Suggested setup defaults</h2>
+<p><code>paraxe init</code> starts with the recipe and asks whether to use its suggestions. Editorial suggests monochrome, Inter, compact density, square corners, flat surfaces, underline tabs, and a transparent navbar. Default suggests the existing general-purpose configuration. Every subsequent setup choice remains editable.</p>
+<p>Suggestions are starting points, not CSS constraints. Generation and changing <code>preset.recipe</code> never reapply them to existing projects. To intentionally start from a profile in code:</p>
+<pre><code class="language-ts">import { createRecipePreset, RECIPE_PROFILES } from &quot;@paraxe/cli&quot;;
+const preset = createRecipePreset(&quot;editorial&quot;, {
+  accent: &quot;emerald&quot;,
+  radius: &quot;lg&quot;,
+});
+</code></pre>
+<p>Explicit values win; font and component-variant choices merge individually. Profiles are exported as metadata so future setup interfaces can show the same descriptions and suggestions.</p>
+<h2 id="educational-and-clean">Educational and Clean</h2>
+<table>
+<thead>
+<tr>
+<th>Recipe</th>
+<th>Treatment</th>
+<th>Suggested setup axes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Educational</td>
+<td>Confident buttons with a pressed edge, bolder study controls, readable disclosure rows, friendly conversation surfaces</td>
+<td>Lime accent, Outfit headings, Inter body, lg radius, comfortable density, bordered surfaces</td>
+</tr>
+<tr>
+<td>Clean</td>
+<td>Quiet controls, restrained type, simple disclosure rows, quiet conversation surfaces with accent-tinted user messages</td>
+<td>Monochrome, Inter, sm radius, comfortable density, bordered surfaces</td>
+</tr>
+</tbody>
+</table>
+<p>Suggestions are optional. Recipes never force these accents, fonts, corners, density, or card surface choices. All seven recipes are included in setup, sharing, generation, and package CSS exports. <a href="../registry/learning-blocks-01.html">Chat01 and Pricing01</a> demonstrate the new treatments.</p>
+<p>Playground-only <code>profile=educational</code> or <code>profile=clean</code> previews the suggested axes without writing configuration. <code>recipe=educational</code> changes only the treatment and preserves saved axes. A recipe query can also override a preview profile's treatment. <code>theme=dark</code> selects the dark preview mode.</p>
+<h2 id="live-recipe-studio">Live recipe studio</h2>
+<p>Both playgrounds have a collapsible <strong>Recipe studio</strong> above the component playground and every isolated block preview. Change recipe, accent, neutral palette, heading/body/mono fonts, density, radius, card surface, and colour mode in place. Switching recipes keeps the other axes and current component state. Existing variant controls remain available in the Vue component playground.</p>
+<p><strong>Apply suggested defaults</strong> intentionally loads the selected recipe's recommendations; it is separate from switching treatments. <strong>Reset to saved preset</strong> restores the imported project configuration. <strong>Export config JSON</strong> downloads the current configuration with preview edits; it does not write files automatically. Existing project overrides still apply last and may override what a control sets.</p>
+<p>The URL stores the preview preset for sharing. Use the studio's Preview selector to switch between blocks without losing the experiment. Light/dark selection also survives those navigations. Invalid encoded preset URLs fall back safely. Browser history replacement keeps slider/select experiments from creating dozens of Back-button entries.</p>
+<p>This is playground tooling, not part of the registry blocks or public component library. Future recipe and block design directions remain a joint discussion before structural changes.</p>
+<p>Run <code>pnpm playground:test</code> for the preview-state regression checks.</p>
+<h2 id="swiss-development">Swiss (development)</h2>
+<p>Swiss is an information-design treatment for publication sites, professional services, research, and structured member workspaces. It emphasizes assertive heading hierarchy, measured whitespace, consistent rules, and typographic controls. It does not turn an arbitrary layout into a Swiss composition; layout quality still belongs to the block.</p>
+<p>The optional suggested profile uses Inter, a red accent, square corners, comfortable density, bordered surfaces, and underline tabs. These are setup suggestions, not constraints. Selecting the recipe alone preserves the project's fonts, palette, density, radius, surfaces, and variants. Apply suggestions explicitly in Recipe studio, then customise any axis.</p>
+<p>The treatment lives in <code>@paraxe/design/recipes/swiss.css</code>; CLI generation imports it for <code>recipe=&quot;swiss&quot;</code>. Both playgrounds include it in live preview and shared preset URLs. Test it with Portal01 via <code>?preview=portal-01&amp;profile=swiss</code>, or change only treatment via <code>?preview=portal-01&amp;recipe=swiss</code>. Swiss is staged for the next coordinated design/CLI release.</p>
+<h2 id="brutalist-development">Brutalist (development)</h2>
+<p>Brutalist gives events, creative launches, and independent studio websites a more emphatic component treatment: oversized headings, stronger control borders, direct labels, and hard-offset button shadows. It keeps card surfaces, radius, fonts, brand, and density owned by the preset. It does not automatically turn any layout into an event poster.</p>
+<p>Its optional profile suggests a yellow accent, Space Grotesk headings, Inter body text, square corners, comfortable density, bordered surfaces, and enclosed tabs. Selecting the recipe alone does not apply those suggestions. Explicit choices win and survive sharing. Apply the profile deliberately, then adjust any axis.</p>
+<p>The treatment ships as <code>@paraxe/design/recipes/brutalist.css</code> in development builds and is listed by the CLI and both Recipe studios. Try <code>?preview=event-01&amp;profile=brutalist</code> for the suggested profile, or <code>?preview=event-01&amp;recipe=brutalist</code> to preserve the project's other axes.</p>
+<table>
+<thead>
+<tr>
+<th>Treatment</th>
+<th>Useful starting point</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default</td>
+<td>Versatile application and website foundations</td>
+</tr>
+<tr>
+<td>Editorial</td>
+<td>Shops, journals, and compact product detail</td>
+</tr>
+<tr>
+<td>Educational</td>
+<td>Study, onboarding, and guided member experiences</td>
+</tr>
+<tr>
+<td>Clean</td>
+<td>Product websites, pricing, and restrained interfaces</td>
+</tr>
+<tr>
+<td>Swiss</td>
+<td>Publications, research, and information-rich workspaces</td>
+</tr>
+<tr>
+<td>Brutalist</td>
+<td>Events, creative launches, and emphatic public-facing pages</td>
+</tr>
+</tbody>
+</table>
+<p>These are starting points rather than product restrictions. Layout and recipe should be evaluated together. All seven treatments remain experimental and require visual review for the actual content and selected palette.</p>
+<h2 id="studio-development">Studio (development)</h2>
+<p>Studio is a type-led treatment for independent practices, portfolios, and professional service websites. Display headings use lighter weight and a clear scale relationship to readable body text and compact action labels. Labels are sentence case; secondary controls and rules stay restrained.</p>
+<p>The optional profile suggests Fraunces display type, DM Sans body type, stone neutrals, a teal accent, spacious density, larger corners, and flat card surfaces. Explicit choices override these suggestions. Switching to the recipe alone preserves all preset axes and variants.</p>
+<p>The treatment ships as <code>@paraxe/design/recipes/studio.css</code> in development builds. CLI setup, generation, sharing, and both Recipe studios include it. Try <code>?preview=studio-01&amp;profile=studio</code>, then adjust the independent axes. The <a href="../block-and-recipe-formula.html">formula document</a> records the typography/control relationship that guides this work.</p>
+<h2 id="navigating-the-growing-playground">Navigating the growing playground</h2>
+<p>Recipe studio has Library, Design, and Typography sections. Library searches and groups previews by product use and entry type, preserving your current preset when switching pages. Recipe/axis controls live under Design; font choices live under Typography. See <a href="../playground-navigation.html">navigation details</a>. Monochrome button/foreground treatment is a deferred <a href="../backlog.html">backlog item</a>.</p>
+</main></div></body></html>
