@@ -299,6 +299,7 @@ export type PaginationVariant = "default" | "outline" | "filled" | "minimal";
 export type PaginationShape = "square" | "round";
 
 export interface PaginationProps {
+  label?: string;
   currentPage: number;
   totalItems: number;
   pageSize: number;

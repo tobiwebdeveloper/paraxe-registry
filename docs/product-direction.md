@@ -10,7 +10,9 @@ The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using th
 
 [Settings01](registry/settings-01.md) is implemented in development: account/profile rail, grouped profile fields, configurable locale choices, notifications, provider-owned security status, and a persistent save/discard bar. Its controlled form/controller covers validation, pending work, failed-save recovery, and restoring the last saved baseline. Core Switch gained native form/label/description and invalid-state support rather than introducing a bespoke toggle. It is an In progress preview, not an addition to immutable registry 0.2.0.
 
-Next: Orders01, a substantial commerce-management layout with search/status filters, useful order data, and an order-detail view. Then Course01 for curriculum and learning progress, and Dashboard01 for a cohesive operational overview. Evaluate core gaps for each job before adding local exceptions or another recipe.
+[Orders01](registry/orders-01.md) is implemented in development: a searchable order book, fulfilment filters, global sorting before paging, a detailed in-flow order panel, delivery/activity information, and filtered CSV export. Core Pagination now shares bounded page-window logic and aligns Vue/React variants, shape, and navigation labels. The block stays read-only with application-supplied totals and statuses; payments and fulfilment are app integrations.
+
+Next: Course01 for curriculum and learning progress, then Dashboard01 for a cohesive operational overview. Evaluate core gaps for each job before adding local exceptions or another recipe. Settings01 and Orders01 remain development after immutable registry 0.2.0.
 
 ## Published package update — 9 November 2026
 

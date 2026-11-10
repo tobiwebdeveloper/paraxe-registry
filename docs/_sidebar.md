@@ -44,6 +44,7 @@
   - [Stay01](registry/stay-01.md)
   - [ContentEditor01 and workspace](registry/content-editor-01.md)
   - [Settings01](registry/settings-01.md)
+  - [Orders01](registry/orders-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
   - [Connected shop demo](registry/shop-journey.md)
   - [Website blocks 01](registry/website-blocks-01.md)
