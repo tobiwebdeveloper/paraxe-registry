@@ -13,3 +13,5 @@ Acceptance: enabled monochrome actions have clear paired foreground/background r
 ## Common application depth
 
 Prioritize reusable settings/account forms, product-management fields, and richer data workflows. Continue auditing shared Checkbox, Pagination, overlay and table contracts before composing them. Cross-page table selection, server sorting/pagination, conflict-aware persistence, real rich-text editing, and browser/keyboard review remain future integrations, not claims of the local content-workspace demo. Further recipe expansion is paused.
+
+The next component batches and their acceptance criteria are prepared in the [core component development plan](core-component-roadmap.md): form structure/compound inputs first, then file selection and searchable selection, followed by application interaction parity. These are planned additions, not published exports.

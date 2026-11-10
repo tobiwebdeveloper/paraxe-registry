@@ -1,0 +1,85 @@
+# Core component development: forms and application depth
+
+Prepared 10 November 2026. This is the next development plan, not a statement that the proposed components are implemented or published. The immediate focus is core components and their composition; recipe expansion remains paused.
+
+## Why this pass
+
+Recent blocks exposed practical gaps that were addressed in core: Checkbox descriptions/errors, Switch form semantics, Pagination, Avatar parity, Stat, and Sparkline. Continue that approach. A new component should remove a repeated product problem, provide useful semantics or behaviour, and remain small enough to compose into several layouts.
+
+The next pass should support account forms, onboarding, product editing, invitations, and checkout details. Each numbered registry block still needs its own deliberate composition. A component showcase or connected workflow is an example, not a numbered block.
+
+## Audit findings
+
+The current source barrels expose these Vue components without corresponding React components: AvatarGroup, BarChart, ChartLegend, DonutChart, Dropdown, FileUpload, Kbd, LineChart, MenuItem, MenuSeparator, PageHeader, Spinner, and Stepper. Export presence is only a starting point: audit behaviour before copying an implementation. Existing source is not proof of keyboard, form, or visual readiness.
+
+The component index is incomplete in places: for example it marks Vue Icon unavailable even though the Vue barrel exports it. Reconcile public names, guides, and real framework support during each batch. Installed package declarations remain authoritative for published versions.
+
+FormField already supplies label, description, and error markup. Consumers currently connect native IDs and describedBy themselves. Its next improvement should make that wiring easier while preserving existing children/slots and explicit control ownership.
+
+Fieldset and grouped input adornments have no focused public components yet. FileUpload has a shared contract and Vue implementation; it needs a behaviour audit and React parity rather than another unrelated upload API.
+
+## Batch 1: form structure and compound controls
+
+| Addition | Product purpose | Component boundary |
+| --- | --- | --- |
+| Fieldset | Related address fields, notification choices, billing details, permissions | Native fieldset/legend, optional help/error, disabled group semantics; children own layout |
+| InputGroup | Search with action, currency/unit fields, URL prefixes, password visibility | One control surface with leading/trailing content; the input retains its label, value, constraints, and events |
+| Spinner parity | Saving, loading buttons, inline requests | React matches the audited Vue/shared contract; loading announcements belong to the owning action or region |
+| FormField composition support | Consistent help/error relationships across all controls | Additive ID/description wiring; preserve manually supplied IDs and current component usage |
+
+### Fieldset design brief
+
+Use a native fieldset and legend. Prepare id, legend, description, error, disabled, and a restrained default/panel presentation. Link the fieldset to its help/error text; do not imply that every child automatically references those IDs. The native disabled behaviour must remain intact, including HTML's first-legend exception. Avoid placing interactive controls inside the legend in examples.
+
+The default should provide clean grouping and spacing without adding another card. An optional panel uses shared card surface, radius, padding, and border roles. The component does not decide column counts, responsive form layout, submission, or validation rules. Compose those through Flex and the application.
+
+### InputGroup design brief
+
+Support leading and trailing content: Vue named slots and React node props, plus the actual control as default content/children. Use a single form surface, coherent focus treatment, and token-driven spacing. Start with one Input per group. Evaluate Select and Textarea separately rather than promising every arbitrary child behaves correctly.
+
+Text adornments such as currency symbols and units need intentional accessible treatment. Decorative adornments should not create redundant announcements; meaningful units should be included in the control's accessible description. Interactive trailing actions remain real buttons with names, keyboard focus, and disabled/loading states. The group itself is not a label and must not create a nested label around controls and buttons.
+
+InputGroup does not own the value, validation, submission, password state, or persistence. Required/disabled/invalid semantics must reach the actual input; a styled wrapper cannot substitute for them. Prepare examples that make this distinction clear. Check focus when moving from the input to a trailing action, and prevent double borders, duplicate shadows, or a second focus ring from competing with the shared surface.
+
+### Completion evidence
+
+- Vue and React implement the same shared contracts and useful states.
+- Native form submission, labels, help/errors, disabled groups, and action focus remain correct.
+- Radius, density, surface, palette, and recipe choices continue to work independently.
+- Larger recipe typography must fit intrinsically or cause an intentional layout wrap; do not rely only on viewport breakpoints or shrink the recipe to hide collisions. Review short/long labels and minimum/maximum display values.
+- A searchable core-component preview shows plain, panel/grouped, invalid, disabled, and pending examples.
+- Examples use real local state and actions; they are not additional registry blocks.
+- Guides include small Vue/React examples and clearly distinguish development from published APIs.
+
+## Batch 2: files and searchable selection
+
+### FileUpload audit and parity
+
+Review the existing contract and Vue implementation before finalizing the cross-framework API. Define selected-file ownership, selecting the same file again, single/multiple replacement, duplicate identity, removal, size/type rejection, disabled behaviour, native picker access, and drag/drop fallback. Decide whether native form submission is supported and document it accurately.
+
+Keep selection separate from transfer. Local file selection must not display invented upload progress or completion. Server uploading, cancellation, retry, storage, and authorization belong to an application-supplied integration. Local checks improve feedback; they do not establish server-side file safety.
+
+### Combobox
+
+Add searchable single selection for customers, assignees, courses, and products. Start with a controlled value and stable option identities, clear keyboard navigation, linked listbox/options, disabled options, no results, loading, and optional clear behaviour. Separate the query from the selected value. The application owns remote search and stale-response handling.
+
+Do not combine multi-selection, free-form tags, async creation, and command navigation into the first version. Evaluate those after the single-selection interaction is sound. Use the accessibility references applicable at implementation time and verify actual keyboard behaviour.
+
+## Batch 3: application interaction parity
+
+Audit Dropdown/Menu items and separators, then Stepper, before creating more action-heavy application blocks. Distinguish menu actions from navigation links. Confirm dismissal, focus restoration, keyboard behaviour, disabled actions, and controlled state. A step indicator does not validate a form or silently advance a workflow.
+
+Evaluate PageHeader, AvatarGroup, Kbd, and remaining chart parity as concrete products require them. A full chart needs appropriate data access, scales, tooltips, responsiveness, theme updates, and a readable alternative. Do not use a decorative sparkline to imply unsupported analytical behaviour.
+
+Calendar/date-range selection, rich text, command search, and advanced table/server workflows remain later work. They require dedicated interaction designs and integration boundaries, rather than thin wrappers with a large list of promised features.
+
+## How each batch ships
+
+1. Record the product jobs, shared API, semantic structure, state ownership, and token roles.
+2. Implement both frameworks and meaningful shared logic before adding showcase compositions.
+3. Verify relevant behaviour and native semantics, then typechecks and production builds.
+4. Review desktop/mobile, keyboard, light/dark, density, radius, and surface combinations. Record when browser review cannot be performed; build success is not visual approval.
+5. Add guides and discoverable playground entries. Keep components, examples, recipes, and registry blocks distinct.
+6. Prepare a coordinated package release only after the batch is ready. Give changed packages new versions and verify clean consumers. Preserve immutable registry 0.1.2/0.2.0 and their existing package metadata.
+
+No npm archives or package versions are changed by this preparation document. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.

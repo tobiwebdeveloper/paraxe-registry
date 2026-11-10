@@ -2,6 +2,7 @@
 
 - [Introduction](index.md)
 - [Product direction and coverage](product-direction.md)
+- [Core component development plan](core-component-roadmap.md)
 - [Block and recipe formula](block-and-recipe-formula.md)
 - [Recipe studio navigation](playground-navigation.md)
 - [Development backlog](backlog.md)
