@@ -1,6 +1,6 @@
 # Dashboard01
 
-A substantial project workspace: derived metrics, delivery health, a sortable project table, controlled priorities, handovers, activity, and ownership. Swiss is the suggested recipe; palette, font, density, radius, and surfaces remain independently configurable. The layout uses Flex and shared core controls, with zero-specificity resets so spacing classes retain their margins.
+A decision-first project workspace: a performance overview with a dominant delivery figure and scoped reporting history, three focused priorities, a full-width project register, a horizontal handover strip, activity, and ownership. Swiss is the suggested recipe; palette, font, density, radius, and surfaces remain independently configurable. The layout uses Flex and shared core controls, with zero-specificity resets so spacing classes retain their margins.
 
 Try `?preview=dashboard-01&profile=swiss&theme=light` in either playground. Dashboard01 appears under **In progress**, after immutable registry 0.2.0. Its Stat and Checkbox improvements require matching development packages until the next coordinated release; the live preview does not make it installable from 0.2.0.
 
@@ -35,3 +35,12 @@ Both previews include an application-owned project brief, simulated task saving,
 Stat is now exported in React alongside Vue with shared label/value/change/trend/variant behaviour. Its surface uses card padding, border, background, shadow, and radius roles. Checkbox adds native id, labelledBy, describedBy, and invalid support in both frameworks for richer task rows and linked form errors.
 
 Checks cover derived scopes/totals, validation, both framework renders, linked descriptions, pending and stale-request guards, failure/retry, and preview updates. Browser visual review remains pending when no connected browser is available.
+
+
+## Composition and history
+
+The overview and priorities share one upper row. Priorities initially show the first three due items; View all expands the remaining work, and Show completed expands the list so completed items remain discoverable. The full-width project register has its own health strip, filters, and sortable columns. Handovers form a shared horizontal strip beneath it. Team activity and ownership have quieter supporting roles. The layout uses density-aware padding and a deliberate type scale rather than equal-weight cards or a long rail competing with a narrow table. Small screens stack these regions and retain table scrolling.
+
+Optional history contains dated reporting points: each has date and projects, whose records contain projectId, completed, and total. Every date must cover all snapshot projects with valid counts, so workspace scopes compare equivalent records. Dates must be unique, real, and no later than asOf. Each scope derives its own historical completion ratio from those records; table search does not change it. Scope totals can change between reporting dates, so the chart explicitly labels completed / total scope rather than claiming velocity. A textual reporting table exposes the underlying dates and counts. Without at least two reports or without projects, the chart is replaced by an explanatory state. There are no inferred trends from one snapshot.
+
+Core Sparkline now has React parity, shared finite-value geometry, optional min/max scale bounds, and decorative/named SVG semantics. This block fixes the scale to 0-100% and uses the brand token. Straight sample segments avoid interpolation overshoot; the core remains useful independently from Dashboard01. The original fictional sample service supplies six explicit weekly observations and updates the latest report when a sample task is saved.

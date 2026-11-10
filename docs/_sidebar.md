@@ -133,6 +133,8 @@
         [ButtonGroup](components/button-group.md)
         [SectionHeader](components/section-header.md)
         [Stat](components/stat.md)
+    Charts
+        [Sparkline](components/sparkline.md)
 - Advanced
   - [Theming and customisation](advanced/theming.md)
   - [Production usage](advanced/production.md)

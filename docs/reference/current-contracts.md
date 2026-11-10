@@ -226,6 +226,9 @@ export type SparklineVariant = "line" | "area" | "bars";
 
 export interface SparklineProps {
   data: number[];
+  /** Fixed scale bounds, useful when comparing percentages or several trends. */
+  min?: number;
+  max?: number;
   variant?: SparklineVariant;
   width?: number;
   height?: number;

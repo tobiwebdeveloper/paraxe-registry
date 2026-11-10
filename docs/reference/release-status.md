@@ -35,3 +35,5 @@ Orders01 and shared paginationState/variant/shape/label improvements are also de
 Course01 and Avatar parity/source-recovery improvements are development after 0.2.0. The course overview uses the existing Educational recipe; its sample lesson/completion experience is preview application code. The public In progress preview is separate from the immutable registry bundles and published framework versions above. See [Course01](../registry/course-01.md).
 
 Dashboard01, React Stat parity/card surface roles, and Checkbox identity/description/error support are development after 0.2.0. The Swiss workspace appears under In progress in both playgrounds and the gallery. Its project brief/task-service simulation is preview application code. See [Dashboard01](../registry/dashboard-01.md).
+
+Dashboard01 composition revision adds optional supplied delivery history, a full-width project register, focused/expandable priorities, and horizontal handovers. React Sparkline parity and shared finite geometry/min/max bounds are also development after the published packages.

@@ -14,7 +14,7 @@ The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using th
 
 [Course01](registry/course-01.md) is implemented in development: an Educational course overview with searchable curriculum disclosures, app-supplied lesson states, a progress/continue-learning rail, educator, and real replaceable study resource. The application owns lesson navigation, completion, and access. Core Avatar now has consistent Vue/React image/size/shape/status behaviour and source-error recovery. The sample lesson/completion flow is preview application code, not an additional numbered block.
 
-[Dashboard01](registry/dashboard-01.md) completes this development sequence: a Swiss operational overview with derived delivery metrics, a sortable project table, controlled priorities, upcoming handovers, activity, and ownership. Core Stat gained React parity and card surface roles; Checkbox gained linked identity/help/error support. All four app blocks remain development after immutable registry 0.2.0. Keep the existing recipes and evaluate practical core/form gaps before adding new flavours.
+[Dashboard01](registry/dashboard-01.md) completes this development sequence: a Swiss operational overview with a performance-led composition, supplied scoped delivery history, focused priorities, a full-width project register, horizontal handovers, activity, and ownership. Core Stat gained React parity and card surface roles; Checkbox gained linked identity/help/error support. The composition revision adds React Sparkline parity and shared explicit-scale geometry. All four app blocks remain development after immutable registry 0.2.0. Keep the existing recipes and evaluate practical core/form gaps before adding new flavours.
 
 ## Published package update — 9 November 2026
 
