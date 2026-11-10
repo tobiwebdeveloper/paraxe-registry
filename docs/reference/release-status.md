@@ -31,3 +31,5 @@ Archive hashes and successful clean-consumer verification are stored under `rele
 Settings01 and the Switch id/name/labelledBy/describedBy/required/invalid additions are newer development source. Settings01 appears as In progress in the gallery and both playgrounds. It is not in the immutable registry 0.2.0 bundles or the published framework archives listed above. See [Settings01](../registry/settings-01.md).
 
 Orders01 and shared paginationState/variant/shape/label improvements are also development after 0.2.0. Orders01 uses the existing Swiss recipe and appears alongside Settings01 in the In progress gallery. Both the block and updated core/framework/design packages need a future coordinated release before installation from the public registry. See [Orders01](../registry/orders-01.md).
+
+Course01 and Avatar parity/source-recovery improvements are development after 0.2.0. The course overview uses the existing Educational recipe; its sample lesson/completion experience is preview application code. The public In progress preview is separate from the immutable registry bundles and published framework versions above. See [Course01](../registry/course-01.md).

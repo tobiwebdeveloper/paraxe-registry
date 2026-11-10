@@ -10,7 +10,7 @@
 | [Navbar](../components/navbar.md) | Navigation | Yes | Yes |
 | [QuantityInput](../components/quantity-input.md) | Commerce | Yes | Yes |
 | [Flex](../components/flex.md) | Primitives | Yes | Yes |
-| [Avatar](../components/avatar.md) | Elements | — | Yes |
+| [Avatar](../components/avatar.md) | Elements | Yes | Yes |
 | [Badge](../components/badge.md) | Elements | Yes | Yes |
 | [Button](../components/button.md) | Elements | Yes | Yes |
 | [Card](../components/card.md) | Elements | Yes | Yes |

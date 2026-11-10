@@ -7,4 +7,4 @@
 | `@paraxe/vue` | Vue components and a resolver subpath |
 | `@paraxe/react` | React components |
 
-The Vue barrel does not export its source `Avatar.vue`, `Icon.vue`, or `Divider.vue`; they are intentionally excluded from the Vue public index. The React barrel exports `Avatar`, `Icon`, `Divider`, `Menu`, and `Video`. Core does not export contracts for every framework-specific component. These differences are documented rather than normalised by this site.
+The current Vue and React barrels both export Avatar, Icon, Divider, Menu, and Video. Export presence does not guarantee identical behaviour in older package versions: for example, React Avatar gains the full image/size/shape/status API in development after 0.2.0. Read [release status](release-status.md), the component's guide, and installed declarations for the version in use. Core provides shared contracts and helpers; rendering and slots/callbacks remain framework-specific.

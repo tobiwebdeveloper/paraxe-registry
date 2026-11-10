@@ -55,6 +55,7 @@
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
@@ -165,26 +166,88 @@ Composites
 </li>
 </ul>
 </details></nav><main><h1 id="avatar">Avatar</h1>
-<p>This React-only export renders a <code>span.avatar</code> around its children. It has no public props contract.</p>
+<p>Development after registry 0.2.0 brings React into parity with the declared AvatarProps API: src, alt, name, size, shape, and status. Vue also recovers when a failed source is replaced. Shared avatarInitials/avatarLabel helpers produce fallback initials and accessible naming. Use alt=&quot;&quot; for a decorative portrait beside a visible name; a named avatar includes its supplied status in the accessible label. Square shape follows the preset form radius; circles preserve their geometry. See <a href="../registry/course-01.html">Course01</a> for an educator example. These changes require matching development packages until the next release.</p>
+<p>Avatar renders a stable-size portrait or initials fallback. Its shared API is AvatarProps from core; the current workspace supports the same declared props in both frameworks. The previously published React implementation supports child text only, so check <a href="../reference/release-status.html">release status</a> before using the newer props.</p>
 <h2 id="when-to-use-it">When to use it</h2>
 <p>Use Avatar when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
 <h2 id="when-not-to-use-it">When not to use it</h2>
 <p>Do not use Avatar to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.</p>
 <h2 id="import">Import</h2>
+<pre><code class="language-ts">import { Avatar } from &quot;@paraxe/vue&quot;;
+</code></pre>
 <pre><code class="language-tsx">import { Avatar } from &quot;@paraxe/react&quot;;
 </code></pre>
 <h2 id="props">Props</h2>
-<p>No public props are declared for this component.</p>
+<table>
+<thead>
+<tr>
+<th>Prop</th>
+<th>Values</th>
+<th>Default</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>string</td>
+<td>none</td>
+<td>Replaceable portrait URL.</td>
+</tr>
+<tr>
+<td>alt</td>
+<td>string</td>
+<td>name</td>
+<td>Accessible portrait name; an empty string makes the whole avatar decorative.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td>none</td>
+<td>Initials fallback and default accessible name.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>xs, sm, md, lg, xl</td>
+<td>md</td>
+<td>Shared size classes.</td>
+</tr>
+<tr>
+<td>shape</td>
+<td>circle, square</td>
+<td>circle</td>
+<td>Circles preserve geometry; square uses the preset form radius.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>online, busy, away, offline</td>
+<td>none</td>
+<td>App-supplied presence indicator; appended to a named avatar's accessible label.</td>
+</tr>
+</tbody>
+</table>
+<p>Children (React) or the default slot (Vue) replace the initials fallback when no working image is present. A failed image falls back, and changing src retries the image. Neither portraits nor presence are fetched from an account service automatically.</p>
 <h2 id="usage">Usage</h2>
 <h3 id="react">React</h3>
 <pre><code class="language-tsx">import { Avatar } from &quot;@paraxe/react&quot;;
 
 export function Example() {
-  return &lt;Avatar&gt;Content&lt;/Avatar&gt;;
+  return &lt;Avatar name=&quot;Maya Chen&quot; src=&quot;/people/maya.jpg&quot; size=&quot;lg&quot; /&gt;;
 }
 </code></pre>
+<h3 id="vue">Vue</h3>
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+import { Avatar } from &quot;@paraxe/vue&quot;;
+&lt;/script&gt;
+&lt;template&gt;
+  &lt;div&gt;
+    &lt;Avatar name=&quot;Maya Chen&quot; src=&quot;/people/maya.jpg&quot; alt=&quot;&quot; size=&quot;lg&quot; /&gt;
+    &lt;span&gt;Maya Chen&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+</code></pre>
 <h2 id="accessibility">Accessibility</h2>
-<p>Use meaningful child content and preserve the semantics of the rendered element. See Foundations &gt; Accessibility for shared responsibilities.</p>
+<p>Use name or meaningful alt for a standalone portrait. Use alt=&quot;&quot; when an adjacent name already labels the same person, as in the Vue example. The wrapper supplies the image semantics; the nested img uses an empty alt to avoid duplicate announcements. Avatar is not interactive; wrap it in a properly named link or button when a profile action is required. Supply status from real application data rather than implying online presence from the image alone.</p>
 <h2 id="related">Related</h2>
 <ul>
 <li><a href="../reference/component-index.html">Component index</a></li>

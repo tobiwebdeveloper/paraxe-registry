@@ -12,7 +12,9 @@ The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using th
 
 [Orders01](registry/orders-01.md) is implemented in development: a searchable order book, fulfilment filters, global sorting before paging, a detailed in-flow order panel, delivery/activity information, and filtered CSV export. Core Pagination now shares bounded page-window logic and aligns Vue/React variants, shape, and navigation labels. The block stays read-only with application-supplied totals and statuses; payments and fulfilment are app integrations.
 
-Next: Course01 for curriculum and learning progress, then Dashboard01 for a cohesive operational overview. Evaluate core gaps for each job before adding local exceptions or another recipe. Settings01 and Orders01 remain development after immutable registry 0.2.0.
+[Course01](registry/course-01.md) is implemented in development: an Educational course overview with searchable curriculum disclosures, app-supplied lesson states, a progress/continue-learning rail, educator, and real replaceable study resource. The application owns lesson navigation, completion, and access. Core Avatar now has consistent Vue/React image/size/shape/status behaviour and source-error recovery. The sample lesson/completion flow is preview application code, not an additional numbered block.
+
+Next: Dashboard01 for a cohesive operational overview. Evaluate core gaps before adding local exceptions or another recipe. Settings01, Orders01, and Course01 remain development after immutable registry 0.2.0.
 
 ## Published package update — 9 November 2026
 

@@ -55,6 +55,7 @@
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
 <li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
@@ -191,5 +192,5 @@ Composites
 </tr>
 </tbody>
 </table>
-<p>The Vue barrel does not export its source <code>Avatar.vue</code>, <code>Icon.vue</code>, or <code>Divider.vue</code>; they are intentionally excluded from the Vue public index. The React barrel exports <code>Avatar</code>, <code>Icon</code>, <code>Divider</code>, <code>Menu</code>, and <code>Video</code>. Core does not export contracts for every framework-specific component. These differences are documented rather than normalised by this site.</p>
+<p>The current Vue and React barrels both export Avatar, Icon, Divider, Menu, and Video. Export presence does not guarantee identical behaviour in older package versions: for example, React Avatar gains the full image/size/shape/status API in development after 0.2.0. Read <a href="release-status.html">release status</a>, the component's guide, and installed declarations for the version in use. Core provides shared contracts and helpers; rendering and slots/callbacks remain framework-specific.</p>
 </main></div></body></html>
