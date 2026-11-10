@@ -95,6 +95,7 @@ Elements
 <a href="../components/card.html">Card</a>
 <a href="../components/icon.html">Icon</a>
 <a href="../components/tag.html">Tag</a>
+<a href="../components/spinner.html">Spinner</a>
 Primitives
 <a href="../components/container.html">Container</a>
 <a href="../components/divider.html">Divider</a>
@@ -112,6 +113,8 @@ Forms
 <a href="../components/choice.html">Choice</a>
 <a href="../components/choice-group.html">ChoiceGroup</a>
 <a href="../components/form-field.html">FormField</a>
+<a href="../components/fieldset.html">Fieldset</a>
+<a href="../components/input-group.html">InputGroup</a>
 <a href="../components/input.html">Input</a>
 <a href="../components/radio.html">Radio</a>
 <a href="../components/select.html">Select</a>
@@ -698,6 +701,16 @@ export interface ChoiceGroupContext {
 <h2 id="packagescoresrccontractsformsdatepickerts">packages/core/src/contracts/forms/DatePicker.ts</h2>
 <pre><code class="language-ts">
 </code></pre>
+<h2 id="packagescoresrccontractsformsfieldsetts">packages/core/src/contracts/forms/Fieldset.ts</h2>
+<pre><code class="language-ts">export interface FieldsetProps {
+  id?: string;
+  legend: string;
+  description?: string;
+  error?: string;
+  disabled?: boolean;
+  variant?: &quot;default&quot; | &quot;panel&quot;;
+}
+</code></pre>
 <h2 id="packagescoresrccontractsformsfileuploadts">packages/core/src/contracts/forms/FileUpload.ts</h2>
 <pre><code class="language-ts">export type FileUploadVariant = &quot;dropzone&quot; | &quot;compact&quot;;
 
@@ -724,6 +737,15 @@ export interface FileUploadProps {
 }
 
 export type FieldProps = FormFieldProps;
+
+/** Bind to the actual input; the wrapper never mutates children. */
+export interface FormFieldControlProps {
+  id: string;
+  describedBy?: string;
+  invalid: boolean;
+  required: boolean;
+  disabled: boolean;
+}
 </code></pre>
 <h2 id="packagescoresrccontractsformsinputts">packages/core/src/contracts/forms/Input.ts</h2>
 <pre><code class="language-ts">export interface InputProps {
@@ -759,6 +781,12 @@ export type FieldProps = FormFieldProps;
   error?: boolean;
   success?: boolean;
   describedBy?: string;
+  invalid?: boolean;
+}
+</code></pre>
+<h2 id="packagescoresrccontractsformsinputgroupts">packages/core/src/contracts/forms/InputGroup.ts</h2>
+<pre><code class="language-ts">/** Layout for one input and optional adornments. Control state remains on the input. */
+export interface InputGroupProps {
   invalid?: boolean;
 }
 </code></pre>

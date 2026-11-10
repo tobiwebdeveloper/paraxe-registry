@@ -95,6 +95,7 @@ Elements
 <a href="../components/card.html">Card</a>
 <a href="../components/icon.html">Icon</a>
 <a href="../components/tag.html">Tag</a>
+<a href="../components/spinner.html">Spinner</a>
 Primitives
 <a href="../components/container.html">Container</a>
 <a href="../components/divider.html">Divider</a>
@@ -112,6 +113,8 @@ Forms
 <a href="../components/choice.html">Choice</a>
 <a href="../components/choice-group.html">ChoiceGroup</a>
 <a href="../components/form-field.html">FormField</a>
+<a href="../components/fieldset.html">Fieldset</a>
+<a href="../components/input-group.html">InputGroup</a>
 <a href="../components/input.html">Input</a>
 <a href="../components/radio.html">Radio</a>
 <a href="../components/select.html">Select</a>
@@ -171,103 +174,23 @@ Charts
 </li>
 </ul>
 </details></nav><main><h1 id="formfield">FormField</h1>
-<p>FormField is a public Vue and React component. Its shared API is defined by <code>FormFieldProps</code> from <code>@paraxe/core</code>.</p>
-<h2 id="when-to-use-it">When to use it</h2>
-<p>Use FormField when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
-<h2 id="when-not-to-use-it">When not to use it</h2>
-<p>Do not use FormField to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.</p>
-<h2 id="import">Import</h2>
-<pre><code class="language-ts">import { FormField } from &quot;@paraxe/vue&quot;;
+<p>A labelled field with a description or announced error. Import FormField (also exported as Field) from @paraxe/vue or @paraxe/react. It keeps value, validation, and native control ownership in the application.</p>
+<p>Shared props: id, label, description, error, required, optional, disabled. Explicit IDs are preserved. Development source now generates a stable fallback ID and exposes bindable control props; this is newer than the published framework packages.</p>
+<pre><code class="language-tsx">import { FormField, Input } from '@paraxe/react';
+&lt;FormField label=&quot;Contact email&quot; description=&quot;For project enquiries.&quot;
+  required error={emailError} disabled={saving}&gt;
+  {control =&gt; &lt;Input {...control} name=&quot;email&quot; type=&quot;email&quot;
+    modelValue={email} onModelValueChange={setEmail} /&gt;}
+&lt;/FormField&gt;
 </code></pre>
-<pre><code class="language-tsx">import { FormField } from &quot;@paraxe/react&quot;;
+<pre><code class="language-vue">&lt;FormField label=&quot;Contact email&quot; description=&quot;For project enquiries.&quot;
+  required :error=&quot;emailError&quot; :disabled=&quot;saving&quot; v-slot=&quot;{ control }&quot;&gt;
+  &lt;Input v-bind=&quot;control&quot; name=&quot;email&quot; type=&quot;email&quot; v-model=&quot;email&quot; /&gt;
+&lt;/FormField&gt;
 </code></pre>
-<h2 id="props">Props</h2>
-<table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Default</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td><code>string</code></td>
-<td>{id</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td><code>string</code></td>
-<td>--</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>description</code></td>
-<td><code>string</code></td>
-<td>--</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>error</code></td>
-<td><code>string</code></td>
-<td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>required</code></td>
-<td><code>boolean</code></td>
-<td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>optional</code></td>
-<td><code>boolean</code></td>
-<td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>disabled</code></td>
-<td><code>boolean</code></td>
-<td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="usage">Usage</h2>
-<h3 id="vue">Vue</h3>
-<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
-import { FormField } from &quot;@paraxe/vue&quot;;
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;FormField&gt;Content&lt;/FormField&gt;
-&lt;/template&gt;
-</code></pre>
-<h3 id="react">React</h3>
-<pre><code class="language-tsx">import { FormField } from &quot;@paraxe/react&quot;;
-
-export function Example() {
-  return &lt;FormField&gt;Content&lt;/FormField&gt;;
-}
-</code></pre>
-<h2 id="accessibility">Accessibility</h2>
-<p>Use meaningful child content and preserve the semantics of the rendered element. See Foundations &gt; Accessibility for shared responsibilities.</p>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="../reference/component-index.html">Component index</a></li>
-<li><a href="../core/contracts.html">Core contracts</a></li>
-</ul>
-<h2 id="development-accessibility-update">Development accessibility update</h2>
-<p>When id is supplied, descriptions and errors have id-description and id-error targets. Errors have an alert role and a semantic error colour. Consumers connect helper IDs through their control describedBy prop. These changes are staged for the next coordinated package release.</p>
+<p>Import both components from @paraxe/vue for the Vue example. The React child function and Vue scoped slot provide control: id, describedBy, invalid, required, and disabled. Bind them to the actual Paraxe control. A compound InputGroup can sit around that control without changing the relationship. Wrapper labels and visual state cannot replace native control props.</p>
+<p>Descriptions appear at <code>&lt;id&gt;-description</code>. A nonempty error replaces the description, appears at <code>&lt;id&gt;-error</code>, and is announced with role alert. The binding references only the currently visible message. IDs must be nonempty and contain no whitespace. Generated IDs remain stable through updates.</p>
+<p>Existing static children/default slots still work with explicit IDs and manually supplied describedBy/invalid attributes. The component never clones children or silently overrides them. Consumers using native HTML inputs must map describedBy to aria-describedby and invalid to aria-invalid themselves; the bindable object follows Paraxe contracts.</p>
+<p>The pure core helper formFieldState(props, fallbackId) returns control, descriptionId, and errorId without changing input props. Framework components generate the fallback ID. The helper does not validate entered values.</p>
+<p>Use <a href="fieldset.html">Fieldset</a> to group related controls and <a href="input-group.html">InputGroup</a> for adornments/actions. The form-composition preview demonstrates both patterns, failure/retry, and native FormData inspection. Browser review remains part of release acceptance.</p>
 </main></div></body></html>

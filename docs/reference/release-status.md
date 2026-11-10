@@ -37,3 +37,5 @@ Course01 and Avatar parity/source-recovery improvements are development after 0.
 Dashboard01, React Stat parity/card surface roles, and Checkbox identity/description/error support are development after 0.2.0. The Swiss workspace appears under In progress in both playgrounds and the gallery. Its project brief/task-service simulation is preview application code. See [Dashboard01](../registry/dashboard-01.md).
 
 Dashboard01 composition revision adds optional supplied delivery history, a full-width project register, focused/expandable priorities, and horizontal handovers. React Sparkline parity and shared finite geometry/min/max bounds are also development after the published packages.
+
+Core form batch 1 is development after 0.2.0: Fieldset, InputGroup, React Spinner parity, and additive FormField ID/help/error bindings. The form-composition core preview is In progress, not a numbered block. It uses matching development core/design/framework packages; current npm archives are unchanged. See the [component plan](../core-component-roadmap.md).

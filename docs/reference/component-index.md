@@ -14,7 +14,7 @@
 | [Badge](../components/badge.md) | Elements | Yes | Yes |
 | [Button](../components/button.md) | Elements | Yes | Yes |
 | [Card](../components/card.md) | Elements | Yes | Yes |
-| [Icon](../components/icon.md) | Elements | — | Yes |
+| [Icon](../components/icon.md) | Elements | Yes | Yes |
 | [Tag](../components/tag.md) | Elements | Yes | Yes |
 | [Container](../components/container.md) | Primitives | Yes | Yes |
 | [AppShell](../components/app-shell.md) | Layout | Yes | Yes |
@@ -64,3 +64,6 @@
 | [SectionHeader](../components/section-header.md) | Composites | Yes | Yes |
 | [Stat](../components/stat.md) | Composites | Yes | Yes |
 | [Sparkline](../components/sparkline.md) | Charts | Yes | Yes |
+| [Fieldset](../components/fieldset.md) | Forms | Yes | Yes |
+| [InputGroup](../components/input-group.md) | Forms | Yes | Yes |
+| [Spinner](../components/spinner.md) | Elements | Yes | Yes |

@@ -77,6 +77,7 @@
         [Card](components/card.md)
         [Icon](components/icon.md)
         [Tag](components/tag.md)
+        [Spinner](components/spinner.md)
     Primitives
         [Container](components/container.md)
         [Divider](components/divider.md)
@@ -94,6 +95,8 @@
         [Choice](components/choice.md)
         [ChoiceGroup](components/choice-group.md)
         [FormField](components/form-field.md)
+        [Fieldset](components/fieldset.md)
+        [InputGroup](components/input-group.md)
         [Input](components/input.md)
         [Radio](components/radio.md)
         [Select](components/select.md)

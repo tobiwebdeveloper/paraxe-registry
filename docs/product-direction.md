@@ -4,7 +4,7 @@ Paraxe is a composable UI system for building polished websites and software pro
 
 The current emphasis is **depth in commonly used application components and forms**, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.
 
-The [core component development plan](core-component-roadmap.md) prepares the next pass: Fieldset, InputGroup, Spinner parity, and easier FormField relationships; then an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.
+The [core component development plan](core-component-roadmap.md) records the first implemented core batch: Fieldset, InputGroup, Spinner parity, and easier FormField relationships. Next are an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.
 
 ## Application blocks after registry 0.2.0
 

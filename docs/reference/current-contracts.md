@@ -625,6 +625,19 @@ export interface ChoiceGroupContext {
 
 ```
 
+## packages/core/src/contracts/forms/Fieldset.ts
+
+```ts
+export interface FieldsetProps {
+  id?: string;
+  legend: string;
+  description?: string;
+  error?: string;
+  disabled?: boolean;
+  variant?: "default" | "panel";
+}
+```
+
 ## packages/core/src/contracts/forms/FileUpload.ts
 
 ```ts
@@ -656,6 +669,15 @@ export interface FormFieldProps {
 }
 
 export type FieldProps = FormFieldProps;
+
+/** Bind to the actual input; the wrapper never mutates children. */
+export interface FormFieldControlProps {
+  id: string;
+  describedBy?: string;
+  invalid: boolean;
+  required: boolean;
+  disabled: boolean;
+}
 ```
 
 ## packages/core/src/contracts/forms/Input.ts
@@ -694,6 +716,15 @@ export interface InputProps {
   error?: boolean;
   success?: boolean;
   describedBy?: string;
+  invalid?: boolean;
+}
+```
+
+## packages/core/src/contracts/forms/InputGroup.ts
+
+```ts
+/** Layout for one input and optional adornments. Control state remains on the input. */
+export interface InputGroupProps {
   invalid?: boolean;
 }
 ```

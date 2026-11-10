@@ -1,71 +1,31 @@
 # FormField
 
-FormField is a public Vue and React component. Its shared API is defined by `FormFieldProps` from `@paraxe/core`.
+A labelled field with a description or announced error. Import FormField (also exported as Field) from @paraxe/vue or @paraxe/react. It keeps value, validation, and native control ownership in the application.
 
-## When to use it
+Shared props: id, label, description, error, required, optional, disabled. Explicit IDs are preserved. Development source now generates a stable fallback ID and exposes bindable control props; this is newer than the published framework packages.
 
-Use FormField when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.
-
-## When not to use it
-
-Do not use FormField to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.
-
-## Import
-
-```ts
-import { FormField } from "@paraxe/vue";
-```
 ```tsx
-import { FormField } from "@paraxe/react";
+import { FormField, Input } from '@paraxe/react';
+<FormField label="Contact email" description="For project enquiries."
+  required error={emailError} disabled={saving}>
+  {control => <Input {...control} name="email" type="email"
+    modelValue={email} onModelValueChange={setEmail} />}
+</FormField>
 ```
-
-## Props
-
-| Prop | Type | Default | Required | Description |
-| --- | --- | --- | --- | --- |
-| `id` | `string` | {id | No | Defined by the core contract. |
-| `label` | `string` | -- | No | Defined by the core contract. |
-| `description` | `string` | -- | No | Defined by the core contract. |
-| `error` | `string` | false | No | Defined by the core contract. |
-| `required` | `boolean` | false | No | Defined by the core contract. |
-| `optional` | `boolean` | false | No | Defined by the core contract. |
-| `disabled` | `boolean` | false | No | Defined by the core contract. |
-
-
-
-## Usage
-
-### Vue
 
 ```vue
-<script setup lang="ts">
-import { FormField } from "@paraxe/vue";
-</script>
-
-<template>
-  <FormField>Content</FormField>
-</template>
+<FormField label="Contact email" description="For project enquiries."
+  required :error="emailError" :disabled="saving" v-slot="{ control }">
+  <Input v-bind="control" name="email" type="email" v-model="email" />
+</FormField>
 ```
 
-### React
+Import both components from @paraxe/vue for the Vue example. The React child function and Vue scoped slot provide control: id, describedBy, invalid, required, and disabled. Bind them to the actual Paraxe control. A compound InputGroup can sit around that control without changing the relationship. Wrapper labels and visual state cannot replace native control props.
 
-```tsx
-import { FormField } from "@paraxe/react";
+Descriptions appear at `<id>-description`. A nonempty error replaces the description, appears at `<id>-error`, and is announced with role alert. The binding references only the currently visible message. IDs must be nonempty and contain no whitespace. Generated IDs remain stable through updates.
 
-export function Example() {
-  return <FormField>Content</FormField>;
-}
-```
+Existing static children/default slots still work with explicit IDs and manually supplied describedBy/invalid attributes. The component never clones children or silently overrides them. Consumers using native HTML inputs must map describedBy to aria-describedby and invalid to aria-invalid themselves; the bindable object follows Paraxe contracts.
 
-## Accessibility
+The pure core helper formFieldState(props, fallbackId) returns control, descriptionId, and errorId without changing input props. Framework components generate the fallback ID. The helper does not validate entered values.
 
-Use meaningful child content and preserve the semantics of the rendered element. See Foundations > Accessibility for shared responsibilities.
-
-## Related
-
-- [Component index](../reference/component-index.md)
-- [Core contracts](../core/contracts.md)
-
-## Development accessibility update
-
-When id is supplied, descriptions and errors have id-description and id-error targets. Errors have an alert role and a semantic error colour. Consumers connect helper IDs through their control describedBy prop. These changes are staged for the next coordinated package release.
+Use [Fieldset](fieldset.md) to group related controls and [InputGroup](input-group.md) for adornments/actions. The form-composition preview demonstrates both patterns, failure/retry, and native FormData inspection. Browser review remains part of release acceptance.

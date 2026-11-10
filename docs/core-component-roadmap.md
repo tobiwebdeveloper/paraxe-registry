@@ -1,6 +1,6 @@
 # Core component development: forms and application depth
 
-Prepared 10 November 2026. This is the next development plan, not a statement that the proposed components are implemented or published. The immediate focus is core components and their composition; recipe expansion remains paused.
+Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These are not yet in the published package archives. Batches 2 and 3 remain planned. The immediate focus is core components and their composition; recipe expansion remains paused.
 
 ## Why this pass
 
@@ -10,13 +10,13 @@ The next pass should support account forms, onboarding, product editing, invitat
 
 ## Audit findings
 
-The current source barrels expose these Vue components without corresponding React components: AvatarGroup, BarChart, ChartLegend, DonutChart, Dropdown, FileUpload, Kbd, LineChart, MenuItem, MenuSeparator, PageHeader, Spinner, and Stepper. Export presence is only a starting point: audit behaviour before copying an implementation. Existing source is not proof of keyboard, form, or visual readiness.
+The preparation audit found these Vue components without corresponding React components: AvatarGroup, BarChart, ChartLegend, DonutChart, Dropdown, FileUpload, Kbd, LineChart, MenuItem, MenuSeparator, PageHeader, Spinner, and Stepper. Export presence is only a starting point: audit behaviour before copying an implementation. Existing source is not proof of keyboard, form, or visual readiness.
 
 The component index is incomplete in places: for example it marks Vue Icon unavailable even though the Vue barrel exports it. Reconcile public names, guides, and real framework support during each batch. Installed package declarations remain authoritative for published versions.
 
-FormField already supplies label, description, and error markup. Consumers currently connect native IDs and describedBy themselves. Its next improvement should make that wiring easier while preserving existing children/slots and explicit control ownership.
+FormField supplies label, description, and error markup. It now offers React child-function and Vue scoped-slot control bindings while preserving static children/slots and explicit IDs.
 
-Fieldset and grouped input adornments have no focused public components yet. FileUpload has a shared contract and Vue implementation; it needs a behaviour audit and React parity rather than another unrelated upload API.
+Fieldset and InputGroup are now implemented in both frameworks. Spinner parity has also been completed. FileUpload has a shared contract and Vue implementation; it needs a behaviour audit and React parity rather than another unrelated upload API.
 
 ## Batch 1: form structure and compound controls
 
@@ -40,6 +40,12 @@ Support leading and trailing content: Vue named slots and React node props, plus
 Text adornments such as currency symbols and units need intentional accessible treatment. Decorative adornments should not create redundant announcements; meaningful units should be included in the control's accessible description. Interactive trailing actions remain real buttons with names, keyboard focus, and disabled/loading states. The group itself is not a label and must not create a nested label around controls and buttons.
 
 InputGroup does not own the value, validation, submission, password state, or persistence. Required/disabled/invalid semantics must reach the actual input; a styled wrapper cannot substitute for them. Prepare examples that make this distinction clear. Check focus when moving from the input to a trailing action, and prevent double borders, duplicate shadows, or a second focus ring from competing with the shared surface.
+
+### Batch 1 delivery
+
+Implemented in both framework barrels, with a searchable form-composition core preview in the playgrounds and public In progress gallery. It demonstrates suggested addresses, currency adornments, help/error binding, a disabled notification group, native form values, and a guarded pending/failure/retry action. No numbered block was added. Form borders share the form-border-width role so recipes retain their control treatment. Spinner stops rotating under reduced motion and supports decorative use.
+
+See [Fieldset](components/fieldset.md), [InputGroup](components/input-group.md), [FormField](components/form-field.md), and [Spinner](components/spinner.md). Browser visual/native interaction review remains pending when no connection is available.
 
 ### Completion evidence
 
@@ -82,4 +88,4 @@ Calendar/date-range selection, rich text, command search, and advanced table/ser
 5. Add guides and discoverable playground entries. Keep components, examples, recipes, and registry blocks distinct.
 6. Prepare a coordinated package release only after the batch is ready. Give changed packages new versions and verify clean consumers. Preserve immutable registry 0.1.2/0.2.0 and their existing package metadata.
 
-No npm archives or package versions are changed by this preparation document. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.
+Batch 1 changes development source only; no npm archives or package versions have been changed. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.
