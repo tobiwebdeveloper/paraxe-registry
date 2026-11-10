@@ -33,3 +33,5 @@ Settings01 and the Switch id/name/labelledBy/describedBy/required/invalid additi
 Orders01 and shared paginationState/variant/shape/label improvements are also development after 0.2.0. Orders01 uses the existing Swiss recipe and appears alongside Settings01 in the In progress gallery. Both the block and updated core/framework/design packages need a future coordinated release before installation from the public registry. See [Orders01](../registry/orders-01.md).
 
 Course01 and Avatar parity/source-recovery improvements are development after 0.2.0. The course overview uses the existing Educational recipe; its sample lesson/completion experience is preview application code. The public In progress preview is separate from the immutable registry bundles and published framework versions above. See [Course01](../registry/course-01.md).
+
+Dashboard01, React Stat parity/card surface roles, and Checkbox identity/description/error support are development after 0.2.0. The Swiss workspace appears under In progress in both playgrounds and the gallery. Its project brief/task-service simulation is preview application code. See [Dashboard01](../registry/dashboard-01.md).

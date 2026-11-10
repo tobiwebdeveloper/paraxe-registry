@@ -45,6 +45,7 @@
   - [ContentEditor01 and workspace](registry/content-editor-01.md)
   - [Settings01](registry/settings-01.md)
   - [Orders01](registry/orders-01.md)
+  - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
   - [Connected shop demo](registry/shop-journey.md)
@@ -131,6 +132,7 @@
         [AccordionItem](components/accordion-item.md)
         [ButtonGroup](components/button-group.md)
         [SectionHeader](components/section-header.md)
+        [Stat](components/stat.md)
 - Advanced
   - [Theming and customisation](advanced/theming.md)
   - [Production usage](advanced/production.md)

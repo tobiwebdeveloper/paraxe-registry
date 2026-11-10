@@ -55,6 +55,7 @@
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
 <li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
@@ -148,7 +149,8 @@ Composites
 <a href="../components/accordion.html">Accordion</a>
 <a href="../components/accordion-item.html">AccordionItem</a>
 <a href="../components/button-group.html">ButtonGroup</a>
-<a href="../components/section-header.html">SectionHeader</a></li>
+<a href="../components/section-header.html">SectionHeader</a>
+<a href="../components/stat.html">Stat</a></li>
 <li>Advanced
 <ul>
 <li><a href="../advanced/theming.html">Theming and customisation</a></li>
@@ -166,80 +168,93 @@ Composites
 </li>
 </ul>
 </details></nav><main><h1 id="checkbox">Checkbox</h1>
-<p>Checkbox is a public Vue and React component. Its shared API is defined by <code>CheckboxProps</code> from <code>@paraxe/core</code>.</p>
-<h2 id="when-to-use-it">When to use it</h2>
-<p>Use Checkbox when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
-<h2 id="when-not-to-use-it">When not to use it</h2>
-<p>Do not use Checkbox to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.</p>
-<h2 id="import">Import</h2>
-<pre><code class="language-ts">import { Checkbox } from &quot;@paraxe/vue&quot;;
-</code></pre>
-<pre><code class="language-tsx">import { Checkbox } from &quot;@paraxe/react&quot;;
-</code></pre>
-<h2 id="props">Props</h2>
+<p>A native boolean checkbox with a labelled visual control. Import Checkbox from @paraxe/vue or @paraxe/react. Its shared CheckboxProps contract lives in @paraxe/core.</p>
 <table>
 <thead>
 <tr>
 <th>Prop</th>
 <th>Type</th>
 <th>Default</th>
-<th>Required</th>
-<th>Description</th>
+<th>Purpose</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><code>modelValue</code></td>
-<td><code>boolean</code></td>
+<td>modelValue</td>
+<td>boolean</td>
 <td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
+<td>Current checked state</td>
 </tr>
 <tr>
-<td><code>name</code></td>
-<td><code>string</code></td>
-<td>{name</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
+<td>name</td>
+<td>string</td>
+<td>Omitted</td>
+<td>Native form name</td>
 </tr>
 <tr>
-<td><code>disabled</code></td>
-<td><code>boolean</code></td>
+<td>disabled</td>
+<td>boolean</td>
 <td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
+<td>Disable input</td>
 </tr>
 <tr>
-<td><code>required</code></td>
-<td><code>boolean</code></td>
+<td>required</td>
+<td>boolean</td>
 <td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
+<td>Native required constraint</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+<td>Omitted</td>
+<td>Native input ID</td>
+</tr>
+<tr>
+<td>labelledBy</td>
+<td>string</td>
+<td>Omitted</td>
+<td>Accessible label IDs</td>
+</tr>
+<tr>
+<td>describedBy</td>
+<td>string</td>
+<td>Omitted</td>
+<td>Space-separated help/error IDs</td>
+</tr>
+<tr>
+<td>invalid</td>
+<td>boolean</td>
+<td>false</td>
+<td>aria-invalid and error border</td>
 </tr>
 </tbody>
 </table>
-<h2 id="usage">Usage</h2>
-<h3 id="vue">Vue</h3>
+<p>id, labelledBy, describedBy, and invalid are development after the published packages. Use matching development core/framework/design until the next coordinated release.</p>
 <pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
-import { Checkbox } from &quot;@paraxe/vue&quot;;
+import { ref } from 'vue';
+import { Checkbox } from '@paraxe/vue';
+const accepted = ref(false);
 &lt;/script&gt;
-
 &lt;template&gt;
-  &lt;Checkbox&gt;Content&lt;/Checkbox&gt;
+  &lt;Checkbox v-model=&quot;accepted&quot; id=&quot;terms&quot; described-by=&quot;terms-help&quot;&gt;
+    Accept the terms
+  &lt;/Checkbox&gt;
+  &lt;p id=&quot;terms-help&quot;&gt;Required to create your account.&lt;/p&gt;
 &lt;/template&gt;
 </code></pre>
-<h3 id="react">React</h3>
-<pre><code class="language-tsx">import { Checkbox } from &quot;@paraxe/react&quot;;
-
-export function Example() {
-  return &lt;Checkbox&gt;Content&lt;/Checkbox&gt;;
+<pre><code class="language-tsx">import { useState } from 'react';
+import { Checkbox } from '@paraxe/react';
+function Terms() {
+  const [accepted, setAccepted] = useState(false);
+  return &lt;&gt;
+    &lt;Checkbox id=&quot;terms&quot; modelValue={accepted}
+      onModelValueChange={setAccepted} describedBy=&quot;terms-help&quot;&gt;
+      Accept the terms
+    &lt;/Checkbox&gt;
+    &lt;p id=&quot;terms-help&quot;&gt;Required to create your account.&lt;/p&gt;
+  &lt;/&gt;;
 }
 </code></pre>
-<h2 id="accessibility">Accessibility</h2>
-<p>Use meaningful child content and preserve the semantics of the rendered element. See Foundations &gt; Accessibility for shared responsibilities.</p>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="../reference/component-index.html">Component index</a></li>
-<li><a href="../core/contracts.html">Core contracts</a></li>
-</ul>
+<p>Use slot/children text for a normal label. For external labels supply labelledBy and matching IDs. Link errors through describedBy and set invalid; announce request failures in the owning form. Controlled state belongs to the application. Checkbox has no indeterminate state; core Table manages its own native mixed-selection input. Preset form/control roles determine size, border, radius, text, and checked treatment.</p>
+<p>See <a href="../registry/dashboard-01.html">Dashboard01</a> for descriptions, pending changes, and linked save failures.</p>
 </main></div></body></html>

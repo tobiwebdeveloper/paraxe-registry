@@ -565,6 +565,10 @@ export interface ToastEmits {
 
 ```ts
 export interface CheckboxProps {
+  id?: string;
+  labelledBy?: string;
+  describedBy?: string;
+  invalid?: boolean;
   modelValue?: boolean;
   name?: string;
   disabled?: boolean;

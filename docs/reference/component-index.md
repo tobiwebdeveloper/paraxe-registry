@@ -62,3 +62,4 @@
 | [AccordionItem](../components/accordion-item.md) | Composites | Yes | Yes |
 | [ButtonGroup](../components/button-group.md) | Composites | Yes | Yes |
 | [SectionHeader](../components/section-header.md) | Composites | Yes | Yes |
+| [Stat](../components/stat.md) | Composites | Yes | Yes |
