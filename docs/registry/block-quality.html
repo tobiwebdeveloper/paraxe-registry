@@ -178,6 +178,7 @@ Composites
 <li>Start with the existing core. Audit its behaviour, semantics, styling hooks, and framework parity before adding block-specific UI.</li>
 <li>Define the layout's purpose and geometry before choosing sample content. Explain what makes 02 structurally different from 01.</li>
 <li>Give each section clear boundaries, aligned edges, deliberate type scale, and a readable content measure. Whitespace needs a structural purpose.</li>
+<li>Keep block-local element resets at zero specificity, for example <code>:where(.block) :where(h1, p, dl)</code>. A scoped <code>:is()</code> type reset can override single-class spacing rules even when those rules occur later. Use one owner for section separation and semantic density-aware gutter/padding roles.</li>
 <li>Use tokens and component variants for visual treatment. Blocks may define local aliases and layout rules; they must not freeze a palette, font, density, or radius.</li>
 <li>Make sample content and destinations replaceable. Handle empty and long content without leaving fake actions or collapsing the layout.</li>
 <li>Check behaviour and semantics in both frameworks, then inspect the desktop and mobile render in light/dark modes and contrasting recipes. Passing a build alone is not visual approval.</li>

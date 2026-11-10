@@ -28,6 +28,8 @@ The existing Accordion and AccordionItem provide native disclosure buttons and l
 
 The complete page uses Flex and core controls. It can sit inside an application shell without nesting another main landmark. The educator, resources, cover, curriculum, and actions are editable; no extra recipe or prebuilt application shell is required.
 
+Element resets use zero specificity so spacing classes retain their intended margins. The main gutter, rail gaps, hero facts, lesson padding, and section separation use shared density-aware tokens. On small screens lesson statuses occupy a separate row aligned with the lesson text, rather than consuming extra space beside the title.
+
 ## Preview and core work
 
 The preview includes a small sample lesson experience with an explicit completion button. It stores progress in tab memory only. About this preview exposes loading, error, empty, completed, and locked states, plus a failed-open simulation. The lesson preview is application/demo code, not another numbered block or a full learning platform.

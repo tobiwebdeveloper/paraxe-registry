@@ -19,6 +19,7 @@ FAQ01 uses a contained split layout. Its introduction, support card, numbered qu
 - Start with the existing core. Audit its behaviour, semantics, styling hooks, and framework parity before adding block-specific UI.
 - Define the layout's purpose and geometry before choosing sample content. Explain what makes 02 structurally different from 01.
 - Give each section clear boundaries, aligned edges, deliberate type scale, and a readable content measure. Whitespace needs a structural purpose.
+- Keep block-local element resets at zero specificity, for example `:where(.block) :where(h1, p, dl)`. A scoped `:is()` type reset can override single-class spacing rules even when those rules occur later. Use one owner for section separation and semantic density-aware gutter/padding roles.
 - Use tokens and component variants for visual treatment. Blocks may define local aliases and layout rules; they must not freeze a palette, font, density, or radius.
 - Make sample content and destinations replaceable. Handle empty and long content without leaving fake actions or collapsing the layout.
 - Check behaviour and semantics in both frameworks, then inspect the desktop and mobile render in light/dark modes and contrasting recipes. Passing a build alone is not visual approval.
