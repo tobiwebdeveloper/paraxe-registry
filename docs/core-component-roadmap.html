@@ -57,6 +57,7 @@
 <li><a href="registry/settings-01.html">Settings01</a></li>
 <li><a href="registry/orders-01.html">Orders01</a></li>
 <li><a href="registry/checkout-01.html">Checkout01</a></li>
+<li><a href="registry/booking-01.html">Booking01</a></li>
 <li><a href="registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="registry/course-01.html">Course01</a></li>
 <li><a href="registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -110,6 +111,7 @@ Typography
 <a href="components/label.html">Label</a>
 <a href="components/text.html">Text</a>
 Forms
+<a href="components/calendar.html">Calendar</a>
 <a href="components/checkbox.html">Checkbox</a>
 <a href="components/choice.html">Choice</a>
 <a href="components/choice-group.html">ChoiceGroup</a>
@@ -247,7 +249,7 @@ Charts
 <h2 id="batch-3-application-interaction-parity">Batch 3: application interaction parity</h2>
 <p>Audit Dropdown/Menu items and separators, then Stepper, before creating more action-heavy application blocks. Distinguish menu actions from navigation links. Confirm dismissal, focus restoration, keyboard behaviour, disabled actions, and controlled state. A step indicator does not validate a form or silently advance a workflow.</p>
 <p>Evaluate PageHeader, AvatarGroup, Kbd, and remaining chart parity as concrete products require them. A full chart needs appropriate data access, scales, tooltips, responsiveness, theme updates, and a readable alternative. Do not use a decorative sparkline to imply unsupported analytical behaviour.</p>
-<p>Calendar/date-range selection, rich text, command search, and advanced table/server workflows remain later work. They require dedicated interaction designs and integration boundaries, rather than thin wrappers with a large list of promised features.</p>
+<p>Date-range selection, rich text, command search, and advanced table/server workflows remain later work. Inline single-date Calendar is now implemented for Booking01; it does not imply a complete date-picker/range system. These larger capabilities require dedicated interaction designs and integration boundaries.</p>
 <h2 id="how-each-batch-ships">How each batch ships</h2>
 <ol>
 <li>Record the product jobs, shared API, semantic structure, state ownership, and token roles.</li>
@@ -260,4 +262,5 @@ Charts
 <p>Batch 1 changes development source only; no npm archives or package versions have been changed. Use the existing <a href="registry/publishing-commands.html">publishing workflow</a> only after a newly prepared, verified release; the old archives do not contain future component work.</p>
 <h2 id="product-driven-follow-up-checkout01">Product-driven follow-up: Checkout01</h2>
 <p>On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload, Combobox, and the remaining interaction audits stay planned. See <a href="registry/checkout-01.html">Checkout01</a>.</p>
+<p>Booking01 now adds inline Calendar in both frameworks: shared real-date arithmetic, six-week grid, controlled selection, explicit availability/bounds, locale/week start, and day/week/month/year keyboard navigation. Booking state, service requests, timezone conversion, and confirmation remain above the core component. No new recipe was added. See <a href="registry/booking-01.html">Booking01</a> and <a href="components/calendar.html">Calendar</a>.</p>
 </main></div></body></html>

@@ -2,6 +2,7 @@
 
 | Component | Group | Vue | React |
 | --- | --- | --- | --- |
+| [Calendar](../components/calendar.md) | Forms (development) | Yes | Yes |
 | [Price](../components/price.md) | Commerce | Yes | Yes |
 | [ProductMedia](../components/product-media.md) | Commerce | Yes | Yes |
 | [ProductGallery](../components/product-gallery.md) | Commerce | Yes | Yes |

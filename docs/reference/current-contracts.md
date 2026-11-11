@@ -564,6 +564,24 @@ export interface ToastEmits {
 }
 ```
 
+## packages/core/src/contracts/forms/Calendar.ts
+
+```ts
+/** Date-only values use YYYY-MM-DD. The inline calendar does not book time slots. */
+export interface CalendarProps {
+  modelValue?: string | null;
+  defaultMonth?: string;
+  min?: string;
+  max?: string;
+  availableDates?: readonly string[];
+  locale?: string;
+  weekStartsOn?: 0 | 1;
+  disabled?: boolean;
+  label?: string;
+  today?: string;
+}
+```
+
 ## packages/core/src/contracts/forms/Checkbox.ts
 
 ```ts

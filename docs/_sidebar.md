@@ -47,6 +47,7 @@
   - [Settings01](registry/settings-01.md)
   - [Orders01](registry/orders-01.md)
   - [Checkout01](registry/checkout-01.md)
+  - [Booking01](registry/booking-01.md)
   - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
@@ -92,6 +93,7 @@
         [Label](components/label.md)
         [Text](components/text.md)
     Forms
+        [Calendar](components/calendar.md)
         [Checkbox](components/checkbox.md)
         [Choice](components/choice.md)
         [ChoiceGroup](components/choice-group.md)

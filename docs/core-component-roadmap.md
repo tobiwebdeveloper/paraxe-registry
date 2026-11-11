@@ -77,7 +77,7 @@ Audit Dropdown/Menu items and separators, then Stepper, before creating more act
 
 Evaluate PageHeader, AvatarGroup, Kbd, and remaining chart parity as concrete products require them. A full chart needs appropriate data access, scales, tooltips, responsiveness, theme updates, and a readable alternative. Do not use a decorative sparkline to imply unsupported analytical behaviour.
 
-Calendar/date-range selection, rich text, command search, and advanced table/server workflows remain later work. They require dedicated interaction designs and integration boundaries, rather than thin wrappers with a large list of promised features.
+Date-range selection, rich text, command search, and advanced table/server workflows remain later work. Inline single-date Calendar is now implemented for Booking01; it does not imply a complete date-picker/range system. These larger capabilities require dedicated interaction designs and integration boundaries.
 
 ## How each batch ships
 
@@ -93,3 +93,5 @@ Batch 1 changes development source only; no npm archives or package versions hav
 ## Product-driven follow-up: Checkout01
 
 On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload, Combobox, and the remaining interaction audits stay planned. See [Checkout01](registry/checkout-01.md).
+
+Booking01 now adds inline Calendar in both frameworks: shared real-date arithmetic, six-week grid, controlled selection, explicit availability/bounds, locale/week start, and day/week/month/year keyboard navigation. Booking state, service requests, timezone conversion, and confirmation remain above the core component. No new recipe was added. See [Booking01](registry/booking-01.md) and [Calendar](components/calendar.md).

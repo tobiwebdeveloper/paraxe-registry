@@ -155,6 +155,12 @@ Careers01 adds a distinct recruiting layout using Swiss: a filterable, grouped r
 
 The [guide hub](guides/start-here.md) now covers installation, core usage, source-owned blocks, and AI implementation. Static HTML, Markdown sources, an AI index, and a generated current-contract snapshot make this an ongoing adoption track alongside block development. Published and development APIs must remain clearly separated.
 
+## Scheduling as a distinct product layout
+
+[Booking01](registry/booking-01.md) introduces a service brief, calendar, and local-time column within one considered scheduling frame. Its details and confirmation states retain the service context. Studio supplies the suggested typography/control treatment; all preset axes stay independent. A new core [Calendar](components/calendar.md) handles inline date selection, bounds, availability, and keyboard movement in both frameworks. The copied booking controller handles time-zone grouping, guest validation, retries/conflicts, and confirmation from the application's service. The local calendar-event download is real; meeting creation and invitations remain application integrations.
+
+Booking01 and Calendar are development after registry 0.2.0, visible in the In progress previews. No npm publication or immutable bundle changes are included. This expands appointment/service products while keeping the emphasis on distinct layouts and the existing recipes.
+
 ## Film, atmosphere, and a shared video player
 
 [Film01](registry/film-01.md) expands culture and visual-storytelling coverage with a title frame, synopsis, native trailer, production credits, and viewing destinations. Cinematic is an eighth development recipe, pairing expansive regular-weight display type with small, deliberate controls. Nocturne is an independent dark-plum/light-porcelain base palette; it is not a recipe-owned skin. Explicit preset choices still win.
