@@ -58,7 +58,8 @@
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
-<li><a href="../registry/booking-01.html">Booking01</a></li>
+<li><a href="../registry/booking-01.html">Booking01</a>
+<a href="../registry/application-01.html">Application01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -92,6 +93,7 @@ Commerce
 <a href="../components/quantity-input.html">QuantityInput</a>
 Elements
 <a href="../components/avatar.html">Avatar</a>
+<a href="../components/avatar-group.html">AvatarGroup</a>
 <a href="../components/badge.html">Badge</a>
 <a href="../components/swatch.html">Swatch</a>
 <a href="../components/button.html">Button</a>
@@ -503,6 +505,22 @@ export interface AvatarProps {
   status?: AvatarStatus;
 }
 </code></pre>
+<h2 id="packagescoresrccontractselementsavatargroupts">packages/core/src/contracts/elements/AvatarGroup.ts</h2>
+<pre><code class="language-ts">import type { AvatarProps, AvatarSize } from &quot;./Avatar&quot;;
+export interface AvatarGroupMember
+  extends Omit&lt;AvatarProps, &quot;size&quot; | &quot;shape&quot; | &quot;alt&quot;&gt; {
+  id: string;
+  name: string;
+}
+export interface AvatarGroupProps {
+  /** Omit to preserve child/slot composition. */
+  members?: readonly AvatarGroupMember[];
+  max?: number;
+  size?: AvatarSize;
+  label?: string;
+  decorative?: boolean;
+}
+</code></pre>
 <h2 id="packagescoresrccontractselementsbadgets">packages/core/src/contracts/elements/Badge.ts</h2>
 <pre><code class="language-ts">export type BadgeVariant =
   | &quot;default&quot;
@@ -781,13 +799,15 @@ export interface FileUploadProps {
   variant?: FileUploadVariant;
   /** Maximum size per file in bytes. */
   maxSize?: number;
+  /** Maximum selected files; existing app-owned files are never removed. */
+  maxFiles?: number;
   label?: string;
   hint?: string;
 }
 
 export interface FileUploadRejection {
   file: File;
-  reason: &quot;type&quot; | &quot;size&quot; | &quot;duplicate&quot; | &quot;single&quot;;
+  reason: &quot;type&quot; | &quot;size&quot; | &quot;duplicate&quot; | &quot;single&quot; | &quot;count&quot;;
   message: string;
 }
 </code></pre>
@@ -1041,6 +1061,7 @@ export interface MenuItemProps {
   textValue?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
   href?: string;
   danger?: boolean;
   disabled?: boolean;

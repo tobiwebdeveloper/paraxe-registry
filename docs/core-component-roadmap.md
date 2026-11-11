@@ -101,3 +101,7 @@ Batch 1 and the Calendar/Stepper follow-ups are included in published registry 0
 On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload and Combobox have since been implemented in development; the remaining interaction audits stay planned. See [Checkout01](registry/checkout-01.md).
 
 Booking01 now adds inline Calendar in both frameworks: shared real-date arithmetic, six-week grid, controlled selection, explicit availability/bounds, locale/week start, and day/week/month/year keyboard navigation. Booking state, service requests, timezone conversion, and confirmation remain above the core component. No new recipe was added. See [Booking01](registry/booking-01.md) and [Calendar](components/calendar.md).
+
+## Application01 audit (development after 0.3.0)
+
+AvatarGroup gains a shared member contract, bounded overlap, aggregate accessible naming, overflow and React parity while preserving Vue slots. FileUpload gains maxFiles and count rejection without deleting existing app-owned files. MenuItem forwards native download for actual public brief files. Application01 exercises these alongside Combobox, Fieldset and FormField; submission remains application-owned.

@@ -372,6 +372,25 @@ export interface AvatarProps {
 }
 ```
 
+## packages/core/src/contracts/elements/AvatarGroup.ts
+
+```ts
+import type { AvatarProps, AvatarSize } from "./Avatar";
+export interface AvatarGroupMember
+  extends Omit<AvatarProps, "size" | "shape" | "alt"> {
+  id: string;
+  name: string;
+}
+export interface AvatarGroupProps {
+  /** Omit to preserve child/slot composition. */
+  members?: readonly AvatarGroupMember[];
+  max?: number;
+  size?: AvatarSize;
+  label?: string;
+  decorative?: boolean;
+}
+```
+
 ## packages/core/src/contracts/elements/Badge.ts
 
 ```ts
@@ -703,13 +722,15 @@ export interface FileUploadProps {
   variant?: FileUploadVariant;
   /** Maximum size per file in bytes. */
   maxSize?: number;
+  /** Maximum selected files; existing app-owned files are never removed. */
+  maxFiles?: number;
   label?: string;
   hint?: string;
 }
 
 export interface FileUploadRejection {
   file: File;
-  reason: "type" | "size" | "duplicate" | "single";
+  reason: "type" | "size" | "duplicate" | "single" | "count";
   message: string;
 }
 ```
@@ -1011,6 +1032,7 @@ export interface MenuItemProps {
   textValue?: string;
   target?: string;
   rel?: string;
+  download?: string | boolean;
   href?: string;
   danger?: boolean;
   disabled?: boolean;

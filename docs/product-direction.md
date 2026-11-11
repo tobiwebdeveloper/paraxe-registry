@@ -198,3 +198,7 @@ The core Input audit added native min/max/step forwarding in both frameworks. Th
 ## Common application foundations
 
 [ContentEditor01 and the content workspace](registry/content-editor-01.md) deepen everyday app coverage without another recipe. The new block is the controlled writing-form layout; the connected workspace is an example. Core improvements address React AppShell parity, navigation variants/actions, native table controls and selection, and consistent field validation. The next slices should prioritize reusable settings/account forms, data workflows, and product-management forms against this foundation. Real persistence and permissions remain application-owned.
+
+## Brief-led applications
+
+[Application01](registry/application-01.md) adds a standalone recruiting dossier, not a connected Careers01 demo. A numbered role brief and hiring-team context sit beside three working form sections; app-confirmed receipts and closed roles retain the composition. Swiss is suggested without resetting preset axes. The core audit adds data-driven AvatarGroup/React parity, FileUpload count limits and native MenuItem downloads. This is development after registry 0.3.0; the next work should deepen common forms and product workflows using existing recipes.

@@ -58,7 +58,8 @@
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
-<li><a href="../registry/booking-01.html">Booking01</a></li>
+<li><a href="../registry/booking-01.html">Booking01</a>
+<a href="../registry/application-01.html">Application01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -92,6 +93,7 @@ Commerce
 <a href="../components/quantity-input.html">QuantityInput</a>
 Elements
 <a href="../components/avatar.html">Avatar</a>
+<a href="../components/avatar-group.html">AvatarGroup</a>
 <a href="../components/badge.html">Badge</a>
 <a href="../components/swatch.html">Swatch</a>
 <a href="../components/button.html">Button</a>
@@ -204,4 +206,6 @@ Charts
 <h2 id="styling">Styling</h2>
 <p>variant accepts default, flat, or outline; size accepts sm, md, or lg. The existing menu preset/provider key supplies a default variant, while an explicit prop wins. Card background/border/radius/shadow, form radius, button-size roles, caption typography, spacing, foreground, focus, and semantic danger colour remain token-driven. Labels wrap without colliding with optional shortcut captions. Flat intentionally removes the menu surface; outline uses a stronger border without shadow.</p>
 <p>Use MenuItem children and optional passive labels, not arbitrary form fields, nested tabs, or interactive controls within a menu item. Submenus, checked/radio menu items, and a full menubar are outside this first audit. <a href="dropdown.html">Dropdown</a>, <a href="menu-item.html">MenuItem</a>, and <a href="menu-separator.html">MenuSeparator</a> describe composition and boundaries.</p>
+<h2 id="native-downloads-development-after-030">Native downloads (development after 0.3.0)</h2>
+<p>MenuItem accepts <code>download?: string | boolean</code>, forwarded only to an enabled anchor with href. This preserves native browser download behaviour for real resources; it does not generate file contents. Application01 supplies a local public role-brief text resource. Disabled items omit both href and download. Cross-origin download handling remains subject to browser rules.</p>
 </main></div></body></html>

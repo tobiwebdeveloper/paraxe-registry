@@ -30,3 +30,7 @@ The shared navigator observes item changes, keeps roving tabindex coherent, and 
 variant accepts default, flat, or outline; size accepts sm, md, or lg. The existing menu preset/provider key supplies a default variant, while an explicit prop wins. Card background/border/radius/shadow, form radius, button-size roles, caption typography, spacing, foreground, focus, and semantic danger colour remain token-driven. Labels wrap without colliding with optional shortcut captions. Flat intentionally removes the menu surface; outline uses a stronger border without shadow.
 
 Use MenuItem children and optional passive labels, not arbitrary form fields, nested tabs, or interactive controls within a menu item. Submenus, checked/radio menu items, and a full menubar are outside this first audit. [Dropdown](dropdown.md), [MenuItem](menu-item.md), and [MenuSeparator](menu-separator.md) describe composition and boundaries.
+
+## Native downloads (development after 0.3.0)
+
+MenuItem accepts `download?: string | boolean`, forwarded only to an enabled anchor with href. This preserves native browser download behaviour for real resources; it does not generate file contents. Application01 supplies a local public role-brief text resource. Disabled items omit both href and download. Cross-origin download handling remains subject to browser rules.

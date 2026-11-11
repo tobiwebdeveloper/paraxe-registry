@@ -49,6 +49,7 @@
   - [Orders01](registry/orders-01.md)
   - [Checkout01](registry/checkout-01.md)
   - [Booking01](registry/booking-01.md)
+    [Application01](registry/application-01.md)
   - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
@@ -74,6 +75,7 @@
         [QuantityInput](components/quantity-input.md)
     Elements
         [Avatar](components/avatar.md)
+        [AvatarGroup](components/avatar-group.md)
         [Badge](components/badge.md)
         [Swatch](components/swatch.md)
         [Button](components/button.md)

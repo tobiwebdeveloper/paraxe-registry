@@ -58,7 +58,8 @@
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
-<li><a href="../registry/booking-01.html">Booking01</a></li>
+<li><a href="../registry/booking-01.html">Booking01</a>
+<a href="../registry/application-01.html">Application01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -92,6 +93,7 @@ Commerce
 <a href="../components/quantity-input.html">QuantityInput</a>
 Elements
 <a href="../components/avatar.html">Avatar</a>
+<a href="../components/avatar-group.html">AvatarGroup</a>
 <a href="../components/badge.html">Badge</a>
 <a href="../components/swatch.html">Swatch</a>
 <a href="../components/button.html">Button</a>
@@ -221,4 +223,6 @@ await applicationService.submit(body);
 </code></pre>
 <p>The browser exposes selected File objects through its <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file">file-input API</a>. Local name/type/size checks provide feedback; the application server must validate its actual uploads. Transfer progress, cancellation, retries, storage, and permissions belong to that integration. This component invents no upload progress or completion.</p>
 <p>Try <code>?preview=file-upload&amp;profile=clean&amp;theme=light</code> in either playground. It is an In progress <strong>core-component preview</strong>, not a numbered registry block. It covers multiple attachments, single replacement, compact/disabled states, external reset, and explicit sample selection. Shared logic, both framework renders/provider defaults, and Vue client selection/removal/rejection transitions are tested. Browser visual/native picker review remains pending when the review connection is unavailable.</p>
+<h2 id="file-count-limits-development">File-count limits (development)</h2>
+<p><code>maxFiles</code> optionally limits the total accepted selection. It must be a nonnegative safe integer; zero rejects all new files. Multiple mode counts retained files plus accepted new files. Single mode permits a valid replacement at a limit of one. Extra files are rejected with reason <code>count</code>; no existing files are removed. Changing the limit does not reconcile an app-owned array. Validate the complete array again when submitting. Application01 uses one CV and up to three optional supporting files.</p>
 </main></div></body></html>

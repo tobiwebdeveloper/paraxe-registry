@@ -74,3 +74,5 @@
 | [InputGroup](../components/input-group.md) | Forms | Yes | Yes |
 | [Spinner](../components/spinner.md) | Elements | Yes | Yes |
 | [Stepper](../components/stepper.md) | Navigation | Yes | Yes |
+
+Development: [AvatarGroup](../components/avatar-group.md) adds bounded member data, overflow naming, and React parity after registry 0.3.0.

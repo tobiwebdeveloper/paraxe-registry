@@ -50,3 +50,7 @@ await applicationService.submit(body);
 The browser exposes selected File objects through its [file-input API](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/input/file). Local name/type/size checks provide feedback; the application server must validate its actual uploads. Transfer progress, cancellation, retries, storage, and permissions belong to that integration. This component invents no upload progress or completion.
 
 Try `?preview=file-upload&profile=clean&theme=light` in either playground. It is an In progress **core-component preview**, not a numbered registry block. It covers multiple attachments, single replacement, compact/disabled states, external reset, and explicit sample selection. Shared logic, both framework renders/provider defaults, and Vue client selection/removal/rejection transitions are tested. Browser visual/native picker review remains pending when the review connection is unavailable.
+
+## File-count limits (development)
+
+`maxFiles` optionally limits the total accepted selection. It must be a nonnegative safe integer; zero rejects all new files. Multiple mode counts retained files plus accepted new files. Single mode permits a valid replacement at a limit of one. Extra files are rejected with reason `count`; no existing files are removed. Changing the limit does not reconcile an app-owned array. Validate the complete array again when submitting. Application01 uses one CV and up to three optional supporting files.

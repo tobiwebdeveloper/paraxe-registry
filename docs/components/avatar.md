@@ -74,3 +74,5 @@ Use name or meaningful alt for a standalone portrait. Use alt="" when an adjacen
 
 - [Component index](../reference/component-index.md)
 - [Core contracts](../core/contracts.md)
+
+For bounded overlapping teams and an aggregate accessible name, see development [AvatarGroup](avatar-group.md).
