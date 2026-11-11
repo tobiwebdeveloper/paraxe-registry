@@ -27,7 +27,7 @@ import { Button, Dropdown, Menu, MenuItem } from '@paraxe/vue';
 </template>
 ```
 
-duplicateDraft is an application callback in these examples. Omit trigger/#trigger and use label to get a native default button. A custom trigger must be one button or a component forwarding native button attributes, such as Paraxe Button. Dropdown clones that element with its ID, menu attributes, and disabled state; it does not create a nested button. Use an accessible label when the button contains only an icon or avatar. Existing Vue visual-only avatar triggers need a Button around the avatar; the core playground now follows this pattern.
+duplicateDraft is an application callback in these examples. Omit trigger/#trigger and use label to get a native default button. A custom trigger must be one button or a component forwarding native button attributes, such as Paraxe Button. Dropdown clones that element with type=button, its ID, menu attributes, and disabled state; it does not create a nested button. Use an accessible label when the button contains only an icon or avatar. Existing Vue visual-only avatar triggers need a Button around the avatar; the core playground now follows this pattern.
 
 Supply one Menu as the default child. Dropdown gives it the generated menu ID and trigger relationship. MenuItem/MenuSeparator remain the existing menu composition; Dropdown is not a new menu surface. id supplies a stable prefix for the owned IDs rather than an unrelated root DOM ID.
 
