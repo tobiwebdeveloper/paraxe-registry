@@ -1,0 +1,66 @@
+{
+  "name": "login-01",
+  "type": "block",
+  "title": "Login01",
+  "description": "Compact sign-in form with an app-owned authentication callback and no bundled auth provider.",
+  "category": "authentication",
+  "status": "experimental",
+  "components": [
+    "Flex",
+    "Heading",
+    "Text",
+    "Image",
+    "FormField",
+    "Input",
+    "Checkbox",
+    "Button",
+    "Card"
+  ],
+  "tokenPrefix": "--login01-",
+  "schemaVersion": 2,
+  "framework": "react",
+  "entry": "blocks/login-01/react/Login01.tsx",
+  "dependencies": [
+    "@paraxe/react",
+    "@paraxe/design"
+  ],
+  "files": [
+    {
+      "source": "blocks/login-01/react/Login01.tsx",
+      "target": "blocks/login-01/react/Login01.tsx",
+      "encoding": "utf8",
+      "content": "import { useId, useRef, useState, type FormEvent } from \"react\";\r\nimport { Button, Card, Checkbox, Flex, FormField, Heading, Image, Input, Text } from \"@paraxe/react\";\r\nimport { defaultLoginLabels, type Login01Props } from \"../shared/types\";\r\nimport \"../shared/login.css\";\r\nexport function Login01({ labels: providedLabels, title = \"Welcome back\", description = \"Sign in to your account.\", brandName = \"Paraxe\", homeHref = \"/\", logoSrc, forgotPasswordHref = \"/forgot-password\", signUpHref = \"/sign-up\", authenticate, unavailableMessage = \"Sign-in is unavailable in this preview.\", failureMessage = \"We couldn't sign you in. Please try again.\", successMessage = \"Sign-in completed.\" }: Login01Props) {\r\n  const labels = { ...defaultLoginLabels, ...providedLabels };\r\n  const id = `login-${useId().replace(/:/g, '')}`;\r\n  const [email, setEmail] = useState(''), [password, setPassword] = useState(''), [remember, setRemember] = useState(false), [showPassword, setShowPassword] = useState(false), [pending, setPending] = useState(false), [error, setError] = useState(''), [success, setSuccess] = useState('');\r\n  const submitting = useRef(false);\r\n  async function submit(event: FormEvent) {\r\n    event.preventDefault();\r\n    if (submitting.current || !authenticate) return;\r\n    if (!email.trim() || !password) { setError(labels.incomplete); return; }\r\n    submitting.current = true; setPending(true); setError(''); setSuccess('');\r\n    try { await authenticate({ email: email.trim(), password, remember }); setPassword(''); setSuccess(successMessage); }\r\n    catch { setError(failureMessage); }\r\n    finally { submitting.current = false; setPending(false); }\r\n  }\r\n  return <section className=\"login01\"><Card className=\"login01-card\"><Flex className=\"login01-content\" direction=\"column\">\r\n    <a className=\"login01-brand\" href={homeHref}>{logoSrc ? <Image src={logoSrc} alt=\"\" fit=\"contain\" /> : <span className=\"login01-mark\" aria-hidden=\"true\">P.</span>}{brandName}</a>\r\n    <Flex direction=\"column\" className=\"login01-intro\" size=\"small\"><Heading level=\"h1\">{title}</Heading><Text tone=\"muted\">{description}</Text></Flex>\r\n    <form aria-label={title} aria-busy={pending || undefined} onSubmit={submit}><Flex direction=\"column\" className=\"login01-fields\">\r\n      <FormField id={`${id}-email`} label={labels.email} required><Input id={`${id}-email`} modelValue={email} onModelValueChange={setEmail} name=\"email\" type=\"email\" autocomplete=\"username\" required disabled={pending} invalid={!!error} describedBy={error ? `${id}-error` : undefined} /></FormField>\r\n      <FormField id={`${id}-password`} label={labels.password} required><Input id={`${id}-password`} modelValue={password} onModelValueChange={setPassword} name=\"password\" type={showPassword ? 'text' : 'password'} autocomplete=\"current-password\" required disabled={pending} invalid={!!error} describedBy={error ? `${id}-error` : undefined} /></FormField>\r\n      <Flex justify=\"between\" align=\"center\" wrap><Checkbox modelValue={remember} onModelValueChange={setRemember} disabled={pending}>{labels.remember}</Checkbox><Button variant=\"text\" size=\"small\" aria-controls={`${id}-password`} aria-pressed={showPassword} disabled={pending} onActivate={() => setShowPassword(!showPassword)}>{showPassword ? labels.hidePassword : labels.showPassword}</Button></Flex>\r\n      {error && <p id={`${id}-error`} className=\"login01-error\" role=\"alert\">{error}</p>}{success && <p role=\"status\">{success}</p>}\r\n      {!authenticate && <Text className=\"login01-notice\" tone=\"muted\">{unavailableMessage}</Text>}\r\n      <Button type=\"submit\" width=\"full\" loading={pending} disabled={!authenticate}>{pending ? labels.pending : labels.submit}</Button>\r\n    </Flex></form>\r\n    <Flex className=\"login01-links\" justify=\"between\" wrap><a href={forgotPasswordHref}>{labels.forgotPassword}</a><a href={signUpHref}>{labels.signUp}</a></Flex>\r\n  </Flex></Card></section>;\r\n}\r\n",
+      "sha256": "e2ede14c6c7500f3ed37955129f55fa742606cce5463321905260f1fab1195fb"
+    },
+    {
+      "source": "blocks/login-01/shared/login.css",
+      "target": "blocks/login-01/shared/login.css",
+      "encoding": "utf8",
+      "content": ".login01 { padding: var(--space-10) var(--space-4); color: var(--text-primary); font-family: var(--font-family-body); }\r\n.login01 *, .login01 *::before, .login01 *::after { box-sizing: border-box; }\r\n.login01 p, .login01 h1 { margin: 0; }\r\n.login01 .login01-card { max-width: calc(var(--grid-min) * 1.75); margin-inline: auto; }\r\n.login01 .login01-content { gap: var(--stack-gap-lg); }\r\n.login01-brand { display: inline-flex; align-items: center; align-self: flex-start; gap: var(--inline-gap-sm); color: inherit; font-weight: var(--font-weight-bold); text-decoration: none; }\r\n.login01-mark { display: grid; place-items: center; width: calc(var(--space-4) * 2); height: calc(var(--space-4) * 2); border: var(--border-width-thin) solid var(--border-default); border-radius: var(--form-radius); }\r\n.login01-brand .media { width: calc(var(--space-4) * 2); height: calc(var(--space-4) * 2); }\r\n.login01 .login01-intro h1 { font-size: var(--font-size-3xl); line-height: var(--line-height-tight); letter-spacing: var(--letter-spacing-tighter); }\r\n.login01-intro p, .login01-notice { font-size: var(--font-size-sm); line-height: var(--line-height-relaxed); }\r\n.login01 .login01-fields { gap: var(--form-field-gap); }\r\n.login01-links { font-size: var(--typography-caption-size); }\r\n.login01 .btn-text { padding-inline: 0; }\r\n.login01-links a { display: inline-flex; align-items: center; min-height: calc(var(--space-4) * 2.75); color: var(--text-secondary); text-underline-offset: var(--space-1); }\r\n.login01-error { color: var(--color-danger); font-size: var(--font-size-sm); }\r\n.login01 a:focus-visible { outline: var(--focus-ring-width) solid var(--focus-ring-color); outline-offset: var(--focus-ring-offset); }\r\n\r\n",
+      "sha256": "adef0eca2fede268f75749feef366a5527f222b465d52d9e817221fffa8e8509"
+    },
+    {
+      "source": "blocks/login-01/shared/types.ts",
+      "target": "blocks/login-01/shared/types.ts",
+      "encoding": "utf8",
+      "content": "export interface LoginCredentials { email: string; password: string; remember: boolean; }\nexport interface Login01Labels {\n  email: string; password: string; remember: string; showPassword: string; hidePassword: string;\n  submit: string; pending: string; forgotPassword: string; signUp: string; incomplete: string;\n}\nexport const defaultLoginLabels: Login01Labels = {\n  email: \"Email\", password: \"Password\", remember: \"Remember me\", showPassword: \"Show password\", hidePassword: \"Hide password\",\n  submit: \"Sign in\", pending: \"Signing in…\", forgotPassword: \"Forgot password?\", signUp: \"Create an account\", incomplete: \"Enter your email and password.\",\n};\nexport interface Login01Props {\n  labels?: Partial<Login01Labels>;\n  title?: string;\n  description?: string;\n  brandName?: string;\n  homeHref?: string;\n  logoSrc?: string;\n  forgotPasswordHref?: string;\n  signUpHref?: string;\n  authenticate?: (credentials: LoginCredentials) => Promise<void> | void;\n  unavailableMessage?: string;\n  failureMessage?: string;\n  successMessage?: string;\n}\n",
+      "sha256": "809613ffb62deddd8e054cceb125878cca96df940dead3dd3250f962f6f959d1"
+    },
+    {
+      "source": "LICENSE",
+      "target": ".paraxe-licenses/login-01-react-0.3.0.txt",
+      "content": "MIT License\r\n\r\nCopyright (c) 2026 Paraxe contributors\r\n\r\nPermission is hereby granted, free of charge, to any person obtaining a copy\r\nof this software and associated documentation files (the \"Software\"), to deal\r\nin the Software without restriction, including without limitation the rights\r\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\r\ncopies of the Software, and to permit persons to whom the Software is\r\nfurnished to do so, subject to the following conditions:\r\n\r\nThe above copyright notice and this permission notice shall be included in all\r\ncopies or substantial portions of the Software.\r\n\r\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\r\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\r\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\r\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\r\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\r\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\r\nSOFTWARE.\r\n",
+      "encoding": "utf8",
+      "sha256": "bf0d0a796f171a14ecad403dbccba4d4ae40257a1977e5acdc056e33ca4c4229"
+    }
+  ],
+  "version": "0.3.0",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.6.0",
+    "@paraxe/design": "1.10.0",
+    "@paraxe/vue": "1.5.0",
+    "@paraxe/react": "0.4.0",
+    "@paraxe/cli": "0.5.0"
+  }
+}

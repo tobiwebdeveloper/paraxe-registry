@@ -1,0 +1,495 @@
+{
+  "schemaVersion": 2,
+  "name": "paraxe",
+  "version": "0.3.0",
+  "license": "MIT",
+  "packageVersions": {
+    "@paraxe/core": "1.6.0",
+    "@paraxe/design": "1.10.0",
+    "@paraxe/vue": "1.5.0",
+    "@paraxe/react": "0.4.0",
+    "@paraxe/cli": "0.5.0"
+  },
+  "blocks": [
+    {
+      "name": "kit-room-collection",
+      "title": "Kit room collection",
+      "description": "Monochrome collection with category tabs, filters, sorting, search, and product tiles.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "kit-room-collection.vue.json",
+      "sha256": "51e3f9dec9004e8108acf68b8390c641aa19f55ab9b8850b076209cba09ef2f1",
+      "status": "experimental"
+    },
+    {
+      "name": "kit-room-collection",
+      "title": "Kit room collection",
+      "description": "Monochrome collection with category tabs, filters, sorting, search, and product tiles.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "kit-room-collection.react.json",
+      "sha256": "78f2e29d54aee7c202807eb6fd9e4a6d3e6595bab324b1ddb0340b9c5f3773b0",
+      "status": "experimental"
+    },
+    {
+      "name": "navbar-01",
+      "title": "Navbar01",
+      "description": "Replaceable brand mark, centered shop/collection/cart links, active underline, and edition label.",
+      "category": "navigation",
+      "framework": "vue",
+      "file": "navbar-01.vue.json",
+      "sha256": "433ff20995f3372bfc4dfa80548ed8a12e03fa0a078f1981124373d572c957c1",
+      "status": "experimental"
+    },
+    {
+      "name": "navbar-01",
+      "title": "Navbar01",
+      "description": "Replaceable brand mark, centered shop/collection/cart links, active underline, and edition label.",
+      "category": "navigation",
+      "framework": "react",
+      "file": "navbar-01.react.json",
+      "sha256": "5622c9f273ece480f539cd9c461713c0620f3fec5f33daae19580628dd83ec7c",
+      "status": "experimental"
+    },
+    {
+      "name": "product-page-01",
+      "title": "ProductPage01",
+      "description": "Image-led product page with stock availability and optional app-owned size, quantity and add-to-cart flow.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "product-page-01.vue.json",
+      "sha256": "634814d80c2b833af099e8545cafb0f7eb1b3ab421b05a39b0838aaefabeac33",
+      "status": "experimental"
+    },
+    {
+      "name": "product-page-01",
+      "title": "ProductPage01",
+      "description": "Image-led product page with stock availability and optional app-owned size, quantity and add-to-cart flow.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "product-page-01.react.json",
+      "sha256": "8f36114cbc6edc444a7a72d8513db8c7247cdf5d706d91b2e9ff28bdc0be0661",
+      "status": "experimental"
+    },
+    {
+      "name": "hero-01",
+      "title": "Hero01",
+      "description": "Two-sided editorial hero with replaceable media and a feature strip.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "hero-01.vue.json",
+      "sha256": "895c236b00484739994fcc7c8d6eb5453ab367138bf934c495aa35bc2d8888bd",
+      "status": "experimental"
+    },
+    {
+      "name": "hero-01",
+      "title": "Hero01",
+      "description": "Two-sided editorial hero with replaceable media and a feature strip.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "hero-01.react.json",
+      "sha256": "1b816d98fc039bbc7a52b7b1e2c1309211ab0a2757afd57a69ec0ad76ff7c2a9",
+      "status": "experimental"
+    },
+    {
+      "name": "login-01",
+      "title": "Login01",
+      "description": "Compact sign-in form with an app-owned authentication callback and no bundled auth provider.",
+      "category": "authentication",
+      "framework": "vue",
+      "file": "login-01.vue.json",
+      "sha256": "acdc04ee0c5f6d1ad2377efe34d5035155b2f0402b948e3f6bce85f89bc23c39",
+      "status": "experimental"
+    },
+    {
+      "name": "login-01",
+      "title": "Login01",
+      "description": "Compact sign-in form with an app-owned authentication callback and no bundled auth provider.",
+      "category": "authentication",
+      "framework": "react",
+      "file": "login-01.react.json",
+      "sha256": "3226b0d34ff0ecdda8ec4117b68b7e0bb9a87cd2e9bc3dc1e74bc19bfb21d882",
+      "status": "experimental"
+    },
+    {
+      "name": "footer-01",
+      "title": "Footer01",
+      "description": "Editorial footer with a contact column, grouped navigation, brand signature and legal band.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "footer-01.vue.json",
+      "sha256": "da0ad90f48a0e1ee22a33cafffa22e15d955d9a431b7e75d988d6b4979017b07",
+      "status": "experimental"
+    },
+    {
+      "name": "footer-01",
+      "title": "Footer01",
+      "description": "Editorial footer with a contact column, grouped navigation, brand signature and legal band.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "footer-01.react.json",
+      "sha256": "f25b462a7d7062fa29acb69ca4645c630aaac11a7bf461e841aac2602a3a8715",
+      "status": "experimental"
+    },
+    {
+      "name": "faq-01",
+      "title": "Faq01",
+      "description": "Editorial support section with numbered accordion rows and a contact panel.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "faq-01.vue.json",
+      "sha256": "48ac546aab432b29b73705b9b6e4784217aef5929a999c1f02674fee29cf215f",
+      "status": "experimental"
+    },
+    {
+      "name": "faq-01",
+      "title": "Faq01",
+      "description": "Editorial support section with numbered accordion rows and a contact panel.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "faq-01.react.json",
+      "sha256": "d1c3500f78c5c8d186b3a8ab18780ca1d24e6cb89c802be74a54d462ab882baa",
+      "status": "experimental"
+    },
+    {
+      "name": "pricing-01",
+      "title": "Pricing01",
+      "description": "Three aligned pricing cards with featured plans, feature lists and app-owned checkout destinations.",
+      "category": "marketing",
+      "framework": "vue",
+      "file": "pricing-01.vue.json",
+      "sha256": "448f451c5463311c939e3c197f0624693717226840918046437eaa6f5d097cd4",
+      "status": "experimental"
+    },
+    {
+      "name": "pricing-01",
+      "title": "Pricing01",
+      "description": "Three aligned pricing cards with featured plans, feature lists and app-owned checkout destinations.",
+      "category": "marketing",
+      "framework": "react",
+      "file": "pricing-01.react.json",
+      "sha256": "98f10ccf7e772fd83f93e01178c528bcb6784b774df2bafe82752b81f313c81b",
+      "status": "experimental"
+    },
+    {
+      "name": "chat-01",
+      "title": "Chat01",
+      "description": "Study conversation workspace with context, starter prompts and an app-owned send callback.",
+      "category": "education",
+      "framework": "vue",
+      "file": "chat-01.vue.json",
+      "sha256": "d41dcc8e4691408f63bd64c5f3e83860cea405c2e8d982fcc8d15ac674ee6712",
+      "status": "experimental"
+    },
+    {
+      "name": "chat-01",
+      "title": "Chat01",
+      "description": "Study conversation workspace with context, starter prompts and an app-owned send callback.",
+      "category": "education",
+      "framework": "react",
+      "file": "chat-01.react.json",
+      "sha256": "796252302a53a9f3db863d1841b4bef47a8d0ff9d8d971374c171aff5c60df30",
+      "status": "experimental"
+    },
+    {
+      "name": "cart-01",
+      "title": "Cart 01",
+      "description": "Responsive shopping bag with editable quantities, availability, removal, and an app-owned order summary.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "cart-01.react.json",
+      "sha256": "89b84f88e53337510d50babe66530f87abbee010098b94ab1942c83cfa11af9b",
+      "status": "experimental"
+    },
+    {
+      "name": "cart-01",
+      "title": "Cart 01",
+      "description": "Responsive shopping bag with editable quantities, availability, removal, and an app-owned order summary.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "cart-01.vue.json",
+      "sha256": "60070f1e580393217160b65fffd7c2f3795a990a72517f13c38cc2c5ac5efee4",
+      "status": "experimental"
+    },
+    {
+      "name": "portal-01",
+      "title": "Portal01",
+      "description": "Member workspace with a featured learning path, searchable resource library, saved views, and a schedule/activity rail.",
+      "category": "portal",
+      "framework": "react",
+      "file": "portal-01.react.json",
+      "sha256": "e892fd1142f6f27baadcf9d817116dde2ad5763c6f735b5bf424ec37e8fc636b",
+      "status": "experimental"
+    },
+    {
+      "name": "portal-01",
+      "title": "Portal01",
+      "description": "Member workspace with a featured learning path, searchable resource library, saved views, and a schedule/activity rail.",
+      "category": "portal",
+      "framework": "vue",
+      "file": "portal-01.vue.json",
+      "sha256": "4184438f327b94e15195473a23367cf2a1421b86479c45c8a321eeb4b9953982",
+      "status": "experimental"
+    },
+    {
+      "name": "article-01",
+      "title": "Article01",
+      "description": "Long-form publication with a typographic masthead, cover, reading column, contents rail, pull quotes, author notes, and related stories.",
+      "category": "publication",
+      "framework": "react",
+      "file": "article-01.react.json",
+      "sha256": "5fbbfc9c98cc10b198508cd3f88780fd37712f04098f333761b7e594ee39262b",
+      "status": "experimental"
+    },
+    {
+      "name": "article-01",
+      "title": "Article01",
+      "description": "Long-form publication with a typographic masthead, cover, reading column, contents rail, pull quotes, author notes, and related stories.",
+      "category": "publication",
+      "framework": "vue",
+      "file": "article-01.vue.json",
+      "sha256": "85848de0b11bbbdc0a584c3861a9c76f454052888172fb42124cccc87e455da5",
+      "status": "experimental"
+    },
+    {
+      "name": "event-01",
+      "title": "Event01",
+      "description": "Poster-led event page with day-by-day programme, speaker lineup, location details, and an app-owned registration destination.",
+      "category": "event",
+      "framework": "react",
+      "file": "event-01.react.json",
+      "sha256": "6c3410ba25744fdbf650c8ac1d09e4e6cefdc0e03b07ee05468ac30465b83a0c",
+      "status": "experimental"
+    },
+    {
+      "name": "event-01",
+      "title": "Event01",
+      "description": "Poster-led event page with day-by-day programme, speaker lineup, location details, and an app-owned registration destination.",
+      "category": "event",
+      "framework": "vue",
+      "file": "event-01.vue.json",
+      "sha256": "9e588c277f41d5a5def0cf370aa532e36d9b3ca54780ccfd0b4283658d0913a8",
+      "status": "experimental"
+    },
+    {
+      "name": "studio-01",
+      "title": "Studio01",
+      "description": "Service-studio website with a typographic introduction, selected project studies, capability disclosures, and app-owned project enquiry.",
+      "category": "services",
+      "framework": "react",
+      "file": "studio-01.react.json",
+      "sha256": "f8e9ac1838fc5d68488ab39080a792ff07b193889f451381fac6ab7c288ef4d4",
+      "status": "experimental"
+    },
+    {
+      "name": "studio-01",
+      "title": "Studio01",
+      "description": "Service-studio website with a typographic introduction, selected project studies, capability disclosures, and app-owned project enquiry.",
+      "category": "services",
+      "framework": "vue",
+      "file": "studio-01.vue.json",
+      "sha256": "3783989c37c43845b2cd53c37e1ec2043df801bb932503a619210cc0bdba7ab6",
+      "status": "experimental"
+    },
+    {
+      "name": "careers-01",
+      "title": "Careers01",
+      "description": "Recruiting page with a prominent roles count, grouped and filterable job board, company principles, and hiring process.",
+      "category": "teams",
+      "framework": "react",
+      "file": "careers-01.react.json",
+      "sha256": "7fa24873a1d1c18860c605ca2e0ce2da428a4e001f8c93688ca3025d5d274533",
+      "status": "experimental"
+    },
+    {
+      "name": "careers-01",
+      "title": "Careers01",
+      "description": "Recruiting page with a prominent roles count, grouped and filterable job board, company principles, and hiring process.",
+      "category": "teams",
+      "framework": "vue",
+      "file": "careers-01.vue.json",
+      "sha256": "b01850a52d822b9a682299965f8166856efddff23ac12c81aea44daca0a8fc21",
+      "status": "experimental"
+    },
+    {
+      "name": "film-01",
+      "title": "Film01",
+      "description": "Film-release layout with an offset concept poster, visual contact sheet, story, production credits, and optional native trailer.",
+      "category": "culture",
+      "framework": "react",
+      "file": "film-01.react.json",
+      "sha256": "a6a350173b21590993195dcb6cda0a86a8103e06a94d0c4e74d8b90dba5a6ba2",
+      "status": "experimental"
+    },
+    {
+      "name": "film-01",
+      "title": "Film01",
+      "description": "Film-release layout with an offset concept poster, visual contact sheet, story, production credits, and optional native trailer.",
+      "category": "culture",
+      "framework": "vue",
+      "file": "film-01.vue.json",
+      "sha256": "9e895bc2e88afffe84e7ed52f7d6f754abba46ed3fbb8bc0d1ba0bafa537b01e",
+      "status": "experimental"
+    },
+    {
+      "name": "stay-01",
+      "title": "Stay01",
+      "description": "Coastal guesthouse layout with an editorial landscape, date preferences, room-plan comparison, and considered hospitality details.",
+      "category": "hospitality",
+      "framework": "vue",
+      "file": "stay-01.vue.json",
+      "sha256": "2d08c74fe5d262bee8443071ac2151de2d3c0e1fcbdc0ce444bf1269c34d8f82",
+      "status": "experimental"
+    },
+    {
+      "name": "stay-01",
+      "title": "Stay01",
+      "description": "Coastal guesthouse layout with an editorial landscape, date preferences, room-plan comparison, and considered hospitality details.",
+      "category": "hospitality",
+      "framework": "react",
+      "file": "stay-01.react.json",
+      "sha256": "45bd385ea47573ec5dffe326c9f41c85e70220ee42c3c460414aef2e6347967b",
+      "status": "experimental"
+    },
+    {
+      "name": "content-editor-01",
+      "title": "ContentEditor01",
+      "description": "Embeddable content form with writing panels, entry settings, live summary, validation targets, and save/preview actions.",
+      "category": "content-operations",
+      "framework": "react",
+      "file": "content-editor-01.react.json",
+      "sha256": "9ef55857e8fa947b889a6b611cf3de93477483aec53eca846e9464c575604703",
+      "status": "experimental"
+    },
+    {
+      "name": "content-editor-01",
+      "title": "ContentEditor01",
+      "description": "Embeddable content form with writing panels, entry settings, live summary, validation targets, and save/preview actions.",
+      "category": "content-operations",
+      "framework": "vue",
+      "file": "content-editor-01.vue.json",
+      "sha256": "a6a0725c674185d9c3347c1a7bb4da3846ab0c9f0f83c597d0d6fe268e282ca3",
+      "status": "experimental"
+    },
+    {
+      "name": "settings-01",
+      "title": "Settings01",
+      "description": "Account settings with a profile rail, grouped preferences, security overview, and a persistent save/discard bar.",
+      "category": "application",
+      "framework": "vue",
+      "file": "settings-01.vue.json",
+      "sha256": "c748b1ce5d06eb48c934709fa7334991d9380ed1914ed158576f52efb2f68938",
+      "status": "experimental"
+    },
+    {
+      "name": "settings-01",
+      "title": "Settings01",
+      "description": "Account settings with a profile rail, grouped preferences, security overview, and a persistent save/discard bar.",
+      "category": "application",
+      "framework": "react",
+      "file": "settings-01.react.json",
+      "sha256": "b005333d50cb2b556c2fbd63b865b74cbaae68ba8bfb253dcb256bb55d1ba009",
+      "status": "experimental"
+    },
+    {
+      "name": "orders-01",
+      "title": "Orders01",
+      "description": "Order management with a searchable order book, fulfilment filters, pagination, and an in-flow order detail panel.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "orders-01.vue.json",
+      "sha256": "99662d50f903fd577844055f5e27e8f714097c99513079dae2e49261a8f59c0a",
+      "status": "experimental"
+    },
+    {
+      "name": "orders-01",
+      "title": "Orders01",
+      "description": "Order management with a searchable order book, fulfilment filters, pagination, and an in-flow order detail panel.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "orders-01.react.json",
+      "sha256": "300a4f000374050eb2abe00977f0f6b677cbbb0e6bb156e89f096cbcc06cbe94",
+      "status": "experimental"
+    },
+    {
+      "name": "course-01",
+      "title": "Course01",
+      "description": "A learning path with a course overview, searchable module curriculum, progress/continue rail, educator, and replaceable resources.",
+      "category": "education",
+      "framework": "vue",
+      "file": "course-01.vue.json",
+      "sha256": "afb62ce94da564f1ebc26cd9cf9f729dbdee3b5855bdbe70acb17b96026454eb",
+      "status": "experimental"
+    },
+    {
+      "name": "course-01",
+      "title": "Course01",
+      "description": "A learning path with a course overview, searchable module curriculum, progress/continue rail, educator, and replaceable resources.",
+      "category": "education",
+      "framework": "react",
+      "file": "course-01.react.json",
+      "sha256": "7ae3a19b2c19c4d3bb5ea6d9a534b3958931d5ae2c791c94f43eca179a9bd7dd",
+      "status": "experimental"
+    },
+    {
+      "name": "dashboard-01",
+      "title": "Dashboard01",
+      "description": "A decision-first workspace: delivery history, focused priorities, full-width project register, handovers, activity, and ownership.",
+      "category": "workspace",
+      "framework": "vue",
+      "file": "dashboard-01.vue.json",
+      "sha256": "57f201a629ba2586bfc7b8208ca762e97eac1ad8c1061ca8757322f83d0b65c0",
+      "status": "experimental"
+    },
+    {
+      "name": "dashboard-01",
+      "title": "Dashboard01",
+      "description": "A decision-first workspace: delivery history, focused priorities, full-width project register, handovers, activity, and ownership.",
+      "category": "workspace",
+      "framework": "react",
+      "file": "dashboard-01.react.json",
+      "sha256": "c45a402037e9542a2177da237715ef28fcca9ecdf38f07e49b02a2f0d29a81d8",
+      "status": "experimental"
+    },
+    {
+      "name": "checkout-01",
+      "title": "Checkout01",
+      "description": "A contact, delivery, and review checkout with a product spread, order summary, authoritative quotes, validation, and app-owned payment handoff.",
+      "category": "commerce",
+      "framework": "vue",
+      "file": "checkout-01.vue.json",
+      "sha256": "a5d2b947ee5201647aa3b79bf127face6b1076b4d25211afd9082d4a78b2d6d3",
+      "status": "experimental"
+    },
+    {
+      "name": "checkout-01",
+      "title": "Checkout01",
+      "description": "A contact, delivery, and review checkout with a product spread, order summary, authoritative quotes, validation, and app-owned payment handoff.",
+      "category": "commerce",
+      "framework": "react",
+      "file": "checkout-01.react.json",
+      "sha256": "ff7d30a24a453272922cac257daba9c72b2d281387a1880d411e8258e7697c0d",
+      "status": "experimental"
+    },
+    {
+      "name": "booking-01",
+      "title": "Booking01",
+      "description": "A service brief, inline calendar, and available times with guest details, conflict recovery, time zones, and a calendar-event download.",
+      "category": "scheduling",
+      "framework": "vue",
+      "file": "booking-01.vue.json",
+      "sha256": "6b07dfc1bd51fe94332b79e01e523283aecb32b4238e676ee43a877fee967f77",
+      "status": "experimental"
+    },
+    {
+      "name": "booking-01",
+      "title": "Booking01",
+      "description": "A service brief, inline calendar, and available times with guest details, conflict recovery, time zones, and a calendar-event download.",
+      "category": "scheduling",
+      "framework": "react",
+      "file": "booking-01.react.json",
+      "sha256": "a15d9114b3f84f1563138ca2187a031a5492d7e8aced0744d03f6849def6a1e0",
+      "status": "experimental"
+    }
+  ]
+}
