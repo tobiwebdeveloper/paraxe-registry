@@ -27,3 +27,7 @@ All five published archive SHA-512 values match their prepared archives. Clean-c
 Registry **0.2.0** (18 layouts / 36 bundles) and **0.1.2** (9 layouts / 18 bundles) remain unchanged. CLI 0.4.0 keeps its registry 0.2.0 default; CLI 0.3.0 keeps registry 0.1.2. Installing new 0.3.0 blocks requires the package versions above. Installed declarations remain authoritative for applications on older versions.
 
 [Current contracts](current-contracts.md) describe workspace source. Future development can move beyond this published baseline; read each feature's release note rather than assuming every workspace change is in npm. All blocks remain experimental. Browser visual/native keyboard and assistive-technology review remain pending where review connections are unavailable; successful builds are not visual approval.
+
+## Development after 0.3.0
+
+The FileUpload audit and React parity are newer workspace source: controlled selection, consistent picker/drop type and size validation, duplicate feedback, guarded removal, native focus/labels, token-driven dropzone/compact surfaces, and preset/provider variant support. They appear under In progress as a core-component preview. Published Vue 1.5.0 retains the earlier implementation; React 0.4.0 does not export FileUpload. No published archive or immutable bundle has been changed. See [FileUpload](../components/file-upload.md).

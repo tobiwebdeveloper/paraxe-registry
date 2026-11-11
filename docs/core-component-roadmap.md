@@ -1,6 +1,6 @@
 # Core component development: forms and application depth
 
-Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batches 2 and 3 remain planned. The immediate focus is core components and their composition; recipe expansion remains paused.
+Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload is now audited in development after 0.3.0; Combobox and the remaining batch 3 work stay planned. The immediate focus is core components and their composition; recipe expansion remains paused.
 
 ## Why this pass
 
@@ -64,6 +64,8 @@ See [Fieldset](components/fieldset.md), [InputGroup](components/input-group.md),
 Review the existing contract and Vue implementation before finalizing the cross-framework API. Define selected-file ownership, selecting the same file again, single/multiple replacement, duplicate identity, removal, size/type rejection, disabled behaviour, native picker access, and drag/drop fallback. Decide whether native form submission is supported and document it accurately.
 
 Keep selection separate from transfer. Local file selection must not display invented upload progress or completion. Server uploading, cancellation, retry, storage, and authorization belong to an application-supplied integration. Local checks improve feedback; they do not establish server-side file safety.
+
+The FileUpload audit is now implemented in development after 0.3.0. Both frameworks support controlled/local selection, shared type/size/duplicate checks for picker and drop, rejected single-file replacement recovery, disabled guards, native labelling/focus, and dropzone/compact preset variants. The earlier Vue update:files event is preserved. Selected files are app state; native form submission is deliberately not claimed. A dedicated In progress core preview and guide cover these boundaries. See [FileUpload](components/file-upload.md). Combobox remains next in this batch.
 
 ### Combobox
 

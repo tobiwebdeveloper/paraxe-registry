@@ -118,6 +118,7 @@ Forms
 <a href="../components/choice-group.html">ChoiceGroup</a>
 <a href="../components/form-field.html">FormField</a>
 <a href="../components/fieldset.html">Fieldset</a>
+<a href="../components/file-upload.html">FileUpload</a>
 <a href="../components/input-group.html">InputGroup</a>
 <a href="../components/input.html">Input</a>
 <a href="../components/radio.html">Radio</a>
@@ -735,6 +736,11 @@ export interface ChoiceGroupContext {
 <pre><code class="language-ts">export type FileUploadVariant = &quot;dropzone&quot; | &quot;compact&quot;;
 
 export interface FileUploadProps {
+  /** Omit for local state; supply for application-controlled selection. */
+  files?: readonly File[];
+  id?: string;
+  describedBy?: string;
+  invalid?: boolean;
   accept?: string;
   multiple?: boolean;
   disabled?: boolean;
@@ -743,6 +749,12 @@ export interface FileUploadProps {
   maxSize?: number;
   label?: string;
   hint?: string;
+}
+
+export interface FileUploadRejection {
+  file: File;
+  reason: &quot;type&quot; | &quot;size&quot; | &quot;duplicate&quot; | &quot;single&quot;;
+  message: string;
 }
 </code></pre>
 <h2 id="packagescoresrccontractsformsformfieldts">packages/core/src/contracts/forms/FormField.ts</h2>

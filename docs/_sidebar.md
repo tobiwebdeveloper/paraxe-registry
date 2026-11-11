@@ -100,6 +100,7 @@
         [ChoiceGroup](components/choice-group.md)
         [FormField](components/form-field.md)
         [Fieldset](components/fieldset.md)
+        [FileUpload](components/file-upload.md)
         [InputGroup](components/input-group.md)
         [Input](components/input.md)
         [Radio](components/radio.md)

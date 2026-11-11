@@ -118,6 +118,7 @@ Forms
 <a href="components/choice-group.html">ChoiceGroup</a>
 <a href="components/form-field.html">FormField</a>
 <a href="components/fieldset.html">Fieldset</a>
+<a href="components/file-upload.html">FileUpload</a>
 <a href="components/input-group.html">InputGroup</a>
 <a href="components/input.html">Input</a>
 <a href="components/radio.html">Radio</a>
@@ -179,7 +180,7 @@ Charts
 </li>
 </ul>
 </details></nav><main><h1 id="core-component-development-forms-and-application-depth">Core component development: forms and application depth</h1>
-<p>Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batches 2 and 3 remain planned. The immediate focus is core components and their composition; recipe expansion remains paused.</p>
+<p>Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload is now audited in development after 0.3.0; Combobox and the remaining batch 3 work stay planned. The immediate focus is core components and their composition; recipe expansion remains paused.</p>
 <h2 id="why-this-pass">Why this pass</h2>
 <p>Recent blocks exposed practical gaps that were addressed in core: Checkbox descriptions/errors, Switch form semantics, Pagination, Avatar parity, Stat, and Sparkline. Continue that approach. A new component should remove a repeated product problem, provide useful semantics or behaviour, and remain small enough to compose into several layouts.</p>
 <p>The next pass should support account forms, onboarding, product editing, invitations, and checkout details. Each numbered registry block still needs its own deliberate composition. A component showcase or connected workflow is an example, not a numbered block.</p>
@@ -244,6 +245,7 @@ Charts
 <h3 id="fileupload-audit-and-parity">FileUpload audit and parity</h3>
 <p>Review the existing contract and Vue implementation before finalizing the cross-framework API. Define selected-file ownership, selecting the same file again, single/multiple replacement, duplicate identity, removal, size/type rejection, disabled behaviour, native picker access, and drag/drop fallback. Decide whether native form submission is supported and document it accurately.</p>
 <p>Keep selection separate from transfer. Local file selection must not display invented upload progress or completion. Server uploading, cancellation, retry, storage, and authorization belong to an application-supplied integration. Local checks improve feedback; they do not establish server-side file safety.</p>
+<p>The FileUpload audit is now implemented in development after 0.3.0. Both frameworks support controlled/local selection, shared type/size/duplicate checks for picker and drop, rejected single-file replacement recovery, disabled guards, native labelling/focus, and dropzone/compact preset variants. The earlier Vue update:files event is preserved. Selected files are app state; native form submission is deliberately not claimed. A dedicated In progress core preview and guide cover these boundaries. See <a href="components/file-upload.html">FileUpload</a>. Combobox remains next in this batch.</p>
 <h3 id="combobox">Combobox</h3>
 <p>Add searchable single selection for customers, assignees, courses, and products. Start with a controlled value and stable option identities, clear keyboard navigation, linked listbox/options, disabled options, no results, loading, and optional clear behaviour. Separate the query from the selected value. The application owns remote search and stale-response handling.</p>
 <p>Do not combine multi-selection, free-form tags, async creation, and command navigation into the first version. Evaluate those after the single-selection interaction is sound. Use the accessibility references applicable at implementation time and verify actual keyboard behaviour.</p>

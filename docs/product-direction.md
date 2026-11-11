@@ -20,6 +20,8 @@ The helper publishes the verified archives through pnpm to npm; the maintainer c
 
 The [core component development plan](core-component-roadmap.md) records the first implemented core batch: Fieldset, InputGroup, Spinner parity, and easier FormField relationships. Next are an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.
 
+Development has resumed after the 0.3.0 publication with the [FileUpload audit and React parity](components/file-upload.md). This is a reusable core addition, not a numbered block: controlled file selection, picker/drop validation, recovery, native focus, and token/preset surfaces. Upload transfer stays app-owned. The public core preview is In progress; published archives and registry 0.3.0 remain unchanged. Searchable single selection is the next planned foundation.
+
 ## Application blocks after registry 0.2.0
 
 The implementation log below records their original development status. All six blocks through Booking01 and the described core improvements now ship in registry 0.3.0 and its coordinated npm versions; 0.2.0 stays immutable.

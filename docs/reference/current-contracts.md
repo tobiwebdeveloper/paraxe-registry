@@ -662,6 +662,11 @@ export interface FieldsetProps {
 export type FileUploadVariant = "dropzone" | "compact";
 
 export interface FileUploadProps {
+  /** Omit for local state; supply for application-controlled selection. */
+  files?: readonly File[];
+  id?: string;
+  describedBy?: string;
+  invalid?: boolean;
   accept?: string;
   multiple?: boolean;
   disabled?: boolean;
@@ -670,6 +675,12 @@ export interface FileUploadProps {
   maxSize?: number;
   label?: string;
   hint?: string;
+}
+
+export interface FileUploadRejection {
+  file: File;
+  reason: "type" | "size" | "duplicate" | "single";
+  message: string;
 }
 ```
 
