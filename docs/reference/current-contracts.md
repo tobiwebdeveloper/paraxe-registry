@@ -967,9 +967,19 @@ export interface BreadcrumbsProps {
 ## packages/core/src/contracts/navigation/Dropdown.ts
 
 ```ts
-export type DropdownPlacement = "bottom-start" | "bottom-end" | "top-start" | "top-end";
+export type DropdownPlacement =
+  | "bottom-start"
+  | "bottom-end"
+  | "top-start"
+  | "top-end";
 
 export interface DropdownProps {
+  /** Omit for local open state. */
+  modelValue?: boolean;
+  /** Stable prefix for the trigger and menu IDs. */
+  id?: string;
+  /** Visible text for the default trigger. */
+  label?: string;
   placement?: DropdownPlacement;
   disabled?: boolean;
 }
@@ -989,12 +999,18 @@ export type MenuVariant = "default" | "flat" | "outline";
 export type MenuSize = "sm" | "md" | "lg";
 
 export interface MenuProps {
+  id?: string;
+  labelledBy?: string;
   variant?: MenuVariant;
   size?: MenuSize;
   label?: string;
 }
 
 export interface MenuItemProps {
+  id?: string;
+  textValue?: string;
+  target?: string;
+  rel?: string;
   href?: string;
   danger?: boolean;
   disabled?: boolean;

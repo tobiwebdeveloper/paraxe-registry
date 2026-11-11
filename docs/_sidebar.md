@@ -117,9 +117,12 @@
         [Image](components/image.md)
         [Video](components/video.md)
     Navigation
+        [Dropdown](components/dropdown.md)
         [Breadcrumb](components/breadcrumb.md)
         [Breadcrumbs](components/breadcrumbs.md)
         [Menu](components/menu.md)
+        [MenuItem](components/menu-item.md)
+        [MenuSeparator](components/menu-separator.md)
         [Navbar](components/navbar.md)
         [Sidebar](components/sidebar.md)
         [SidebarGroup](components/sidebar-group.md)

@@ -1,6 +1,6 @@
 # Core component development: forms and application depth
 
-Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload and Combobox are implemented in development after 0.3.0; the remaining batch 3 work stays planned. The immediate focus is core components and their composition; recipe expansion remains paused.
+Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload and Combobox are implemented in development after 0.3.0; Dropdown/Menu audit is now implemented in development; remaining parity work stays planned. The immediate focus is core components and their composition; recipe expansion remains paused.
 
 ## Why this pass
 
@@ -78,6 +78,8 @@ The first Combobox is now implemented in development after 0.3.0, with Vue/React
 ## Batch 3: application interaction parity
 
 Audit Dropdown/Menu items and separators, then Stepper, before creating more action-heavy application blocks. Distinguish menu actions from navigation links. Confirm dismissal, focus restoration, keyboard behaviour, disabled actions, and controlled state. A step indicator does not validate a form or silently advance a workflow.
+
+Dropdown audit and React parity are now implemented in development after 0.3.0. It connects an actual button to the existing Menu, with controlled/local state, keyboard entry, Escape/selection focus return, outside/Tab dismissal, and cleanup. Supporting Menu/MenuItem/MenuSeparator parity retains their existing variants and adds shared roving navigation, Home/End, typeahead, guarded disabled links/actions, and appropriate callback semantics. This is a core preview, not a new menu system or block. Inline placement remains bounded; the shared portal/collision layer and browser/native review are future work. See [Dropdown](components/dropdown.md).
 
 Evaluate PageHeader, AvatarGroup, Kbd, and remaining chart parity as concrete products require them. A full chart needs appropriate data access, scales, tooltips, responsiveness, theme updates, and a readable alternative. Do not use a decorative sparkline to imply unsupported analytical behaviour.
 

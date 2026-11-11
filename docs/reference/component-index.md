@@ -47,6 +47,9 @@
 | [Breadcrumb](../components/breadcrumb.md) | Navigation | Yes | Yes |
 | [Breadcrumbs](../components/breadcrumbs.md) | Navigation | Yes | Yes |
 | [Menu](../components/menu.md) | Navigation | Yes | Yes |
+| [Dropdown](../components/dropdown.md) | Navigation (audited development) | Yes | Yes |
+| [MenuItem](../components/menu-item.md) | Navigation (audited development) | Yes | Yes |
+| [MenuSeparator](../components/menu-separator.md) | Navigation (development parity) | Yes | Yes |
 | [Sidebar](../components/sidebar.md) | Navigation | Yes | Yes |
 | [SidebarGroup](../components/sidebar-group.md) | Navigation | Yes | Yes |
 | [SidebarItem](../components/sidebar-item.md) | Navigation | Yes | Yes |

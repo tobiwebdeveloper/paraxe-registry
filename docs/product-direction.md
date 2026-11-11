@@ -24,6 +24,8 @@ Development has resumed after the 0.3.0 publication with the [FileUpload audit a
 
 [Combobox](components/combobox.md) now follows that foundation in development: a focused searchable single selection for assignees, customers, courses, or products. It keeps the selected ID separate from query text, supports native committed-ID form data, keyboard exploration, disabled options, optional clear, and app-owned search states. Both frameworks and a dedicated In progress core preview are provided. No additional numbered block or recipe was added; 0.3.0/npm contents remain unchanged.
 
+[Dropdown](components/dropdown.md) is the next core addition/audit. It uses the existing Menu, MenuItem, and MenuSeparator, with supporting React parity and keyboard improvements. Native button attributes, controlled/local open state, disabled links, dismissal, and deliberate focus return are exercised in a core preview with local example actions. It is development after 0.3.0; no numbered block, recipe, npm archive, or immutable registry bundle was added or replaced.
+
 ## Application blocks after registry 0.2.0
 
 The implementation log below records their original development status. All six blocks through Booking01 and the described core improvements now ship in registry 0.3.0 and its coordinated npm versions; 0.2.0 stays immutable.
