@@ -20,7 +20,9 @@ The helper publishes the verified archives through pnpm to npm; the maintainer c
 
 The [core component development plan](core-component-roadmap.md) records the first implemented core batch: Fieldset, InputGroup, Spinner parity, and easier FormField relationships. Next are an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.
 
-Development has resumed after the 0.3.0 publication with the [FileUpload audit and React parity](components/file-upload.md). This is a reusable core addition, not a numbered block: controlled file selection, picker/drop validation, recovery, native focus, and token/preset surfaces. Upload transfer stays app-owned. The public core preview is In progress; published archives and registry 0.3.0 remain unchanged. Searchable single selection is the next planned foundation.
+Development has resumed after the 0.3.0 publication with the [FileUpload audit and React parity](components/file-upload.md). This is a reusable core addition, not a numbered block: controlled file selection, picker/drop validation, recovery, native focus, and token/preset surfaces. Upload transfer stays app-owned. The public core preview is In progress; published archives and registry 0.3.0 remain unchanged. Searchable single selection follows as another shared foundation.
+
+[Combobox](components/combobox.md) now follows that foundation in development: a focused searchable single selection for assignees, customers, courses, or products. It keeps the selected ID separate from query text, supports native committed-ID form data, keyboard exploration, disabled options, optional clear, and app-owned search states. Both frameworks and a dedicated In progress core preview are provided. No additional numbered block or recipe was added; 0.3.0/npm contents remain unchanged.
 
 ## Application blocks after registry 0.2.0
 

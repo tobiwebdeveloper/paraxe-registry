@@ -31,3 +31,5 @@ Registry **0.2.0** (18 layouts / 36 bundles) and **0.1.2** (9 layouts / 18 bundl
 ## Development after 0.3.0
 
 The FileUpload audit and React parity are newer workspace source: controlled selection, consistent picker/drop type and size validation, duplicate feedback, guarded removal, native focus/labels, token-driven dropzone/compact surfaces, and preset/provider variant support. They appear under In progress as a core-component preview. Published Vue 1.5.0 retains the earlier implementation; React 0.4.0 does not export FileUpload. No published archive or immutable bundle has been changed. See [FileUpload](../components/file-upload.md).
+
+Combobox is also development after 0.3.0 in both frameworks: searchable single selection, controlled option ID/query, disabled choices, native committed-ID form values, required validity, keyboard exploration/commit/cancel, and app-owned loading/error/search results. The public In progress preview includes local and fictional remote examples. It is not in the published packages above. See [Combobox](../components/combobox.md).

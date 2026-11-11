@@ -634,7 +634,37 @@ export interface ChoiceGroupContext {
 ## packages/core/src/contracts/forms/Combobox.ts
 
 ```ts
+export interface ComboboxOption {
+  value: string;
+  label: string;
+  description?: string;
+  keywords?: readonly string[];
+  disabled?: boolean;
+}
 
+export interface ComboboxProps {
+  options: readonly ComboboxOption[];
+  modelValue?: string | null;
+  /** Keeps a remote selection's label available outside the current results. */
+  selectedOption?: ComboboxOption;
+  query?: string;
+  /** Disable local filtering when the application supplies search results. */
+  filter?: boolean;
+  loading?: boolean;
+  error?: string;
+  clearable?: boolean;
+  id?: string;
+  name?: string;
+  label?: string;
+  describedBy?: string;
+  required?: boolean;
+  disabled?: boolean;
+  invalid?: boolean;
+  placeholder?: string;
+  emptyMessage?: string;
+  loadingMessage?: string;
+  requiredMessage?: string;
+}
 ```
 
 ## packages/core/src/contracts/forms/DatePicker.ts

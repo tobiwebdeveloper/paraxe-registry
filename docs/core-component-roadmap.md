@@ -1,6 +1,6 @@
 # Core component development: forms and application depth
 
-Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload is now audited in development after 0.3.0; Combobox and the remaining batch 3 work stay planned. The immediate focus is core components and their composition; recipe expansion remains paused.
+Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batch 2 FileUpload and Combobox are implemented in development after 0.3.0; the remaining batch 3 work stays planned. The immediate focus is core components and their composition; recipe expansion remains paused.
 
 ## Why this pass
 
@@ -65,13 +65,15 @@ Review the existing contract and Vue implementation before finalizing the cross-
 
 Keep selection separate from transfer. Local file selection must not display invented upload progress or completion. Server uploading, cancellation, retry, storage, and authorization belong to an application-supplied integration. Local checks improve feedback; they do not establish server-side file safety.
 
-The FileUpload audit is now implemented in development after 0.3.0. Both frameworks support controlled/local selection, shared type/size/duplicate checks for picker and drop, rejected single-file replacement recovery, disabled guards, native labelling/focus, and dropzone/compact preset variants. The earlier Vue update:files event is preserved. Selected files are app state; native form submission is deliberately not claimed. A dedicated In progress core preview and guide cover these boundaries. See [FileUpload](components/file-upload.md). Combobox remains next in this batch.
+The FileUpload audit is now implemented in development after 0.3.0. Both frameworks support controlled/local selection, shared type/size/duplicate checks for picker and drop, rejected single-file replacement recovery, disabled guards, native labelling/focus, and dropzone/compact preset variants. The earlier Vue update:files event is preserved. Selected files are app state; native form submission is deliberately not claimed. A dedicated In progress core preview and guide cover these boundaries. See [FileUpload](components/file-upload.md). Combobox is also implemented below in this batch.
 
 ### Combobox
 
 Add searchable single selection for customers, assignees, courses, and products. Start with a controlled value and stable option identities, clear keyboard navigation, linked listbox/options, disabled options, no results, loading, and optional clear behaviour. Separate the query from the selected value. The application owns remote search and stale-response handling.
 
 Do not combine multi-selection, free-form tags, async creation, and command navigation into the first version. Evaluate those after the single-selection interaction is sound. Use the accessibility references applicable at implementation time and verify actual keyboard behaviour.
+
+The first Combobox is now implemented in development after 0.3.0, with Vue/React parity and shared matching/navigation helpers. Selection and query are independent; native form values use the committed option ID. Keyboard exploration, disabled choices, clear, loading/error/empty results, and stale active-reference removal are covered. Remote fetching and result correlation remain application-owned. The In progress core preview includes a fictional async adapter and recovery controls. Inline popup positioning remains bounded; portal/collision handling and browser/native review are future work. See [Combobox](components/combobox.md).
 
 ## Batch 3: application interaction parity
 
@@ -94,6 +96,6 @@ Batch 1 and the Calendar/Stepper follow-ups are included in published registry 0
 
 ## Product-driven follow-up: Checkout01
 
-On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload, Combobox, and the remaining interaction audits stay planned. See [Checkout01](registry/checkout-01.md).
+On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload and Combobox have since been implemented in development; the remaining interaction audits stay planned. See [Checkout01](registry/checkout-01.md).
 
 Booking01 now adds inline Calendar in both frameworks: shared real-date arithmetic, six-week grid, controlled selection, explicit availability/bounds, locale/week start, and day/week/month/year keyboard navigation. Booking state, service requests, timezone conversion, and confirmation remain above the core component. No new recipe was added. See [Booking01](registry/booking-01.md) and [Calendar](components/calendar.md).

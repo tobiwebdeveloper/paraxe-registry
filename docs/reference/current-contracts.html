@@ -112,6 +112,7 @@ Typography
 <a href="../components/label.html">Label</a>
 <a href="../components/text.html">Text</a>
 Forms
+<a href="../components/combobox.html">Combobox</a>
 <a href="../components/calendar.html">Calendar</a>
 <a href="../components/checkbox.html">Checkbox</a>
 <a href="../components/choice.html">Choice</a>
@@ -717,7 +718,37 @@ export interface ChoiceGroupContext {
 }
 </code></pre>
 <h2 id="packagescoresrccontractsformscomboboxts">packages/core/src/contracts/forms/Combobox.ts</h2>
-<pre><code class="language-ts">
+<pre><code class="language-ts">export interface ComboboxOption {
+  value: string;
+  label: string;
+  description?: string;
+  keywords?: readonly string[];
+  disabled?: boolean;
+}
+
+export interface ComboboxProps {
+  options: readonly ComboboxOption[];
+  modelValue?: string | null;
+  /** Keeps a remote selection's label available outside the current results. */
+  selectedOption?: ComboboxOption;
+  query?: string;
+  /** Disable local filtering when the application supplies search results. */
+  filter?: boolean;
+  loading?: boolean;
+  error?: string;
+  clearable?: boolean;
+  id?: string;
+  name?: string;
+  label?: string;
+  describedBy?: string;
+  required?: boolean;
+  disabled?: boolean;
+  invalid?: boolean;
+  placeholder?: string;
+  emptyMessage?: string;
+  loadingMessage?: string;
+  requiredMessage?: string;
+}
 </code></pre>
 <h2 id="packagescoresrccontractsformsdatepickerts">packages/core/src/contracts/forms/DatePicker.ts</h2>
 <pre><code class="language-ts">
