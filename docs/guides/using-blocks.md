@@ -14,7 +14,7 @@ pnpm exec paraxe add faq-01 --framework vue
 
 Use `--framework react` for React. Review and install the dependency versions printed by the CLI. It does not install dependencies or run registry scripts.
 
-Registry 0.2.0 contains eighteen blocks in both frameworks: kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, chat-01, cart-01, portal-01, article-01, event-01, studio-01, careers-01, film-01, stay-01, and content-editor-01. Check [release status](../reference/release-status.md) during the coordinated rollout. Registry 0.1.2 remains available for the previous CLI.
+Registry 0.3.0 contains twenty-four blocks in both frameworks: kit-room-collection, navbar-01, product-page-01, hero-01, login-01, footer-01, faq-01, pricing-01, chat-01, cart-01, portal-01, article-01, event-01, studio-01, careers-01, film-01, stay-01, content-editor-01, settings-01, orders-01, course-01, dashboard-01, checkout-01, and booking-01. Check [release status](../reference/release-status.md) during the coordinated rollout. Registries 0.1.2 and 0.2.0 remain available for older CLIs.
 
 ## Import copied source
 
@@ -53,7 +53,7 @@ Keep interface styles token-driven and layout CSS scoped. Reuse existing core co
 
 Assets are copied to `public/`. Sample paths usually start at the app root. For subpath hosting, adapt asset data/paths to the host base URL; registry installation does not configure routing or deployment.
 
-[Schema 2](../registry/binary-assets.md), supported by CLI 0.4.0 and registry 0.2.0, copies binary assets exactly. The installer also reads schema 1; CLI 0.3.0 remains pinned to the previous registry 0.1.2.
+[Schema 2](../registry/binary-assets.md), supported by CLI 0.4.0+ and registry 0.2.0+, copies binary assets exactly. The installer also reads schema 1; CLI 0.3.0 remains pinned to the previous registry 0.1.2.
 
 Existing files are protected. Review dry runs. `--force` replaces files and does not merge edits. Compare a fresh copy and merge deliberately; retain licenses.
 

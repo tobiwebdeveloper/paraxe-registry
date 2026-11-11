@@ -1,6 +1,6 @@
 # Sparkline
 
-A small SVG trend or bar sequence. Import Sparkline from @paraxe/vue or @paraxe/react. React support, explicit scale bounds, and shared geometry are development after the published packages.
+A small SVG trend or bar sequence. Import Sparkline from @paraxe/vue or @paraxe/react. React support, explicit scale bounds, and shared geometry ship with core 1.6.0, Vue 1.5.0, and React 0.4.0.
 
 | Prop | Type | Default |
 | --- | --- | --- |

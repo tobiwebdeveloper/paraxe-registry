@@ -1,6 +1,6 @@
 # InputGroup
 
-One form surface around one Input and optional leading/trailing content. It is a core component, not a composed search or pricing block. Available in development Vue and React source after registry 0.2.0.
+One form surface around one Input and optional leading/trailing content. It is a core component, not a composed search or pricing block. Available in Vue 1.5.0 and React 0.4.0 with core 1.6.0/design 1.10.0.
 
 The shared prop invalid defaults to false and marks the wrapper's visual error border. The actual input still needs its own invalid/describedBy/required/disabled props. InputGroup does not clone children, own values, supply a label, or disable trailing actions automatically.
 

@@ -59,7 +59,7 @@ Both require [application CSS setup](install-and-theme.md). This state remains l
 
 Do not mechanically translate DOM events or assume every wrapper forwards native attributes. Installed declarations and framework source are authoritative. The [current contract snapshot](../reference/current-contracts.md) describes development source.
 
-Pair inputs with visible labels and stable IDs. The app owns values, validation, pending, failure, and submission. Use the installed version's documented helper APIs; recent FormField targets and Select validity props are development additions. Native helper markup can supply IDs when an older wrapper cannot.
+Pair inputs with visible labels and stable IDs. The app owns values, validation, pending, failure, and submission. Use the installed version's documented helper APIs; FormField control bindings ship in Vue 1.5.0/React 0.4.0, while Select validity props also exist in the previous release. Native helper markup can supply IDs when an older wrapper cannot.
 
 Use links for real navigation and buttons for actions. Preserve rejected drafts, prevent duplicate requests while pending, and announce useful feedback. Server validation, auth, persistence, and transport belong to the app.
 

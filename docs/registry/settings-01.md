@@ -2,7 +2,7 @@
 
 A complete account-settings layout: a compact identity and section rail, profile fields, locale choices, notification rows, a read-only security overview, and a persistent save/discard bar. It uses Flex, the existing form/typography controls, and semantic colour, density, radius, and surface tokens. Clean is its suggested recipe; it does not introduce a new recipe or embed AppShell.
 
-Try `?preview=settings-01&profile=clean&theme=light` in either playground. The layout is in development after registry 0.2.0. It is visible in the public gallery and Recipe studio but is not part of the immutable installable 0.2.0 release. Its new Switch label/description props require the matching development framework packages.
+Try `?preview=settings-01&profile=clean&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Controlled form contract
 

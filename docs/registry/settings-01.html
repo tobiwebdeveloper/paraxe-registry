@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -179,7 +180,7 @@ Charts
 </ul>
 </details></nav><main><h1 id="settings01">Settings01</h1>
 <p>A complete account-settings layout: a compact identity and section rail, profile fields, locale choices, notification rows, a read-only security overview, and a persistent save/discard bar. It uses Flex, the existing form/typography controls, and semantic colour, density, radius, and surface tokens. Clean is its suggested recipe; it does not introduce a new recipe or embed AppShell.</p>
-<p>Try <code>?preview=settings-01&amp;profile=clean&amp;theme=light</code> in either playground. The layout is in development after registry 0.2.0. It is visible in the public gallery and Recipe studio but is not part of the immutable installable 0.2.0 release. Its new Switch label/description props require the matching development framework packages.</p>
+<p>Try <code>?preview=settings-01&amp;profile=clean&amp;theme=light</code> in either playground. Included in registry <strong>0.3.0</strong>, with core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong> or React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.</p>
 <h2 id="controlled-form-contract">Controlled form contract</h2>
 <p>Import <code>Settings01</code> from its React entry or the default Vue entry. <code>modelValue</code> is required and contains fullName, email, bio, timezone, language, weeklyDigest, mentions, and productUpdates. React emits <code>onModelValueChange(value)</code>, <code>onSubmit(value)</code>, and <code>onDiscard()</code>; Vue emits <code>update:modelValue</code>, <code>submit</code>, and <code>discard</code>. No account or credentials are fetched automatically.</p>
 <p>Optional props: errors (field messages), dirty, pending, feedback ({tone, message}), title, accountLabel, timezones, languages, security, and securityHref. Time-zone/language options are editable value/label lists. Extend the default lists in the copied source or pass your application's supported choices; pass the same lists to validation.</p>

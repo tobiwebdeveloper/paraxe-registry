@@ -1,6 +1,6 @@
 # Stat
 
-Stat presents a labelled value with an optional comparison. Import Stat from @paraxe/vue or @paraxe/react. It is a focused core component. React support and updated surface roles are development after published React 0.3.0/design 1.9.0.
+Stat presents a labelled value with an optional comparison. Import Stat from @paraxe/vue or @paraxe/react. It is a focused core component. React support and updated surface roles ship in React 0.4.0/design 1.10.0.
 
 | Prop | Type | Default |
 | --- | --- | --- |

@@ -2,7 +2,7 @@
 
 An order-management workspace with a searchable order book, fulfilment tabs, global sorting, pagination, CSV export, and an in-flow detail panel. The detail includes product lines, app-supplied totals, payment status, customer/delivery information, and timestamped activity. Swiss is its suggested recipe; existing palettes, fonts, density, radius, and surfaces remain configurable.
 
-Try `?preview=orders-01&profile=swiss&theme=light` in either playground. This is development after registry 0.2.0, shown in the public In progress section. It is not in the immutable installable 0.2.0 bundles. The updated Pagination helper/variants require matching development core, framework, and design packages.
+Try `?preview=orders-01&profile=swiss&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Use and data ownership
 

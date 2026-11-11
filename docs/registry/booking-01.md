@@ -4,7 +4,7 @@ A scheduling layout for consultations, tutoring, introductions, and service appo
 
 The service brief moves above the working area on smaller screens. At mobile widths the calendar and times stack, time buttons form wrapping pairs, and details become a single column. Text can wrap inside each region. Brand, host, agenda, copy, imagery, dates, time zones, and destinations are editable source/data.
 
-Try `?preview=booking-01&profile=studio&theme=light` in either playground. Booking01 appears under **In progress**, outside immutable registry 0.2.0. It requires the new core Calendar and matching development framework/design packages. The current npm archives and installable registry bundles are unchanged.
+Try `?preview=booking-01&profile=studio&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Use the block
 

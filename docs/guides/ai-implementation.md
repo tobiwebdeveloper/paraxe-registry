@@ -4,7 +4,7 @@ Use this as project documentation; it does not replace the application's require
 
 ## Establish what is available
 
-Inspect package.json/lockfile, framework compatibility, installed Paraxe exports/declarations, `paraxe.config.json`, CSS entry points, and copied blocks. Read [release status](../reference/release-status.md). Workspace source and In progress previews contain features absent from current npm.
+Inspect package.json/lockfile, framework compatibility, installed Paraxe exports/declarations, `paraxe.config.json`, CSS entry points, and copied blocks. Read [release status](../reference/release-status.md). Workspace source and future In progress previews may contain features absent from npm. Registry 0.3.0 and its 24 layouts are published; use the matching package versions in release status.
 
 Follow [installation](install-and-theme.md), [core composition](core-components.md), and [registry usage](using-blocks.md). Core exports contracts/helpers; framework packages render UI. Do not invent components, props, callback names, or registry entries. The [current reference](../reference/current-contracts.md) is a development snapshot; installed declarations govern released consumers.
 

@@ -66,6 +66,6 @@ Use meaningful child content and preserve the semantics of the rendered element.
 
 ## Development: descriptive radio options
 
-Radio now forwards id, required, labelledBy, describedBy, and invalid to its native input in both frameworks. These additions are newer than the published packages. A selected option still uses modelValue/value with a shared native name for its group. Vue emits update:modelValue; React calls onModelValueChange.
+Radio now forwards id, required, labelledBy, describedBy, and invalid to its native input in both frameworks. These additions ship in core 1.6.0, Vue 1.5.0, and React 0.4.0. A selected option still uses modelValue/value with a shared native name for its group. Vue emits update:modelValue; React calls onModelValueChange.
 
 Use labelledBy to include an option title and price in its accessible name, describedBy for a delivery description and error, and required/invalid on the actual input. The group still needs a native Fieldset/legend or another appropriate group label. Distinct inputs need distinct IDs; shared name preserves the browser's radio interaction. The invalid state uses the form error border token. See [Checkout01](../registry/checkout-01.md) for complete descriptive choices and validation.

@@ -1,5 +1,7 @@
 # Registry and npm release — 9 November 2026
 
+The current coordinated update is [published release 0.3.0](release-0.3.0.md), with 24 layouts, 48 bundles, Calendar, and all work through Booking01. Use the [current publishing commands](publishing-commands.md). The details below record the verified 0.2.0 baseline; its bundles and older CLI default remain immutable.
+
 ## What ships
 
 | npm package | Published update | Previous release |

@@ -1,45 +1,29 @@
 # Published release and development status
 
-Verified against npm metadata and package archives on 9 November 2026.
+Verified against npm version metadata and the exact prepared archive integrity on 11 November 2026.
 
-| Package | Published latest |
+| Package | Published release |
 | --- | --- |
-| @paraxe/core | 1.5.0 |
-| @paraxe/design | 1.9.0 |
-| @paraxe/vue | 1.4.0 |
-| @paraxe/react | 0.3.0 |
-| @paraxe/cli | 0.4.0 |
+| @paraxe/core | 1.6.0 |
+| @paraxe/design | 1.10.0 |
+| @paraxe/vue | 1.5.0 |
+| @paraxe/react | 0.4.0 |
+| @paraxe/cli | 0.5.0 |
 
-Registry **0.2.0** has eighteen experimental blocks and thirty-six framework bundles, with schema 2 binary-asset support. Its index records package compatibility and hashes. Published CLI/design archives support **Default, Editorial, Educational, Clean, Swiss, Brutalist, Studio, Cinematic, and Organic**. Registry 0.1.2 and its eighteen legacy bundles remain unchanged for older consumers.
+Registry **0.3.0** contains **24 experimental layouts / 48 framework bundles**, with schema 2 text/binary assets. CLI 0.5.0 pins its immutable index. Nine recipes are available: Default, Editorial, Educational, Clean, Swiss, Brutalist, Studio, Cinematic, and Organic. Palette, fonts, density, radius, surfaces, and component variants remain independent.
 
-Sources: [npm core](https://www.npmjs.com/package/@paraxe/core/v/1.5.0), [design](https://www.npmjs.com/package/@paraxe/design/v/1.9.0), [Vue](https://www.npmjs.com/package/@paraxe/vue/v/1.4.0), [React](https://www.npmjs.com/package/@paraxe/react/v/0.3.0), [CLI](https://www.npmjs.com/package/@paraxe/cli/v/0.4.0), and the [registry index](https://tobiwebdeveloper.github.io/paraxe-registry/r/v0.2.0/index.json).
+Sources: [core](https://www.npmjs.com/package/@paraxe/core/v/1.6.0), [design](https://www.npmjs.com/package/@paraxe/design/v/1.10.0), [Vue](https://www.npmjs.com/package/@paraxe/vue/v/1.5.0), [React](https://www.npmjs.com/package/@paraxe/react/v/0.4.0), [CLI](https://www.npmjs.com/package/@paraxe/cli/v/0.5.0), and the [registry index](https://tobiwebdeveloper.github.io/paraxe-registry/r/v0.3.0/index.json).
 
-## Included in this release
+## Included in 0.3.0
 
+The six additions since 0.2.0 are [Settings01](../registry/settings-01.md), [Orders01](../registry/orders-01.md), [Course01](../registry/course-01.md), [Dashboard01](../registry/dashboard-01.md), [Checkout01](../registry/checkout-01.md), and [Booking01](../registry/booking-01.md). They are installable layouts, rather than In progress previews. All eighteen earlier layouts are retained. Connected shop/content demos remain examples, not extra numbered blocks.
 
+Core additions include [Calendar](../components/calendar.md), [Fieldset](../components/fieldset.md), [InputGroup](../components/input-group.md), React parity for Spinner/Stepper/Stat/Sparkline, shared date/pagination/progress/geometry helpers, improved Avatar recovery/parity, FormField control bindings, and descriptive Checkbox/Radio/Switch semantics. The associated design roles and CLI variant support ship together. Booking confirmation, checkout pricing/payments, persistence, authentication, and external services remain application-owned.
 
-Swiss, Brutalist, Studio, Cinematic, Organic; the Nocturne base palette; Cart01, Portal01, Article01, Event01, Studio01, Careers01, Film01, Stay01, ContentEditor01; ProductGallery; the shared native Video player and caption/error handling; optional product purchasing; media/form accessibility updates and native Input constraints; React AppShell, shared navigation/table/form improvements, and Hero01 width choices are included. Connected shop and content-workspace previews are composition examples, not additional installable blocks.
+## Verification and compatibility
 
-All five published archive SHA-512 values match the exact prepared archives. [Current contracts](current-contracts.md) describe the checkout; installed declarations remain authoritative for the consumer version in use.
+All five published archive SHA-512 values match their prepared archives. Clean-consumer verification installed all five archives outside the monorepo, copied and checked every one of the 48 bundles with the packed CLI, checked all nine recipe exports, built both framework consumers, and checked their component/block declarations. Evidence is retained under releases/npm. See [release 0.3.0](../registry/release-0.3.0.md) and [publishing commands](../registry/publishing-commands.md).
 
-CLI 0.4.0 reads schemas 1 and 2 and pins registry 0.2.0. CLI 0.3.0 keeps its schema 1 registry 0.1.2 URL. See [binary assets](../registry/binary-assets.md).
+Registry **0.2.0** (18 layouts / 36 bundles) and **0.1.2** (9 layouts / 18 bundles) remain unchanged. CLI 0.4.0 keeps its registry 0.2.0 default; CLI 0.3.0 keeps registry 0.1.2. Installing new 0.3.0 blocks requires the package versions above. Installed declarations remain authoritative for applications on older versions.
 
-Archive hashes and successful clean-consumer verification are stored under `releases/npm/`. Verification covers all thirty-six installed bundles, nine recipe CSS exports, both framework production builds, consumer declarations, workspace typechecks, and package/registry tests. Browser visual review remains pending; all blocks stay experimental. See [releasing](../registry/releasing.md), [publishing](../registry/publishing-commands.md), and the copyable command in the [product direction document](../product-direction.md).
-
-## Development after 0.2.0
-
-Settings01 and the Switch id/name/labelledBy/describedBy/required/invalid additions are newer development source. Settings01 appears as In progress in the gallery and both playgrounds. It is not in the immutable registry 0.2.0 bundles or the published framework archives listed above. See [Settings01](../registry/settings-01.md).
-
-Orders01 and shared paginationState/variant/shape/label improvements are also development after 0.2.0. Orders01 uses the existing Swiss recipe and appears alongside Settings01 in the In progress gallery. Both the block and updated core/framework/design packages need a future coordinated release before installation from the public registry. See [Orders01](../registry/orders-01.md).
-
-Course01 and Avatar parity/source-recovery improvements are development after 0.2.0. The course overview uses the existing Educational recipe; its sample lesson/completion experience is preview application code. The public In progress preview is separate from the immutable registry bundles and published framework versions above. See [Course01](../registry/course-01.md).
-
-Dashboard01, React Stat parity/card surface roles, and Checkbox identity/description/error support are development after 0.2.0. The Swiss workspace appears under In progress in both playgrounds and the gallery. Its project brief/task-service simulation is preview application code. See [Dashboard01](../registry/dashboard-01.md).
-
-Dashboard01 composition revision adds optional supplied delivery history, a full-width project register, focused/expandable priorities, and horizontal handovers. React Sparkline parity and shared finite geometry/min/max bounds are also development after the published packages.
-
-Core form batch 1 is development after 0.2.0: Fieldset, InputGroup, React Spinner parity, and additive FormField ID/help/error bindings. The form-composition core preview is In progress, not a numbered block. It uses matching development core/design/framework packages; current npm archives are unchanged. See the [component plan](../core-component-roadmap.md).
-
-Checkout01, React Stepper parity/shared progress behaviour, and descriptive Radio semantics are development after 0.2.0. The new checkout layout appears under In progress with a fictional quote/handoff preview. It requires matching development packages; payments remain app-owned. See [Checkout01](../registry/checkout-01.md).
-
-Booking01 and core Calendar in both frameworks are development after 0.2.0. The scheduling layout uses Studio, with local time-zone conversion, guest details, app-confirmed appointment states, and a local calendar-file download. Its fictional preview appears under In progress. Current published archives and immutable bundles remain unchanged. See [Booking01](../registry/booking-01.md) and [Calendar](../components/calendar.md).
+[Current contracts](current-contracts.md) describe workspace source. Future development can move beyond this published baseline; read each feature's release note rather than assuming every workspace change is in npm. All blocks remain experimental. Browser visual/native keyboard and assistive-technology review remain pending where review connections are unavailable; successful builds are not visual approval.

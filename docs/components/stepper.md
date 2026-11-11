@@ -1,6 +1,6 @@
 # Stepper
 
-A read-only step indicator for a staged process. Vue and React now share the same progress model. React parity, the optional label, and bounded progress behaviour are development after the published packages.
+A read-only step indicator for a staged process. Vue and React now share the same progress model. React parity, the optional label, and bounded progress behaviour ship with core 1.6.0, Vue 1.5.0, and React 0.4.0.
 
 | Prop | Type | Default |
 | --- | --- | --- |

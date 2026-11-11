@@ -13,7 +13,7 @@ A native boolean checkbox with a labelled visual control. Import Checkbox from @
 | describedBy | string | Omitted | Space-separated help/error IDs |
 | invalid | boolean | false | aria-invalid and error border |
 
-id, labelledBy, describedBy, and invalid are development after the published packages. Use matching development core/framework/design until the next coordinated release.
+id, labelledBy, describedBy, and invalid ship in core 1.6.0, Vue 1.5.0, and React 0.4.0.
 
 ```vue
 <script setup lang="ts">

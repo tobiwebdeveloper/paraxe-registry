@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -190,7 +191,13 @@ Charts
 </code></pre>
 <p>Run the <code>.ps1</code> file itself; do not paste its contents into the terminal. Its archive paths depend on PowerShell's <code>$PSScriptRoot</code>. The generated helper belongs beside <code>release-manifest.json</code> and the <code>.tgz</code> archives in <code>releases/npm/</code>. The canonical <code>scripts/publish-release.ps1</code> is a template, not the copy to run there.</p>
 <p>The helper checks archive hashes, skips matching versions already on npm, and stops if a published version has different contents. Authenticate to npm if necessary with <code>pnpm login</code>; complete any account or two-factor prompts in your terminal.</p>
-<p>These commands publish <strong>the prepared archives</strong>, not whatever source is currently in the workspace. The prepared update is core 1.5.0, design 1.9.0, Vue 1.4.0, React 0.3.0, and CLI 0.4.0, coordinated with registry 0.2.0. Do not repack new source under an already-published version. <code>pnpm release:pack</code> builds and packs; after <code>pnpm registry:release</code>, <code>pnpm release:verify</code> installs the archives in an isolated consumer, copies and checks all thirty-six bundles, builds both frameworks, and checks consumer types. Repacking invalidates that verification. None of those preparation commands publishes npm packages.</p>
+<p>If publishing returns E404 and <code>pnpm whoami</code> returns E401, the current credentials are not accepted. Sign in again using the npm account with access to the @paraxe packages, confirm whoami succeeds, then rerun the helper:</p>
+<pre><code class="language-powershell">pnpm login --registry=https://registry.npmjs.org/
+pnpm whoami --registry=https://registry.npmjs.org/
+&amp; .\releases\npm\publish.ps1
+</code></pre>
+<p>Complete the login before running the next command. A dry run checks packaging but does not establish publish permission. The helper checks authentication before any actual uploads; no archive rebuild or version bump is needed to retry.</p>
+<p>These commands publish <strong>the prepared archives</strong>, not whatever source is currently in the workspace. The current published update is core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong>, React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>, coordinated with registry <strong>0.3.0</strong> (24 layouts / 48 framework bundles). This includes all work through Booking01 and Calendar. See the <a href="release-0.3.0.html">release notes</a>. Do not repack new source under an already-published version. <code>pnpm release:pack</code> builds and packs; after <code>pnpm registry:release</code>, <code>pnpm release:verify</code> installs the archives in an isolated consumer, copies and checks every bundle, builds both frameworks, and checks consumer types. Repacking invalidates that verification. None of those preparation commands publishes npm packages.</p>
 <h2 id="registry-previews">Registry previews</h2>
 <p>To update the mutable gallery and its In progress previews, without changing installed release bundles:</p>
 <pre><code class="language-powershell">Set-Location &quot;C:\Users\tobio\paraxe&quot;
@@ -200,4 +207,5 @@ pnpm registry:preview
 pnpm registry:deploy
 </code></pre>
 <p>For a new installable registry release, review new package versions and <code>registry/release.json</code>, build and verify a new immutable release with <code>pnpm registry:release</code>, then deploy it. Existing versioned bundles stay unchanged. See <a href="releasing.html">release details</a>.</p>
+<p><code>pnpm registry:stage</code> is the pre-publication step for a verified coordinated update: it copies only the new immutable versioned registry files, leaving the current public gallery/docs unchanged. This makes the new CLI's destination available before npm publication. Full registry promotion still waits for published npm versions. The maintainer does not need to run these registry commands.</p>
 </main></div></body></html>

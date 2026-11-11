@@ -1,8 +1,8 @@
 # Avatar
 
-Development after registry 0.2.0 brings React into parity with the declared AvatarProps API: src, alt, name, size, shape, and status. Vue also recovers when a failed source is replaced. Shared avatarInitials/avatarLabel helpers produce fallback initials and accessible naming. Use alt="" for a decorative portrait beside a visible name; a named avatar includes its supplied status in the accessible label. Square shape follows the preset form radius; circles preserve their geometry. See [Course01](../registry/course-01.md) for an educator example. These changes require matching development packages until the next release.
+React 0.4.0 brings React into parity with the declared AvatarProps API: src, alt, name, size, shape, and status. Vue also recovers when a failed source is replaced. Shared avatarInitials/avatarLabel helpers produce fallback initials and accessible naming. Use alt="" for a decorative portrait beside a visible name; a named avatar includes its supplied status in the accessible label. Square shape follows the preset form radius; circles preserve their geometry. See [Course01](../registry/course-01.md) for an educator example. These changes ship with core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0.
 
-Avatar renders a stable-size portrait or initials fallback. Its shared API is AvatarProps from core; the current workspace supports the same declared props in both frameworks. The previously published React implementation supports child text only, so check [release status](../reference/release-status.md) before using the newer props.
+Avatar renders a stable-size portrait or initials fallback. Its shared API is AvatarProps from core; the current workspace supports the same declared props in both frameworks. Older React releases supported child text only, so check [release status](../reference/release-status.md) before using the newer props.
 
 ## When to use it
 

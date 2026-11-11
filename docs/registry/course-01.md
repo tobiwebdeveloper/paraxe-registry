@@ -2,7 +2,7 @@
 
 A course overview with a substantial learning plan: replaceable cover artwork, outcomes, searchable module disclosures, lesson states and durations, a progress/continue-learning rail, educator, and study resources. Educational is its suggested recipe. Palette, typography, density, radius, and surfaces remain independent preset choices; the default mathematical artwork uses the accent and its paired foreground tokens.
 
-Try `?preview=course-01&profile=educational&theme=light` in either playground. Course01 is development after immutable registry 0.2.0 and appears under In progress. It is not an installable 0.2.0 block. Its improved Avatar needs matching development framework/core/design packages until a coordinated release.
+Try `?preview=course-01&profile=educational&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Course and lesson data
 

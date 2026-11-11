@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -179,7 +180,7 @@ Charts
 </ul>
 </details></nav><main><h1 id="orders01">Orders01</h1>
 <p>An order-management workspace with a searchable order book, fulfilment tabs, global sorting, pagination, CSV export, and an in-flow detail panel. The detail includes product lines, app-supplied totals, payment status, customer/delivery information, and timestamped activity. Swiss is its suggested recipe; existing palettes, fonts, density, radius, and surfaces remain configurable.</p>
-<p>Try <code>?preview=orders-01&amp;profile=swiss&amp;theme=light</code> in either playground. This is development after registry 0.2.0, shown in the public In progress section. It is not in the immutable installable 0.2.0 bundles. The updated Pagination helper/variants require matching development core, framework, and design packages.</p>
+<p>Try <code>?preview=orders-01&amp;profile=swiss&amp;theme=light</code> in either playground. Included in registry <strong>0.3.0</strong>, with core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong> or React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.</p>
 <h2 id="use-and-data-ownership">Use and data ownership</h2>
 <p>Import the named Orders01 React entry or the default Vue entry. Optional props are orders, currency (GBP), locale (en-GB), title, pageSize (6), loading, error, and retry. Omitting orders uses illustrative sample data; pass an empty array for a real empty collection. One currency applies to the supplied order book. The page size can be changed by the app and is bounded to 1–50. Currency/locale formatting and UTC timestamps are explicit, so server/client rendering agrees.</p>
 <p>An OrderRecord has a unique id, display number, createdAt, fulfilment status, payment status, customer, lines, totals, delivery, and events. Amounts are major currency units. The app supplies line amounts and subtotal/shipping/tax/discount/total; the block does not calculate charges, refunds, tax, or fulfilment changes. Totals are displayed as supplied rather than implying a client-calculated financial ledger. Customer and address records must be authorized before delivery to the browser.</p>

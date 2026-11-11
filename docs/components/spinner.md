@@ -1,6 +1,6 @@
 # Spinner
 
-A focused loading indicator, now implemented in development React as well as Vue. Import Spinner from the relevant framework package. React parity and updated motion/size roles require matching development packages until the next release.
+A focused loading indicator, implemented in React as well as Vue. Import Spinner from the relevant framework package. React parity and updated motion/size roles ship in React 0.4.0, Vue 1.5.0, and design 1.10.0.
 
 | Prop | Type | Default |
 | --- | --- | --- |

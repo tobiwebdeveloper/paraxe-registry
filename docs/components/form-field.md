@@ -2,7 +2,7 @@
 
 A labelled field with a description or announced error. Import FormField (also exported as Field) from @paraxe/vue or @paraxe/react. It keeps value, validation, and native control ownership in the application.
 
-Shared props: id, label, description, error, required, optional, disabled. Explicit IDs are preserved. Development source now generates a stable fallback ID and exposes bindable control props; this is newer than the published framework packages.
+Shared props: id, label, description, error, required, optional, disabled. Explicit IDs are preserved. Vue 1.5.0 and React 0.4.0 generate a stable fallback ID and expose bindable control props.
 
 ```tsx
 import { FormField, Input } from '@paraxe/react';

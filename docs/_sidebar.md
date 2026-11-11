@@ -32,6 +32,7 @@
   - [Registry plan](registry/plan.md)
   - [Releasing and installing](registry/releasing.md)
   - [Publishing commands](registry/publishing-commands.md)
+  - [Release 0.3.0](registry/release-0.3.0.md)
   - [Kit room collection](registry/kit-room-collection.md)
   - [Reference blocks 01](registry/reference-blocks-01.md)
   - [Product purchasing](registry/product-purchase.md)

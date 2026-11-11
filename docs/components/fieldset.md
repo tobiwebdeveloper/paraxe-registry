@@ -1,6 +1,6 @@
 # Fieldset
 
-Groups related controls using native fieldset and legend elements. Available in development Vue and React source after registry 0.2.0; use matching development packages until the next coordinated release.
+Groups related controls using native fieldset and legend elements. Available in Vue 1.5.0 and React 0.4.0 with core 1.6.0/design 1.10.0.
 
 | Prop | Type | Default |
 | --- | --- | --- |

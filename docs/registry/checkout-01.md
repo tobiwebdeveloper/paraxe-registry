@@ -4,7 +4,7 @@ A dedicated commerce checkout with an editorial introduction, contact/delivery/r
 
 The composition gives forms and the selection separate measures: a quiet working column and a larger product-led summary. Delivery options are native radios in a fieldset. Review includes editable contact/address sections and a confirmed total beside the final action. On small screens the columns stack, field pairs become single columns, and in-page links connect details and summary. Headings wrap rather than borrowing narrow fixed columns from the display type.
 
-Try `?preview=checkout-01&profile=editorial&theme=light` in either playground. It appears under **In progress**, after immutable registry 0.2.0, and requires matching development core/design/framework packages. No installable 0.2.0 bundle or npm archive has been changed.
+Try `?preview=checkout-01&profile=editorial&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Use the block
 

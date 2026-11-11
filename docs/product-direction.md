@@ -4,9 +4,25 @@ Paraxe is a composable UI system for building polished websites and software pro
 
 The current emphasis is **depth in commonly used application components and forms**, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.
 
+## Published update — all work through Booking01
+
+Block development is paused at the owner's request for a coordinated package update on 11 November 2026. The published versions are core **1.6.0**, design **1.10.0**, Vue **1.5.0**, React **0.4.0**, and CLI **0.5.0**, with registry **0.3.0** (24 layouts / 48 framework bundles). This includes Settings01, Orders01, Course01, Dashboard01, Checkout01, Booking01, Calendar, the form component batch, and the associated parity/layout improvements. All nine existing recipes remain included.
+
+Run in a **PowerShell terminal** after preparation and clean-consumer verification:
+
+```powershell
+Set-Location "C:\Users\tobio\paraxe"
+& .\releases\npm\publish.ps1 -DryRun
+& .\releases\npm\publish.ps1
+```
+
+The helper publishes the verified archives through pnpm to npm; the maintainer completes authentication/2FA in the terminal. No manual rebuilding or version bump is needed. All five npm archives have been published and their integrity verified. Registry 0.3.0 is promoted with all 24 layouts; previous versioned paths remain unchanged. See [release 0.3.0](registry/release-0.3.0.md) and [publishing commands](registry/publishing-commands.md). Registry 0.1.2/0.2.0 and existing npm versions stay unchanged.
+
 The [core component development plan](core-component-roadmap.md) records the first implemented core batch: Fieldset, InputGroup, Spinner parity, and easier FormField relationships. Next are an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.
 
 ## Application blocks after registry 0.2.0
+
+The implementation log below records their original development status. All six blocks through Booking01 and the described core improvements now ship in registry 0.3.0 and its coordinated npm versions; 0.2.0 stays immutable.
 
 The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using the existing Clean, Swiss, and Educational recipes. Each must be a complete, useful layout; connected examples remain separate from numbered blocks.
 

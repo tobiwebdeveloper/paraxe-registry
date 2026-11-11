@@ -1,6 +1,6 @@
 # Core component development: forms and application depth
 
-Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These are not yet in the published package archives. Batches 2 and 3 remain planned. The immediate focus is core components and their composition; recipe expansion remains paused.
+Prepared 10 November 2026. Batch 1 is now implemented in development: Fieldset, InputGroup, React Spinner parity, and additive FormField control bindings. These ship in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0 with registry 0.3.0. Batches 2 and 3 remain planned. The immediate focus is core components and their composition; recipe expansion remains paused.
 
 ## Why this pass
 
@@ -88,7 +88,7 @@ Date-range selection, rich text, command search, and advanced table/server workf
 5. Add guides and discoverable playground entries. Keep components, examples, recipes, and registry blocks distinct.
 6. Prepare a coordinated package release only after the batch is ready. Give changed packages new versions and verify clean consumers. Preserve immutable registry 0.1.2/0.2.0 and their existing package metadata.
 
-Batch 1 changes development source only; no npm archives or package versions have been changed. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.
+Batch 1 and the Calendar/Stepper follow-ups are included in published registry 0.3.0 and its coordinated package versions. Future batches need their own prepared release. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.
 
 ## Product-driven follow-up: Checkout01
 

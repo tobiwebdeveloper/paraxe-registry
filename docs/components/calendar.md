@@ -1,6 +1,6 @@
 # Calendar
 
-An inline, controlled single-date calendar in Vue and React. It renders a month grid, locale weekday headings, bounded month controls, optional availability, and one date in the keyboard tab order. Calendar is development after registry 0.2.0; use matching development core, design, and framework packages. The published versions listed in [release status](../reference/release-status.md) do not export it yet.
+An inline, controlled single-date calendar in Vue and React. It renders a month grid, locale weekday headings, bounded month controls, optional availability, and one date in the keyboard tab order. Calendar ships in core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0. See [release status](../reference/release-status.md).
 
 ```tsx
 import { Calendar } from '@paraxe/react';

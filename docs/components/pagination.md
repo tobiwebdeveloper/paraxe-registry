@@ -1,6 +1,6 @@
 # Pagination
 
-Development after registry 0.2.0 adds a shared paginationState helper, navigation label prop, and matching Vue/React variant and shape support. Outline, filled, minimal, and round treatments use shared tokens. Invalid page/count inputs and unusually large sibling windows are bounded. [Orders01](../registry/orders-01.md) demonstrates sorting/filtering the full supplied collection before pagination. These changes require matching development packages until the next coordinated release.
+Core 1.6.0, Vue 1.5.0, and React 0.4.0 add a shared paginationState helper, navigation label prop, and matching Vue/React variant and shape support. Outline, filled, minimal, and round treatments use shared tokens. Invalid page/count inputs and unusually large sibling windows are bounded. [Orders01](../registry/orders-01.md) demonstrates sorting/filtering the full supplied collection before pagination. Use the matching design 1.10.0 roles.
 
 Pagination is a public Vue and React component. Its shared API is defined by `PaginationProps` from `@paraxe/core`.
 

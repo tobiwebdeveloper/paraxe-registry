@@ -42,6 +42,7 @@
 <li><a href="registry/plan.html">Registry plan</a></li>
 <li><a href="registry/releasing.html">Releasing and installing</a></li>
 <li><a href="registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="registry/product-purchase.html">Product purchasing</a></li>
@@ -180,8 +181,17 @@ Charts
 </details></nav><main><h1 id="paraxe-product-direction-and-coverage">Paraxe product direction and coverage</h1>
 <p>Paraxe is a composable UI system for building polished websites and software products. Its core components, independent preset axes, visual recipes, and editable registry layouts should compose across product uses. A new product family must not create a separate design system or bypass the tokens.</p>
 <p>The current emphasis is <strong>depth in commonly used application components and forms</strong>, rather than adding more recipes. Strengthen shells, navigation, tables, editors, settings, and useful product workflows; demonstrate how the pieces fit together. Organic is retained with a more distinct treatment, while further recipe expansion is paused.</p>
+<h2 id="published-update-all-work-through-booking01">Published update — all work through Booking01</h2>
+<p>Block development is paused at the owner's request for a coordinated package update on 11 November 2026. The published versions are core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong>, React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>, with registry <strong>0.3.0</strong> (24 layouts / 48 framework bundles). This includes Settings01, Orders01, Course01, Dashboard01, Checkout01, Booking01, Calendar, the form component batch, and the associated parity/layout improvements. All nine existing recipes remain included.</p>
+<p>Run in a <strong>PowerShell terminal</strong> after preparation and clean-consumer verification:</p>
+<pre><code class="language-powershell">Set-Location &quot;C:\Users\tobio\paraxe&quot;
+&amp; .\releases\npm\publish.ps1 -DryRun
+&amp; .\releases\npm\publish.ps1
+</code></pre>
+<p>The helper publishes the verified archives through pnpm to npm; the maintainer completes authentication/2FA in the terminal. No manual rebuilding or version bump is needed. All five npm archives have been published and their integrity verified. Registry 0.3.0 is promoted with all 24 layouts; previous versioned paths remain unchanged. See <a href="registry/release-0.3.0.html">release 0.3.0</a> and <a href="registry/publishing-commands.html">publishing commands</a>. Registry 0.1.2/0.2.0 and existing npm versions stay unchanged.</p>
 <p>The <a href="core-component-roadmap.html">core component development plan</a> records the first implemented core batch: Fieldset, InputGroup, Spinner parity, and easier FormField relationships. Next are an audited FileUpload, searchable single selection, and application interaction parity. This preparation is separate from package publication and from adding numbered blocks.</p>
 <h2 id="application-blocks-after-registry-020">Application blocks after registry 0.2.0</h2>
+<p>The implementation log below records their original development status. All six blocks through Booking01 and the described core improvements now ship in registry 0.3.0 and its coordinated npm versions; 0.2.0 stays immutable.</p>
 <p>The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using the existing Clean, Swiss, and Educational recipes. Each must be a complete, useful layout; connected examples remain separate from numbered blocks.</p>
 <p><a href="registry/settings-01.html">Settings01</a> is implemented in development: account/profile rail, grouped profile fields, configurable locale choices, notifications, provider-owned security status, and a persistent save/discard bar. Its controlled form/controller covers validation, pending work, failed-save recovery, and restoring the last saved baseline. Core Switch gained native form/label/description and invalid-state support rather than introducing a bespoke toggle. It is an In progress preview, not an addition to immutable registry 0.2.0.</p>
 <p><a href="registry/orders-01.html">Orders01</a> is implemented in development: a searchable order book, fulfilment filters, global sorting before paging, a detailed in-flow order panel, delivery/activity information, and filtered CSV export. Core Pagination now shares bounded page-window logic and aligns Vue/React variants, shape, and navigation labels. The block stays read-only with application-supplied totals and statuses; payments and fulfilment are app integrations.</p>

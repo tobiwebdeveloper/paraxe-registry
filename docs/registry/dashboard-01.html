@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -179,7 +180,7 @@ Charts
 </ul>
 </details></nav><main><h1 id="dashboard01">Dashboard01</h1>
 <p>A decision-first project workspace: a performance overview with a dominant delivery figure and scoped reporting history, three focused priorities, a full-width project register, a horizontal handover strip, activity, and ownership. Swiss is the suggested recipe; palette, font, density, radius, and surfaces remain independently configurable. The layout uses Flex and shared core controls, with zero-specificity resets so spacing classes retain their margins.</p>
-<p>Try <code>?preview=dashboard-01&amp;profile=swiss&amp;theme=light</code> in either playground. Dashboard01 appears under <strong>In progress</strong>, after immutable registry 0.2.0. Its Stat and Checkbox improvements require matching development packages until the next coordinated release; the live preview does not make it installable from 0.2.0.</p>
+<p>Try <code>?preview=dashboard-01&amp;profile=swiss&amp;theme=light</code> in either playground. Included in registry <strong>0.3.0</strong>, with core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong> or React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.</p>
 <h2 id="supply-a-workspace">Supply a workspace</h2>
 <p>Import the named React Dashboard01 entry or default Vue entry. Pass a DashboardSnapshot through snapshot. title, description, and locale change the introduction and date formatting. Omitting snapshot uses explicit fictional sample data; supply empty projects, tasks, and activity arrays for a real empty workspace.</p>
 <p>A snapshot has id, organization, asOf (timestamp with timezone), currentMemberId, members, projects, tasks, and activity. Members have id, name, role, optional portrait src. Projects have id, code, title, client, summary, ownerId, status, completed and total deliverable counts, date-only due, optional href. Status is on-track, at-risk, blocked, or complete. Tasks have id, title, projectId, optional assigneeId, date-only due, high/normal priority, and done. Activity has id, action, at, and optional actorId/projectId.</p>

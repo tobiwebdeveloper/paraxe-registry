@@ -2,7 +2,7 @@
 
 A decision-first project workspace: a performance overview with a dominant delivery figure and scoped reporting history, three focused priorities, a full-width project register, a horizontal handover strip, activity, and ownership. Swiss is the suggested recipe; palette, font, density, radius, and surfaces remain independently configurable. The layout uses Flex and shared core controls, with zero-specificity resets so spacing classes retain their margins.
 
-Try `?preview=dashboard-01&profile=swiss&theme=light` in either playground. Dashboard01 appears under **In progress**, after immutable registry 0.2.0. Its Stat and Checkbox improvements require matching development packages until the next coordinated release; the live preview does not make it installable from 0.2.0.
+Try `?preview=dashboard-01&profile=swiss&theme=light` in either playground. Included in registry **0.3.0**, with core **1.6.0**, design **1.10.0**, Vue **1.5.0** or React **0.4.0**, and CLI **0.5.0**. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.
 
 ## Supply a workspace
 

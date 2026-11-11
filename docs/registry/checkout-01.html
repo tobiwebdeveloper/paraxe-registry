@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -180,7 +181,7 @@ Charts
 </details></nav><main><h1 id="checkout01">Checkout01</h1>
 <p>A dedicated commerce checkout with an editorial introduction, contact/delivery/review stages, a product-media spread, persistent order summary, and an application-owned payment handoff. Editorial is the suggested recipe. Existing palettes, fonts, density, radius, surfaces, and component variants remain independently editable.</p>
 <p>The composition gives forms and the selection separate measures: a quiet working column and a larger product-led summary. Delivery options are native radios in a fieldset. Review includes editable contact/address sections and a confirmed total beside the final action. On small screens the columns stack, field pairs become single columns, and in-page links connect details and summary. Headings wrap rather than borrowing narrow fixed columns from the display type.</p>
-<p>Try <code>?preview=checkout-01&amp;profile=editorial&amp;theme=light</code> in either playground. It appears under <strong>In progress</strong>, after immutable registry 0.2.0, and requires matching development core/design/framework packages. No installable 0.2.0 bundle or npm archive has been changed.</p>
+<p>Try <code>?preview=checkout-01&amp;profile=editorial&amp;theme=light</code> in either playground. Included in registry <strong>0.3.0</strong>, with core <strong>1.6.0</strong>, design <strong>1.10.0</strong>, Vue <strong>1.5.0</strong> or React <strong>0.4.0</strong>, and CLI <strong>0.5.0</strong>. Its shared component improvements ship in these packages. Older immutable registry 0.2.0 does not include this layout.</p>
 <h2 id="use-the-block">Use the block</h2>
 <p>Copy the Vue default Checkout01 entry or named React Checkout01 entry with shared checkout.ts and checkout.css. Create a stable controller in application setup and pass it through controller. Do not create it again on every render. Optional title, description, logoSrc, and backHref customize the page. Brand text, products, imagery, supported countries, and delivery options come from the checkout record. Locale formats money; the current interface copy is English and editable in the copied source. Back destinations accept relative paths or HTTPS.</p>
 <pre><code class="language-ts">import { createCheckoutController } from './blocks/checkout-01/shared/checkout';

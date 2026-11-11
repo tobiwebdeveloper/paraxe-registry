@@ -42,6 +42,7 @@
 <li><a href="../registry/plan.html">Registry plan</a></li>
 <li><a href="../registry/releasing.html">Releasing and installing</a></li>
 <li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
 <li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
 <li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
 <li><a href="../registry/product-purchase.html">Product purchasing</a></li>
@@ -178,8 +179,8 @@ Charts
 </li>
 </ul>
 </details></nav><main><h1 id="avatar">Avatar</h1>
-<p>Development after registry 0.2.0 brings React into parity with the declared AvatarProps API: src, alt, name, size, shape, and status. Vue also recovers when a failed source is replaced. Shared avatarInitials/avatarLabel helpers produce fallback initials and accessible naming. Use alt=&quot;&quot; for a decorative portrait beside a visible name; a named avatar includes its supplied status in the accessible label. Square shape follows the preset form radius; circles preserve their geometry. See <a href="../registry/course-01.html">Course01</a> for an educator example. These changes require matching development packages until the next release.</p>
-<p>Avatar renders a stable-size portrait or initials fallback. Its shared API is AvatarProps from core; the current workspace supports the same declared props in both frameworks. The previously published React implementation supports child text only, so check <a href="../reference/release-status.html">release status</a> before using the newer props.</p>
+<p>React 0.4.0 brings React into parity with the declared AvatarProps API: src, alt, name, size, shape, and status. Vue also recovers when a failed source is replaced. Shared avatarInitials/avatarLabel helpers produce fallback initials and accessible naming. Use alt=&quot;&quot; for a decorative portrait beside a visible name; a named avatar includes its supplied status in the accessible label. Square shape follows the preset form radius; circles preserve their geometry. See <a href="../registry/course-01.html">Course01</a> for an educator example. These changes ship with core 1.6.0, design 1.10.0, Vue 1.5.0, and React 0.4.0.</p>
+<p>Avatar renders a stable-size portrait or initials fallback. Its shared API is AvatarProps from core; the current workspace supports the same declared props in both frameworks. Older React releases supported child text only, so check <a href="../reference/release-status.html">release status</a> before using the newer props.</p>
 <h2 id="when-to-use-it">When to use it</h2>
 <p>Use Avatar when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
 <h2 id="when-not-to-use-it">When not to use it</h2>
