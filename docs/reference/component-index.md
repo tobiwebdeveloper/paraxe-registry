@@ -67,3 +67,4 @@
 | [Fieldset](../components/fieldset.md) | Forms | Yes | Yes |
 | [InputGroup](../components/input-group.md) | Forms | Yes | Yes |
 | [Spinner](../components/spinner.md) | Elements | Yes | Yes |
+| [Stepper](../components/stepper.md) | Navigation | Yes | Yes |

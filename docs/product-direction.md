@@ -18,6 +18,12 @@ The agreed sequence is Settings01, Orders01, Course01, and Dashboard01, using th
 
 [Dashboard01](registry/dashboard-01.md) completes this development sequence: a Swiss operational overview with a performance-led composition, supplied scoped delivery history, focused priorities, a full-width project register, horizontal handovers, activity, and ownership. Core Stat gained React parity and card surface roles; Checkbox gained linked identity/help/error support. The composition revision adds React Sparkline parity and shared explicit-scale geometry. All four app blocks remain development after immutable registry 0.2.0. Keep the existing recipes and evaluate practical core/form gaps before adding new flavours.
 
+## Return to standalone product layouts
+
+[Checkout01](registry/checkout-01.md) adds a dedicated commerce checkout on 11 November 2026: editorial introduction, gated contact/delivery/review, native delivery choices, a product-media spread, confirmed order totals, and an app-owned payment handoff. The main form and selection summary have separate measures; mobile review repeats the confirmed total beside the final action. It is a new layout rather than a connected-shop composition demo. Editorial is the suggested recipe; existing axes remain independent.
+
+Core gaps were addressed first: React Stepper parity/shared progress semantics and richer Radio identity/help/error/required support. A shared controller handles quote correlation, exact minor-unit totals, expiry, pending work, stale results, and retry. The application owns authoritative pricing, availability, address verification, and payments. Both frameworks, editable assets, guides, and In progress previews are prepared for a future coordinated release; registry 0.2.0 stays immutable.
+
 ## Published package update — 9 November 2026
 
 | Package | Published version |

@@ -46,6 +46,7 @@
   - [ContentEditor01 and workspace](registry/content-editor-01.md)
   - [Settings01](registry/settings-01.md)
   - [Orders01](registry/orders-01.md)
+  - [Checkout01](registry/checkout-01.md)
   - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
@@ -118,6 +119,7 @@
         [Sidebar](components/sidebar.md)
         [SidebarGroup](components/sidebar-group.md)
         [SidebarItem](components/sidebar-item.md)
+        [Stepper](components/stepper.md)
         [Tab](components/tab.md)
         [Tabs](components/tabs.md)
     Data display

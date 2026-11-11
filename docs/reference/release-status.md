@@ -39,3 +39,5 @@ Dashboard01, React Stat parity/card surface roles, and Checkbox identity/descrip
 Dashboard01 composition revision adds optional supplied delivery history, a full-width project register, focused/expandable priorities, and horizontal handovers. React Sparkline parity and shared finite geometry/min/max bounds are also development after the published packages.
 
 Core form batch 1 is development after 0.2.0: Fieldset, InputGroup, React Spinner parity, and additive FormField ID/help/error bindings. The form-composition core preview is In progress, not a numbered block. It uses matching development core/design/framework packages; current npm archives are unchanged. See the [component plan](../core-component-roadmap.md).
+
+Checkout01, React Stepper parity/shared progress behaviour, and descriptive Radio semantics are development after 0.2.0. The new checkout layout appears under In progress with a fictional quote/handoff preview. It requires matching development packages; payments remain app-owned. See [Checkout01](../registry/checkout-01.md).

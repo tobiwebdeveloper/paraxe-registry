@@ -89,3 +89,7 @@ Calendar/date-range selection, rich text, command search, and advanced table/ser
 6. Prepare a coordinated package release only after the batch is ready. Give changed packages new versions and verify clean consumers. Preserve immutable registry 0.1.2/0.2.0 and their existing package metadata.
 
 Batch 1 changes development source only; no npm archives or package versions have been changed. Use the existing [publishing workflow](registry/publishing-commands.md) only after a newly prepared, verified release; the old archives do not contain future component work.
+
+## Product-driven follow-up: Checkout01
+
+On 11 November 2026 the owner returned the focus to standalone blocks. Checkout01 uses the new form foundations and prompted React Stepper parity and descriptive Radio support. This implements the Stepper portion of batch 3 in a concrete product context; FileUpload, Combobox, and the remaining interaction audits stay planned. See [Checkout01](registry/checkout-01.md).

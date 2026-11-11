@@ -56,6 +56,7 @@
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/checkout-01.html">Checkout01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -136,6 +137,7 @@ Navigation
 <a href="../components/sidebar.html">Sidebar</a>
 <a href="../components/sidebar-group.html">SidebarGroup</a>
 <a href="../components/sidebar-item.html">SidebarItem</a>
+<a href="../components/stepper.html">Stepper</a>
 <a href="../components/tab.html">Tab</a>
 <a href="../components/tabs.html">Tabs</a>
 Data display
@@ -792,6 +794,11 @@ export interface InputGroupProps {
 </code></pre>
 <h2 id="packagescoresrccontractsformsradiots">packages/core/src/contracts/forms/Radio.ts</h2>
 <pre><code class="language-ts">export interface RadioProps {
+  id?: string;
+  labelledBy?: string;
+  describedBy?: string;
+  required?: boolean;
+  invalid?: boolean;
   modelValue?: string | number | null;
   value: string | number;
   name: string;
@@ -1015,6 +1022,7 @@ export interface SidebarItemProps {
 <pre><code class="language-ts">export type StepperVariant = &quot;default&quot; | &quot;dots&quot; | &quot;bars&quot; | &quot;vertical&quot;;
 
 export interface StepperProps {
+  label?: string;
   /** Zero-based index of the current step. */
   current: number;
   steps: string[];

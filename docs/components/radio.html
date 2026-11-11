@@ -56,6 +56,7 @@
 <li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
 <li><a href="../registry/settings-01.html">Settings01</a></li>
 <li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/checkout-01.html">Checkout01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -136,6 +137,7 @@ Navigation
 <a href="../components/sidebar.html">Sidebar</a>
 <a href="../components/sidebar-group.html">SidebarGroup</a>
 <a href="../components/sidebar-item.html">SidebarItem</a>
+<a href="../components/stepper.html">Stepper</a>
 <a href="../components/tab.html">Tab</a>
 <a href="../components/tabs.html">Tabs</a>
 Data display
@@ -250,4 +252,7 @@ export function Example() {
 <li><a href="../reference/component-index.html">Component index</a></li>
 <li><a href="../core/contracts.html">Core contracts</a></li>
 </ul>
+<h2 id="development-descriptive-radio-options">Development: descriptive radio options</h2>
+<p>Radio now forwards id, required, labelledBy, describedBy, and invalid to its native input in both frameworks. These additions are newer than the published packages. A selected option still uses modelValue/value with a shared native name for its group. Vue emits update:modelValue; React calls onModelValueChange.</p>
+<p>Use labelledBy to include an option title and price in its accessible name, describedBy for a delivery description and error, and required/invalid on the actual input. The group still needs a native Fieldset/legend or another appropriate group label. Distinct inputs need distinct IDs; shared name preserves the browser's radio interaction. The invalid state uses the form error border token. See <a href="../registry/checkout-01.html">Checkout01</a> for complete descriptive choices and validation.</p>
 </main></div></body></html>

@@ -733,6 +733,11 @@ export interface InputGroupProps {
 
 ```ts
 export interface RadioProps {
+  id?: string;
+  labelledBy?: string;
+  describedBy?: string;
+  required?: boolean;
+  invalid?: boolean;
   modelValue?: string | number | null;
   value: string | number;
   name: string;
@@ -1001,6 +1006,7 @@ export interface SidebarItemProps {
 export type StepperVariant = "default" | "dots" | "bars" | "vertical";
 
 export interface StepperProps {
+  label?: string;
   /** Zero-based index of the current step. */
   current: number;
   steps: string[];
