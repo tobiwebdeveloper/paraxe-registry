@@ -59,7 +59,8 @@
 <li><a href="../registry/orders-01.html">Orders01</a></li>
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
 <li><a href="../registry/booking-01.html">Booking01</a>
-<a href="../registry/application-01.html">Application01</a></li>
+<a href="../registry/application-01.html">Application01</a>
+<a href="../registry/footer-01.html">Footer01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
 <li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
@@ -185,63 +186,24 @@ Charts
 </ul>
 </li>
 </ul>
+<p><a href="../quality-improvements.html">Quality improvements</a></p>
 </details></nav><main><h1 id="icon">Icon</h1>
-<p>Icon is a public React component. Its shared API is defined by <code>IconProps</code> from <code>@paraxe/core</code>.</p>
-<h2 id="when-to-use-it">When to use it</h2>
-<p>Use Icon when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
-<h2 id="when-not-to-use-it">When not to use it</h2>
-<p>Do not use Icon to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.</p>
-<h2 id="import">Import</h2>
-<pre><code class="language-tsx">import { Icon } from &quot;@paraxe/react&quot;;
+<p>A local SVG symbol with identical Vue and React drawing data, inherited colour, token-sized geometry and optional accessible naming. <strong>Development after registry 0.3.0.</strong> Published core/framework packages still have the earlier text-name placeholder. No font, network icon lookup, third-party icon runtime or SVG HTML injection is required.</p>
+<pre><code class="language-tsx">import { Icon } from '@paraxe/react';
+&lt;Icon name=&quot;search&quot; size=&quot;sm&quot; /&gt;
+&lt;Icon name=&quot;check&quot; label=&quot;Completed&quot; /&gt;
+&lt;Icon paths={['M12 3 21 12 12 21 3 12z']} viewBox=&quot;0 0 24 24&quot; /&gt;
 </code></pre>
-<h2 id="props">Props</h2>
-<table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Default</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>name</code></td>
-<td><code>string</code></td>
-<td>{name</td>
-<td>Yes</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>size</code></td>
-<td><code>IconSize</code></td>
-<td>&quot;inherit&quot;</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>label</code></td>
-<td><code>string</code></td>
-<td>{label</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="usage">Usage</h2>
-<h3 id="react">React</h3>
-<pre><code class="language-tsx">import { Icon } from &quot;@paraxe/react&quot;;
-
-export function Example() {
-  return &lt;Icon name={value}&gt;Content&lt;/Icon&gt;;
-}
+<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
+import { Icon } from '@paraxe/vue';
+&lt;/script&gt;
+&lt;template&gt;&lt;Icon name=&quot;arrow-up-right&quot; size=&quot;sm&quot; /&gt;&lt;/template&gt;
 </code></pre>
-<h2 id="accessibility">Accessibility</h2>
-<p>Without <code>label</code>, Icon sets <code>aria-hidden</code>; provide <code>label</code> when the icon needs an accessible name.</p>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="../reference/component-index.html">Component index</a></li>
-<li><a href="../core/contracts.html">Core contracts</a></li>
-</ul>
+<h2 id="drawing-and-names">Drawing and names</h2>
+<p>Supply exactly one of <code>name</code> or <code>paths</code>. Built-ins include directional arrows/chevrons, check, close, plus, minus, search, menu, mail, calendar, clock, user, download, upload, info, warning, external-link, copy, edit, trash, play, pause, lock, bag, heart, sun, moon and globe. Import <code>ICON_NAMES</code> from core for the complete list. The symbols are original small path drawings, not a compatibility layer for Iconify names. Existing playgrounds may still demonstrate independent icon libraries.</p>
+<p>Unknown names, empty paths, ambiguous definitions and invalid view boxes throw a configuration error instead of silently showing text. Custom <code>paths</code> are SVG path-data strings. Path data from another library can be adapted explicitly; this path-only API does not support every SVG fill, mask or illustration. Use trusted application assets for complex artwork. Never inject untrusted SVG markup. <code>viewBox</code> defaults to <code>0 0 24 24</code> and needs four finite values with positive width and height.</p>
+<h2 id="size-and-accessibility">Size and accessibility</h2>
+<p><code>size</code> accepts <code>inherit</code> (default), xs, sm, md and lg. Inherited geometry is one em; explicit sizes use <code>--icon-size-*</code>. Colour uses currentColor and stroke weight uses <code>--icon-stroke-width</code>. Vue inherits class/style attributes; React accepts className/style.</p>
+<p>Icons without a nonblank <code>label</code> are decorative and hidden from accessibility APIs. A labelled symbol is role img with its accessible name. SVG never adds a tabstop. In a button with visible text, keep the icon decorative. An icon-only button needs an accessible name on the <strong>button</strong>, not merely on its SVG. Icon is not a button or an animation player.</p>
+<p><a href="https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=icons&amp;profile=clean&amp;theme=light">Core preview</a>. These changes also replace Footer01's text arrows with real geometry.</p>
 </main></div></body></html>

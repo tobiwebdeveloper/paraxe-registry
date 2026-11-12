@@ -50,6 +50,7 @@
   - [Checkout01](registry/checkout-01.md)
   - [Booking01](registry/booking-01.md)
     [Application01](registry/application-01.md)
+    [Footer01](registry/footer-01.md)
   - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)
   - [Binary assets / schema 2](registry/binary-assets.md)
@@ -160,3 +161,5 @@
   - [Component index](reference/component-index.md)
   - [Component status](reference/component-status.md)
   - [Contributing](reference/contributing.md)
+
+[Quality improvements](quality-improvements.md)

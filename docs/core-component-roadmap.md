@@ -105,3 +105,7 @@ Booking01 now adds inline Calendar in both frameworks: shared real-date arithmet
 ## Application01 audit (development after 0.3.0)
 
 AvatarGroup gains a shared member contract, bounded overlap, aggregate accessible naming, overflow and React parity while preserving Vue slots. FileUpload gains maxFiles and count rejection without deleting existing app-owned files. MenuItem forwards native download for actual public brief files. Application01 exercises these alongside Combobox, Fieldset and FormField; submission remains application-owned.
+
+## Raising the quality floor
+
+The approved [quality programme](quality-improvements.md) starts with real SVG Icon parity, linked and dismissible Tooltip behaviour, and Footer01 layout revision. These are development after 0.3.0. Popover, modal overlays, Toast, FAQ01, Dashboard01 and chart parity remain subsequent batches.

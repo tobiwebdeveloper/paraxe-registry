@@ -471,9 +471,12 @@ export interface CardProps {
 
 ```ts
 export type IconSize = "xs" | "sm" | "md" | "lg" | "inherit";
-
 export interface IconProps {
-  name: string;
+  /** A built-in name. Supply either name or custom paths, never both. */
+  name?: string;
+  /** Trusted SVG path data, rendered as path attributes rather than injected markup. */
+  paths?: readonly string[];
+  viewBox?: string;
   size?: IconSize;
   label?: string;
 }
@@ -1203,6 +1206,8 @@ export type TooltipPlacement =
   | "right";
 
 export interface TooltipProps {
+  id?: string;
+  disabled?: boolean;
   placement?: TooltipPlacement;
   text: string;
   delay?: number;

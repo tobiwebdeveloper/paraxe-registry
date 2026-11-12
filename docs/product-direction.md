@@ -202,3 +202,7 @@ The core Input audit added native min/max/step forwarding in both frameworks. Th
 ## Brief-led applications
 
 [Application01](registry/application-01.md) adds a standalone recruiting dossier, not a connected Careers01 demo. A numbered role brief and hiring-team context sit beside three working form sections; app-confirmed receipts and closed roles retain the composition. Swiss is suggested without resetting preset axes. The core audit adds data-driven AvatarGroup/React parity, FileUpload count limits and native MenuItem downloads. This is development after registry 0.3.0; the next work should deepen common forms and product workflows using existing recipes.
+
+## Quality improvements before expansion
+
+The owner approved strengthening the lower-ranked library items. The first [quality batch](quality-improvements.md) improves Icon and Tooltip in both frameworks and revises [Footer01](registry/footer-01.md) around a framed invitation and directory. Existing recipes and published registry files remain intact. Subsequent batches target Popover/modal overlays, Toast, FAQ01 and Dashboard01.

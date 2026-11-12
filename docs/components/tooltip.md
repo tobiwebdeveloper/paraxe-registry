@@ -1,63 +1,32 @@
 # Tooltip
 
-Tooltip is a public Vue and React component. Its shared API is defined by `TooltipProps` from `@paraxe/core`.
+A short, text-only hint attached to one real trigger. The linked description, Escape dismissal and shared hover/focus behaviour are **development after registry 0.3.0**. Published packages retain the earlier implementation.
 
-## When to use it
-
-Use Tooltip when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.
-
-## When not to use it
-
-Do not use Tooltip to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.
-
-## Import
-
-```ts
-import { Tooltip } from "@paraxe/vue";
-```
 ```tsx
-import { Tooltip } from "@paraxe/react";
+import { Button, Tooltip } from '@paraxe/react';
+<Tooltip text="Keep your current draft.">
+  <Button variant="secondary" onActivate={saveDraft}>Save draft</Button>
+</Tooltip>
 ```
-
-## Props
-
-| Prop | Type | Default | Required | Description |
-| --- | --- | --- | --- | --- |
-| `placement` | `TooltipPlacement` | "top" | No | Defined by the core contract. |
-| `text` | `string` | createContext<{ | Yes | Defined by the core contract. |
-| `delay` | `number` | 300 | No | Defined by the core contract. |
-
-
-
-## Usage
-
-### Vue
 
 ```vue
-<script setup lang="ts">
-import { Tooltip } from "@paraxe/vue";
-</script>
-
-<template>
-  <Tooltip :text="value">Content</Tooltip>
-</template>
+<Tooltip text="Keep your current draft.">
+  <Button variant="secondary" @activate="saveDraft">Save draft</Button>
+</Tooltip>
 ```
 
-### React
+Vue imports Button/Tooltip from `@paraxe/vue`. Both APIs accept `text`, `placement` (top, bottom, left, right; default top), `delay` (300 ms hover default), optional `id`, and `disabled`. Delay must be finite and nonnegative. Empty text disables the hint. Automatic IDs are instance-specific; explicit IDs must be unique.
 
-```tsx
-import { Tooltip } from "@paraxe/react";
+## Trigger and interaction
 
-export function Example() {
-  return <Tooltip text={value}>Content</Tooltip>;
-}
-```
+Supply one element, typically a native button/link or Paraxe Button. The component clones its trigger to merge aria-describedby with existing description IDs. Custom trigger components must forward that attribute to their actual focusable element. Fragment/text/multiple-node triggers are unsupported. No wrapper tabstop is added and the trigger's own events are preserved. Native disabled controls cannot receive keyboard focus; keep essential reasons for disabling visible outside the tooltip.
 
-## Accessibility
+Keyboard focus shows the hint immediately. Pointer hover uses delay. Escape dismisses without moving focus and suppresses reopening during the same engagement. Blur dismisses; moving between trigger and popup has a short grace period so the text stays hoverable. Timers and listeners are removed on disable/unmount. The popup is role tooltip and the trigger references its ID. This follows the interaction guidance in the [WAI tooltip pattern](https://www.w3.org/WAI/ARIA/apg/patterns/tooltip/), which WAI marks as work in progress.
 
-Use meaningful child content and preserve the semantics of the rendered element. See Foundations > Accessibility for shared responsibilities.
+The hint is supplemental. Keep required help, errors and action labels visible. Tooltip has no interactive content; use a nonmodal dialog/popover for links or inputs. It does not take focus or announce through a live region.
 
-## Related
+## Styling and limits
 
-- [Component index](../reference/component-index.md)
-- [Core contracts](../core/contracts.md)
+Surface, border, typography, radius, motion, focus context and spacing follow shared tokens. `--tooltip-surface`, `--tooltip-text`, `--tooltip-border` and `--tooltip-radius` are overridable roles; radius follows the card treatment by default and text uses caption typography. Width is bounded to the viewport, but placement remains **inline CSS**, without collision flipping or a portal. An overflow-clipping ancestor can clip the popup; choose another placement or visible help there. Native browser/screen-reader review remains separate from helper and renderer tests.
+
+[Core preview](https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=icons&profile=clean&theme=light).

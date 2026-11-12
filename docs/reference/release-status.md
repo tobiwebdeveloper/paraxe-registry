@@ -37,3 +37,5 @@ Combobox is also development after 0.3.0 in both frameworks: searchable single s
 Dropdown now has React parity and an audited native-button/open/dismiss/focus contract in development after 0.3.0. It uses the existing Menu/MenuItem/MenuSeparator composition; Menu retains its variants while gaining shared keyboard handling and React parity. Disabled links are inert, selection can keep the popup open intentionally, and outside/Tab dismissal preserves destination focus. Published Vue/React archives retain their earlier implementations. See [Dropdown](../components/dropdown.md).
 
 [Application01](../registry/application-01.md), data-driven [AvatarGroup](../components/avatar-group.md)/React parity, FileUpload.maxFiles and MenuItem.download are development after registry 0.3.0. Preview visibility does not imply npm or immutable registry availability. Published archive versions and hashes are unchanged.
+
+The SVG Icon implementation, audited Tooltip and revised [Footer01](../registry/footer-01.md) are development after registry 0.3.0. The current npm archives and versioned Footer01 bundle retain their earlier implementations.

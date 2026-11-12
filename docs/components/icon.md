@@ -1,51 +1,31 @@
 # Icon
 
-Icon is a public React component. Its shared API is defined by `IconProps` from `@paraxe/core`.
-
-## When to use it
-
-Use Icon when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.
-
-## When not to use it
-
-Do not use Icon to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.
-
-## Import
-
+A local SVG symbol with identical Vue and React drawing data, inherited colour, token-sized geometry and optional accessible naming. **Development after registry 0.3.0.** Published core/framework packages still have the earlier text-name placeholder. No font, network icon lookup, third-party icon runtime or SVG HTML injection is required.
 
 ```tsx
-import { Icon } from "@paraxe/react";
+import { Icon } from '@paraxe/react';
+<Icon name="search" size="sm" />
+<Icon name="check" label="Completed" />
+<Icon paths={['M12 3 21 12 12 21 3 12z']} viewBox="0 0 24 24" />
 ```
 
-## Props
-
-| Prop | Type | Default | Required | Description |
-| --- | --- | --- | --- | --- |
-| `name` | `string` | {name | Yes | Defined by the core contract. |
-| `size` | `IconSize` | "inherit" | No | Defined by the core contract. |
-| `label` | `string` | {label | No | Defined by the core contract. |
-
-
-
-## Usage
-
-
-
-### React
-
-```tsx
-import { Icon } from "@paraxe/react";
-
-export function Example() {
-  return <Icon name={value}>Content</Icon>;
-}
+```vue
+<script setup lang="ts">
+import { Icon } from '@paraxe/vue';
+</script>
+<template><Icon name="arrow-up-right" size="sm" /></template>
 ```
 
-## Accessibility
+## Drawing and names
 
-Without `label`, Icon sets `aria-hidden`; provide `label` when the icon needs an accessible name.
+Supply exactly one of `name` or `paths`. Built-ins include directional arrows/chevrons, check, close, plus, minus, search, menu, mail, calendar, clock, user, download, upload, info, warning, external-link, copy, edit, trash, play, pause, lock, bag, heart, sun, moon and globe. Import `ICON_NAMES` from core for the complete list. The symbols are original small path drawings, not a compatibility layer for Iconify names. Existing playgrounds may still demonstrate independent icon libraries.
 
-## Related
+Unknown names, empty paths, ambiguous definitions and invalid view boxes throw a configuration error instead of silently showing text. Custom `paths` are SVG path-data strings. Path data from another library can be adapted explicitly; this path-only API does not support every SVG fill, mask or illustration. Use trusted application assets for complex artwork. Never inject untrusted SVG markup. `viewBox` defaults to `0 0 24 24` and needs four finite values with positive width and height.
 
-- [Component index](../reference/component-index.md)
-- [Core contracts](../core/contracts.md)
+## Size and accessibility
+
+`size` accepts `inherit` (default), xs, sm, md and lg. Inherited geometry is one em; explicit sizes use `--icon-size-*`. Colour uses currentColor and stroke weight uses `--icon-stroke-width`. Vue inherits class/style attributes; React accepts className/style.
+
+Icons without a nonblank `label` are decorative and hidden from accessibility APIs. A labelled symbol is role img with its accessible name. SVG never adds a tabstop. In a button with visible text, keep the icon decorative. An icon-only button needs an accessible name on the **button**, not merely on its SVG. Icon is not a button or an animation player.
+
+[Core preview](https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=icons&profile=clean&theme=light). These changes also replace Footer01's text arrows with real geometry.
