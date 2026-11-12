@@ -158,6 +158,7 @@ Data display
 <a href="../components/pagination.html">Pagination</a>
 <a href="../components/table.html">Table</a>
 Overlays
+<a href="../components/overlay-surfaces.html">Overlay surfaces</a>
 <a href="../components/dialog.html">Dialog</a>
 <a href="../components/drawer.html">Drawer</a>
 <a href="../components/popover.html">Popover</a>
@@ -188,73 +189,26 @@ Charts
 </ul>
 <p><a href="../quality-improvements.html">Quality improvements</a></p>
 </details></nav><main><h1 id="dialog">Dialog</h1>
-<p>Dialog is a public Vue and React component. Its shared API is defined by <code>DialogProps</code> from <code>@paraxe/core</code>.</p>
-<h2 id="when-to-use-it">When to use it</h2>
-<p>Use Dialog when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.</p>
-<h2 id="when-not-to-use-it">When not to use it</h2>
-<p>Do not use Dialog to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.</p>
-<h2 id="import">Import</h2>
-<pre><code class="language-ts">import { Dialog } from &quot;@paraxe/vue&quot;;
+<p>A controlled modal task/decision surface. Shared stack, naming, focus containment/return, inert background, built-in close action and scroll ownership are <strong>development after registry 0.3.0</strong>. See the <a href="overlay-surfaces.html">shared overlay contract</a> for props, nesting and limitations.</p>
+<pre><code class="language-tsx">const [open, setOpen] = useState(false);
+&lt;Button onActivate={() =&gt; setOpen(true)}&gt;Edit project&lt;/Button&gt;
+&lt;Dialog modelValue={open} onModelValueChange={setOpen}
+  labelledBy=&quot;project-title&quot; initialFocus=&quot;#project-name&quot;&gt;
+  &lt;h2 id=&quot;project-title&quot;&gt;Edit project&lt;/h2&gt;
+  &lt;FormField id=&quot;project-name&quot; label=&quot;Project name&quot;&gt;
+    {control =&gt; &lt;Input {...control} modelValue={name} onModelValueChange={setName} /&gt;}
+  &lt;/FormField&gt;
+  &lt;Button onActivate={() =&gt; setOpen(false)}&gt;Cancel&lt;/Button&gt;
+&lt;/Dialog&gt;
 </code></pre>
-<pre><code class="language-tsx">import { Dialog } from &quot;@paraxe/react&quot;;
+<pre><code class="language-vue">&lt;Dialog v-model=&quot;open&quot; labelled-by=&quot;project-title&quot; initial-focus=&quot;#project-name&quot;&gt;
+  &lt;h2 id=&quot;project-title&quot;&gt;Edit project&lt;/h2&gt;
+  &lt;FormField id=&quot;project-name&quot; label=&quot;Project name&quot; v-slot=&quot;{ control }&quot;&gt;
+    &lt;Input v-bind=&quot;control&quot; v-model=&quot;name&quot; /&gt;
+  &lt;/FormField&gt;
+  &lt;Button @activate=&quot;open = false&quot;&gt;Cancel&lt;/Button&gt;
+&lt;/Dialog&gt;
 </code></pre>
-<h2 id="props">Props</h2>
-<table>
-<thead>
-<tr>
-<th>Prop</th>
-<th>Type</th>
-<th>Default</th>
-<th>Required</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>modelValue</code></td>
-<td><code>boolean</code></td>
-<td>false</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>closeOnBackdrop</code></td>
-<td><code>boolean</code></td>
-<td>true</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-<tr>
-<td><code>closeOnEscape</code></td>
-<td><code>boolean</code></td>
-<td>true</td>
-<td>No</td>
-<td>Defined by the core contract.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="usage">Usage</h2>
-<h3 id="vue">Vue</h3>
-<pre><code class="language-vue">&lt;script setup lang=&quot;ts&quot;&gt;
-import { Dialog } from &quot;@paraxe/vue&quot;;
-&lt;/script&gt;
-
-&lt;template&gt;
-  &lt;Dialog&gt;Content&lt;/Dialog&gt;
-&lt;/template&gt;
-</code></pre>
-<h3 id="react">React</h3>
-<pre><code class="language-tsx">import { Dialog } from &quot;@paraxe/react&quot;;
-
-export function Example() {
-  return &lt;Dialog&gt;Content&lt;/Dialog&gt;;
-}
-</code></pre>
-<h2 id="accessibility">Accessibility</h2>
-<p>Rendered as a modal dialog. Escape and backdrop behaviour follow <code>closeOnEscape</code> and <code>closeOnBackdrop</code>; supply focusable, meaningful content.</p>
-<h2 id="related">Related</h2>
-<ul>
-<li><a href="../reference/component-index.html">Component index</a></li>
-<li><a href="../core/contracts.html">Core contracts</a></li>
-</ul>
+<p>Import Button, Dialog, FormField and Input from the corresponding framework package. Any save operation remains app-owned. IDs must be unique if multiple examples are rendered. Supply closeOnBackdrop/closeOnEscape (both true by default) to control those dismissal requests. An app may keep the controlled modal open until a pending operation finishes; preserve an understandable cancellation/recovery path. Focus callbacks can change on rerender without resetting the active field.</p>
+<p>Use Drawer for a larger contextual panel and Popover for a small nonmodal form. A modal is not a substitute for a whole page. See <a href="https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=overlays&amp;profile=clean&amp;theme=light">overlay preview</a>.</p>
 </main></div></body></html>

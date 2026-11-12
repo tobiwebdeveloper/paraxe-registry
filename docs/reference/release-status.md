@@ -39,3 +39,5 @@ Dropdown now has React parity and an audited native-button/open/dismiss/focus co
 [Application01](../registry/application-01.md), data-driven [AvatarGroup](../components/avatar-group.md)/React parity, FileUpload.maxFiles and MenuItem.download are development after registry 0.3.0. Preview visibility does not imply npm or immutable registry availability. Published archive versions and hashes are unchanged.
 
 The SVG Icon implementation, audited Tooltip and revised [Footer01](../registry/footer-01.md) are development after registry 0.3.0. The current npm archives and versioned Footer01 bundle retain their earlier implementations.
+
+The [overlay surface audit](../components/overlay-surfaces.md) is development after registry 0.3.0: new shared surface props, Popover local/controlled ownership, real trigger semantics, modal stack/focus/inert/scroll handling and built-in close controls. Published archives retain the earlier versions. A coordinated package release is still required. The existing iconLibrary preset setting remains metadata until the planned runtime adapters are implemented.

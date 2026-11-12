@@ -1,61 +1,33 @@
 # Popover
 
-Popover is a public Vue and React component. Its shared API is defined by `PopoverProps` from `@paraxe/core`.
+A nonmodal interactive surface attached to a real button. The audited trigger, controlled/local state, accessible panel naming, focus/dismissal and nested-stack behaviour are **development after registry 0.3.0**. Read [overlay surfaces](overlay-surfaces.md) for shared props and boundaries.
 
-## When to use it
-
-Use Popover when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.
-
-## When not to use it
-
-Do not use Popover to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.
-
-## Import
-
-```ts
-import { Popover } from "@paraxe/vue";
-```
 ```tsx
-import { Popover } from "@paraxe/react";
+<Popover label="View options" labelledBy="view-title" initialFocus="#view-order"
+  trigger={<Button variant="secondary">View options</Button>}>
+  {({ close }) => <>
+    <h2 id="view-title">View options</h2>
+    <label htmlFor="view-order">Sort order</label>
+    <select id="view-order"><option>Recent first</option></select>
+    <Button onActivate={close}>Done</Button>
+  </>}
+</Popover>
 ```
-
-## Props
-
-| Prop | Type | Default | Required | Description |
-| --- | --- | --- | --- | --- |
-| `placement` | `PopoverPlacement` | "bottom" | No | Defined by the core contract. |
-
-
-
-## Usage
-
-### Vue
 
 ```vue
-<script setup lang="ts">
-import { Popover } from "@paraxe/vue";
-</script>
-
-<template>
-  <Popover>Content</Popover>
-</template>
+<Popover label="View options" labelled-by="view-title" initial-focus="#view-order">
+  <template #trigger><Button variant="secondary">View options</Button></template>
+  <template #default="{ close }">
+    <h2 id="view-title">View options</h2>
+    <label for="view-order">Sort order</label>
+    <select id="view-order"><option>Recent first</option></select>
+    <Button @activate="close">Done</Button>
+  </template>
+</Popover>
 ```
 
-### React
+Import Popover/Button from the matching framework package. Plain child/default-slot content remains supported; the optional render function/slot close helper is convenient for local state. The supplied trigger must be one native button or a component forwarding attributes to its actual button. A default labelled button is rendered if trigger is omitted. Custom triggers keep their own activation handler; prevented activation and disabled controls do not toggle. Forced type=button prevents accidental form submission. aria-haspopup=dialog, expanded and controls are placed on the actual button.
 
-```tsx
-import { Popover } from "@paraxe/react";
+modelValue/onModelValueChange in React or v-model in Vue makes the state app-owned. Omit modelValue for local state; defaultOpen is false. disabled suppresses opening. closeOnOutside and closeOnEscape default true. Outside pointer/focus dismissal preserves the new destination. Escape and explicit close return focus when the panel owned it. A refusal to acknowledge a controlled close request leaves the panel open.
 
-export function Example() {
-  return <Popover>Content</Popover>;
-}
-```
-
-## Accessibility
-
-Use meaningful child content and preserve the semantics of the rendered element. See Foundations > Accessibility for shared responsibilities.
-
-## Related
-
-- [Component index](../reference/component-index.md)
-- [Core contracts](../core/contracts.md)
+placement accepts top/bottom/left/right, default bottom. Positioning is inline CSS; collision flipping and a portal are not part of this audit. Focus enters the panel but Tab is not trapped. Inside a modal, Tab remains within that modal and can leave the Popover. This is role dialog without aria-modal, not a menu/listbox/tooltip. Use Dropdown with the existing Menu for action menus.

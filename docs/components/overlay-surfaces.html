@@ -1,0 +1,244 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Overlay surfaces | Paraxe</title><link rel="stylesheet" href="../../design.css"><link rel="stylesheet" href="../../recipe.css"><link rel="stylesheet" href="../../preset.css"><link rel="stylesheet" href="../../theme.css"><link rel="stylesheet" href="../guides.css"></head><body><header><a href="../../index.html">Paraxe registry</a><a href="../guides/start-here.html">Guides</a><a href="../reference/release-status.html">Release status</a><a href="overlay-surfaces.md">Markdown source</a></header><div class="layout"><nav aria-label="Documentation"><details open><summary>Browse documentation</summary><h1 id="paraxe-ui">Paraxe UI</h1>
+<ul>
+<li><a href="../index.html">Introduction</a></li>
+<li><a href="../product-direction.html">Product direction and coverage</a></li>
+<li><a href="../core-component-roadmap.html">Core component development plan</a></li>
+<li><a href="../block-and-recipe-formula.html">Block and recipe formula</a></li>
+<li><a href="../playground-navigation.html">Recipe studio navigation</a></li>
+<li><a href="../backlog.html">Development backlog</a></li>
+<li>Guides
+<ul>
+<li><a href="../guides/start-here.html">Start here</a></li>
+<li><a href="../guides/install-and-theme.html">Install and theme</a></li>
+<li><a href="../guides/core-components.html">Core components</a></li>
+<li><a href="../guides/using-blocks.html">Editable blocks</a></li>
+<li><a href="../guides/ai-implementation.html">AI implementation</a></li>
+<li><a href="../reference/release-status.html">Release status</a></li>
+<li><a href="../reference/current-contracts.html">Current contracts</a></li>
+</ul>
+</li>
+<li>Getting Started
+<ul>
+<li><a href="../getting-started/installation.html">Installation</a></li>
+<li><a href="../getting-started/project-setup.html">Project setup</a></li>
+<li><a href="../getting-started/package-structure.html">Package structure</a></li>
+<li><a href="../getting-started/first-component.html">First component</a></li>
+<li><a href="../getting-started/versioning.html">Versioning</a></li>
+</ul>
+</li>
+<li>Foundations
+<ul>
+<li><a href="../foundations/design-tokens.html">Design tokens</a></li>
+<li><a href="../foundations/themes.html">Themes and presets</a></li>
+<li><a href="../foundations/recipes.html">Component recipes and overrides</a></li>
+<li><a href="../storefront-roadmap.html">Storefront roadmap</a></li>
+<li><a href="../foundations/component-appearance-audit.html">Component appearance audit</a></li>
+<li><a href="../foundations/animation-integration.html">Animation integration</a></li>
+<li><a href="../foundations/accessibility.html">Accessibility</a></li>
+</ul>
+</li>
+<li>Registry
+<ul>
+<li><a href="../registry/plan.html">Registry plan</a></li>
+<li><a href="../registry/releasing.html">Releasing and installing</a></li>
+<li><a href="../registry/publishing-commands.html">Publishing commands</a></li>
+<li><a href="../registry/release-0.3.0.html">Release 0.3.0</a></li>
+<li><a href="../registry/kit-room-collection.html">Kit room collection</a></li>
+<li><a href="../registry/reference-blocks-01.html">Reference blocks 01</a></li>
+<li><a href="../registry/product-purchase.html">Product purchasing</a></li>
+<li><a href="../registry/cart-01.html">Cart 01</a></li>
+<li><a href="../registry/portal-01.html">Portal01</a></li>
+<li><a href="../registry/article-01.html">Article01</a></li>
+<li><a href="../registry/event-01.html">Event01</a></li>
+<li><a href="../registry/studio-01.html">Studio01</a></li>
+<li><a href="../registry/careers-01.html">Careers01</a></li>
+<li><a href="../registry/film-01.html">Film01</a></li>
+<li><a href="../registry/stay-01.html">Stay01</a></li>
+<li><a href="../registry/content-editor-01.html">ContentEditor01 and workspace</a></li>
+<li><a href="../registry/settings-01.html">Settings01</a></li>
+<li><a href="../registry/orders-01.html">Orders01</a></li>
+<li><a href="../registry/checkout-01.html">Checkout01</a></li>
+<li><a href="../registry/booking-01.html">Booking01</a>
+<a href="../registry/application-01.html">Application01</a>
+<a href="../registry/footer-01.html">Footer01</a></li>
+<li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
+<li><a href="../registry/course-01.html">Course01</a></li>
+<li><a href="../registry/binary-assets.html">Binary assets / schema 2</a></li>
+<li><a href="../registry/shop-journey.html">Connected shop demo</a></li>
+<li><a href="../registry/website-blocks-01.html">Website blocks 01</a></li>
+<li><a href="../registry/block-quality.html">Block quality</a></li>
+<li><a href="../registry/learning-blocks-01.html">Learning and pricing blocks</a></li>
+</ul>
+</li>
+<li>Core
+<ul>
+<li><a href="../core/architecture.html">Architecture</a></li>
+<li><a href="../core/contracts.html">Contracts</a></li>
+<li><a href="../core/component-contracts.html">Component contracts</a></li>
+<li><a href="../core/composition.html">Composition</a></li>
+<li><a href="../components/app-shell.html">AppShell and navigation</a></li>
+</ul>
+</li>
+<li>Frameworks
+<ul>
+<li><a href="../vue/index.html">Vue</a></li>
+<li><a href="../react/index.html">React</a></li>
+</ul>
+</li>
+<li>Components
+Commerce
+<a href="../components/price.html">Price</a>
+<a href="../components/product-media.html">ProductMedia</a>
+<a href="../components/product-gallery.html">ProductGallery</a>
+<a href="../components/product-card.html">ProductCard</a>
+<a href="../components/quantity-input.html">QuantityInput</a>
+Elements
+<a href="../components/avatar.html">Avatar</a>
+<a href="../components/avatar-group.html">AvatarGroup</a>
+<a href="../components/badge.html">Badge</a>
+<a href="../components/swatch.html">Swatch</a>
+<a href="../components/button.html">Button</a>
+<a href="../components/card.html">Card</a>
+<a href="../components/icon.html">Icon</a>
+<a href="../components/tag.html">Tag</a>
+<a href="../components/spinner.html">Spinner</a>
+Primitives
+<a href="../components/container.html">Container</a>
+<a href="../components/divider.html">Divider</a>
+<a href="../components/flex.html">Flex</a>
+<a href="../components/grid.html">Grid</a>
+<a href="../components/section.html">Section</a>
+<a href="../components/stack.html">Stack</a>
+Typography
+<a href="../components/eyebrow.html">Eyebrow</a>
+<a href="../components/heading.html">Heading</a>
+<a href="../components/label.html">Label</a>
+<a href="../components/text.html">Text</a>
+Forms
+<a href="../components/combobox.html">Combobox</a>
+<a href="../components/calendar.html">Calendar</a>
+<a href="../components/checkbox.html">Checkbox</a>
+<a href="../components/choice.html">Choice</a>
+<a href="../components/choice-group.html">ChoiceGroup</a>
+<a href="../components/form-field.html">FormField</a>
+<a href="../components/fieldset.html">Fieldset</a>
+<a href="../components/file-upload.html">FileUpload</a>
+<a href="../components/input-group.html">InputGroup</a>
+<a href="../components/input.html">Input</a>
+<a href="../components/radio.html">Radio</a>
+<a href="../components/select.html">Select</a>
+<a href="../components/switch.html">Switch</a>
+<a href="../components/textarea.html">Textarea</a>
+Feedback
+<a href="../components/alert.html">Alert</a>
+<a href="../components/progress.html">Progress</a>
+<a href="../components/skeleton.html">Skeleton</a>
+<a href="../components/toast.html">Toast</a>
+Media
+<a href="../components/image.html">Image</a>
+<a href="../components/video.html">Video</a>
+Navigation
+<a href="../components/dropdown.html">Dropdown</a>
+<a href="../components/breadcrumb.html">Breadcrumb</a>
+<a href="../components/breadcrumbs.html">Breadcrumbs</a>
+<a href="../components/menu.html">Menu</a>
+<a href="../components/menu-item.html">MenuItem</a>
+<a href="../components/menu-separator.html">MenuSeparator</a>
+<a href="../components/navbar.html">Navbar</a>
+<a href="../components/sidebar.html">Sidebar</a>
+<a href="../components/sidebar-group.html">SidebarGroup</a>
+<a href="../components/sidebar-item.html">SidebarItem</a>
+<a href="../components/stepper.html">Stepper</a>
+<a href="../components/tab.html">Tab</a>
+<a href="../components/tabs.html">Tabs</a>
+Data display
+<a href="../components/empty-state.html">EmptyState</a>
+<a href="../components/list.html">List</a>
+<a href="../components/list-item.html">ListItem</a>
+<a href="../components/pagination.html">Pagination</a>
+<a href="../components/table.html">Table</a>
+Overlays
+<a href="../components/overlay-surfaces.html">Overlay surfaces</a>
+<a href="../components/dialog.html">Dialog</a>
+<a href="../components/drawer.html">Drawer</a>
+<a href="../components/popover.html">Popover</a>
+<a href="../components/tooltip.html">Tooltip</a>
+Composites
+<a href="../components/accordion.html">Accordion</a>
+<a href="../components/accordion-item.html">AccordionItem</a>
+<a href="../components/button-group.html">ButtonGroup</a>
+<a href="../components/section-header.html">SectionHeader</a>
+<a href="../components/stat.html">Stat</a>
+Charts
+<a href="../components/sparkline.html">Sparkline</a></li>
+<li>Advanced
+<ul>
+<li><a href="../advanced/theming.html">Theming and customisation</a></li>
+<li><a href="../advanced/production.html">Production usage</a></li>
+</ul>
+</li>
+<li>Reference
+<ul>
+<li><a href="../reference/packages.html">Packages and exports</a></li>
+<li><a href="../reference/contracts.html">Contract source</a></li>
+<li><a href="../reference/component-index.html">Component index</a></li>
+<li><a href="../reference/component-status.html">Component status</a></li>
+<li><a href="../reference/contributing.html">Contributing</a></li>
+</ul>
+</li>
+</ul>
+<p><a href="../quality-improvements.html">Quality improvements</a></p>
+</details></nav><main><h1 id="overlay-surfaces">Overlay surfaces</h1>
+<p>Popover, Dialog and Drawer share a focus/dismissal layer manager in <strong>development after registry 0.3.0</strong>. This replaces their independent document listeners and adds cross-framework parity. Current npm archives retain earlier implementations. Use matching development core, design and framework packages; preview availability is not release availability.</p>
+<p><a href="https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=overlays&amp;profile=clean&amp;theme=light">Vue preview</a> / <a href="https://tobiwebdeveloper.github.io/paraxe-registry/preview/react/?preview=overlays&amp;profile=clean&amp;theme=light">React preview</a>. The preview edits local workspace details, opens a Popover inside a Drawer, and opens a confirmation Dialog above the Drawer. It is a core example, not another block or a connected backend.</p>
+<h2 id="choose-the-surface">Choose the surface</h2>
+<table>
+<thead>
+<tr>
+<th>Surface</th>
+<th>Intended content</th>
+<th>Focus and background</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Popover</td>
+<td>Small contextual form or supplementary interactive content</td>
+<td>Nonmodal; focus enters, Tab may leave, background remains usable.</td>
+</tr>
+<tr>
+<td>Dialog</td>
+<td>Focused task or decision</td>
+<td>Modal; background is inert and Tab stays in the dialog.</td>
+</tr>
+<tr>
+<td>Drawer</td>
+<td>Larger contextual task alongside page context</td>
+<td>Modal, with the same focus rules as Dialog; left/right viewport edge.</td>
+</tr>
+</tbody>
+</table>
+<p>Use the existing Dropdown/Menu for a menu of actions. Tooltip is short text and does not receive focus. Do not use a nonmodal Popover to impersonate a menu.</p>
+<h2 id="shared-props">Shared props</h2>
+<ul>
+<li><code>id</code>: optional stable, document-unique panel ID. Otherwise generated per instance.</li>
+<li><code>labelledBy</code>: IDs of visible headings naming the surface; preferred for real content. <code>label</code> provides an accessible name when no heading reference is supplied. Fallback names are Dialog, Drawer and Details; replace these with meaningful names in a product.</li>
+<li><code>describedBy</code>: optional IDs for a short description. Avoid referencing a long, structured document as one description.</li>
+<li><code>initialFocus</code>: CSS selector resolved <strong>inside the panel</strong>. A heading/static target needs tabindex=-1. Invalid syntax throws before global background/scroll ownership is taken. A missing, disabled or hidden target falls back to the first eligible tabstop, then the panel if empty.</li>
+<li><code>returnFocus</code>: defaults true. Focus returns to a connected, enabled, visible opener when focus belonged to the closing surface. An intentional new destination is preserved. Set false when the owning workflow explicitly manages the next focus target.</li>
+<li><code>showClose</code>: defaults true, rendering a native type=button close control inside the surface. <code>closeLabel</code> customizes its accessible label. If hidden, provide a clear app-owned close/cancel action.</li>
+<li><code>closeOnEscape</code>: defaults true. Only the active top layer requests dismissal. Disabling it on the top layer does not cause a lower modal to close.</li>
+</ul>
+<p>Names and references belong to the actual role=dialog panel, not an inert wrapper. The close control has a real decorative SVG. React accepts className/style on all three; Vue accepts class/style attributes on their roots.</p>
+<h2 id="ownership-and-nested-behaviour">Ownership and nested behaviour</h2>
+<p>Dialog and Drawer are controlled: React uses modelValue/onModelValueChange, Vue uses v-model. They request false through the callback/event; the owner must acknowledge the request. They do not silently change app state. Popover additionally supports local state when modelValue is omitted, with optional defaultOpen.</p>
+<p>Each document has a shared layer stack from the installed core instance. Framework context records logical nesting even when modal portals are DOM siblings and child mount effects run first. The active modal isolates background branches with native inert, including body children inserted while open. Root/body overflow and scrollbar compensation are restored after the last modal closes; nested modal closure preserves the lock. Existing inert attributes and inline overflow/padding values are restored.</p>
+<p>Tab/Shift+Tab wrap in the active modal. Hidden/inert, disabled-fieldset and negative-tabindex controls are excluded; radio groups contribute their active tabstop. Static initial headings and empty panels are handled explicitly. Closing a child returns to the parent opener; closing the last modal returns to the page opener where still appropriate. Portal removal before framework cleanup is covered. Removing a parent deactivates descendants and requests their closure. Do not keep a child surface mounted independently while discarding its owning workflow.</p>
+<p>A composed Menu or Tooltip may consume Escape before its containing surface. The first Escape dismisses an engaged Paraxe hint; a subsequent Escape can dismiss its surface. Application widgets should preventDefault when they own that Escape. Tab within a nonmodal Popover is natural; leaving it requests closure unless closeOnOutside is false. Outside dismissal preserves the pointer/focus destination rather than pulling focus back.</p>
+<p>The modal interaction follows the <a href="https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/">WAI modal dialog pattern</a>: name the panel, keep focus within it while modal, provide a close action and choose appropriate initial/return focus. Automated helper/renderer tests do not establish browser or screen-reader conformance.</p>
+<h2 id="styling-and-boundaries">Styling and boundaries</h2>
+<p>Surfaces consume card/background, typography, spacing, border, focus and motion roles. <code>--dialog-width</code>, <code>--drawer-width</code>, <code>--popover-width</code>, <code>--popover-radius</code>, <code>--popover-surface</code>, <code>--popover-border</code> and <code>--overlay-blur</code> are configurable. Close controls consume form radius and icon-button sizing. The layer manager owns the temporary <code>--paraxe-overlay-order</code> value; do not override it to simulate a separate stack.</p>
+<p>Dialog and Drawer portal/teleport to the document body and render after client mounting. Project-global presets therefore work; narrowly scoped ancestor-only CSS variables do not automatically follow a body portal. Pass surface class/style or define project roles at the document root. Framework provider context is retained.</p>
+<p>Popover remains an inline CSS-positioned surface with bounded width. This batch does <strong>not</strong> add viewport collision flipping or a floating portal. Avoid clipping ancestors or use a modal/visible section where the content needs more room. Light-DOM native controls and Paraxe controls are covered; embedded-document keyboard boundaries, custom shadow-root tab order and coordination with independent third-party modal managers are not established. Native mobile scrolling, focus, screen-reader and visual review remain pending when the connected browser is unavailable.</p>
+<p>Persistence, permissions, save confirmation and destructive operations remain app-owned. Body scroll policy should be coordinated with other application-level scroll managers.</p>
+</main></div></body></html>

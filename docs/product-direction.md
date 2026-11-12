@@ -206,3 +206,7 @@ The core Input audit added native min/max/step forwarding in both frameworks. Th
 ## Quality improvements before expansion
 
 The owner approved strengthening the lower-ranked library items. The first [quality batch](quality-improvements.md) improves Icon and Tooltip in both frameworks and revises [Footer01](registry/footer-01.md) around a framed invitation and directory. Existing recipes and published registry files remain intact. Subsequent batches target Popover/modal overlays, Toast, FAQ01 and Dashboard01.
+
+## Overlay depth and configured icon libraries
+
+The second quality batch deepens Popover, Dialog and Drawer as [shared interaction surfaces](components/overlay-surfaces.md), with a core preview rather than another numbered layout. Nested modal focus, scroll and background isolation are owned together. The owner endorsed the new icons and asked to connect the already-existing iconLibrary configuration to Lucide/Tabler soon. That adapter work is the next icon priority; it must preserve tokens and avoid claiming metadata already changes runtime rendering.

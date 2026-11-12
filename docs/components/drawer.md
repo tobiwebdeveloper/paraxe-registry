@@ -1,64 +1,25 @@
 # Drawer
 
-Drawer is a public Vue and React component. Its shared API is defined by `DrawerProps` from `@paraxe/core`.
+A controlled modal workspace at the viewport edge, using the same layer/focus contract as Dialog. The audit is **development after registry 0.3.0**. See [overlay surfaces](overlay-surfaces.md) for shared naming, initial focus, built-in close, inert background, scroll and nested-layer rules.
 
-## When to use it
-
-Use Drawer when its semantic structure and contract match the interface pattern. Use it as a focused building block; compose it with ordinary application markup where no companion component is required.
-
-## When not to use it
-
-Do not use Drawer to simulate a different semantic control or invent undocumented states. Choose native HTML when no Paraxe behaviour or styling contract is needed.
-
-## Import
-
-```ts
-import { Drawer } from "@paraxe/vue";
-```
 ```tsx
-import { Drawer } from "@paraxe/react";
+<Drawer modelValue={open} onModelValueChange={setOpen} side="right"
+  labelledBy="details-title" initialFocus="#details-title">
+  <h2 id="details-title" tabIndex={-1}>Project details</h2>
+  <p>Read the context before editing.</p>
+  <Button onActivate={() => setOpen(false)}>Done</Button>
+</Drawer>
 ```
-
-## Props
-
-| Prop | Type | Default | Required | Description |
-| --- | --- | --- | --- | --- |
-| `modelValue` | `boolean` | false | No | Defined by the core contract. |
-| `side` | `"left" | "right"` | "right" | No | Defined by the core contract. |
-| `closeOnBackdrop` | `boolean` | true | No | Defined by the core contract. |
-| `closeOnEscape` | `boolean` | true | No | Defined by the core contract. |
-
-
-
-## Usage
-
-### Vue
 
 ```vue
-<script setup lang="ts">
-import { Drawer } from "@paraxe/vue";
-</script>
-
-<template>
-  <Drawer>Content</Drawer>
-</template>
+<Drawer v-model="open" side="right" labelled-by="details-title"
+  initial-focus="#details-title">
+  <h2 id="details-title" tabindex="-1">Project details</h2>
+  <p>Read the context before editing.</p>
+  <Button @activate="open = false">Done</Button>
+</Drawer>
 ```
 
-### React
+Import Drawer/Button from the corresponding framework package. side accepts left/right, default right. Drawer now has the same Tab containment, Escape/backdrop options and close naming in both frameworks; React additionally accepts className/style. The full-height edge geometry remains appropriate for a docked drawer, while content, borders, padding, close controls and surfaces follow tokens. Long content scrolls inside the panel.
 
-```tsx
-import { Drawer } from "@paraxe/react";
-
-export function Example() {
-  return <Drawer>Content</Drawer>;
-}
-```
-
-## Accessibility
-
-Rendered as a modal dialog. Escape and backdrop behaviour follow `closeOnEscape` and `closeOnBackdrop`; supply focusable, meaningful content.
-
-## Related
-
-- [Component index](../reference/component-index.md)
-- [Core contracts](../core/contracts.md)
+The drawer does not save data or infer whether a draft is dirty. Keep save/discard decisions in app state; use a nested Dialog for a meaningful confirmation, as in the [core preview](https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=overlays&profile=clean&theme=light). Parent and child coordinate focus and scroll ownership through the shared manager. Provide unique IDs and meaningful headings.

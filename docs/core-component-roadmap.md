@@ -109,3 +109,7 @@ AvatarGroup gains a shared member contract, bounded overlap, aggregate accessibl
 ## Raising the quality floor
 
 The approved [quality programme](quality-improvements.md) starts with real SVG Icon parity, linked and dismissible Tooltip behaviour, and Footer01 layout revision. These are development after 0.3.0. Popover, modal overlays, Toast, FAQ01, Dashboard01 and chart parity remain subsequent batches.
+
+## Overlay interaction audit (development after 0.3.0)
+
+[Popover, Dialog and Drawer](components/overlay-surfaces.md) now share document-level layer ownership and framework parent contexts. The audit covers naming, actual Popover button/controlled ownership, focus entry/containment/return, nested Escape, background inertness, scroll restoration and portal cleanup. Positioning collision work and native browser review remain separate. The next icon priority is wiring the existing iconLibrary preset axis to runtime adapters, starting with Lucide/Tabler; metadata is not yet an active library integration.

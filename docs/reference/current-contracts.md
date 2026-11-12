@@ -1155,7 +1155,8 @@ export interface TabsEmits {
 ## packages/core/src/contracts/overlays/Dialog.ts
 
 ```ts
-export interface DialogProps {
+import type { OverlaySurfaceProps } from "./Surface";
+export interface DialogProps extends OverlaySurfaceProps {
   modelValue?: boolean;
   closeOnBackdrop?: boolean;
   closeOnEscape?: boolean;
@@ -1168,7 +1169,8 @@ export interface DialogEmits {
 ## packages/core/src/contracts/overlays/Drawer.ts
 
 ```ts
-export interface DrawerProps {
+import type { OverlaySurfaceProps } from "./Surface";
+export interface DrawerProps extends OverlaySurfaceProps {
   modelValue?: boolean;
   side?: "left" | "right";
   closeOnBackdrop?: boolean;
@@ -1179,14 +1181,15 @@ export interface DrawerProps {
 ## packages/core/src/contracts/overlays/Popover.ts
 
 ```ts
-export type PopoverPlacement =
-  | "top"
-  | "bottom"
-  | "left"
-  | "right";
-
-export interface PopoverProps {
+import type { OverlaySurfaceProps } from "./Surface";
+export type PopoverPlacement = "top" | "bottom" | "left" | "right";
+export interface PopoverProps extends OverlaySurfaceProps {
   placement?: PopoverPlacement;
+  modelValue?: boolean;
+  defaultOpen?: boolean;
+  disabled?: boolean;
+  closeOnEscape?: boolean;
+  closeOnOutside?: boolean;
 }
 ```
 
@@ -1196,14 +1199,28 @@ export interface PopoverProps {
 
 ```
 
+## packages/core/src/contracts/overlays/Surface.ts
+
+```ts
+/** Shared naming and focus contract for a dialog surface. */
+export interface OverlaySurfaceProps {
+  id?: string;
+  /** Accessible fallback name. Prefer labelledBy for a visible heading. */
+  label?: string;
+  labelledBy?: string;
+  describedBy?: string;
+  /** CSS selector resolved only inside the open panel; static targets need tabindex=-1. */
+  initialFocus?: string;
+  returnFocus?: boolean;
+  showClose?: boolean;
+  closeLabel?: string;
+}
+```
+
 ## packages/core/src/contracts/overlays/Tooltip.ts
 
 ```ts
-export type TooltipPlacement =
-  | "top"
-  | "bottom"
-  | "left"
-  | "right";
+export type TooltipPlacement = "top" | "bottom" | "left" | "right";
 
 export interface TooltipProps {
   id?: string;

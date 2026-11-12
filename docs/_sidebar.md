@@ -140,6 +140,7 @@
         [Pagination](components/pagination.md)
         [Table](components/table.md)
     Overlays
+        [Overlay surfaces](components/overlay-surfaces.md)
         [Dialog](components/dialog.md)
         [Drawer](components/drawer.md)
         [Popover](components/popover.md)

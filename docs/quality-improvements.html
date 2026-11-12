@@ -158,6 +158,7 @@ Data display
 <a href="components/pagination.html">Pagination</a>
 <a href="components/table.html">Table</a>
 Overlays
+<a href="components/overlay-surfaces.html">Overlay surfaces</a>
 <a href="components/dialog.html">Dialog</a>
 <a href="components/drawer.html">Drawer</a>
 <a href="components/popover.html">Popover</a>
@@ -196,13 +197,16 @@ Charts
 <li><strong>Footer01:</strong> replace its loose composition with an invitation/directory frame, actual SVG direction cues, native lists, adaptive brand signature and legal row. Preserve props and independent presets.</li>
 </ul>
 <p>These changes are after registry 0.3.0 and require another coordinated package release. Previews do not overwrite published bundles. Browser visual review remains pending when the browser connection is unavailable.</p>
+<h2 id="second-batch-overlay-audit-implemented-in-development">Second batch: overlay audit implemented in development</h2>
+<p>Popover now has actual-button semantics, controlled/local ownership, linked panel naming, scoped initial focus, dismissal and focus restoration. Dialog/Drawer share native inert/scroll ownership, Tab containment, nested Escape ordering, logical parent contexts and safe portal cleanup. A shared core preview exercises the public adapters. Tooltip consumes only its first engaged Escape so its surface can close next. <a href="components/overlay-surfaces.html">Overlay surfaces</a> records the contract and limits. Collision/flipping, shadow-root navigation and native-browser review remain separate work.</p>
+<h2 id="next-icon-priority">Next icon priority</h2>
+<p>The owner likes the new symbols and explicitly requested library integration soon. The existing preset <code>iconLibrary</code> already offers lucide, tabler, heroicons and phosphor, defaulting to lucide. Today it is metadata: the preset generator instructs users to wire a library separately. Connect this choice to explicit Vue/React runtime adapters and CLI guidance in the next icon pass, with Lucide/Tabler first. Preserve the new semantic names, sizing, labels and custom paths; avoid a hidden network fetch or an eagerly bundled full icon catalogue. The local path set remains a fallback, not a claim that the configured library is already active.</p>
 <h2 id="remaining-sequence">Remaining sequence</h2>
 <ol>
-<li><strong>Popover:</strong> actual trigger semantics, naming, controlled ownership, initial focus, dismissal and focus restoration. Establish shared positioning needs before claiming collision handling.</li>
-<li><strong>Dialog and Drawer:</strong> modal stacking, inert background/scroll ownership, focus containment/return and accessible labelling. Test nested/empty cases and framework parity.</li>
-<li><strong>Toast:</strong> lifecycle, dismissal, timer pause and announcements; avoid stacking transient messages as the only way to recover.</li>
-<li><strong>FAQ01:</strong> audit accordion constraints first, then improve question hierarchy, spacing and supporting navigation without another generic card grid.</li>
-<li><strong>Dashboard01:</strong> oversized recipe typography, intrinsic metric wrapping, visual prioritisation and responsive density. Preserve useful workflows while strengthening the silhouette.</li>
+<li><strong>Icon adapters/configuration:</strong> connect the existing iconLibrary choice to actual runtime integration, starting with Lucide and Tabler.</li>
+<li><strong>Toast:</strong> lifecycle, dismissal, timer pause and announcements; avoid transient messages as the only recovery route.</li>
+<li><strong>FAQ01:</strong> audit accordion constraints first, then improve hierarchy, spacing and supporting navigation.</li>
+<li><strong>Dashboard01:</strong> oversized recipe typography, intrinsic metric wrapping, prioritisation and responsive density.</li>
 <li><strong>Chart parity:</strong> complete analytical behaviour and readable alternatives rather than copying decoration into React.</li>
 </ol>
 <p>Continue working in concrete batches with guides, searchable previews, meaningful tests and a separate visual review record. Lower position is not a reason to add complexity to a simple primitive.</p>
