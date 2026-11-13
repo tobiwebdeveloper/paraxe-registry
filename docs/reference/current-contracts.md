@@ -7,10 +7,13 @@ Framework components add native attributes and framework events; see [core usage
 ## packages/core/src/contracts/commerce/Price.ts
 
 ```ts
-/** Amounts are in major currency units (e.g. 48.5 GBP), not minor units. */
+/** Supply either major-unit amount or exact integer amountMinor, never both. */
 export interface PriceProps {
   size?: "inline" | "detail" | "display";
-  amount: number;
+  amount?: number;
+  /** Exact integer minor-unit mode; mutually exclusive with amount. */
+  amountMinor?: number;
+  compareAtMinor?: number;
   currency: string;
   /** Explicit locale avoids server/client formatting differences. */
   locale: string;
@@ -474,11 +477,20 @@ export type IconSize = "xs" | "sm" | "md" | "lg" | "inherit";
 export interface IconProps {
   /** A built-in name. Supply either name or custom paths, never both. */
   name?: string;
+  /** Explicit library; otherwise the framework provider selects it. */
+  library?: string;
   /** Trusted SVG path data, rendered as path attributes rather than injected markup. */
   paths?: readonly string[];
   viewBox?: string;
   size?: IconSize;
   label?: string;
+}
+
+export interface IconConfiguration<T> {
+  library?: string;
+  libraries?: Readonly<Record<string, Readonly<Record<string, T>>>>;
+  /** Missing symbols only; an unregistered library is always an error. */
+  fallback?: "builtin" | "error";
 }
 ```
 

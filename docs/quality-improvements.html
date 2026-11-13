@@ -60,6 +60,8 @@
 <li><a href="registry/checkout-01.html">Checkout01</a></li>
 <li><a href="registry/booking-01.html">Booking01</a>
 <a href="registry/application-01.html">Application01</a>
+<a href="registry/inbox-01.html">Inbox01</a>
+<a href="registry/invoice-01.html">Invoice01</a>
 <a href="registry/footer-01.html">Footer01</a></li>
 <li><a href="registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="registry/course-01.html">Course01</a></li>
@@ -199,11 +201,10 @@ Charts
 <p>These changes are after registry 0.3.0 and require another coordinated package release. Previews do not overwrite published bundles. Browser visual review remains pending when the browser connection is unavailable.</p>
 <h2 id="second-batch-overlay-audit-implemented-in-development">Second batch: overlay audit implemented in development</h2>
 <p>Popover now has actual-button semantics, controlled/local ownership, linked panel naming, scoped initial focus, dismissal and focus restoration. Dialog/Drawer share native inert/scroll ownership, Tab containment, nested Escape ordering, logical parent contexts and safe portal cleanup. A shared core preview exercises the public adapters. Tooltip consumes only its first engaged Escape so its surface can close next. <a href="components/overlay-surfaces.html">Overlay surfaces</a> records the contract and limits. Collision/flipping, shadow-root navigation and native-browser review remain separate work.</p>
-<h2 id="next-icon-priority">Next icon priority</h2>
-<p>The owner likes the new symbols and explicitly requested library integration soon. The existing preset <code>iconLibrary</code> already offers lucide, tabler, heroicons and phosphor, defaulting to lucide. Today it is metadata: the preset generator instructs users to wire a library separately. Connect this choice to explicit Vue/React runtime adapters and CLI guidance in the next icon pass, with Lucide/Tabler first. Preserve the new semantic names, sizing, labels and custom paths; avoid a hidden network fetch or an eagerly bundled full icon catalogue. The local path set remains a fallback, not a claim that the configured library is already active.</p>
+<h2 id="icon-configuration-implemented-in-development">Icon configuration implemented in development</h2>
+<p>Optional Lucide/Tabler adapters, provider configuration, explicit mappings, inherited icon semantics and recipe-studio selection now connect the existing iconLibrary axis to real renderers. Base framework entries remain vendor-free. Heroicons/Phosphor values remain supported metadata/custom-map choices, without bundled adapters being claimed. See <a href="components/icon.html">Icon</a>. New Inbox01 and Invoice01 exercise the shared semantic set in different product layouts. These additions require a future coordinated release.</p>
 <h2 id="remaining-sequence">Remaining sequence</h2>
 <ol>
-<li><strong>Icon adapters/configuration:</strong> connect the existing iconLibrary choice to actual runtime integration, starting with Lucide and Tabler.</li>
 <li><strong>Toast:</strong> lifecycle, dismissal, timer pause and announcements; avoid transient messages as the only recovery route.</li>
 <li><strong>FAQ01:</strong> audit accordion constraints first, then improve hierarchy, spacing and supporting navigation.</li>
 <li><strong>Dashboard01:</strong> oversized recipe typography, intrinsic metric wrapping, prioritisation and responsive density.</li>

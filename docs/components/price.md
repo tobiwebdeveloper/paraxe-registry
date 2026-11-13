@@ -25,3 +25,11 @@ Import from `@paraxe/vue` or `@paraxe/react`. `PriceProps` and the shared `forma
 A compare-at value above the current amount displays as a struck-through original price. Equal/lower values, or values that round to the same displayed price, are omitted. Zero is valid. Negative/non-finite amounts and compare-at values throw `RangeError`; invalid locale/currency syntax also throws rather than silently changing a price. Currency precision follows Intl (for example, JPY has no fractional digits). Currency conversion, discounts, tax, and money arithmetic belong to the app.
 
 Screen-reader labels distinguish current/original prices without relying on strikethrough announcement. Translate the labels in non-English interfaces. The component adds no live region; announce cart updates at the cart level. Gap and muted text use shared theme/density tokens.
+
+Development Price also accepts amountMinor and compareAtMinor instead of major-unit amount/compareAt. Supply exactly one unit mode. Nonnegative safe integers format through BigInt parts, preserving cents even at the safe-integer boundary and respecting currency-specific precision. Invoice01 uses this mode for its amount-due display; published packages still have the earlier major-unit-only API.
+
+```tsx
+<Price amountMinor={438000} currency="GBP" locale="en-GB" currentLabel="Amount due" />
+```
+
+Vue uses :amount-minor="438000" with the same currency/locale. Do not divide the minor-unit value before passing it.

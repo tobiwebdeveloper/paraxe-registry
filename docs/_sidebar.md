@@ -50,6 +50,8 @@
   - [Checkout01](registry/checkout-01.md)
   - [Booking01](registry/booking-01.md)
     [Application01](registry/application-01.md)
+    [Inbox01](registry/inbox-01.md)
+    [Invoice01](registry/invoice-01.md)
     [Footer01](registry/footer-01.md)
   - [Dashboard01](registry/dashboard-01.md)
   - [Course01](registry/course-01.md)

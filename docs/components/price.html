@@ -60,6 +60,8 @@
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
 <li><a href="../registry/booking-01.html">Booking01</a>
 <a href="../registry/application-01.html">Application01</a>
+<a href="../registry/inbox-01.html">Inbox01</a>
+<a href="../registry/invoice-01.html">Invoice01</a>
 <a href="../registry/footer-01.html">Footer01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
@@ -243,4 +245,8 @@ Charts
 </table>
 <p>A compare-at value above the current amount displays as a struck-through original price. Equal/lower values, or values that round to the same displayed price, are omitted. Zero is valid. Negative/non-finite amounts and compare-at values throw <code>RangeError</code>; invalid locale/currency syntax also throws rather than silently changing a price. Currency precision follows Intl (for example, JPY has no fractional digits). Currency conversion, discounts, tax, and money arithmetic belong to the app.</p>
 <p>Screen-reader labels distinguish current/original prices without relying on strikethrough announcement. Translate the labels in non-English interfaces. The component adds no live region; announce cart updates at the cart level. Gap and muted text use shared theme/density tokens.</p>
+<p>Development Price also accepts amountMinor and compareAtMinor instead of major-unit amount/compareAt. Supply exactly one unit mode. Nonnegative safe integers format through BigInt parts, preserving cents even at the safe-integer boundary and respecting currency-specific precision. Invoice01 uses this mode for its amount-due display; published packages still have the earlier major-unit-only API.</p>
+<pre><code class="language-tsx">&lt;Price amountMinor={438000} currency=&quot;GBP&quot; locale=&quot;en-GB&quot; currentLabel=&quot;Amount due&quot; /&gt;
+</code></pre>
+<p>Vue uses :amount-minor=&quot;438000&quot; with the same currency/locale. Do not divide the minor-unit value before passing it.</p>
 </main></div></body></html>

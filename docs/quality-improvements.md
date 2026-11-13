@@ -14,16 +14,15 @@ These changes are after registry 0.3.0 and require another coordinated package r
 
 Popover now has actual-button semantics, controlled/local ownership, linked panel naming, scoped initial focus, dismissal and focus restoration. Dialog/Drawer share native inert/scroll ownership, Tab containment, nested Escape ordering, logical parent contexts and safe portal cleanup. A shared core preview exercises the public adapters. Tooltip consumes only its first engaged Escape so its surface can close next. [Overlay surfaces](components/overlay-surfaces.md) records the contract and limits. Collision/flipping, shadow-root navigation and native-browser review remain separate work.
 
-## Next icon priority
+## Icon configuration implemented in development
 
-The owner likes the new symbols and explicitly requested library integration soon. The existing preset `iconLibrary` already offers lucide, tabler, heroicons and phosphor, defaulting to lucide. Today it is metadata: the preset generator instructs users to wire a library separately. Connect this choice to explicit Vue/React runtime adapters and CLI guidance in the next icon pass, with Lucide/Tabler first. Preserve the new semantic names, sizing, labels and custom paths; avoid a hidden network fetch or an eagerly bundled full icon catalogue. The local path set remains a fallback, not a claim that the configured library is already active.
+Optional Lucide/Tabler adapters, provider configuration, explicit mappings, inherited icon semantics and recipe-studio selection now connect the existing iconLibrary axis to real renderers. Base framework entries remain vendor-free. Heroicons/Phosphor values remain supported metadata/custom-map choices, without bundled adapters being claimed. See [Icon](components/icon.md). New Inbox01 and Invoice01 exercise the shared semantic set in different product layouts. These additions require a future coordinated release.
 
 ## Remaining sequence
 
-1. **Icon adapters/configuration:** connect the existing iconLibrary choice to actual runtime integration, starting with Lucide and Tabler.
-2. **Toast:** lifecycle, dismissal, timer pause and announcements; avoid transient messages as the only recovery route.
-3. **FAQ01:** audit accordion constraints first, then improve hierarchy, spacing and supporting navigation.
-4. **Dashboard01:** oversized recipe typography, intrinsic metric wrapping, prioritisation and responsive density.
-5. **Chart parity:** complete analytical behaviour and readable alternatives rather than copying decoration into React.
+1. **Toast:** lifecycle, dismissal, timer pause and announcements; avoid transient messages as the only recovery route.
+2. **FAQ01:** audit accordion constraints first, then improve hierarchy, spacing and supporting navigation.
+3. **Dashboard01:** oversized recipe typography, intrinsic metric wrapping, prioritisation and responsive density.
+4. **Chart parity:** complete analytical behaviour and readable alternatives rather than copying decoration into React.
 
 Continue working in concrete batches with guides, searchable previews, meaningful tests and a separate visual review record. Lower position is not a reason to add complexity to a simple primitive.

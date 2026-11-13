@@ -209,4 +209,8 @@ The owner approved strengthening the lower-ranked library items. The first [qual
 
 ## Overlay depth and configured icon libraries
 
-The second quality batch deepens Popover, Dialog and Drawer as [shared interaction surfaces](components/overlay-surfaces.md), with a core preview rather than another numbered layout. Nested modal focus, scroll and background isolation are owned together. The owner endorsed the new icons and asked to connect the already-existing iconLibrary configuration to Lucide/Tabler soon. That adapter work is the next icon priority; it must preserve tokens and avoid claiming metadata already changes runtime rendering.
+The second quality batch deepens Popover, Dialog and Drawer as [shared interaction surfaces](components/overlay-surfaces.md), with a core preview rather than another numbered layout. Nested modal focus, scroll and background isolation are owned together. The owner endorsed the new icons and asked to connect the already-existing iconLibrary configuration to Lucide/Tabler soon. The configured-icon follow-up below implements that adapter work while preserving tokens and distinguishing unsupported vendor choices.
+
+## Configured icons and two new product layouts
+
+Lucide and Tabler now have optional framework adapters, provider configuration and live recipe-studio selection through the existing iconLibrary field. Explicit custom mappings and paths remain supported; unsupported families are not silently claimed. [Inbox01](registry/inbox-01.md) adds a conversation desk with service-confirmed replies and archive states, while [Invoice01](registry/invoice-01.md) adds a client-facing invoice document with exact totals and a real breakdown download. Both are standalone layouts using existing recipes, developed after immutable registry 0.3.0.

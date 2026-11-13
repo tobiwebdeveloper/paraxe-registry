@@ -67,3 +67,7 @@ Let recipes supply type/control treatment and presets choose brand, fonts, radiu
 
 Verify empty, unavailable, long-text, loading/failure, and narrow-screen states. Typecheck/build and test meaningful behavior. Compilation does not prove visual balance or keyboard accessibility.
 
+
+## Configured icons
+
+Development builds can connect preset.iconLibrary to the framework provider with optional Lucide/Tabler maps. See [Icon](../components/icon.md) for installation and both framework examples. Icon family remains independent from colour/recipe and is not a CSS token.

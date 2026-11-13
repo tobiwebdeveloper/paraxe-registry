@@ -60,6 +60,8 @@
 <li><a href="../registry/checkout-01.html">Checkout01</a></li>
 <li><a href="../registry/booking-01.html">Booking01</a>
 <a href="../registry/application-01.html">Application01</a>
+<a href="../registry/inbox-01.html">Inbox01</a>
+<a href="../registry/invoice-01.html">Invoice01</a>
 <a href="../registry/footer-01.html">Footer01</a></li>
 <li><a href="../registry/dashboard-01.html">Dashboard01</a></li>
 <li><a href="../registry/course-01.html">Course01</a></li>
@@ -189,7 +191,7 @@ Charts
 </ul>
 <p><a href="../quality-improvements.html">Quality improvements</a></p>
 </details></nav><main><h1 id="icon">Icon</h1>
-<p>A local SVG symbol with identical Vue and React drawing data, inherited colour, token-sized geometry and optional accessible naming. <strong>Development after registry 0.3.0.</strong> Published core/framework packages still have the earlier text-name placeholder. No font, network icon lookup, third-party icon runtime or SVG HTML injection is required.</p>
+<p>A local SVG symbol with identical Vue and React drawing data, inherited colour, token-sized geometry and optional accessible naming. <strong>Development after registry 0.3.0.</strong> Published core/framework packages still have the earlier text-name placeholder. The built-in set needs no font, network icon lookup, vendor runtime or SVG HTML injection. Optional vendor adapters are described below.</p>
 <pre><code class="language-tsx">import { Icon } from '@paraxe/react';
 &lt;Icon name=&quot;search&quot; size=&quot;sm&quot; /&gt;
 &lt;Icon name=&quot;check&quot; label=&quot;Completed&quot; /&gt;
@@ -207,4 +209,40 @@ import { Icon } from '@paraxe/vue';
 <p><code>size</code> accepts <code>inherit</code> (default), xs, sm, md and lg. Inherited geometry is one em; explicit sizes use <code>--icon-size-*</code>. Colour uses currentColor and stroke weight uses <code>--icon-stroke-width</code>. Vue inherits class/style attributes; React accepts className/style.</p>
 <p>Icons without a nonblank <code>label</code> are decorative and hidden from accessibility APIs. A labelled symbol is role img with its accessible name. SVG never adds a tabstop. In a button with visible text, keep the icon decorative. An icon-only button needs an accessible name on the <strong>button</strong>, not merely on its SVG. Icon is not a button or an animation player.</p>
 <p><a href="https://tobiwebdeveloper.github.io/paraxe-registry/preview/vue/?preview=icons&amp;profile=clean&amp;theme=light">Core preview</a>. These changes also replace Footer01's text arrows with real geometry.</p>
+<h2 id="lucide-and-tabler-adapters-development">Lucide and Tabler adapters (development)</h2>
+<p>The provider integration and optional adapters are development after registry 0.3.0, requiring matching newer framework/core packages. Current npm releases do not contain these exports. The recipe studio now reads preset.iconLibrary for Lucide/Tabler and retains that field in exported/shared presets. Icon family is a runtime choice, not a colour/CSS axis.</p>
+<h3 id="react">React</h3>
+<p>Install only the vendor packages you use: <code>pnpm add lucide-react</code> and/or <code>pnpm add @tabler/icons-react</code>.</p>
+<pre><code class="language-tsx">import { ParaxeProvider, Icon } from '@paraxe/react';
+import { lucideIcons } from '@paraxe/react/icons/lucide';
+import { tablerIcons } from '@paraxe/react/icons/tabler';
+import config from './paraxe.config.json';
+&lt;ParaxeProvider icons={{
+  library: config.preset.iconLibrary,
+  libraries: { lucide: lucideIcons, tabler: tablerIcons },
+}}&gt;
+  &lt;Icon name=&quot;search&quot; size=&quot;sm&quot; /&gt;
+&lt;/ParaxeProvider&gt;
+</code></pre>
+<h3 id="vue">Vue</h3>
+<p>Install <code>pnpm add @lucide/vue</code> and/or <code>pnpm add @tabler/icons-vue</code>. Lucide's current Vue package is <a href="https://lucide.dev/guide/version-1">@lucide/vue</a>; the older lucide-vue-next name belongs to its earlier release line.</p>
+<pre><code class="language-ts">import { createParaxe } from '@paraxe/vue';
+import { lucideIcons } from '@paraxe/vue/icons/lucide';
+import { tablerIcons } from '@paraxe/vue/icons/tabler';
+import config from './paraxe.config.json';
+app.use(createParaxe({ icons: {
+  library: config.preset.iconLibrary,
+  libraries: { lucide: lucideIcons, tabler: tablerIcons },
+} }));
+</code></pre>
+<p>Use a reactive configuration object to change the selected family in a running Vue app. React follows provider prop changes; a nested provider that changes only variants inherits icon configuration. The studio demonstrates switching without rewriting the blocks. Remove imports and registrations for any unused family in a product.</p>
+<p>Both optional maps cover the common Paraxe semantic names. The base package entry does not import vendor code; adapters have optional peer dependencies. Importing a common map includes its curated set, not just one symbol. For the smallest application-specific set, register explicit vendor components instead:</p>
+<pre><code class="language-tsx">import { Search, Folder } from 'lucide-react';
+const icons = { library: 'lucide', libraries: {
+  lucide: { ...lucideIcons, search: Search, 'project-folder': Folder },
+} };
+</code></pre>
+<p>Omit the spread and map only the needed symbols when that is preferable. Vue accepts its corresponding SVG component mappings. These are trusted application components that must forward SVG size/class/style and accessibility attributes. No runtime icon network lookup or injected SVG markup is introduced. Vendor licensing remains with the imported packages; do not copy their drawings without their licence notices.</p>
+<p><code>&lt;Icon library=&quot;tabler&quot; name=&quot;search&quot; /&gt;</code> overrides the selected family, but that family must be registered. <code>library=&quot;builtin&quot;</code> explicitly selects the original local path set. Custom paths bypass vendor selection. Inherited colour, size classes, stroke token, decorative hiding and named role img stay consistent; data-icon-library records the renderer actually used. An unregistered family or missing symbol throws a useful error. Set provider fallback to builtin explicitly to permit missing common symbols to use the local set; a missing family still throws.</p>
+<p>Heroicons/Phosphor preset values are preserved and may use explicit application mappings; bundled adapters for them are not supplied yet. In the studio, such a saved preset shows a notice and uses the built-in set until Lucide/Tabler is selected. It is not silently relabelled as a supported vendor.</p>
 </main></div></body></html>
