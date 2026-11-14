@@ -214,3 +214,7 @@ The second quality batch deepens Popover, Dialog and Drawer as [shared interacti
 ## Configured icons and two new product layouts
 
 Lucide and Tabler now have optional framework adapters, provider configuration and live recipe-studio selection through the existing iconLibrary field. Explicit custom mappings and paths remain supported; unsupported families are not silently claimed. [Inbox01](registry/inbox-01.md) adds a conversation desk with service-confirmed replies and archive states, while [Invoice01](registry/invoice-01.md) adds a client-facing invoice document with exact totals and a real breakdown download. Both are standalone layouts using existing recipes, developed after immutable registry 0.3.0.
+
+## Preview reliability and loading
+
+Inbox01 and Invoice01 exposed a Vue entry-registration error: their imports sat outside script setup. Those imports now register correctly. Both playgrounds route named previews through lazy modules, preserving special props and connected examples; loading and reload-on-error states prevent silent failures. Page-entry regression checks render the two affected Vue routes and verify route coverage in both frameworks. GitHub Pages remains the free host; no domain or npm release is required for this repair. Browser visual review remains pending because the browser runtime is unavailable.
